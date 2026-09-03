@@ -53,6 +53,32 @@
    yellow measures Δhue 20° from SF6's #FF7D00, which is the tightest primary
    pair on the platform; the selector card and SourceBadge must be eyeballed
    beside SF6 at chip size, not only in isolation.
+
+   ── PROVENANCE CORRECTION, measured against the game's logo ───────────────
+   design/handoff/cotwlogo_nodot.png arrived after the handoff was written, and
+   two of the handoff header's four stated samples do not survive contact with
+   it. Measured over the logo's 222,364 opaque pixels:
+
+     · "FATAL FURY red band #E8281E (logo)" — THERE IS NO RED IN THE LOGO.
+       Zero pixels fall in hue 340–20° at sat ≥45%. The logo is 29.9% gold
+       (hue 40–50°, one dominant band) and 58% neutral chrome. The nearest
+       real CotW red is #E52E13 (hue 8°), sampled from SNK's own key art for
+       Rock Howard — so the COLOUR is genuinely this game's and --color-secondary
+       #F5433A stands; only the citation was wrong.
+     · "wordmark fang-silver #D9D4CC (logo 'CITY OF THE WOLVES' fill)" — the
+       letterforms are NEUTRAL, not warm: 120,702 perfectly neutral pixels
+       against ~6,000 biased either way, body tone #DFDFE0 (hue 240°, sat 2%).
+       #D9D4CC occurs, but on the gold-lit edge rather than as the fill.
+
+   WHAT THE LOGO CHANGES: nothing that ships. It STRENGTHENS the lever — the
+   logo is overwhelmingly gold at hue 49°, one degree off the primary's 48°, so
+   yellow-as-primary is corroborated by the game's own mark rather than merely
+   compatible with it. And it leaves one open design question, deliberately not
+   answered here: this file's text ramp is WARM (--color-text #F2EDE4, hue 39°,
+   sat 35%) to sit on the warm asphalt surface, while the logo's chrome is
+   neutral. That is a coherent system, not an error, but if a future design
+   session wants the type to echo the mark it is a whole-ramp decision and
+   belongs in the handoff, not in a transcription note.
    ========================================================================== */
 
 @import '@fontsource/anton/400';
