@@ -1,0 +1,487 @@
+[
+  {
+    "id": "rock-howard",
+    "name": "Rock Howard",
+    "imgPortrait": "/img/char/rock-howard.webp",
+    "imgSplash": "/img/splash/rock-howard.webp",
+    "accent": "#9C8CFF",
+    "extra": {
+      "aliases": [
+        "Rock"
+      ],
+      "season": 0,
+      "released": "2025-04-21",
+      "full name": "Rock Howard"
+    }
+  },
+  {
+    "id": "terry-bogard",
+    "name": "Terry Bogard",
+    "imgPortrait": "/img/char/terry-bogard.webp",
+    "imgSplash": "/img/splash/terry-bogard.webp",
+    "accent": "#FF7060",
+    "extra": {
+      "aliases": [
+        "Terry"
+      ],
+      "season": 0,
+      "released": "2025-04-21",
+      "full name": "Terry Bogard"
+    }
+  },
+  {
+    "id": "hotaru-futaba",
+    "name": "Hotaru Futaba",
+    "imgPortrait": "/img/char/hotaru-futaba.webp",
+    "imgSplash": "/img/splash/hotaru-futaba.webp",
+    "accent": "#FFA3C9",
+    "extra": {
+      "aliases": [
+        "Hotaru",
+        "Hotaro"
+      ],
+      "season": 0,
+      "released": "2025-04-21",
+      "full name": "Hotaru Futaba"
+    }
+  },
+  {
+    "id": "preecha",
+    "name": "Preecha",
+    "imgPortrait": "/img/char/preecha.webp",
+    "imgSplash": "/img/splash/preecha.webp",
+    "accent": "#5FD36A",
+    "extra": {
+      "aliases": [],
+      "season": 0,
+      "released": "2025-04-21",
+      "full name": "Preecha"
+    }
+  },
+  {
+    "id": "vox-reaper",
+    "name": "Vox Reaper",
+    "imgPortrait": "/img/char/vox-reaper.webp",
+    "imgSplash": "/img/splash/vox-reaper.webp",
+    "accent": "#B8F53F",
+    "extra": {
+      "aliases": [
+        "Vox"
+      ],
+      "season": 0,
+      "released": "2025-04-21",
+      "full name": "Vox Reaper"
+    }
+  },
+  {
+    "id": "marco-rodrigues",
+    "name": "Marco Rodrigues",
+    "imgPortrait": "/img/char/marco-rodrigues.webp",
+    "imgSplash": "/img/splash/marco-rodrigues.webp",
+    "accent": "#C9B27E",
+    "extra": {
+      "aliases": [
+        "Marco",
+        "Marcos",
+        "Khushnood Butt"
+      ],
+      "season": 0,
+      "released": "2025-04-21",
+      "full name": "Marco Rodrigues"
+    }
+  },
+  {
+    "id": "kevin-rian",
+    "name": "Kevin Rian",
+    "imgPortrait": "/img/char/kevin-rian.webp",
+    "imgSplash": "/img/splash/kevin-rian.webp",
+    "accent": "#7A9CC9",
+    "extra": {
+      "aliases": [
+        "Kevin"
+      ],
+      "season": 0,
+      "released": "2025-04-21",
+      "full name": "Kevin Rian"
+    }
+  },
+  {
+    "id": "b-jenet",
+    "name": "B. Jenet",
+    "imgPortrait": "/img/char/b-jenet.webp",
+    "imgSplash": "/img/splash/b-jenet.webp",
+    "accent": "#E858C8",
+    "extra": {
+      "aliases": [
+        "B.Jenet",
+        "B Jenet",
+        "Jenet",
+        "BJenet",
+        "B.Jene"
+      ],
+      "season": 0,
+      "released": "2025-04-21",
+      "full name": "B. Jenet"
+    }
+  },
+  {
+    "id": "gato",
+    "name": "Gato",
+    "imgPortrait": "/img/char/gato.webp",
+    "imgSplash": "/img/splash/gato.webp",
+    "accent": "#C89AF5",
+    "extra": {
+      "aliases": [],
+      "season": 0,
+      "released": "2025-04-21",
+      "full name": "Gato"
+    }
+  },
+  {
+    "id": "tizoc",
+    "name": "Tizoc",
+    "imgPortrait": "/img/char/tizoc.webp",
+    "imgSplash": "/img/splash/tizoc.webp",
+    "accent": "#FFC24A",
+    "extra": {
+      "aliases": [],
+      "season": 0,
+      "released": "2025-04-21",
+      "full name": "Tizoc"
+    }
+  },
+  {
+    "id": "hokutomaru",
+    "name": "Hokutomaru",
+    "imgPortrait": "/img/char/hokutomaru.webp",
+    "imgSplash": "/img/splash/hokutomaru.webp",
+    "accent": "#7FE6BE",
+    "extra": {
+      "aliases": [],
+      "season": 0,
+      "released": "2025-04-21",
+      "full name": "Hokutomaru"
+    }
+  },
+  {
+    "id": "kain-r-heinlein",
+    "name": "Kain R. Heinlein",
+    "imgPortrait": "/img/char/kain-r-heinlein.webp",
+    "imgSplash": "/img/splash/kain-r-heinlein.webp",
+    "accent": "#6E8BFF",
+    "extra": {
+      "aliases": [
+        "Kain",
+        "Kain R Heinlein",
+        "Kain Heinlein"
+      ],
+      "season": 0,
+      "released": "2025-04-21",
+      "full name": "Kain R. Heinlein"
+    }
+  },
+  {
+    "id": "billy-kane",
+    "name": "Billy Kane",
+    "imgPortrait": "/img/char/billy-kane.webp",
+    "imgSplash": "/img/splash/billy-kane.webp",
+    "accent": "#B9C0CC",
+    "extra": {
+      "aliases": [
+        "Billy"
+      ],
+      "season": 0,
+      "released": "2025-04-21",
+      "full name": "Billy Kane"
+    }
+  },
+  {
+    "id": "mai-shiranui",
+    "name": "Mai Shiranui",
+    "imgPortrait": "/img/char/mai-shiranui.webp",
+    "imgSplash": "/img/splash/mai-shiranui.webp",
+    "accent": "#FF6E8F",
+    "extra": {
+      "aliases": [
+        "Mai"
+      ],
+      "season": 0,
+      "released": "2025-04-21",
+      "full name": "Mai Shiranui"
+    }
+  },
+  {
+    "id": "kim-dong-hwan",
+    "name": "Kim Dong Hwan",
+    "imgPortrait": "/img/char/kim-dong-hwan.webp",
+    "imgSplash": "/img/splash/kim-dong-hwan.webp",
+    "accent": "#4FD9FF",
+    "extra": {
+      "aliases": [
+        "Dong Hwan",
+        "DongHwan",
+        "Dong H.",
+        "Kim Donghwan",
+        "Don Hwan"
+      ],
+      "season": 0,
+      "released": "2025-04-21",
+      "full name": "Kim Dong Hwan"
+    }
+  },
+  {
+    "id": "cristiano-ronaldo",
+    "name": "Cristiano Ronaldo",
+    "imgPortrait": "/img/char/cristiano-ronaldo.webp",
+    "imgSplash": "/img/splash/cristiano-ronaldo.webp",
+    "accent": "#2FBF6F",
+    "extra": {
+      "aliases": [
+        "CR7",
+        "Ronaldo",
+        "C. Ronaldo",
+        "C Ronaldo",
+        "Cristiano"
+      ],
+      "season": 0,
+      "released": "2025-04-21",
+      "full name": "Cristiano Ronaldo"
+    }
+  },
+  {
+    "id": "salvatore-ganacci",
+    "name": "Salvatore Ganacci",
+    "imgPortrait": "/img/char/salvatore-ganacci.webp",
+    "imgSplash": "/img/splash/salvatore-ganacci.webp",
+    "accent": "#AC8CFF",
+    "extra": {
+      "aliases": [
+        "Salvatore",
+        "Ganacci",
+        "S. Ganacci",
+        "Salvatore G."
+      ],
+      "season": 0,
+      "released": "2025-04-21",
+      "full name": "Salvatore Ganacci"
+    }
+  },
+  {
+    "id": "andy-bogard",
+    "name": "Andy Bogard",
+    "imgPortrait": "/img/char/andy-bogard.webp",
+    "imgSplash": "/img/splash/andy-bogard.webp",
+    "accent": "#E6E1F2",
+    "extra": {
+      "aliases": [
+        "Andy"
+      ],
+      "season": 1,
+      "released": "2025-06-24",
+      "full name": "Andy Bogard"
+    }
+  },
+  {
+    "id": "ken",
+    "name": "Ken",
+    "imgPortrait": "/img/char/ken.webp",
+    "imgSplash": "/img/splash/ken.webp",
+    "accent": "#F04250",
+    "extra": {
+      "aliases": [
+        "Ken Masters"
+      ],
+      "season": 1,
+      "released": "2025-08-04",
+      "full name": "Ken"
+    }
+  },
+  {
+    "id": "joe-higashi",
+    "name": "Joe Higashi",
+    "imgPortrait": "/img/char/joe-higashi.webp",
+    "imgSplash": "/img/splash/joe-higashi.webp",
+    "accent": "#FFA23C",
+    "extra": {
+      "aliases": [
+        "Joe",
+        "Joe Higshi"
+      ],
+      "season": 1,
+      "released": "2025-10-14",
+      "full name": "Joe Higashi"
+    }
+  },
+  {
+    "id": "chun-li",
+    "name": "Chun-Li",
+    "imgPortrait": "/img/char/chun-li.webp",
+    "imgSplash": "/img/splash/chun-li.webp",
+    "accent": "#3FA8E8",
+    "extra": {
+      "aliases": [
+        "Chun Li",
+        "ChunLi",
+        "Chun-lin"
+      ],
+      "season": 1,
+      "released": "2025-11-05",
+      "full name": "Chun-Li"
+    }
+  },
+  {
+    "id": "mr-big",
+    "name": "Mr. Big",
+    "imgPortrait": "/img/char/mr-big.webp",
+    "imgSplash": "/img/splash/mr-big.webp",
+    "accent": "#B95EE8",
+    "extra": {
+      "aliases": [
+        "Mr.Big",
+        "Mr Big",
+        "MrBig"
+      ],
+      "season": 1,
+      "released": "2025-12-10",
+      "full name": "Mr. Big"
+    }
+  },
+  {
+    "id": "kim-jae-hoon",
+    "name": "Kim Jae Hoon",
+    "imgPortrait": "/img/char/kim-jae-hoon.webp",
+    "imgSplash": "/img/splash/kim-jae-hoon.webp",
+    "accent": "#F04A2C",
+    "extra": {
+      "aliases": [
+        "Jae Hoon",
+        "JaeHoon",
+        "J. Hoon",
+        "Kim Jaehoon"
+      ],
+      "season": 2,
+      "released": "2026-01-22",
+      "full name": "Kim Jae Hoon"
+    }
+  },
+  {
+    "id": "nightmare-geese",
+    "name": "Nightmare Geese",
+    "imgPortrait": "/img/char/nightmare-geese.webp",
+    "imgSplash": "/img/splash/nightmare-geese.webp",
+    "accent": "#D04FE0",
+    "extra": {
+      "aliases": [
+        "Geese",
+        "N. Geese",
+        "N.Geese",
+        "Geese Howard",
+        "Gueese"
+      ],
+      "season": 2,
+      "released": "2026-02-26",
+      "full name": "Nightmare Geese"
+    }
+  },
+  {
+    "id": "blue-mary",
+    "name": "Blue Mary",
+    "imgPortrait": "/img/char/blue-mary.webp",
+    "imgSplash": "/img/splash/blue-mary.webp",
+    "accent": "#45D6E0",
+    "extra": {
+      "aliases": [
+        "Mary",
+        "BlueMary"
+      ],
+      "season": 2,
+      "released": "2026-03-26",
+      "full name": "Blue Mary"
+    }
+  },
+  {
+    "id": "wolfgang-krauser",
+    "name": "Wolfgang Krauser",
+    "imgPortrait": "/img/char/wolfgang-krauser.webp",
+    "imgSplash": "/img/splash/wolfgang-krauser.webp",
+    "accent": "#8E6FE0",
+    "extra": {
+      "aliases": [
+        "Krauser",
+        "W. Krauser",
+        "W.Krauser",
+        "Krauser von Stroheim",
+        "Klauser"
+      ],
+      "season": 2,
+      "released": "2026-04-23",
+      "full name": "Wolfgang Krauser"
+    }
+  },
+  {
+    "id": "mr-karate",
+    "name": "Mr. Karate",
+    "imgPortrait": "/img/char/mr-karate.webp",
+    "imgSplash": "/img/splash/mr-karate.webp",
+    "accent": "#FF7E30",
+    "extra": {
+      "aliases": [
+        "Mr.Karate",
+        "Mr Karate",
+        "MrKarate",
+        "Mr Karatê",
+        "Kr.Karate"
+      ],
+      "season": 2,
+      "released": "2026-05-27",
+      "full name": "Mr. Karate"
+    }
+  },
+  {
+    "id": "kenshiro",
+    "name": "Kenshiro",
+    "imgPortrait": "/img/char/kenshiro.webp",
+    "imgSplash": "/img/splash/kenshiro.webp",
+    "accent": "#C7DCF5",
+    "extra": {
+      "aliases": [
+        "Ken shiro"
+      ],
+      "season": 2,
+      "released": "2026-06-29",
+      "full name": "Kenshiro"
+    }
+  },
+  {
+    "id": "rick-strowd",
+    "name": "Rick Strowd",
+    "imgPortrait": "/img/char/rick-strowd.webp",
+    "imgSplash": "/img/splash/rick-strowd.webp",
+    "accent": "#C8895A",
+    "extra": {
+      "aliases": [
+        "Rick",
+        "Rick S.",
+        "Strowd"
+      ],
+      "season": 3,
+      "released": "2026-07-23",
+      "full name": "Rick Strowd"
+    }
+  },
+  {
+    "id": "duck-king",
+    "name": "Duck King",
+    "imgPortrait": "/img/char/duck-king.webp",
+    "imgSplash": "/img/splash/duck-king.webp",
+    "accent": "#2FCBB0",
+    "extra": {
+      "aliases": [
+        "DuckKing"
+      ],
+      "season": 3,
+      "released": "2026-08-27",
+      "full name": "Duck King"
+    }
+  }
+]

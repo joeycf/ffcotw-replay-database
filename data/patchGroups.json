@@ -1,0 +1,153 @@
+[
+  {
+    "id": "Beta",
+    "label": "Beta",
+    "note": "Open beta tests 1 and 2. Admitted per channel via preReleaseFrom, never globally.",
+    "children": [
+      {
+        "id": "2025-02-20",
+        "label": "2025-02-20",
+        "note": "Open Beta Test 1"
+      },
+      {
+        "id": "2025-03-26",
+        "label": "2025-03-26",
+        "note": "Open Beta Test 2 — the vendor’s one version-less patch note"
+      }
+    ]
+  },
+  {
+    "id": "S1",
+    "label": "Season 1",
+    "children": [
+      {
+        "id": "2025-04-21",
+        "label": "2025-04-21",
+        "note": "Launch build"
+      },
+      {
+        "id": "1.1.3",
+        "label": "Ver.1.1.3"
+      },
+      {
+        "id": "1.1.4",
+        "label": "Ver.1.1.4"
+      },
+      {
+        "id": "1.1.5",
+        "label": "Ver.1.1.5"
+      },
+      {
+        "id": "1.1.6",
+        "label": "Ver.1.1.6"
+      },
+      {
+        "id": "1.1.7",
+        "label": "Ver.1.1.7"
+      },
+      {
+        "id": "1.2.0",
+        "label": "Ver.1.2.0",
+        "note": "Andy Bogard"
+      },
+      {
+        "id": "1.2.1",
+        "label": "Ver.1.2.1"
+      },
+      {
+        "id": "1.3.1",
+        "label": "Ver.1.3.1",
+        "note": "Ken"
+      },
+      {
+        "id": "1.4.0",
+        "label": "Ver.1.4.0",
+        "note": "Joe Higashi · Ranked Phase 1"
+      },
+      {
+        "id": "1.5.0",
+        "label": "Ver.1.5.0",
+        "note": "Chun-Li"
+      },
+      {
+        "id": "1.6.0",
+        "label": "Ver.1.6.0",
+        "note": "Mr. Big"
+      }
+    ]
+  },
+  {
+    "id": "S2",
+    "label": "Season 2 · Legends Unleashed",
+    "note": "Opened by Ver.1.7.2, whose notes say so in the vendor’s own words.",
+    "children": [
+      {
+        "id": "1.7.2",
+        "label": "Ver.1.7.2",
+        "note": "Kim Jae Hoon · Season 2 opener"
+      },
+      {
+        "id": "1.7.3",
+        "label": "Ver.1.7.3"
+      },
+      {
+        "id": "1.8.0",
+        "label": "Ver.1.8.0",
+        "note": "Nightmare Geese"
+      },
+      {
+        "id": "1.9.0",
+        "label": "Ver.1.9.0",
+        "note": "Blue Mary"
+      },
+      {
+        "id": "2.0.1",
+        "label": "Ver.2.0.1",
+        "note": "Wolfgang Krauser · 1st anniversary — a MAJOR bump inside Season 2"
+      },
+      {
+        "id": "2.0.2",
+        "label": "Ver.2.0.2"
+      },
+      {
+        "id": "2.0.3",
+        "label": "Ver.2.0.3"
+      },
+      {
+        "id": "2.1.2",
+        "label": "Ver.2.1.2",
+        "note": "Mr. Karate"
+      },
+      {
+        "id": "2.2.0",
+        "label": "Ver.2.2.0",
+        "note": "Kenshiro"
+      }
+    ]
+  },
+  {
+    "id": "S3",
+    "label": "Season 3 · Destined for Revenge",
+    "note": "Opened by Ver.3.0.0. Runs to December 2026 on the announced schedule.",
+    "children": [
+      {
+        "id": "3.0.0",
+        "label": "Ver.3.0.0",
+        "note": "Rick Strowd · Season 3 opener · Ranked Phase 4"
+      },
+      {
+        "id": "3.0.1",
+        "label": "Ver.3.0.1"
+      },
+      {
+        "id": "3.1.2",
+        "label": "Ver.3.1.2",
+        "note": "Duck King"
+      },
+      {
+        "id": "3.1.3",
+        "label": "Ver.3.1.3"
+      }
+    ]
+  }
+]

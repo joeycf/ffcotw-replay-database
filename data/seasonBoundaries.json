@@ -1,0 +1,33 @@
+[
+  {
+    "season": 0,
+    "start": "2025-02-20",
+    "end": "2025-04-21",
+    "confirmed": true,
+    "label": "Beta",
+    "note": "Open beta tests 1 and 2. Admitted per channel via preReleaseFrom, never globally."
+  },
+  {
+    "season": 1,
+    "start": "2025-04-21",
+    "end": "2026-01-21",
+    "confirmed": true,
+    "label": "Season 1"
+  },
+  {
+    "season": 2,
+    "start": "2026-01-21",
+    "end": "2026-07-17",
+    "confirmed": true,
+    "label": "Season 2 · Legends Unleashed",
+    "note": "Opened by Ver.1.7.2, whose notes say so in the vendor’s own words."
+  },
+  {
+    "season": 3,
+    "start": "2026-07-17",
+    "end": null,
+    "confirmed": true,
+    "label": "Season 3 · Destined for Revenge",
+    "note": "Opened by Ver.3.0.0. Runs to December 2026 on the announced schedule."
+  }
+]
