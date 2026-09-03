@@ -31,6 +31,21 @@
  * suit: it proves the outlines came from the real font (a known glyph advance
  * and a non-trivial path), so a corrupt or missing TTF still fails loudly.
  *
+ * ── IT IS ALSO THE SELECTOR CARD ──────────────────────────────────────────
+ * The shell's game cards are byte-copies of each game repo's own
+ * og-default.png (2XKO, Tekken and SF6 all are; Tōkon needed a bespoke
+ * generator only because it had no game repo at the time). So this file has to
+ * speak the platform's card language, not just be a valid image:
+ *
+ *   · a cut-corner badge in the game's PRIMARY, carrying the platform slash
+ *   · the wordmark, with the slash in the game's SECONDARY
+ *   · "The competitive <full name> replay database", then the tagline
+ *   · a footer stripe that is THE ROSTER: one segment per fighter, in roster
+ *     order, each in that fighter's own accent. Sampled from the shipped cards
+ *     to confirm — Tōkon's stripe is 21 segments and SF6's is 30, matching
+ *     their roster sizes exactly. Reading it from data/characters.json here
+ *     means the card tracks the roster instead of going stale on the next DLC.
+ *
  * Run: npm run data:og   (manual — the card changes when the brand does)
  */
 
@@ -50,102 +65,93 @@ const BG = '#0F0D0B';
 const SURFACE = '#171513';
 const PRIMARY = '#FFD21F';
 const TEXT = '#F2EDE4';
+const TEXT_DIM = '#C4BDB3';
 const MUTED = '#B5ADA2';
-const FAINT = '#8B837A';
+const SECONDARY = '#F5433A';
+const PRIMARY_CONTRAST = '#17130E';
 
-interface Chunk {
+interface Glyph {
+  /** SVG path data for ONE glyph, drawn at the origin. */
   path: string;
-  /** x offset of this chunk within the whole string, in px. */
+  /** x offset of this glyph within the string, in px. */
   dx: number;
-  /** advance width of this chunk alone, so its canvas can be cropped to it. */
-  w: number;
 }
 
 /**
- * Text → a SEQUENCE of SVG paths, each short, each drawn at the origin and
- * positioned by its measured advance.
+ * Text → ONE PATH PER GLYPH, each drawn at the origin and positioned by the
+ * font's own advance and kern pairs.
  *
- * TWO LIBRSVG LIMITS ARE BEING ROUTED AROUND HERE, and both were found by
- * looking at the rendered card rather than by any assertion on the data:
+ * THIS SHAPE IS FORCED BY TWO INDEPENDENT DEFECTS, both found by looking at the
+ * rendered card rather than by any assertion on the data:
  *
- *  · a long `d` attribute truncates mid-string. The 46-character subtitle
- *    (~14k chars of path data) renders in full; the 43-character stat line
- *    (~17k) stops after "character usage · ma".
- *  · the same path emitted at a non-zero x offset truncates EARLIER than at
- *    x=0, at the same glyph regardless of coordinate precision.
+ *  1. librsvg truncates a long `d` attribute mid-string. The 46-character
+ *     subtitle (~14k chars of path data) renders in full; the 43-character stat
+ *     line (~17k) stops after "character usage · ma". The same path emitted at
+ *     a non-zero x offset truncates EARLIER, at the same glyph regardless of
+ *     coordinate precision. Neither is root-caused; both disappear when every
+ *     path is short and starts at the origin.
  *
- * Neither is root-caused. Both disappear if every path is short and starts at
- * the origin, so that is what this does: split on spaces into chunks of at most
- * MAX_CHUNK_CHARS, draw each at (0, size), and place it with the compositor at
- * the advance width of everything before it. Advance widths come from the font,
- * so the spacing is the font's own metrics and not an approximation.
+ *  2. opentype.js emits literal `NaN` coordinates, and it is NOT only for
+ *     variable fonts. Measured on the STATIC Figtree-Regular: "P" and "2" each
+ *     produce NaN alone, and "Character" produces NaN while "C", "Ch", "City"
+ *     and "character" do not — so the fault is in multi-glyph LAYOUT, not in
+ *     any one outline. Drawing glyphs individually removes the composition step
+ *     the bug lives in.
  *
- * The failure this prevents is the one 5d is really about: a card that has
- * silently dropped half a line still looks like a deliberate design.
+ * Positioning uses getAdvanceWidth per glyph plus getKerningValue between
+ * pairs, so the spacing is the font's own metrics rather than an approximation.
+ * The NaN assertion stays and now runs per glyph, because a glyph that still
+ * fails must stop the build rather than render as a gap.
  */
-const MAX_CHUNK_CHARS = 14;
-
-function chunksOf(font: opentype.Font, text: string, size: number): Chunk[] {
-  const words = text.split(' ');
-  const groups: string[] = [];
-  let cur = '';
-  for (const w of words) {
-    const next = cur ? `${cur} ${w}` : w;
-    if (next.length > MAX_CHUNK_CHARS && cur) {
-      groups.push(cur);
-      cur = w;
-    } else {
-      cur = next;
-    }
-  }
-  if (cur) groups.push(cur);
-
-  const out: Chunk[] = [];
+function glyphsOf(font: opentype.Font, text: string, size: number): Glyph[] {
+  const scale = size / font.unitsPerEm;
+  const out: Glyph[] = [];
   let dx = 0;
-  for (const [i, g] of groups.entries()) {
-    // The chunk carries its own trailing space when it is not the last, so the
-    // advance below is the real distance to the next chunk.
-    const withSpace = i === groups.length - 1 ? g : `${g} `;
-    const d = font.getPath(g, 0, size, size).toPathData(2);
-    // ── THE GEOMETRY MUST BE FINITE, AND THIS IS CHECKED ON THE ARTIFACT ───
-    // opentype.js emits literal `NaN` coordinates for some glyphs of a
-    // VARIABLE font. Measured on Figtree[wght].ttf: the word "character"
-    // produced "Q12.22 14.33 NaN 15.78", librsvg stopped parsing at the NaN,
-    // and the word rendered as its first letter and nothing else.
-    //
-    // AN EARLIER VERSION OF THIS CHECK PROBED EACH GLYPH IN ISOLATION AT THE
-    // ORIGIN AND DID NOT FIRE — the NaN only appears in the composed,
-    // positioned path, which is the thing that actually ships. So the check
-    // reads the emitted `d` string itself. That is checklist 5k's rule
-    // ("read the current answer live", never a cached proxy for it) applied to
-    // geometry rather than to a label cache.
-    //
-    // It is also why design/fonts/ carries STATIC instances and never variable
-    // fonts: the advance width was correct and every glyph reported contours,
-    // so both of the other assertions passed while the output was broken.
-    if (d.includes('NaN') || d.includes('Infinity')) {
-      console.error(
-        [
-          `✖ non-finite path geometry for ${JSON.stringify(g)} at size ${size}.`,
-          `    ${d.slice(Math.max(0, d.indexOf('NaN') - 40), d.indexOf('NaN') + 20)}`,
-          '',
-          '  librsvg stops parsing a path at the first bad number, so this word would have',
-          '  rendered as its first glyph and nothing else — which looks like a design choice.',
-          '  Cause, every time so far: a VARIABLE font. Use a static instance.',
-        ].join('\n'),
-      );
-      process.exit(1);
+  const chars = [...text];
+  for (const [i, ch] of chars.entries()) {
+    const glyph = font.charToGlyph(ch);
+    if (ch !== ' ') {
+      const d = glyph.getPath(0, size, size).toPathData(2);
+      if (d.includes('NaN') || d.includes('Infinity')) {
+        console.error(
+          [
+            `✖ non-finite path geometry for ${JSON.stringify(ch)} at size ${size}.`,
+            `    ${d.slice(0, 90)}`,
+            '',
+            '  librsvg stops parsing a path at the first bad number, so this glyph would have',
+            '  rendered as a gap — which looks like letter-spacing rather than a failure.',
+            '  opentype.js does this for some glyphs of some fonts; try another static cut.',
+          ].join('\n'),
+        );
+        process.exit(1);
+      }
+      if (d) out.push({ path: d, dx });
     }
-    out.push({ path: d, dx, w: font.getAdvanceWidth(g, size) });
-    dx += font.getAdvanceWidth(withSpace, size);
+    dx += glyph.advanceWidth! * scale;
+    const next = chars[i + 1];
+    if (next) dx += font.getKerningValue(glyph, font.charToGlyph(next)) * scale;
   }
   return out;
+}
+
+/** Total advance of `text`, using the same metrics glyphsOf lays out with. */
+function widthOf(font: opentype.Font, text: string, size: number): number {
+  const scale = size / font.unitsPerEm;
+  const chars = [...text];
+  let w = 0;
+  for (const [i, ch] of chars.entries()) {
+    const g = font.charToGlyph(ch);
+    w += g.advanceWidth! * scale;
+    const next = chars[i + 1];
+    if (next) w += font.getKerningValue(g, font.charToGlyph(next)) * scale;
+  }
+  return w;
 }
 
 /** Parse a committed TTF and assert it can actually draw `text`. */
 function loadFont(fontFile: string, text: string, size: number): opentype.Font {
   const font = opentype.parse(readFileSync(join(FONT_DIR, fontFile)).buffer as ArrayBuffer);
-  const advance = font.getAdvanceWidth(text, size);
+  const advance = widthOf(font, text, size);
   // Per-CHARACTER, not per-string. A length floor is wrong for short text (it
   // fired on the single "/" of the wordmark, whose path is legitimately tiny);
   // what matters is that every non-space character contributed contours. A font
@@ -176,86 +182,115 @@ function loadFont(fontFile: string, text: string, size: number): opentype.Font {
 async function main(): Promise<void> {
   const sharp = (await import('sharp')).default;
 
-  const WORD = 'COTW/REPLAY';
-  const L1 = 'FATAL FURY: City of the Wolves — replay archive';
-  const L2 = 'character usage · matchups · meta over time';
-  const L3 = 'replaydatabase.com/ffcotw';
+  const WORD_A = 'COTW';
+  const WORD_B = 'REPLAY';
+  const L1 = 'The competitive FATAL FURY: City of the Wolves replay database';
+  const L2 = 'Character usage · matchups · meta over time';
 
-  const anton = loadFont('Anton-Regular.ttf', WORD, 104);
-  const figtree = loadFont('Figtree-Regular.ttf', `${L1}${L2}${L3}`, 34);
+  const anton = loadFont('Anton-Regular.ttf', `${WORD_A}/${WORD_B}`, 104);
+  const figtree = loadFont('Figtree-Regular.ttf', `${L1}${L2}`, 34);
 
-  // TIGHTLY CROPPED, one small canvas per chunk. Full-page 1200×630 layers
-  // still dropped chunks — the first word of the stat line rendered as a single
-  // dot with twelve layers in flight — and a small canvas is both the fix and
-  // obviously cheaper. Height allows for descenders; width for the chunk's own
-  // advance plus a little slack so the final glyph's right sidebearing is not
-  // clipped.
-  const layer = async (
-    d: string,
-    fill: string,
-    w: number,
-    size: number,
-    left: number,
-    top: number,
-  ) => ({
-    input: await sharp(
-      Buffer.from(
-        `<svg xmlns="http://www.w3.org/2000/svg" width="${Math.ceil(w) + 12}" height="${Math.ceil(size * 1.6)}">` +
-          `<path d="${d}" fill="${fill}"/></svg>`,
-      ),
+  // The footer stripe is the roster, in roster order.
+  const roster = JSON.parse(readFileSync(join(ROOT, 'data', 'characters.json'), 'utf8')) as {
+    id: string;
+    accent: string;
+  }[];
+  if (roster.length === 0) {
+    console.error('✖ data/characters.json is empty — the footer stripe would be blank.');
+    process.exit(1);
+  }
+  const STRIPE = 16;
+  const seg = W / roster.length;
+  const stripe = roster
+    // +0.5px of overlap so neighbouring segments never leave a hairline gap at
+    // fractional widths. Written as (seg + 0.5).toFixed(2) and not
+    // seg.toFixed(2) + 0.5, which is string concatenation and emits
+    // width="40.000.5" — an invalid length that librsvg drops, taking the whole
+    // stripe with it. It shipped invisible exactly once.
+    .map(
+      (c, i) =>
+        `<rect x="${(i * seg).toFixed(2)}" y="${H - STRIPE}" width="${(seg + 0.5).toFixed(2)}" height="${STRIPE}" fill="${c.accent}"/>`,
     )
-      .png()
-      .toBuffer(),
-    left,
-    top,
-  });
+    .join('');
 
-  const line = async (
+  // Every glyph is its own <path>, all in ONE overlay document. The paths are
+  // individually tiny, which is what the librsvg limit actually cares about.
+  const paths: string[] = [];
+  const line = (
     font: opentype.Font,
     text: string,
     size: number,
     fill: string,
     left: number,
     top: number,
-  ) =>
-    Promise.all(
-      chunksOf(font, text, size).map((c) =>
-        layer(c.path, fill, c.w, size, left + Math.round(c.dx), top),
-      ),
-    );
+  ): void => {
+    for (const g of glyphsOf(font, text, size)) {
+      paths.push(
+        `<g transform="translate(${(left + g.dx).toFixed(2)} ${top})"><path d="${g.path}" fill="${fill}"/></g>`,
+      );
+    }
+  };
 
-  // The wordmark is three chunks so the slash can take the primary colour.
-  const cotwW = anton.getAdvanceWidth('COTW', 104);
-  const slashW = anton.getAdvanceWidth('/', 104);
-  const WORD_Y = 196;
-  const layers = [
-    ...(await line(anton, 'COTW', 104, TEXT, 70, WORD_Y)),
-    ...(await line(anton, '/', 104, PRIMARY, 70 + Math.round(cotwW), WORD_Y)),
-    ...(await line(anton, 'REPLAY', 104, TEXT, 70 + Math.round(cotwW + slashW), WORD_Y)),
-    ...(await line(figtree, L1, 34, MUTED, 74, 334)),
-    ...(await line(figtree, L2, 26, MUTED, 74, 398)),
-    ...(await line(figtree, L3, 22, FAINT, 74, 538)),
-  ];
+  const BADGE = 116;
+  const BX = 70;
+  const BY = 168;
+  const wordLeft = BX + BADGE + 34;
+  const aW = widthOf(anton, `${WORD_A}`, 104);
+  const slashW = widthOf(anton, '/', 104);
+  const WORD_Y = 176;
 
+  line(anton, WORD_A, 104, TEXT, wordLeft, WORD_Y);
+  line(anton, '/', 104, SECONDARY, wordLeft + aW, WORD_Y);
+  line(anton, WORD_B, 104, TEXT, wordLeft + aW + slashW, WORD_Y);
+  line(figtree, L1, 34, TEXT_DIM, BX + 6, 330);
+  line(figtree, L2, 26, MUTED, BX + 6, 392);
+
+  // The chassis: diagonal texture, a corner wash in the primary, the badge, and
+  // the roster stripe. All background, so it is one SVG — the path-length limit
+  // that forces the type into chunks does not apply to rects and lines.
   const base = Buffer.from(
     `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
       <defs>
-        <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+        <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stop-color="${SURFACE}"/>
           <stop offset="100%" stop-color="${BG}"/>
         </linearGradient>
+        <radialGradient id="wash" cx="78%" cy="18%" r="62%">
+          <stop offset="0%" stop-color="${PRIMARY}" stop-opacity="0.20"/>
+          <stop offset="100%" stop-color="${PRIMARY}" stop-opacity="0"/>
+        </radialGradient>
+        <pattern id="diag" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+          <rect width="14" height="14" fill="none"/>
+          <rect width="5" height="14" fill="#FFFFFF" fill-opacity="0.018"/>
+        </pattern>
       </defs>
-      <rect width="100%" height="100%" fill="url(#g)"/>
-      <rect x="0" y="0" width="${W}" height="10" fill="${PRIMARY}"/>
+      <rect width="100%" height="100%" fill="url(#bg)"/>
+      <rect width="100%" height="100%" fill="url(#diag)"/>
+      <rect width="100%" height="100%" fill="url(#wash)"/>
+      <!-- the platform badge: a cut-corner square in the game's primary,
+           carrying the same slash the wordmark uses -->
+      <path d="M${BX} ${BY} H${BX + BADGE - 26} L${BX + BADGE} ${BY + 26} V${BY + BADGE} H${BX} Z" fill="${PRIMARY}"/>
+      <path d="M${BX + BADGE * 0.62} ${BY + BADGE * 0.2} L${BX + BADGE * 0.34} ${BY + BADGE * 0.8} l14 0 L${BX + BADGE * 0.62 + 14} ${BY + BADGE * 0.2} Z" fill="${PRIMARY_CONTRAST}"/>
+      ${stripe}
     </svg>`,
+  );
+
+  const overlay = Buffer.from(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">${paths.join('')}</svg>`,
   );
 
   const out = join(ROOT, 'public', 'og-default.png');
   await mkdir(dirname(out), { recursive: true });
-  await writeFile(out, await sharp(base).composite(layers).png().toBuffer());
+  await writeFile(
+    out,
+    await sharp(base)
+      .composite([{ input: await sharp(overlay).png().toBuffer(), top: 0, left: 0 }])
+      .png()
+      .toBuffer(),
+  );
   console.log(
-    `✓ public/og-default.png — ${W}×${H}, ${layers.length} outline layer(s) from committed OFL ` +
-      `TTFs; no font resolution at raster time, so there is no fallback to be plausible about`,
+    `✓ public/og-default.png — ${W}×${H}, ${paths.length} glyph outline(s) from committed OFL ` +
+      `TTFs, ${roster.length}-segment roster stripe; no font resolution at raster time`,
   );
 }
 
