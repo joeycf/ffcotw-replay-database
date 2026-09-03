@@ -1,0 +1,171 @@
+name: Daily data refresh
+
+on:
+  schedule:
+    # 08:17 UTC daily (odd minute to dodge cron rush; the FIFTH stagger slot on
+    # the platform, after 2XKO's 06:17, Tekken's 06:47, SF6's 07:17 and Tōkon's
+    # 07:47, so the five refreshes never contend).
+    #
+    # NOTE FOR WHOEVER ADDS GAME SIX: the platform's refresh window was
+    # 06:00–08:00 and this entry widens it to 06:00–08:30. The pattern is +30
+    # minutes alternating :17/:47, so the next free slot is 08:47.
+    - cron: '17 8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          # matches engines.node (the platform's Node policy — STACK.md §1)
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      # fetch + parse + emit. The roster, the character art and the OG card are
+      # NOT part of the daily run: scripts/characters.ts, scripts/art.ts and
+      # scripts/og.ts only run when the roster or the brand changes, and
+      # scripts/patch-check.ts is manual by design (a patch table is a human
+      # decision, and a daily job reaching out to the vendor would fail on their
+      # outage rather than ours).
+      - name: Fetch channel uploads
+        run: npm run data:fetch
+        env:
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+
+      # THE INDEX PULL, AND IT IS ALLOWED TO FAIL.
+      #
+      # This is the second half of "the cron never depends on Replay Theater
+      # succeeding", and it is deliberately a step of its own rather than a link
+      # in an && chain — a chain would take the whole refresh down with it,
+      # which is exactly the dependency the split exists to avoid.
+      #
+      # continue-on-error marks the run yellow and moves on. scripts/parse.ts
+      # then finds no dump, carries the committed records against the pin in
+      # data/source-pins.json, and the rest of the day proceeds normally. A bad
+      # morning upstream costs that morning's new entries; nothing already
+      # committed is at risk, because this intake is add-only.
+      #
+      # LAST OF THE FETCHES, so a failure here cannot cost the channel dumps
+      # already in hand. It reads a bounded cursor (two clean pages, ten at
+      # most) rather than the whole 70-page catalogue.
+      #
+      # YT_API_KEY is repeated on purpose: `env:` is per step, and
+      # requireApiKey() runs at module load, so without it this exits 1 before
+      # it has read anything.
+      - name: Fetch the tournament index (Replay Theater)
+        continue-on-error: true
+        run: npm run data:theater
+        env:
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+
+      - name: Parse
+        run: npm run data:parse
+
+      - name: Emit
+        run: npm run data:emit
+
+      - name: Commit if changed
+        run: |
+          git config user.name "ffcotw-data-refresh[bot]"
+          git config user.email "data-refresh@users.noreply.github.com"
+          # THE FILE LIST IS BY NAME, NEVER `git add data/`. A blanket add would
+          # stage whatever else happens to be in data/ — a hand-edited
+          # overrides.json mid-review, a scratch file — and commit it as part of
+          # an unattended refresh. Every file below is pipeline-owned:
+          #
+          #   videos.json          the parse substrate
+          #   replays.json         the emitted public contract (also copied to
+          #                        public/data at build time)
+          #   stats.json players.json characters.json
+          #                        the provided registries
+          #   patchGroups.json patchBoundaries.json seasonBoundaries.json
+          #                        derived from scripts/patches.ts; a daily run
+          #                        can legitimately change them the day a patch
+          #                        is added
+          #   summary.json         the apex selector's card payload
+          #   review-queue.json    parse-regenerated derived state, content-only
+          #   player-redirects.json hand-authored but validated here
+          #   source-pins.json     the index intake's carry pin. Most runs
+          #                        rebuild and rewrite it, so staging it is
+          #                        required — an unstaged file that DOES change
+          #                        is a change discarded in silence.
+          #   theater-cursor.json  where the index pull remembers how far it
+          #                        read. raw/ is gitignored and CI starts from a
+          #                        fresh checkout, so uncommitted the cursor
+          #                        resets to 0 every morning and every run
+          #                        becomes a bounded sweep that never goes quiet.
+          #   report.md            the human-readable run report
+          git add \
+            data/videos.json data/replays.json data/stats.json data/players.json \
+            data/characters.json data/patchGroups.json data/patchBoundaries.json \
+            data/seasonBoundaries.json data/summary.json data/review-queue.json \
+            data/player-redirects.json data/source-pins.json data/theater-cursor.json \
+            data/report.md
+          # report.md's "_Generated <timestamp>_" line changes every run; a diff
+          # that is ONLY that line is not a data change — drop it so a no-change
+          # day produces no commit (and no deploy). report.md still ships
+          # whenever anything real changes alongside it — including the day an
+          # "## ⚠ ACTION REQUIRED" block first appears, which is real content.
+          REAL=$(git diff --cached -- data/report.md | grep -E '^[+-]' | grep -vE '^(\+\+\+|---)' | { grep -vc '^[+-]_Generated ' || true; })
+          if [ "$REAL" -eq 0 ]; then
+            git restore --staged --worktree data/report.md
+          fi
+          # AND THE SAME FOR THE CURSOR. The catalogue takes new entries most
+          # days whether or not any of OUR data changed, so the highest-seen id
+          # rises on essentially every run. Left staged that would retire the
+          # no-change-no-commit rule outright and put a deploy on the calendar
+          # every day forever. Dropped when it is the only thing left, the cursor
+          # simply does not advance on a quiet day and the next run re-reads
+          # those pages; the cost is a page or two, bounded at ten, and nothing
+          # is lost because the intake is add-only.
+          #
+          # Written as an emptiness test on the remaining staged NAMES rather
+          # than `git diff --quiet -- <paths>`: with the cursor filtered out that
+          # path list can be EMPTY, and an empty pathspec means "everything",
+          # which would silently invert the check.
+          OTHERS=$(git diff --cached --name-only | grep -v '^data/theater-cursor.json$' || true)
+          if [ -z "$OTHERS" ]; then
+            git restore --staged --worktree data/theater-cursor.json
+          fi
+          if git diff --cached --quiet; then
+            echo "No data changes — skipping commit."
+            exit 0
+          fi
+          N=$(node -p "require('./data/replays.json').length")
+          git commit -m "data: refresh $(date -u +%F) — ${N} replays"
+          git push
+
+      # Deploy is Vercel's git integration off the push above — there is no
+      # deploy step here to run "after", so this polls until production serves
+      # the digest we just committed. A build still in flight is a WARNING; a
+      # served count outside the collapse guard's own band is a FAILURE. The
+      # guard in parse.ts protects the repository; this protects what visitors
+      # get.
+      #
+      # Deliberately BEFORE "Flag due expiries": that step is designed to go
+      # red, and a red step stops the ones after it.
+      - name: Post-deploy smoke check
+        run: npm run verify:deployed
+
+      - name: Flag due expiries
+        # Deliberately LAST and deliberately failing (scripts/expiries.ts).
+        # The data has already been committed and pushed by the step above, so a
+        # red run never costs a refresh — it only makes the pending work
+        # impossible to miss. Three things can trip it: an announced Season 3
+        # fighter's window closing (Kim Kaphwan 2026-09-30, the October mystery
+        # slot 2026-10-31, Laocorn 2026-11-30, the December slot 2026-12-31), an
+        # unconfirmed season, and the patch table going 40 days stale.
+        # Clear it by doing the work, NOT by deleting this step.
+        run: npx tsx scripts/expiries.ts --check
