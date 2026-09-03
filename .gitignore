@@ -1,0 +1,24 @@
+.env
+node_modules
+raw/
+
+# Nuxt / build artifacts
+.nuxt
+.output
+.vercel
+.data
+dist
+public/data/
+cache/
+
+# Local credentials
+secrets/
+
+# Local agent config
+.claude/
+
+# fontconfig's cache, created by design/fonts/fonts.conf when the image
+# generators run. Regenerable, machine-specific, and it appears at whatever
+# directory the process happened to start in.
+.fc-cache/
+design/fonts/.fc-cache/

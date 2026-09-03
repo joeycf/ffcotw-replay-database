@@ -1,0 +1,65 @@
+{
+  "name": "ffcotw-replay-database",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "FATAL FURY: City of the Wolves game app for the Replay Database platform: thin consumer of the replay-engine layer + the bespoke CotW data pipeline (fetch/parse YouTube replay uploads across nine channels, Replay Theater index intake as source and witness).",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt prepare && nuxt typecheck && tsc --noEmit -p tsconfig.pipeline.json && tsx scripts/patches.ts --check && tsx scripts/redirects.ts --check",
+    "lint": "nuxt prepare && eslint .",
+    "lint:fix": "nuxt prepare && eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "data:fetch": "tsx --env-file-if-exists=.env scripts/fetch.ts",
+    "data:parse": "tsx scripts/parse.ts",
+    "data:build": "npm run data:fetch && npm run data:parse",
+    "data:theater": "tsx --env-file-if-exists=.env scripts/fetch-theater.ts",
+    "data:emit": "tsx scripts/emit.ts",
+    "data:characters": "tsx scripts/characters.ts",
+    "data:art": "tsx scripts/art.ts",
+    "data:og": "tsx scripts/og.ts",
+    "data:patches": "tsx scripts/patches.ts --check",
+    "data:patch-check": "tsx scripts/patch-check.ts",
+    "data:expiries": "tsx scripts/expiries.ts --check",
+    "data:catchup": "tsx --env-file-if-exists=.env scripts/catchup.ts",
+    "data:redirects": "tsx scripts/redirects.ts",
+    "verify:deployed": "tsx scripts/verify-deployed.ts",
+    "test:e2e": "tsx scripts/e2e.ts",
+    "verify:gates": "tsx scripts/verify-gates.ts"
+  },
+  "devDependencies": {
+    "@fontsource/anton": "^5.3.0",
+    "@fontsource/figtree": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.2.8",
+    "@nuxt/eslint": "^1.16.0",
+    "@types/node": "^24.13.3",
+    "@types/opentype.js": "^1.3.10",
+    "animejs": "^4.5.0",
+    "eslint": "^10.6.0",
+    "eslint-config-prettier": "^10.1.8",
+    "nuxt": "^4.4.8",
+    "opentype.js": "^2.0.0",
+    "playwright-core": "^1.61.1",
+    "prettier": "^3.9.5",
+    "sharp": "^0.35.3",
+    "tsx": "^4.22.4",
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.3.7"
+  },
+  "overrides": {
+    "@vercel/analytics": {
+      "vue-router": "^5"
+    },
+    "@vercel/speed-insights": {
+      "vue-router": "^5"
+    }
+  },
+  "engines": {
+    "node": ">=24 <25"
+  }
+}
