@@ -1,0 +1,121 @@
+/* ==========================================================================
+   FATAL FURY: City of the Wolves — the skin.
+
+   Transcribed from design/handoff/tokens.css, which is the design system's
+   source of truth. Only the ENGINE'S semantic tokens live here; the 32
+   --char-* accents are NOT in this file — they go to app.config.ts `accents`,
+   which the engine injects as --accent-<id> (app/plugins/accents.ts), and
+   scripts/characters.ts reads the same handoff block so the two cannot drift.
+
+   THE CONTRACT (STACK §5.13, engine README "Theming"):
+   this MUST be a plain, UNLAYERED :root block — never @theme. An app
+   stylesheet does not pass through the engine's Tailwind root compile, so an
+   @theme block ships raw, the browser drops it as an unknown at-rule, and
+   production silently wears the umbrella defaults. `nuxt dev` compiles each
+   CSS file on its own and masks it exactly. Unlayered :root beats the
+   engine's @layer theme in every build mode because app CSS loads after it.
+   Gated by the engine's scripts/verify-override.mjs on the built bundle.
+
+   @fontsource specifiers are EXTENSIONLESS on purpose: the packages are not
+   uniform about their ./*.css exports, and the extension form is what broke
+   SF6's display face.
+
+   ── TRANSCRIPTION NOTE ────────────────────────────────────────────────────
+   The handoff declares 21 --color-* names; the engine shadows 18. Reconciled:
+
+   · 14 map 1:1 and are verbatim.
+   · 1 is a RENAME only: the handoff's `--color-faint` is the engine's
+     `--color-text-faint` (#8B837A). Same value, same role, different name —
+     shipping the handoff's spelling would leave the engine token at its
+     umbrella default and nothing would report it.
+   · 3 the engine wants are ABSENT from the handoff and are DERIVED below,
+     each on the handoff's own warm ramp using the engine default theme's own
+     step ratios (measured: sunken/bg 0.7424, border-subtle/border 0.7092,
+     text-secondary at 78.87% of the luminance span text→text-muted). All
+     three were checked to sit in the right order on the ramp.
+   · 6 the handoff declares have NO engine consumer (`surface-high`,
+     `border-strong`, `secondary-contrast`, `info`, `win`, `loss` — grepped:
+     zero hits in the engine's app/). They are parked at the bottom as
+     comments so the design intent survives without shipping dead custom
+     properties.
+
+   Every ratio the handoff claimed was re-measured against --color-surface
+   #171513 (47 of them, including the 32 accents). 46 matched to 0.05. One
+   did not: --char-mr-karate #FF7E30 is stated as 7.3:1 and measures 7.18:1.
+   That is a documentation error, not a failure — it clears the 4.5:1 AA
+   floor with room, and the lowest accent on the roster is wolfgang-krauser
+   at 4.77:1. The value ships as designed; the claim is corrected here.
+
+   COLLISION LEVER, from the handoff and verified against the four shipped
+   skins: sampled FATAL FURY red #E8281E is Δhue 11° from Tekken's #E13048
+   and Δhue 0° from Tōkon's danger #FF4B42 — a chip-size sibling either way.
+   So red is SECONDARY and the REV-gauge yellow #FFD21F is PRIMARY. Primary
+   yellow measures Δhue 20° from SF6's #FF7D00, which is the tightest primary
+   pair on the platform; the selector card and SourceBadge must be eyeballed
+   beside SF6 at chip size, not only in isolation.
+   ========================================================================== */
+
+@import '@fontsource/anton/400';
+@import '@fontsource/figtree/400';
+@import '@fontsource/figtree/500';
+@import '@fontsource/figtree/600';
+@import '@fontsource/figtree/700';
+@import '@fontsource/figtree/800';
+@import '@fontsource/jetbrains-mono/400';
+@import '@fontsource/jetbrains-mono/700';
+
+:root {
+  /* Type. Anton is display-only condensed block lettering. Unlike Tōkon there
+     is no diacritic in the wordmark ("COTW/REPLAY" is plain ASCII), but the
+     ROSTER leans on punctuation Anton has to draw cleanly — "B. Jenet",
+     "Kain R. Heinlein", "Chun-Li", "Mr. Karate" — and player handles parsed
+     from titles carry latin-ext ("SÂO BRISADO", "Mr Karatê", "Ángel"), which
+     is Figtree's job. Both are asserted in e2e per subset, not per family:
+     document.fonts.check returns true for a family whose unicode-range does
+     not cover the text, because the uncovered glyph silently falls back. */
+  --font-display: 'Anton', 'Arial Narrow', 'Impact', sans-serif;
+  --font-ui: 'Figtree', 'Helvetica Neue', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Surfaces. Warm-grey asphalt (H ~30°, S .10) — distinct from Tekken's
+     neutral carbon (S 0), SF6's warmer/redder asphalt, and Tōkon's blue ink. */
+  --color-bg: #0f0d0b; /* page — asphalt black, from key-art ground #14110F */
+  --color-surface: #171513; /* card panel — the accent AA reference */
+  --color-surface-raised: #1f1c19; /* hover / raised panel */
+  --color-surface-sunken: #0b0a08; /* DERIVED — inset wells, one step below bg */
+  --color-border: #36302a; /* hairline panel gutter */
+  --color-border-subtle: #26221e; /* DERIVED — sits between surface-raised and border */
+
+  /* Text tiers. */
+  --color-text: #f2ede4; /* fang-silver lifted to paper (from #D9D4CC) · 15.62:1 */
+  --color-text-secondary: #c4bdb3; /* DERIVED — 78.87% of the span text→text-muted · 9.78:1 */
+  --color-text-muted: #b5ada2; /* secondary copy, warm concrete · 8.21:1 */
+  --color-text-faint: #8b837a; /* meta / timestamps — the handoff's `--color-faint` · 4.88:1 */
+
+  /* Brand. Yellow primary by the collision lever above; red demoted. */
+  --color-primary: #ffd21f; /* REV-gauge yellow — sampled · 12.57:1 */
+  --color-primary-hover: #ffe066; /* primary hover/active lift · 13.97:1 */
+  --color-primary-contrast: #17130e; /* asphalt text on primary · 12.76:1 on primary */
+  --color-secondary: #f5433a; /* FATAL FURY red — sampled #E8281E, lifted for AA · 4.98:1 */
+  --color-focus: #ffe680; /* focus ring pale yellow · 14.64:1 */
+
+  /* Status. Danger is deliberately hue-split off the red secondary: with red
+     demoted to a brand colour, a red danger state would be indistinguishable
+     from ordinary chrome. */
+  --color-danger: #ff3b9e; /* hot pink — 33° from secondary, 22° from Tekken crimson · 5.53:1 */
+  --color-warning: #ffb55c; /* amber — ΔL .18 + lower chroma vs SF6 orange · 10.42:1 */
+  --color-success: #3ddc84; /* spring green — 58° from SF6 Drive-green · 10.21:1 */
+}
+
+/* ── Parked: declared by the handoff, no engine consumer ────────────────────
+   Grepped against the engine's app/ — zero references for all six. Kept as
+   comments so a future engine token can adopt the design's intent rather than
+   re-derive it, and so the handoff and this file stay diffable.
+
+     --color-surface-high:       #29251F   chips/inputs above surface-raised
+     --color-border-strong:      #4A4239   emphasized rules / focus adjacency
+     --color-secondary-contrast: #1A0806   ink text on secondary · 5.31:1
+     --color-info:               #B9C4CF   cool steel · 10.29:1
+     --color-win:                #3DDC84   W marker (success family) · 10.21:1
+     --color-loss:               #FF8AB3   L marker, softened danger · 8.27:1
+   ------------------------------------------------------------------------ */

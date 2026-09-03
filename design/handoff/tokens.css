@@ -1,0 +1,111 @@
+/* ==========================================================================
+   FATAL FURY: CITY OF THE WOLVES — Replay Database skin (game #5)
+   Tokens only: colors + three font families. No new components.
+
+   Sampled from the official title logo (SNK official site header,
+   snk-corp.co.jp/us/games/fatalfury-cotw/ and the Steam store capsule
+   app 2492040 — pixel-modal sample of each flat fill):
+     • FATAL FURY red band            #E8281E   (logo)
+     • REV / S.P.G. gauge yellow      #FFD21F   (key art + in-game HUD; Terry's cap star)
+     • wordmark fang-silver           #D9D4CC   (logo "CITY OF THE WOLVES" fill)
+     • asphalt black                  #14110F   (key-art ground)
+   TEKKEN COLLISION — LEVER 1: sampled red #E8281E vs Tekken crimson
+   #E13048 → Δhue 11°, ΔS .06, ΔL .03 — a chip-size sibling. vs Tōkon
+   danger #FF4B42 → Δhue 0°. Red cannot be primary. YELLOW is primary
+   (the key art's accent and the REV gauge in-game), red is secondary.
+   Strive reconciliation: CotW's sampled red is #E8281E (H 3°, warm-side of
+   crimson); if Strive's sampled red is farther from #E13048 than 11°, Strive
+   may keep red-secondary too — neither game ships red-primary.
+   In-skin, secondary is lifted to #F5433A for AA (sampled value stays here).
+
+   Fonts (Google Fonts / @fontsource):
+     display  "Anton"              @fontsource/anton              400
+              (renders . - and digits cleanly: "B. Jenet", "Kain R.
+               Heinlein", "Dong Hwan", "2-1" — verified in spec doc)
+     ui       "Figtree"            @fontsource/figtree            400 500 600 700 800
+     mono     "JetBrains Mono"     @fontsource/jetbrains-mono     400 700
+
+   Ratios are WCAG contrast vs --color-surface #171513 unless noted.
+   Surface cast: warm-grey asphalt (H ~30°, S .10) — Tekken is neutral
+   carbon (S 0), SF6's asphalt is warmer/redder (H ~20°, higher S),
+   Tōkon is blue-cast ink.
+   ========================================================================== */
+:root {
+  --font-display: "Anton", "Arial Narrow", "Impact", sans-serif;
+  --font-ui: "Figtree", "Helvetica Neue", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-bg: #0F0D0B;                /* page — asphalt black, warm-grey cast (from key-art ground #14110F) */
+  --color-surface: #171513;           /* card panel — accent AA reference */
+  --color-surface-raised: #1F1C19;    /* hover / raised panel */
+  --color-surface-high: #29251F;      /* chips, inputs, top layer */
+  --color-border: #36302A;            /* hairline panel gutter */
+  --color-border-strong: #4A4239;     /* emphasized rules / focus adjacency */
+  --color-text: #F2EDE4;              /* fang-silver lifted to paper (from #D9D4CC) · 15.6:1 */
+  --color-text-muted: #B5ADA2;        /* secondary copy, warm concrete · 8.2:1 */
+  --color-faint: #8B837A;             /* meta / timestamps · 4.9:1 */
+  --color-primary: #FFD21F;           /* REV-gauge yellow — sampled; PRIMARY by collision lever 1 · 12.6:1 */
+  --color-primary-contrast: #17130E;  /* asphalt text on primary · 12.8:1 on primary */
+  --color-primary-hover: #FFE066;     /* primary hover/active lift · 14.0:1 */
+  --color-secondary: #F5433A;         /* FATAL FURY red — sampled #E8281E, lifted L .51→.59 for AA; demoted to secondary · 5.0:1 */
+  --color-secondary-contrast: #1A0806;/* ink text on secondary · 5.3:1 on secondary */
+  --color-danger: #FF3B9E;            /* hot pink — 33° from secondary, 22° from Tekken crimson, hue-split from red on purpose · 5.5:1 */
+  --color-warning: #FFB55C;           /* amber — 4° + ΔL .18 + lower chroma vs SF6 orange #FF7D00; 15° from primary yellow · 10.4:1 */
+  --color-success: #3DDC84;           /* spring green — 58° from SF6 Drive-green, 22° from umbrella teal · 10.2:1 */
+  --color-info: #B9C4CF;              /* cool steel — the one cool neutral; from the logo's fang-silver shaded · 10.3:1 */
+  --color-win: #3DDC84;               /* W marker (success family) · 10.2:1 */
+  --color-loss: #FF8AB3;              /* L marker — softened danger pink; never reads as the red secondary · 8.3:1 */
+  --color-focus: #FFE680;             /* focus ring pale yellow · 14.6:1 */
+
+  /* 32 fighters (17 launch + Season 1 · 2 · 3 as announced 2026-09-03; S3's
+     Nov/Dec slots are unrevealed and NOT tokenized — add on reveal) · one
+     accent each · all ≥4.5:1 on --color-surface.
+     Method (same as Tōkon; use for future DLC):
+     1 anchor on the canonical costume/VFX hue · 2 snap chroma+lightness to
+     the roster's tone band (S .6–1, L .55–.78) · 3 enforce Δ8–12° of hue vs
+     all neighbors, else split by lightness (ΔL ≥ .12) or chroma (ΔS ≥ .3)
+     and document · 4 AA-check. The warm arc is 8-deep here (Terry, Jae
+     Hoon, Mr. Karate, Rick, Joe, Tizoc, Marco, Laocorn) — every split is
+     annotated. */
+
+  /* Launch roster (April 2025) */
+  --char-terry-bogard: #FF7060;       /* cap/jacket red as coral — kept off secondary by ΔL .10 + softer chroma · 6.7:1 */
+  --char-rock-howard: #9C8CFF;        /* Reppuken / jacket violet-blue · 6.6:1 */
+  --char-hotaru-futaba: #FFA3C9;      /* pale pink hanfu · 9.8:1 */
+  --char-tizoc: #FFC24A;              /* Griffon Mask gold — dH 8 from primary, dH 9 from joe · 11.3:1 */
+  --char-preecha: #5FD36A;            /* Muay Thai green shorts · 9.6:1 */
+  --char-gato: #C89AF5;               /* lavender gi · 8.1:1 */
+  --char-mai-shiranui: #FF6E8F;       /* Shiranui red-pink; dH 11 from hotaru resolved by ΔL .10 + S · 6.8:1 */
+  --char-marco-rodrigues: #C9B27E;    /* Kyokugen gi khaki — chroma split (S .41) from tizoc/laocorn · 8.8:1 */
+  --char-hokutomaru: #7FE6BE;         /* ninja mint · 12.1:1 */
+  --char-b-jenet: #E858C8;            /* Lillien Knights magenta · 5.8:1 */
+  --char-kevin-rian: #7A9CC9;         /* SWAT steel-blue — chroma split (S .42) from kaphwan/kain · 6.4:1 */
+  --char-kim-dong-hwan: #4FD9FF;      /* lightning cyan · 11.0:1 */
+  --char-billy-kane: #B9C0CC;         /* bo-staff steel — near-neutral, hue-agnostic · 10.0:1 */
+  --char-vox-reaper: #B8F53F;         /* toxic lime — brighter/yellower than SF6 Drive-green; never shares a row with it · 14.0:1 */
+  --char-kain-r-heinlein: #6E8BFF;    /* cold blue flame · 5.9:1 */
+  --char-cristiano-ronaldo: #2FBF6F;  /* pitch green — dH 21 from preecha, ΔL .13 · 7.6:1 */
+  --char-salvatore-ganacci: #AC8CFF;  /* stage-light violet; dH 9 from rock · 6.9:1 */
+
+  /* Season 1 (2025) */
+  --char-andy-bogard: #E6E1F2;        /* white gi — pale lilac-white, lightness split from everything · 14.2:1 */
+  --char-joe-higashi: #FFA23C;        /* tiger trunks orange — dH 10 from mr-karate, 9 from tizoc · 9.1:1 */
+  --char-ken: #F04250;                /* red gi — dH 11 from terry, ΔL .09 + S split .85/1 · 4.9:1 */
+  --char-chun-li: #3FA8E8;            /* qipao blue · 6.9:1 */
+  --char-mr-big: #B95EE8;             /* purple suit · 5.1:1 */
+
+  /* Season 2 — "Legends Unleashed" (2025–26) */
+  --char-kim-jae-hoon: #F04A2C;       /* flame kick red-orange — dH 3 from terry, split by ΔL .13 · 5.0:1 */
+  --char-nightmare-geese: #D04FE0;    /* spectral violet-magenta; dH 13 from mr-big · 5.1:1 */
+  --char-blue-mary: #45D6E0;          /* Mary's blue as aqua — dH 9 from dong-hwan · 10.4:1 */
+  --char-wolfgang-krauser: #8E6FE0;   /* Stroheim purple — dH 8 from rock resolved by ΔL .11 + S .65/1 · 4.8:1 */
+  --char-mr-karate: #FF7E30;          /* orange gi / red tengu — dH 13 from jae-hoon, 10 from joe · 7.3:1 */
+  --char-kenshiro: #C7DCF5;           /* Hokuto blue-white · 13.0:1 */
+
+  /* Season 3 — "Destined for Revenge" (Jul–Dec 2026) */
+  --char-rick-strowd: #C8895A;        /* boxer bronze — chroma split (S .50) from the orange trio · 6.2:1 */
+  --char-duck-king: #2FCBB0;          /* mohawk teal · 8.9:1 */
+  --char-kim-kaphwan: #4A90FF;        /* dobok blue — dH 11 from kain, 14 from chun-li · 5.8:1 */
+  --char-laocorn: #D4AF37;            /* Armor of Mars gold — dH 6 from tizoc split by ΔL .13 + S .65/1 · 8.7:1 */
+  /* --char-<s3-nov>, --char-<s3-dec>: pending reveal. */
+}
