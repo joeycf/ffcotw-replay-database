@@ -119,6 +119,7 @@ interface Written {
 interface Provenance {
   id: string;
   page: string;
+  enumeratedTile: string;
   portrait: Written;
   splash: Written;
 }
@@ -149,14 +150,6 @@ const finish = async (out: string, webp: Buffer, extra: Omit<Written, 'bytes' | 
  * No sibling does this — all four just `.resize({width})` — which is why the
  * reasoning is written out rather than assumed.
  */
-
-/** Extra tile beyond a bare 3:4, as a multiple — AND, because of the geometry
- *  in savePortrait below, the horizontal stretch factor. 3:4 of SNK's 277-wide
- *  roster tile is its top 369 rows, which on most of the roster is a face
- *  close-up; 1.25 takes 461 rows and reaches the chest at 25% horizontal
- *  stretch. Raising it buys chest and costs face shape at exactly the same
- *  rate. Hard ceiling 1.58, set by where the artwork itself ends. */
-const GRID_ZOOM = 1.25;
 
 /** The desktop hero box, 1440×340. The splash canvas is exactly 2× it, so the
  *  ratio matches to the digit and `object-cover` crops NOTHING at desktop —
@@ -195,43 +188,6 @@ const FIGURE_MAX_W = 788;
 
 const FIGURE_BASELINE = 20;
 
-/** The last row of the tile that is still substantially opaque ARTWORK — the
- *  floor any crop has to stay above.
- *
- *  Two different things end a tile and both had to be measured, because the
- *  obvious one is the rarer one:
- *
- *   · a TRANSPARENT VOID. This is the real constraint. Content stops at 81% of
- *     the tile for B. Jenet, Kevin, Hotaru, Tizoc, Billy, Gato, Ken and Duck
- *     King. Cropping into it flattens to the page background and puts a dark
- *     void across the bottom of the tile.
- *   · an OPAQUE NEAR-WHITE BAND. Only Kain has one, at row 682 of 721. An
- *     earlier version of this check looked ONLY for that band and, by testing
- *     RGB without testing alpha, read the transparent void as white on most of
- *     the roster — it reported floors of 592–721 that were the wrong quantity
- *     entirely.
- *
- *  Roster minimum today: 582 of 721 rows, which caps GRID_ZOOM at 1.58. */
-function contentBottom(data: Buffer, w: number, h: number, c: number): number {
-  const rowFrac = (y: number, test: (i: number) => boolean): number => {
-    let hit = 0;
-    let seen = 0;
-    for (let x = 0; x < w; x += 2) {
-      seen++;
-      if (test((y * w + x) * c)) hit++;
-    }
-    return hit / seen;
-  };
-  const opaque = (i: number): boolean => data[i + 3]! > 200;
-  const white = (i: number): boolean =>
-    opaque(i) && data[i]! > 235 && data[i + 1]! > 235 && data[i + 2]! > 235;
-
-  let y = h - 1;
-  while (y > 0 && rowFrac(y, opaque) < 0.5) y--;
-  while (y > 0 && rowFrac(y, white) > 0.5) y--;
-  return y + 1;
-}
-
 /** The figure's near-opaque bounding box, in source pixels.
  *
  *  Scanned at `alpha > 200` rather than a lower threshold on purpose: these
@@ -241,7 +197,7 @@ async function opaqueBox(
   buf: Buffer,
   w: number,
   h: number,
-): Promise<{ left: number; top: number; width: number; height: number }> {
+): Promise<{ left: number; top: number; width: number; height: number; headX: number }> {
   const SCAN = 400;
   const { data, info } = await sharp(buf)
     .resize({ width: Math.min(SCAN, w) })
@@ -263,6 +219,20 @@ async function opaqueBox(
     }
   }
   if (x1 < 0) throw new Error('the render has no near-opaque pixel — is it a blank image?');
+
+  // Horizontal centre of mass of the figure's TOP QUARTER — the head estimate
+  // the portrait falls back on when BUST_HEAD carries no row for this fighter.
+  let sum = 0;
+  let n = 0;
+  const quarter = y0 + Math.round((y1 - y0) * 0.25);
+  for (let y = y0; y <= quarter; y++) {
+    for (let x = x0; x <= x1; x++) {
+      if (data[(y * info.width + x) * info.channels + 3]! > 200) {
+        sum += x;
+        n++;
+      }
+    }
+  }
   const k = w / info.width;
   const left = Math.max(0, Math.floor(x0 * k));
   const top = Math.max(0, Math.floor(y0 * k));
@@ -271,67 +241,120 @@ async function opaqueBox(
     top,
     width: Math.min(w - left, Math.ceil((x1 - x0 + 1) * k)),
     height: Math.min(h - top, Math.ceil((y1 - y0 + 1) * k)),
+    headX: (n ? sum / n : (x0 + x1) / 2) * k,
   };
 }
 
+/** The bust window's height, as a fraction of the figure's own height, and how
+ *  far down that window the head is placed. 0.52 reaches roughly hip level on a
+ *  standing fighter; the 0.10 of headroom keeps the crown off the top edge. */
+const BUST_HEIGHT = 0.52;
+const BUST_HEAD_TOP = 0.1;
+
+/** Where the HEAD sits inside the figure's bounding box, as fractions of that
+ *  box. Absent = the estimate below, which assumes the head is at the top of the
+ *  figure (y 0.05) and horizontally at the centre of mass of its top quarter.
+ *
+ *  That estimate is right for 26 of 30 and structurally wrong for the rest,
+ *  because "the top of the figure" is only the head when the fighter is upright:
+ *
+ *    terry-bogard   the estimate is dragged left by his raised arm; his head is
+ *                   fine vertically, just right of where the centroid lands.
+ *    kim-dong-hwan  horizontal mid-kick — his raised leg shares the top quarter
+ *                   with his head and pulls the centroid right.
+ *    kim-jae-hoon   inverted mid-air kick; his head is a THIRD of the way down
+ *                   the box, with a shoe at the top.
+ *    tizoc          his feathered headdress fills the whole upper box and his
+ *                   mask is past halfway down.
+ *
+ *  Read off a bbox-normalised grid, per character. This is the table option D
+ *  costs and option E would not have; a DLC fighter in a novel pose needs a row
+ *  here, and `npm run data:art` prints which characters are using the estimate
+ *  so a new one is visible rather than silently mis-framed. */
+const BUST_HEAD: Record<string, { x: number; y: number }> = {
+  'terry-bogard': { x: 0.59, y: 0.05 },
+  'kim-dong-hwan': { x: 0.35, y: 0.08 },
+  'kim-jae-hoon': { x: 0.67, y: 0.34 },
+  tizoc: { x: 0.9, y: 0.45 },
+};
+
+/** The engine's own missing-art ground, rebuilt in sharp:
+ *  `linear-gradient(150deg, accent, color-mix(in srgb, accent 20%, transparent))`
+ *  over the card surface (app/utils/format.ts accentGradient). Using it here
+ *  means a fighter whose art fails to load degrades to the SAME tile, in the
+ *  same colour, rather than to something that looks like a different design. */
+const accentGround = (accent: string, w: number, h: number): Buffer =>
+  Buffer.from(
+    `<svg width="${w}" height="${h}">` +
+      `<defs><linearGradient id="g" x1="0" y1="0" x2="0.5" y2="0.866">` +
+      `<stop offset="0" stop-color="${accent}" stop-opacity="1"/>` +
+      `<stop offset="1" stop-color="${accent}" stop-opacity="0.2"/></linearGradient></defs>` +
+      `<rect width="${w}" height="${h}" fill="#171513"/>` +
+      `<rect width="${w}" height="${h}" fill="url(#g)"/></svg>`,
+  );
+
 /**
- * THE PORTRAIT SHOWS MORE THAN 3:4 OF THE SOURCE, AND ABSORBS IT BY STRETCHING.
+ * THE PORTRAIT IS A BUST CROP OF THE FULL RENDER, ON THE FIGHTER'S ACCENT.
  *
- * SNK's roster tiles are 277×721 (ratio 0.384). A bare top-anchored 3:4 crop is
- * their top 369 rows, and on most of the roster that is a face close-up —
- * correctly framed, too tight. Showing more rows means the crop is no longer
- * 3:4, and the engine's tile is a hard `aspect-[3/4] object-cover` box with no
- * object-position and no config, so the extra has to go somewhere.
+ * ── WHY NOT SNK'S OWN ROSTER TILE, WHICH IS WHAT A PORTRAIT IS FOR ────────
+ * `character_index_*` is 277×721 — ratio 0.384. The engine's grid is a hard
+ * `aspect-[3/4] object-cover` box with no object-position and no config, so that
+ * source can only ever contribute its top 51%, and at 277px wide a 512px output
+ * is an UPSCALE. Three ways of spending the difference were built and shipped in
+ * turn — a bare 3:4 crop (too tight), mirrored blur bands (read as a smear, and
+ * left the artwork holding only 69% of the tile), and a horizontal stretch
+ * (faces 25% wide) — and all three are compromises forced by that one number.
  *
- * There are only two places it can go: ADD WIDTH (bands down each side) or
- * ABSORB IT (stretch horizontally). Bands were built first — mirrored from the
- * subject's own edge, blurred, faded — and rejected on sight: at any width that
- * buys real content they read as a smear, and they cost the subject the tile.
- * At GRID_ZOOM 1.45 the banded artwork occupied only 69% of the tile's width,
- * so the fighter actually rendered SMALLER than they do stretched at 1.25.
- * Plain edge replication (no mirror) was also tried and is worse — every row
- * becomes a horizontal streak. An anamorphic split, centre 1:1 with the outer
- * fifths absorbing the stretch, visibly warps the edges.
+ * `character_main_*` has none of the problem: 1077–3022px wide, and cut out on
+ * transparency. It crops to 3:4 with room to spare, at native resolution, with
+ * no stretch and no bands. SF6's pipeline reaches the same arrangement from the
+ * other direction — Capcom publishes only the render, so both its portrait and
+ * its splash derive from one image, exactly as they now do here.
  *
- * So the subject is stretched to the full tile width, and the arithmetic is
- * unusually clean: the crop is `(w / 0.75) × GRID_ZOOM` rows tall, so the
- * subject before stretching is exactly `OUT_W / GRID_ZOOM` wide, and
- * **the horizontal stretch factor IS GRID_ZOOM**. One dial sets both how much
- * extra tile you see and how wide the faces get. 1.25 keeps the distortion
- * where a face reads as a face without a side-by-side reference; the ceiling
- * imposed by the artwork itself (see contentBottom) is 1.58.
- *
- * Output stays 512×683 — the platform's portrait size, matching SF6 and Tōkon,
- * so all five grids read as one set. The 277px source is the resolution ceiling.
+ * WHAT IT COSTS, stated plainly: SNK's per-character tile backgrounds go (the
+ * vivid greens and oranges), replaced by the accent ground above; the grid and
+ * the hero now show the same artwork; and the head has to be LOCATED, which is
+ * the BUST_HEAD table and the one thing that cannot be derived. Option E — the
+ * whole figure fitted to the tile — needs no table and no located head, and
+ * remains the fallback if that table becomes a maintenance burden.
  */
-async function savePortrait(url: string, out: string): Promise<Written> {
-  const res = await get(url);
-  const buf = Buffer.from(await res.arrayBuffer());
+async function savePortrait(
+  id: string,
+  accent: string,
+  url: string,
+  buf: Buffer,
+  out: string,
+): Promise<Written> {
   const meta = await sharp(buf).metadata();
   const w = meta.width!;
   const h = meta.height!;
+  const box = await opaqueBox(buf, w, h);
 
-  const { data, info } = await sharp(buf).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-  const floor = contentBottom(data, info.width, info.height, info.channels);
+  const head = BUST_HEAD[id];
+  const hx = head ? box.left + head.x * box.width : box.headX;
+  const hy = head ? box.top + head.y * box.height : box.top + 0.05 * box.height;
 
-  const rows = Math.min(h, Math.round((w / 0.75) * GRID_ZOOM));
-  if (rows > floor) {
-    throw new Error(
-      `${url}: a ${rows}-row crop runs past the artwork, which ends at row ${floor} of ${h}. ` +
-        `Lower GRID_ZOOM (currently ${GRID_ZOOM}) rather than shipping a void across the tile.`,
-    );
+  // Fit the window to the image before placing it, so a short render shrinks the
+  // crop rather than silently sliding it off the figure.
+  let winH = Math.min(box.height * BUST_HEIGHT, h, w / 0.75);
+  let winW = winH * 0.75;
+  if (winW > w) {
+    winW = w;
+    winH = winW / 0.75;
   }
+  const left = Math.round(Math.min(Math.max(0, hx - winW / 2), w - winW));
+  const top = Math.round(Math.min(Math.max(0, hy - winH * BUST_HEAD_TOP), h - winH));
 
   const OUT_W = 512;
   const OUT_H = Math.round(OUT_W / 0.75);
-
-  // `fit: 'fill'` is the stretch, and it is deliberate — not a forgotten
-  // `cover`. Flattened because the tiles carry 10–16% transparent pixels and a
-  // hole in a roster tile reads as damage.
-  const webp = await sharp(buf)
-    .extract({ left: 0, top: 0, width: w, height: rows })
+  const figure = await sharp(buf)
+    .extract({ left, top, width: Math.round(winW), height: Math.round(winH) })
     .resize(OUT_W, OUT_H, { fit: 'fill' })
-    .flatten({ background: '#0f0d0b' })
+    .png()
+    .toBuffer();
+
+  const webp = await sharp(accentGround(accent, OUT_W, OUT_H))
+    .composite([{ input: figure }])
     .webp({ quality: 82 })
     .toBuffer();
 
@@ -340,8 +363,10 @@ async function savePortrait(url: string, out: string): Promise<Written> {
     source: url,
     sourceDimensions: `${w}×${h}`,
     dimensions: `${out2.width}×${out2.height}`,
-    crop: `top ${rows} of ${h} rows; artwork ends at row ${floor}`,
-    figure: `stretched ${GRID_ZOOM}× horizontally to fill 3:4`,
+    crop: `bust ${Math.round(winW)}×${Math.round(winH)} at ${left},${top} on ${accent}`,
+    figure:
+      `head ${head ? 'TABLE' : 'estimated'} at ${(((hx - box.left) / box.width) * 100).toFixed(0)}%,` +
+      `${(((hy - box.top) / box.height) * 100).toFixed(0)}% of body ${box.width}×${box.height}`,
   });
 }
 
@@ -373,9 +398,7 @@ async function savePortrait(url: string, out: string): Promise<Written> {
  * move. A 4.24:1 source overflows at every breakpoint below desktop, so X now
  * does real work and is tuned in app.config.ts for the NARROWEST one.
  */
-async function saveSplash(url: string, out: string): Promise<Written> {
-  const res = await get(url);
-  const buf = Buffer.from(await res.arrayBuffer());
+async function saveSplash(url: string, buf: Buffer, out: string): Promise<Written> {
   const meta = await sharp(buf).metadata();
   const w = meta.width!;
   const h = meta.height!;
@@ -459,17 +482,55 @@ async function main(): Promise<void> {
       continue;
     }
 
-    const portraitUrl = new URL(portraitRel, BASE).toString();
     const splashUrl = new URL(mains[0]!, `${BASE}${slug}.php`).toString();
-    const portrait = await savePortrait(portraitUrl, join(ROOT, 'public/img/char', `${c.id}.webp`));
-    const splash = await saveSplash(splashUrl, join(ROOT, 'public/img/splash', `${c.id}.webp`));
-    provenance.push({ id: c.id, page: pageUrl, portrait, splash });
-    const constructed = `img/character_index_${slug}.png`;
-    console.log(
-      `  ${c.id.padEnd(20)} ${portrait.dimensions.padEnd(9)} ${splash.dimensions.padEnd(9)} ` +
-        `${(splash.figure ?? '').padEnd(46)} ${portraitRel.replace('img/', '').padEnd(30)}` +
-        (portraitRel !== constructed ? '  ← a constructed path would have missed this' : ''),
+
+    // ONE fetch feeds both files. Since the portrait became a bust crop of the
+    // render, portrait and splash derive from the same image — downloading it
+    // twice would double the load on SNK's site for nothing.
+    const render = Buffer.from(await (await get(splashUrl)).arrayBuffer());
+    const portrait = await savePortrait(
+      c.id,
+      c.accent,
+      splashUrl,
+      render,
+      join(ROOT, 'public/img/char', `${c.id}.webp`),
     );
+    const splash = await saveSplash(
+      splashUrl,
+      render,
+      join(ROOT, 'public/img/splash', `${c.id}.webp`),
+    );
+    provenance.push({
+      id: c.id,
+      page: pageUrl,
+      // The index tile is no longer downloaded, but it is still what the index
+      // page PAIRS with each link, so it stays on the record as the evidence
+      // that this fighter's slug was enumerated rather than guessed.
+      enumeratedTile: new URL(portraitRel, BASE).toString(),
+      portrait,
+      splash,
+    });
+    // Same lesson as before, now measured against the file we actually fetch:
+    // SNK's splash filenames disagree with their own page slugs too.
+    const constructed = `img/character_main_${slug}.png`;
+    console.log(
+      `  ${c.id.padEnd(20)} ${portrait.dimensions.padEnd(9)} ${(portrait.figure ?? '').padEnd(52)}` +
+        (mains[0] !== constructed ? '  ← a constructed path would have missed this' : ''),
+    );
+  }
+
+  // A BUST_HEAD key that matches no fighter does NOTHING — the estimate is used
+  // instead and the tile is silently mis-framed, which is the failure this table
+  // exists to prevent. Catch the typo, and catch a row left behind by a rename.
+  const rosterIds = new Set(characters.map((c) => c.id));
+  const orphanHeads = Object.keys(BUST_HEAD).filter((id) => !rosterIds.has(id));
+  if (orphanHeads.length) {
+    console.error(
+      `\n✖ BUST_HEAD has ${orphanHeads.length} row(s) matching no fighter: ${orphanHeads.join(', ')}.\n` +
+        `  A stale key is not inert — the fighter it was meant for falls back to the\n` +
+        `  head ESTIMATE, which is exactly what the row was added to override.`,
+    );
+    process.exit(1);
   }
 
   // ── 3. FAIL LOUD ─────────────────────────────────────────────────────────
