@@ -65,6 +65,30 @@ check('OG card shipped', has('og-default.png'));
 check('replays.json shipped under the base', has('data/replays.json'));
 check('summary.json shipped (the apex selector reads this)', has('data/summary.json'));
 
+// ── the apex card payload's CONTRACT ──────────────────────────────────────
+// Both of these shipped wrong once and neither showed on the page, because the
+// selector only reads `replays` for its card count.
+//
+//  · the identity key is `game`, not `id`. Every sibling emits {"game": …} and
+//    the shell's cutover battery asserts payload.game === the game's id. Ours
+//    said `id`, so the battery read game=undefined against a page that looked
+//    perfectly correct.
+//  · `updated` is the NEWEST REPLAY's date, never the build time. The cron only
+//    commits files that actually changed, so a build-time stamp makes this file
+//    differ on every run and puts a deploy on the calendar daily whether or not
+//    a single match arrived.
+const summary = JSON.parse(read('data/summary.json')) as {
+  game?: string;
+  id?: string;
+  replays?: number;
+  updated?: string;
+};
+check(
+  'summary.json identity key is `game` (the platform contract), not `id`',
+  summary.game === 'ffcotw' && summary.id === undefined,
+  JSON.stringify(summary),
+);
+
 // ── the theme override contract (STACK §5.13) ─────────────────────────────
 // The failure this catches is the one the engine README calls out: an app
 // stylesheet written as @theme ships raw, the browser drops it as an unknown
@@ -112,6 +136,7 @@ console.log('\n▶ data contract\n');
 const replays = JSON.parse(read('data/replays.json')) as {
   id: string;
   sides: { player: string; characters: string[] }[];
+  date: string;
   patch?: string;
   source: string;
 }[];
@@ -215,6 +240,18 @@ if (EMPTY) {
   check(
     'player pages prerendered (they must not 404 on static hosting)',
     !!p && has(`players/${p}/index.html`),
+  );
+
+  check(
+    'summary.json replay count matches the emitted archive',
+    summary.replays === replays.length,
+    `summary says ${summary.replays}, archive holds ${replays.length}`,
+  );
+  const newestDay = replays.reduce((n, r) => (r.date > n ? r.date : n), '').slice(0, 10);
+  check(
+    'summary.json `updated` is the newest replay date, not the build date',
+    summary.updated === newestDay,
+    `summary says ${summary.updated}, newest replay is ${newestDay}`,
   );
 }
 

@@ -214,6 +214,13 @@ async function main(): Promise<void> {
   }
 
   // ── write ─────────────────────────────────────────────────────────────────
+  // Newest publish date across the corpus, in UTC. Empty corpus falls back to
+  // the newest patch, which is still content and still stable.
+  const newestReplayDay =
+    records
+      .reduce((newest, v) => (v.publishedAt > newest ? v.publishedAt : newest), '')
+      .slice(0, 10) || PATCHES.at(-1)!.start;
+
   const groups = buildPatchGroups();
   const seenGroupIds = new Set<string>();
   for (const g of groups) {
@@ -243,13 +250,28 @@ async function main(): Promise<void> {
   // summary.json is the apex selector's card payload, fetched SAME-ORIGIN
   // through the shell's /ffcotw rewrite. It goes to both data/ (committed, so
   // Vercel can copy it) and public/data/.
+  //
+  // `updated` IS CONTENT-DERIVED — the newest replay's own date, never the
+  // build time. That is a platform requirement rather than a nicety: the cron
+  // only commits when a staged file actually changed, so a build-time stamp
+  // would make this file differ on EVERY run and put a deploy on the calendar
+  // every day forever, whether or not a single new match arrived. Shipped as
+  // `new Date()` first time round; the tell was that it read a day ahead of
+  // every sibling's within minutes of a quiet run.
+  // THE KEY IS `game`, NOT `id`, and the field order matches the siblings.
+  // This shipped as `id` and the apex cutover battery caught it: every one of
+  // the four live games emits {"game": "<id>", …} and the battery asserts
+  // `payload.game === <the game's id>`. The selector still rendered the right
+  // count because it reads `replays`, so nothing looked wrong on the page —
+  // the identity field was simply absent, which is exactly the kind of contract
+  // drift that stays invisible until something compares two games.
   const summary = {
-    id: GAME_ID,
+    game: GAME_ID,
     name: GAME_NAME,
     replays: records.length,
-    characters: characters.length,
     players: players.length,
-    updated: new Date().toISOString().slice(0, 10),
+    characters: characters.length,
+    updated: newestReplayDay,
   };
   const summaryJson = `${JSON.stringify(summary, null, 2)}\n`;
   await writeFile(join(DATA, 'summary.json'), summaryJson, 'utf8');
