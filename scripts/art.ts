@@ -150,11 +150,13 @@ const finish = async (out: string, webp: Buffer, extra: Omit<Written, 'bytes' | 
  * reasoning is written out rather than assumed.
  */
 
-/** Extra tile beyond a bare 3:4, as a multiple. 3:4 of SNK's 277-wide roster
- *  tile is its top 369 rows, which on most of the roster is a face close-up;
- *  1.25 takes 461 rows and reaches the chest. The rows past 3:4 are filled by
- *  the blurred backdrop below rather than by cropping tighter. */
-const GRID_ZOOM = 1.45;
+/** Extra tile beyond a bare 3:4, as a multiple — AND, because of the geometry
+ *  in savePortrait below, the horizontal stretch factor. 3:4 of SNK's 277-wide
+ *  roster tile is its top 369 rows, which on most of the roster is a face
+ *  close-up; 1.25 takes 461 rows and reaches the chest at 25% horizontal
+ *  stretch. Raising it buys chest and costs face shape at exactly the same
+ *  rate. Hard ceiling 1.58, set by where the artwork itself ends. */
+const GRID_ZOOM = 1.25;
 
 /** The desktop hero box, 1440×340. The splash canvas is exactly 2× it, so the
  *  ratio matches to the digit and `object-cover` crops NOTHING at desktop —
@@ -273,28 +275,31 @@ async function opaqueBox(
 }
 
 /**
- * THE PORTRAIT IS A 3:4 TILE THAT SHOWS MORE THAN 3:4 OF THE SOURCE.
+ * THE PORTRAIT SHOWS MORE THAN 3:4 OF THE SOURCE, AND ABSORBS IT BY STRETCHING.
  *
  * SNK's roster tiles are 277×721 (ratio 0.384). A bare top-anchored 3:4 crop is
  * their top 369 rows, and on most of the roster that is a face close-up —
- * correct framing, too tight. Taking 461 rows instead reaches the chest, but a
- * 277×461 crop is 0.60, not 0.75, so the sides have to be filled.
+ * correctly framed, too tight. Showing more rows means the crop is no longer
+ * 3:4, and the engine's tile is a hard `aspect-[3/4] object-cover` box with no
+ * object-position and no config, so the extra has to go somewhere.
  *
- * The fill is a MIRROR of the subject's own outer edge, blurred, fading into
- * the page background. Mirroring is what makes it seamless: the band's inner
- * pixel column IS the subject's edge column, so the two meet exactly, and the
- * darkening ramp starts at zero there so the brightness matches too. The blur
- * then removes any readable doubled anatomy, leaving a soft vignette.
+ * There are only two places it can go: ADD WIDTH (bands down each side) or
+ * ABSORB IT (stretch horizontally). Bands were built first — mirrored from the
+ * subject's own edge, blurred, faded — and rejected on sight: at any width that
+ * buys real content they read as a smear, and they cost the subject the tile.
+ * At GRID_ZOOM 1.45 the banded artwork occupied only 69% of the tile's width,
+ * so the fighter actually rendered SMALLER than they do stretched at 1.25.
+ * Plain edge replication (no mirror) was also tried and is worse — every row
+ * becomes a horizontal streak. An anamorphic split, centre 1:1 with the outer
+ * fifths absorbing the stretch, visibly warps the edges.
  *
- * A cover-scaled blur of the whole tile was tried first and is WRONG — cover
- * rescales the image, so the band and the subject no longer share a scale and
- * the seam reads as a smear. Sampling a solid background colour is also wrong
- * here: measured, the tile edges are neither flat nor consistent (per-column
- * σ 25–87 across the roster), because on a bust crop the fighter's own
- * shoulders reach the frame.
- *
- * The backdrop is flattened onto the page background first: the tiles carry
- * 10–16% transparent pixels, and holes in a roster tile read as damage.
+ * So the subject is stretched to the full tile width, and the arithmetic is
+ * unusually clean: the crop is `(w / 0.75) × GRID_ZOOM` rows tall, so the
+ * subject before stretching is exactly `OUT_W / GRID_ZOOM` wide, and
+ * **the horizontal stretch factor IS GRID_ZOOM**. One dial sets both how much
+ * extra tile you see and how wide the faces get. 1.25 keeps the distortion
+ * where a face reads as a face without a side-by-side reference; the ceiling
+ * imposed by the artwork itself (see contentBottom) is 1.58.
  *
  * Output stays 512×683 — the platform's portrait size, matching SF6 and Tōkon,
  * so all five grids read as one set. The 277px source is the resolution ceiling.
@@ -317,50 +322,16 @@ async function savePortrait(url: string, out: string): Promise<Written> {
     );
   }
 
-  const crop = await sharp(buf).extract({ left: 0, top: 0, width: w, height: rows }).toBuffer();
-
   const OUT_W = 512;
   const OUT_H = Math.round(OUT_W / 0.75);
-  const subjectW = Math.round((OUT_H * w) / rows);
-  const band = Math.round((OUT_W - subjectW) / 2);
 
-  // Flattened before anything else: the blur below would otherwise pull the
-  // tile's transparent regions into the visible ones as a grey halo.
-  const subject = await sharp(crop)
-    .resize(subjectW, OUT_H, { fit: 'fill' })
+  // `fit: 'fill'` is the stretch, and it is deliberate — not a forgotten
+  // `cover`. Flattened because the tiles carry 10–16% transparent pixels and a
+  // hole in a roster tile reads as damage.
+  const webp = await sharp(buf)
+    .extract({ left: 0, top: 0, width: w, height: rows })
+    .resize(OUT_W, OUT_H, { fit: 'fill' })
     .flatten({ background: '#0f0d0b' })
-    .toBuffer();
-
-  // `flop` puts the subject's own edge column against the seam, so the band
-  // meets the artwork exactly; the ramp fades it out towards the tile edge.
-  const edge = async (fromLeft: boolean): Promise<Buffer> =>
-    sharp(
-      await sharp(subject)
-        .extract({ left: fromLeft ? 0 : subjectW - band, top: 0, width: band, height: OUT_H })
-        .flop()
-        .blur(14)
-        .toBuffer(),
-    )
-      .composite([
-        {
-          input: Buffer.from(
-            `<svg width="${band}" height="${OUT_H}"><defs><linearGradient id="g" x1="${fromLeft ? 0 : 1}" x2="${fromLeft ? 1 : 0}">` +
-              `<stop offset="0" stop-color="#0f0d0b" stop-opacity=".72"/>` +
-              `<stop offset="1" stop-color="#0f0d0b" stop-opacity="0"/>` +
-              `</linearGradient></defs><rect width="${band}" height="${OUT_H}" fill="url(#g)"/></svg>`,
-          ),
-        },
-      ])
-      .toBuffer();
-
-  const webp = await sharp({
-    create: { width: OUT_W, height: OUT_H, channels: 3, background: '#0f0d0b' },
-  })
-    .composite([
-      { input: await edge(true), left: 0, top: 0 },
-      { input: await edge(false), left: band + subjectW, top: 0 },
-      { input: subject, left: band, top: 0 },
-    ])
     .webp({ quality: 82 })
     .toBuffer();
 
@@ -369,10 +340,8 @@ async function savePortrait(url: string, out: string): Promise<Written> {
     source: url,
     sourceDimensions: `${w}×${h}`,
     dimensions: `${out2.width}×${out2.height}`,
-    crop:
-      `top ${rows} of ${h} rows (${(GRID_ZOOM * 100 - 100).toFixed(0)}% past 3:4), ` +
-      `mirror-extended to 3:4; artwork ends at row ${floor}`,
-    figure: `subject ${subjectW}×${OUT_H} centred in ${OUT_W}×${OUT_H}, ${band}px bands`,
+    crop: `top ${rows} of ${h} rows; artwork ends at row ${floor}`,
+    figure: `stretched ${GRID_ZOOM}× horizontally to fill 3:4`,
   });
 }
 
