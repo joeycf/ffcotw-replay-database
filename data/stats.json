@@ -1,8 +1,8 @@
 {
   "totals": {
-    "replays": 4481,
+    "replays": 4485,
     "characters": 30,
-    "players": 2116,
+    "players": 2117,
     "byPatch": {
       "2025-02-20": 65,
       "2025-03-26": 86,
@@ -30,23 +30,24 @@
       "3.0.0": 218,
       "3.0.1": 219,
       "3.1.2": 114,
-      "3.1.3": 11
+      "3.1.3": 15
     }
   },
   "characterUsage": {
-    "duck-king": 89,
+    "duck-king": 92,
+    "mr-big": 226,
+    "andy-bogard": 301,
+    "terry-bogard": 559,
+    "nightmare-geese": 224,
+    "wolfgang-krauser": 269,
     "b-jenet": 293,
-    "terry-bogard": 558,
     "chun-li": 265,
-    "mr-big": 225,
     "mr-karate": 378,
     "marco-rodrigues": 334,
     "kim-jae-hoon": 178,
     "billy-kane": 350,
-    "wolfgang-krauser": 268,
     "kim-dong-hwan": 222,
     "rock-howard": 538,
-    "nightmare-geese": 223,
     "ken": 415,
     "tizoc": 406,
     "blue-mary": 184,
@@ -56,7 +57,6 @@
     "salvatore-ganacci": 194,
     "kain-r-heinlein": 437,
     "mai-shiranui": 256,
-    "andy-bogard": 300,
     "hotaru-futaba": 379,
     "kevin-rian": 247,
     "gato": 345,
@@ -664,20 +664,65 @@
       "billy-kane": 2
     },
     "3.1.3": {
-      "duck-king": 10,
+      "duck-king": 13,
+      "mr-big": 2,
+      "andy-bogard": 1,
+      "terry-bogard": 3,
+      "nightmare-geese": 1,
+      "wolfgang-krauser": 2,
       "b-jenet": 2,
-      "terry-bogard": 2,
       "chun-li": 1,
-      "mr-big": 1,
       "mr-karate": 1,
       "marco-rodrigues": 1,
       "kim-jae-hoon": 1,
       "billy-kane": 1,
-      "wolfgang-krauser": 1,
       "kim-dong-hwan": 1
     }
   },
   "playerCharacters": {
+    "grenas": {
+      "duck-king": 2,
+      "preecha": 25,
+      "mr-karate": 3,
+      "gato": 3,
+      "blue-mary": 1,
+      "nightmare-geese": 2,
+      "mr-big": 2,
+      "joe-higashi": 6,
+      "chun-li": 1
+    },
+    "zeus": {
+      "mr-big": 22,
+      "b-jenet": 21,
+      "joe-higashi": 1
+    },
+    "rigosam": {
+      "andy-bogard": 4,
+      "kim-dong-hwan": 7,
+      "hokutomaru": 1
+    },
+    "kaiser": {
+      "terry-bogard": 84
+    },
+    "plsx": {
+      "nightmare-geese": 32,
+      "duck-king": 3,
+      "rick-strowd": 8,
+      "joe-higashi": 11,
+      "kenshiro": 3,
+      "mr-karate": 1,
+      "wolfgang-krauser": 3,
+      "vox-reaper": 16
+    },
+    "griffon-legend": {
+      "duck-king": 2,
+      "tizoc": 39,
+      "kim-jae-hoon": 19,
+      "mr-karate": 2
+    },
+    "diamond2k2": {
+      "wolfgang-krauser": 1
+    },
     "panpina": {
       "duck-king": 8,
       "ken": 16,
@@ -777,12 +822,6 @@
     },
     "alex5mith": {
       "b-jenet": 10
-    },
-    "griffon-legend": {
-      "duck-king": 1,
-      "tizoc": 39,
-      "kim-jae-hoon": 19,
-      "mr-karate": 2
     },
     "mabe": {
       "wolfgang-krauser": 2,
@@ -905,16 +944,6 @@
       "mai-shiranui": 4,
       "b-jenet": 5,
       "chun-li": 1
-    },
-    "plsx": {
-      "duck-king": 3,
-      "rick-strowd": 8,
-      "nightmare-geese": 31,
-      "joe-higashi": 11,
-      "kenshiro": 3,
-      "mr-karate": 1,
-      "wolfgang-krauser": 3,
-      "vox-reaper": 16
     },
     "leovegabrasil": {
       "cristiano-ronaldo": 2
@@ -1493,11 +1522,6 @@
     "vip": {
       "mai-shiranui": 4
     },
-    "zeus": {
-      "mr-big": 21,
-      "b-jenet": 21,
-      "joe-higashi": 1
-    },
     "faalex": {
       "blue-mary": 4,
       "rock-howard": 85
@@ -1923,16 +1947,6 @@
       "mr-karate": 3,
       "rock-howard": 9,
       "ken": 1
-    },
-    "grenas": {
-      "preecha": 25,
-      "mr-karate": 3,
-      "gato": 3,
-      "blue-mary": 1,
-      "nightmare-geese": 2,
-      "mr-big": 2,
-      "joe-higashi": 6,
-      "chun-li": 1
     },
     "elpapastj": {
       "terry-bogard": 2,
@@ -2506,9 +2520,6 @@
     },
     "el-don-del-ciber": {
       "mai-shiranui": 2
-    },
-    "kaiser": {
-      "terry-bogard": 83
     },
     "moro": {
       "preecha": 1
@@ -3726,11 +3737,6 @@
     },
     "beni": {
       "terry-bogard": 6
-    },
-    "rigosam": {
-      "andy-bogard": 3,
-      "kim-dong-hwan": 7,
-      "hokutomaru": 1
     },
     "thrill": {
       "joe-higashi": 1
