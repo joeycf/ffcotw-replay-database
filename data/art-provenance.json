@@ -8,18 +8,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_rock.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 62544,
-        "sha256": "3b0def02359d1e84"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 713",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 44520,
+        "sha256": "d1473212e5205567"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_rock.png",
         "sourceDimensions": "2143×2319",
-        "dimensions": "1200×1221",
-        "crop": "top 6% removed (2143×2180 of 2143×2319)",
-        "bytes": 125912,
-        "sha256": "752e0af14a3b3709"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1897×2122 → 559×626 at x2235",
+        "bytes": 48614,
+        "sha256": "eb07f2a0d52e1b77"
       }
     },
     {
@@ -28,18 +30,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_terry.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 41080,
-        "sha256": "0841562b0f6dc9d7"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 712",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 39570,
+        "sha256": "e00b18c8dfe5976a"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_terry.png",
         "sourceDimensions": "1639×2500",
-        "dimensions": "1200×1830",
-        "crop": "none — the head is already at the top",
-        "bytes": 244562,
-        "sha256": "d417b9f9a5488d25"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1369×2361 → 363×626 at x2431",
+        "bytes": 47410,
+        "sha256": "a7bc25c1956b90c3"
       }
     },
     {
@@ -48,18 +52,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_hotaru.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 45520,
-        "sha256": "d05f77bf350e8837"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 584",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 44012,
+        "sha256": "90a32a4474fd26db"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_hotaru.png",
         "sourceDimensions": "1263×2500",
-        "dimensions": "1200×2162",
-        "crop": "top 9% removed (1263×2275 of 1263×2500)",
-        "bytes": 280060,
-        "sha256": "b145dfb6d8117c0e"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1008×2321 → 272×626 at x2522",
+        "bytes": 46738,
+        "sha256": "29a0297c1f8ee519"
       }
     },
     {
@@ -68,18 +74,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_preecha.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 57154,
-        "sha256": "8a681e03c14eb0f9"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 658",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 49858,
+        "sha256": "28e19e20e08dac58"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_preecha.png",
         "sourceDimensions": "2143×2319",
-        "dimensions": "1200×1234",
-        "crop": "top 5% removed (2143×2203 of 2143×2319)",
-        "bytes": 184894,
-        "sha256": "29ca55e2c8a9096c"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1822×1876 → 608×626 at x2186",
+        "bytes": 82042,
+        "sha256": "2c9e5a984cbe26c2"
       }
     },
     {
@@ -88,18 +96,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_vox.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 25606,
-        "sha256": "6400083b1e243b83"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 666",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 25914,
+        "sha256": "a1d404bf0322b2f9"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_vox.png",
         "sourceDimensions": "1854×2500",
-        "dimensions": "1200×1537",
-        "crop": "top 5% removed (1854×2375 of 1854×2500)",
-        "bytes": 173448,
-        "sha256": "3c962402df022645"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1618×2374 → 426×626 at x2368",
+        "bytes": 46594,
+        "sha256": "a15ad80326902aa8"
       }
     },
     {
@@ -108,18 +118,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_marco.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 34946,
-        "sha256": "ac798fa9ef372cb0"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 666",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 41664,
+        "sha256": "8dfd9831580a12d4"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_marco.png",
         "sourceDimensions": "2155×2500",
-        "dimensions": "1200×1350",
-        "crop": "top 3% removed (2155×2425 of 2155×2500)",
-        "bytes": 220490,
-        "sha256": "1ece9eb535320800"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1816×2301 → 494×626 at x2300",
+        "bytes": 68100,
+        "sha256": "44d7a7a1a2d6bd6c"
       }
     },
     {
@@ -128,18 +140,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_kevin.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 30978,
-        "sha256": "7f0e804eb020321f"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 583",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 30864,
+        "sha256": "6a5baa03f5b079c8"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_kevin.png",
         "sourceDimensions": "2155×2500",
-        "dimensions": "1200×1323",
-        "crop": "top 5% removed (2155×2375 of 2155×2500)",
-        "bytes": 167882,
-        "sha256": "7bc3932b4f023d63"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1983×2112 → 587×626 at x2207",
+        "bytes": 68762,
+        "sha256": "7720f2634bbb3c9e"
       }
     },
     {
@@ -148,18 +162,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_janet.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 55410,
-        "sha256": "3657ecfef7402e57"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 582",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 50718,
+        "sha256": "9692d4660a3cd759"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_jenet.png",
         "sourceDimensions": "2155×2500",
-        "dimensions": "1200×1392",
-        "crop": "none — the head is already at the top",
-        "bytes": 193326,
-        "sha256": "7dffd2a251f85f74"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1913×2387 → 501×626 at x2293",
+        "bytes": 62810,
+        "sha256": "836e490cfa4bd123"
       }
     },
     {
@@ -168,18 +184,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_gato.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 23302,
-        "sha256": "93ee26741e8bc7f2"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 587",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 27368,
+        "sha256": "a1a8ad5353bb3b32"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_gato.png",
         "sourceDimensions": "2155×2500",
-        "dimensions": "1200×1281",
-        "crop": "top 8% removed (2155×2300 of 2155×2500)",
-        "bytes": 139776,
-        "sha256": "1cb617de5fb2c177"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1369×2387 → 359×626 at x2435",
+        "bytes": 47464,
+        "sha256": "ecf75ea0c6daaedd"
       }
     },
     {
@@ -188,18 +206,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_tizoc.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 42152,
-        "sha256": "f482cd3682e4c4d8"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 584",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 40130,
+        "sha256": "11ff6bf8a6ed141f"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_tizoc.png",
         "sourceDimensions": "2155×2500",
-        "dimensions": "1200×807",
-        "crop": "top 42% removed (2155×1450 of 2155×2500)",
-        "bytes": 149228,
-        "sha256": "5b6f3fb2187c9dde"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1886×2333 → 506×626 at x2288",
+        "bytes": 78046,
+        "sha256": "675ea25a52c00c43"
       }
     },
     {
@@ -208,18 +228,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_hokutomaru.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 32280,
-        "sha256": "2ee9e6cb61411ae2"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 650",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 33166,
+        "sha256": "af1aecdc55e284f9"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_hokutomaru.png",
         "sourceDimensions": "2155×2500",
-        "dimensions": "1200×1253",
-        "crop": "top 10% removed (2155×2250 of 2155×2500)",
-        "bytes": 147342,
-        "sha256": "6531f6a0387e99cc"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1606×2139 → 470×626 at x2324",
+        "bytes": 58878,
+        "sha256": "ad655f98a358b997"
       }
     },
     {
@@ -228,18 +250,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_kain.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 30648,
-        "sha256": "a5661ad4793ebf08"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 682",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 38364,
+        "sha256": "4c9fbe7ba391e4d2"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_kain.png",
         "sourceDimensions": "1639×2500",
-        "dimensions": "1200×1830",
-        "crop": "none — the head is already at the top",
-        "bytes": 166296,
-        "sha256": "8bb42f3ed7c52bb5"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1394×2447 → 356×626 at x2438",
+        "bytes": 41530,
+        "sha256": "88106cec80b2ba58"
       }
     },
     {
@@ -248,18 +272,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_billy.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 46294,
-        "sha256": "d5714b1db63077d9"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 586",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 38392,
+        "sha256": "24fbd8ea1413dd1c"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_billy.png",
         "sourceDimensions": "2155×2500",
-        "dimensions": "1200×1044",
-        "crop": "top 25% removed (2155×1875 of 2155×2500)",
-        "bytes": 126732,
-        "sha256": "0c9ac3031ff6504d"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1649×2366 → 436×626 at x2358",
+        "bytes": 56062,
+        "sha256": "b9f3c33d410bd986"
       }
     },
     {
@@ -268,18 +294,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_mai.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 25828,
-        "sha256": "df4da376c675df10"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 719",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 28910,
+        "sha256": "7b09dc74ef13e02c"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_mai.png",
         "sourceDimensions": "2155×2500",
-        "dimensions": "1200×1392",
-        "crop": "none — the head is already at the top",
-        "bytes": 135818,
-        "sha256": "cd4bcb5d5ddb6f27"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1601×2290 → 437×626 at x2357",
+        "bytes": 49342,
+        "sha256": "17ef7c4065c09e78"
       }
     },
     {
@@ -288,18 +316,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_donghwan.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 25216,
-        "sha256": "d637993107d5679a"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 663",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 29736,
+        "sha256": "ab64cf749ecce4e9"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_donghwan.png",
         "sourceDimensions": "3022×2500",
-        "dimensions": "1200×893",
-        "crop": "top 10% removed (3022×2250 of 3022×2500)",
-        "bytes": 98488,
-        "sha256": "45e101dec9779943"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 2849×2169 → 788×600 at x2006 (width-capped)",
+        "bytes": 64586,
+        "sha256": "8e0246c319b02b89"
       }
     },
     {
@@ -308,18 +338,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_cr7.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 19258,
-        "sha256": "b9bc34f3fa9a71d6"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 709",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 21758,
+        "sha256": "e3930d98a1097a8b"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_cr7.png",
         "sourceDimensions": "1077×1549",
-        "dimensions": "1077×1549",
-        "crop": "none — the head is already at the top",
-        "bytes": 129648,
-        "sha256": "0823fb91303bb536"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 816×1495 → 341×626 at x2453",
+        "bytes": 42730,
+        "sha256": "2abc3c7dc9fc1558"
       }
     },
     {
@@ -328,18 +360,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_ganacci.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 38802,
-        "sha256": "93eedddec9c52e8f"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 708",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 35636,
+        "sha256": "4ca9fff96b05b94b"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_ganacci.png",
         "sourceDimensions": "1077×1549",
-        "dimensions": "1077×1503",
-        "crop": "top 3% removed (1077×1503 of 1077×1549)",
-        "bytes": 141948,
-        "sha256": "50ac4746b1992c8e"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 908×1535 → 370×626 at x2424",
+        "bytes": 47360,
+        "sha256": "1825249e4d2adc26"
       }
     },
     {
@@ -348,18 +382,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_andy.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 44230,
-        "sha256": "b0859ffae5210459"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 714",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 36752,
+        "sha256": "33527bb7da4b4436"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_andy.png",
         "sourceDimensions": "1077×1549",
-        "dimensions": "1077×1472",
-        "crop": "top 5% removed (1077×1472 of 1077×1549)",
-        "bytes": 129350,
-        "sha256": "5d156200d3abe1ab"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 725×1444 → 314×626 at x2480",
+        "bytes": 44322,
+        "sha256": "3b75798eb8c0bbff"
       }
     },
     {
@@ -368,18 +404,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_ken.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 55536,
-        "sha256": "f5fbbc075c912954"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 587",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 46188,
+        "sha256": "932e3685282ad02d"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_ken.png",
         "sourceDimensions": "2155×2500",
-        "dimensions": "1200×1392",
-        "crop": "none — the head is already at the top",
-        "bytes": 172368,
-        "sha256": "2fbf1812e6b3b3a6"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1595×2398 → 416×626 at x2378",
+        "bytes": 58870,
+        "sha256": "d2d4e7059a5981f4"
       }
     },
     {
@@ -388,18 +426,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_joe.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 32786,
-        "sha256": "8226cae08d1f2f86"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 712",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 31302,
+        "sha256": "84f3c48cd3f99165"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_joe.png",
         "sourceDimensions": "2155×2500",
-        "dimensions": "1200×1392",
-        "crop": "none — the head is already at the top",
-        "bytes": 123304,
-        "sha256": "05abb5600f8a276b"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1234×2419 → 319×626 at x2475",
+        "bytes": 43904,
+        "sha256": "fac2a2467b1cab14"
       }
     },
     {
@@ -408,18 +448,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_chun-li.png",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 31928,
-        "sha256": "34fb4af2e002e4a3"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 651",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 32028,
+        "sha256": "1fa7c147fc316544"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_chun-li.png",
         "sourceDimensions": "2155×2500",
-        "dimensions": "1200×1392",
-        "crop": "none — the head is already at the top",
-        "bytes": 125184,
-        "sha256": "882c10f14ea89bea"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1277×2441 → 327×626 at x2467",
+        "bytes": 43248,
+        "sha256": "5f3f5e9b5a6874ac"
       }
     },
     {
@@ -428,18 +470,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_mrbig.webp",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 23870,
-        "sha256": "d9e42d6621982a79"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 653",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 26206,
+        "sha256": "a0291fa11e8f67e2"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_mrbig.webp",
         "sourceDimensions": "2155×2500",
-        "dimensions": "1200×1392",
-        "crop": "none — the head is already at the top",
-        "bytes": 94008,
-        "sha256": "9d55a5efd7332404"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1213×2484 → 305×626 at x2489",
+        "bytes": 39390,
+        "sha256": "71d02c5eae726b6f"
       }
     },
     {
@@ -448,18 +492,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_jaehoon.webp",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 41104,
-        "sha256": "1d2ddfd76087ae2f"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 712",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 33042,
+        "sha256": "32a6a1b6c96796d5"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_jaehoon.webp",
         "sourceDimensions": "2155×2500",
-        "dimensions": "1200×1114",
-        "crop": "top 20% removed (2155×2000 of 2155×2500)",
-        "bytes": 123248,
-        "sha256": "076bd20021ddaacd"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1584×2479 → 400×626 at x2394",
+        "bytes": 50090,
+        "sha256": "55ad84bb83925335"
       }
     },
     {
@@ -468,18 +514,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_geese.webp",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 25990,
-        "sha256": "de3b03b55c246d49"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 604",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 25474,
+        "sha256": "44da902cec7e7882"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_geese.webp",
         "sourceDimensions": "2155×2500",
-        "dimensions": "1200×1392",
-        "crop": "none — the head is already at the top",
-        "bytes": 150084,
-        "sha256": "3bc9d6f5341edbf5"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1180×2436 → 303×626 at x2491",
+        "bytes": 55628,
+        "sha256": "45b8795acba378a9"
       }
     },
     {
@@ -488,18 +536,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_bluemary.webp",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 42114,
-        "sha256": "7547b3f8ae9cfb05"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 603",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 38122,
+        "sha256": "7a64a79ec6ade68c"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_bluemary.webp",
         "sourceDimensions": "2155×2500",
-        "dimensions": "1200×1392",
-        "crop": "none — the head is already at the top",
-        "bytes": 126958,
-        "sha256": "cbf5459ab1677e8d"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1256×2479 → 317×626 at x2477",
+        "bytes": 45630,
+        "sha256": "41716276aadf8dd4"
       }
     },
     {
@@ -508,18 +558,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_krauser.webp",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 38098,
-        "sha256": "cd9450599895d80b"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 709",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 42684,
+        "sha256": "dff1f6f4c7c23e0f"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_krauser.webp",
         "sourceDimensions": "2155×2500",
-        "dimensions": "1200×1392",
-        "crop": "none — the head is already at the top",
-        "bytes": 163800,
-        "sha256": "4fbe6e3ebb7ca185"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1757×2484 → 443×626 at x2351",
+        "bytes": 58172,
+        "sha256": "f078353187b092ca"
       }
     },
     {
@@ -528,18 +580,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_karate.webp",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 41698,
-        "sha256": "7652eb678dc08d18"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 602",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 38288,
+        "sha256": "416c9fda9a0ea825"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_karate.webp",
         "sourceDimensions": "2155×2500",
-        "dimensions": "1200×1392",
-        "crop": "none — the head is already at the top",
-        "bytes": 124426,
-        "sha256": "2d9ee1bc1e794efe"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1444×2479 → 364×626 at x2430",
+        "bytes": 47042,
+        "sha256": "0ce708c333e7205f"
       }
     },
     {
@@ -548,18 +602,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_kenshiro.webp",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 29676,
-        "sha256": "7c6efe30e4b8f2d2"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 601",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 31598,
+        "sha256": "ba3d45892a8ed9f2"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_kenshiro.webp",
         "sourceDimensions": "2155×2500",
-        "dimensions": "1200×1392",
-        "crop": "none — the head is already at the top",
-        "bytes": 88582,
-        "sha256": "7f37f24ee9b35409"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 965×2301 → 262×626 at x2532",
+        "bytes": 37156,
+        "sha256": "664cc86d6b01f206"
       }
     },
     {
@@ -568,18 +624,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_rick.webp",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 37958,
-        "sha256": "e2096958d176d1de"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 664",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 37482,
+        "sha256": "b2afe63f7cac3d38"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_rick.webp",
         "sourceDimensions": "2155×2500",
-        "dimensions": "1200×1392",
-        "crop": "none — the head is already at the top",
-        "bytes": 133932,
-        "sha256": "3e515c3794872ee4"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1396×2436 → 359×626 at x2435",
+        "bytes": 56170,
+        "sha256": "59988e9dd12eff75"
       }
     },
     {
@@ -588,18 +646,20 @@
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_duck.webp",
         "sourceDimensions": "277×721",
-        "dimensions": "512×682",
-        "crop": "top-anchored 3:4, 277×369 of 277×721",
-        "bytes": 24072,
-        "sha256": "7a868150de2df3ff"
+        "dimensions": "512×683",
+        "crop": "top 536 of 721 rows (45% past 3:4), mirror-extended to 3:4; artwork ends at row 587",
+        "figure": "subject 353×683 centred in 512×683, 80px bands",
+        "bytes": 27504,
+        "sha256": "f8bf99f895fb3275"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_duck.webp",
         "sourceDimensions": "2155×2500",
-        "dimensions": "1200×1225",
-        "crop": "top 12% removed (2155×2200 of 2155×2500)",
-        "bytes": 114890,
-        "sha256": "89e1b25b67fa8f86"
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1143×2441 → 293×626 at x2501",
+        "bytes": 47788,
+        "sha256": "dcaa4243d06aec15"
       }
     }
   ]

@@ -85,19 +85,29 @@ export default defineAppConfig({
       metaTimelineTopN: 8,
       metaTimelineFullWidth: true,
     },
-    // The hero crop. The engine default '70% 25%' is documented for WIDE
-    // landscape splashes (2XKO's are 16:9); SNK's character_main_* renders are
-    // tall action poses, so 25% lands on the hip — the hero showed B. Jenet's
-    // waist. Y is 0% rather than Tekken's 4% because this game does the
-    // normalising in the PIPELINE instead: scripts/art.ts crops each splash's
-    // dead space above the head under a measured HERO_TOP table, so every
-    // source arrives with the head at the top and one Y means the same thing
-    // for all 30. That table exists because heroFocus is a single global value
-    // and this roster is not uniform — the head sits at 0% of source height for
-    // Kain and 42% for Tizoc, whose headdress fills everything above his mask.
-    // X stays 70% to hold the subject clear of the name/stat scrim, which is
-    // opaque over the left quarter of the hero.
-    heroFocus: '70% 0%',
+    // The hero crop. Two things about it are counter-intuitive and both were
+    // measured rather than assumed.
+    //
+    // FIRST, X used to do nothing. `object-cover` scales the source to cover the
+    // 1440×340 box; our splashes were ≤1200 wide and tall, so they scaled to
+    // full width and there was NO horizontal overflow for object-position to
+    // move. Every sibling is in the same position today — the engine's advice to
+    // "keep X ~70% to hold the subject on the right" has no effect on four of
+    // the five games. It only became real here because scripts/art.ts now
+    // composes each splash at the hero's own 4.2353:1 ratio.
+    //
+    // SECOND, '100%' is not "shove it off the right edge". The banner already
+    // carries the figure with a 3% margin inside it, so right-aligning the
+    // WINDOW keeps that same margin at every breakpoint: at 1440 the source fits
+    // exactly and nothing is cropped, and at 360 — the narrowest we support —
+    // the window is 874 of 2880 columns and the whole body still sits inside it.
+    // Centring on 70% instead was tried and is wrong: the hero's scrim is opaque
+    // page background to 25% of the width and only reaches transparent AT 70%,
+    // so a body centred there has its entire left half inside the fade.
+    //
+    // Y is inert — a 4.2353:1 source in a box that is never wider than 4.2353:1
+    // has zero vertical overflow — and 50% says so plainly.
+    heroFocus: '100% 50%',
     accents: {
       // Base roster (Early Access 2025-04-21)
       'rock-howard': '#9C8CFF',

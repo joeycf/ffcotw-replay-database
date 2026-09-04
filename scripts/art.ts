@@ -109,6 +109,9 @@ interface Written {
   sourceDimensions: string;
   dimensions: string;
   crop: string;
+  /** How the composition landed — subject box, scale and placement. Both
+   *  helpers COMPOSE, so the crop string alone no longer describes the result. */
+  figure?: string;
   bytes: number;
   sha256: string;
 }
@@ -131,30 +134,170 @@ const finish = async (out: string, webp: Buffer, extra: Omit<Written, 'bytes' | 
 };
 
 /**
- * THE PORTRAIT IS CROPPED 3:4 AND ANCHORED AT THE TOP.
+ * ── THE TWO SURFACES, AND WHY BOTH ARE COMPOSED HERE ──────────────────────
+ * The engine draws character art in exactly two places and neither's framing is
+ * configurable:
  *
- * The engine's roster grid renders `imgPortrait` at `aspect-[3/4] w-full
- * object-cover` with NO `object-position`, so the browser crops from the dead
- * centre and the framing is not configurable from app.config.ts — there is no
- * `heroFocus` equivalent for the grid. The art has to arrive already shaped.
+ *   GRID  `aspect-[3/4] w-full object-cover`, NO object-position
+ *         (app/pages/characters/index.vue) — a 211×282 tile at desktop.
+ *   HERO  a fixed 1440×340 (4.2353:1) `object-cover` letterbox
+ *         (app/pages/characters/[id].vue), framed only by GameConfig.heroFocus,
+ *         which chooses WHICH SLICE of a tall render shows — never how much.
  *
- * SNK's roster tiles are 277×721 (ratio 0.384) with the face in the top ~30%.
- * Covering a 0.75 box with a 0.384 source trims roughly 176 source-pixels off
- * the top at desktop tile size, which is the entire head — every tile showed a
- * torso, a hand or a chin. SF6 records the same lesson in its own pipeline:
- * "shipping the uncropped render would let the browser centre-crop and behead
- * the taller characters."
+ * So the art has to arrive already shaped, and for the hero that means arriving
+ * already the shape of the box. Both helpers below COMPOSE rather than crop.
+ * No sibling does this — all four just `.resize({width})` — which is why the
+ * reasoning is written out rather than assumed.
+ */
+
+/** Extra tile beyond a bare 3:4, as a multiple. 3:4 of SNK's 277-wide roster
+ *  tile is its top 369 rows, which on most of the roster is a face close-up;
+ *  1.25 takes 461 rows and reaches the chest. The rows past 3:4 are filled by
+ *  the blurred backdrop below rather than by cropping tighter. */
+const GRID_ZOOM = 1.45;
+
+/** The desktop hero box, 1440×340. The splash canvas is exactly 2× it, so the
+ *  ratio matches to the digit and `object-cover` crops NOTHING at desktop —
+ *  which is the whole mechanism that makes a full-body hero possible without an
+ *  engine change. */
+const HERO_W = 2880;
+const HERO_H = 680;
+
+/** The figure's share of the hero's height. Every fighter is scaled to the SAME
+ *  body height, which the raw renders never were: their frame ratios span
+ *  0.505–1.209, but frame is not figure — measured body ratios span 0.42
+ *  (Kenshiro, narrow stance) to 1.35 (Kim Dong Hwan, horizontal mid-kick). */
+const FIGURE_H = 0.92;
+
+/** The body's RIGHT edge, as a fraction of canvas width — the figure is placed
+ *  from the right, not centred on a point, and `heroFocus` ships as `'100% …'`
+ *  so the window is flush right at every breakpoint. That makes the framing one
+ *  invariant instead of two: the body keeps this same 3% margin whether or not
+ *  the browser is cropping.
  *
- * Top 369 of 721 rows is head, shoulders and upper chest, and it also excludes
- * SNK's OPAQUE WHITE strip across the bottom 19% of every tile by construction
- * — that strip is not transparent, so on this dark skin any crop that reached
- * it would show a white band.
+ *  Centring on 70% (the obvious reading of the engine's "keep X ~70%" advice)
+ *  is WRONG here and was tried first: the hero's scrim is opaque page background
+ *  to 25% of the width and only reaches transparent AT 70%, so a body centred
+ *  there has its whole left half inside the fade. */
+const FIGURE_RIGHT = 0.97;
+
+/** Hard cap on body width, in canvas px. The binding constraint is the NARROWEST
+ *  viewport: at 360×280 the hero shows only 874 of the canvas's 2880 columns, so
+ *  a body wider than `874 − 2880 × (1 − FIGURE_RIGHT)` = 788 cannot fit however
+ *  it is placed. Nobody on the current roster is scaled by this — Kim Dong Hwan,
+ *  the widest, lands at 788 exactly — but a future DLC pose with wider reach
+ *  would be silently clipped on a phone without it. Height gives way, not width:
+ *  a capped fighter is a little shorter than the rest, which reads as a wide
+ *  pose rather than as a bug. */
+const FIGURE_MAX_W = 788;
+
+const FIGURE_BASELINE = 20;
+
+/** The last row of the tile that is still substantially opaque ARTWORK — the
+ *  floor any crop has to stay above.
  *
- * The 277px source is the resolution ceiling: 512 wide is an upscale, chosen so
- * the output matches SF6's and Tōkon's 512×683 and the five grids read as one
- * set. There is no higher-resolution roster tile on SNK's site, and the
- * high-resolution `character_main_*` render is a full body — a 3:4 crop of it
- * puts the head at a fraction of the frame.
+ *  Two different things end a tile and both had to be measured, because the
+ *  obvious one is the rarer one:
+ *
+ *   · a TRANSPARENT VOID. This is the real constraint. Content stops at 81% of
+ *     the tile for B. Jenet, Kevin, Hotaru, Tizoc, Billy, Gato, Ken and Duck
+ *     King. Cropping into it flattens to the page background and puts a dark
+ *     void across the bottom of the tile.
+ *   · an OPAQUE NEAR-WHITE BAND. Only Kain has one, at row 682 of 721. An
+ *     earlier version of this check looked ONLY for that band and, by testing
+ *     RGB without testing alpha, read the transparent void as white on most of
+ *     the roster — it reported floors of 592–721 that were the wrong quantity
+ *     entirely.
+ *
+ *  Roster minimum today: 582 of 721 rows, which caps GRID_ZOOM at 1.58. */
+function contentBottom(data: Buffer, w: number, h: number, c: number): number {
+  const rowFrac = (y: number, test: (i: number) => boolean): number => {
+    let hit = 0;
+    let seen = 0;
+    for (let x = 0; x < w; x += 2) {
+      seen++;
+      if (test((y * w + x) * c)) hit++;
+    }
+    return hit / seen;
+  };
+  const opaque = (i: number): boolean => data[i + 3]! > 200;
+  const white = (i: number): boolean =>
+    opaque(i) && data[i]! > 235 && data[i + 1]! > 235 && data[i + 2]! > 235;
+
+  let y = h - 1;
+  while (y > 0 && rowFrac(y, opaque) < 0.5) y--;
+  while (y > 0 && rowFrac(y, white) > 0.5) y--;
+  return y + 1;
+}
+
+/** The figure's near-opaque bounding box, in source pixels.
+ *
+ *  Scanned at `alpha > 200` rather than a lower threshold on purpose: these
+ *  renders carry a soft drop shadow whose alpha runs well below that, and a
+ *  threshold that admits the shadow inflates the box and shrinks every figure. */
+async function opaqueBox(
+  buf: Buffer,
+  w: number,
+  h: number,
+): Promise<{ left: number; top: number; width: number; height: number }> {
+  const SCAN = 400;
+  const { data, info } = await sharp(buf)
+    .resize({ width: Math.min(SCAN, w) })
+    .ensureAlpha()
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+  let x0 = info.width;
+  let y0 = info.height;
+  let x1 = -1;
+  let y1 = -1;
+  for (let y = 0; y < info.height; y++) {
+    for (let x = 0; x < info.width; x++) {
+      if (data[(y * info.width + x) * info.channels + 3]! > 200) {
+        if (x < x0) x0 = x;
+        if (x > x1) x1 = x;
+        if (y < y0) y0 = y;
+        if (y > y1) y1 = y;
+      }
+    }
+  }
+  if (x1 < 0) throw new Error('the render has no near-opaque pixel — is it a blank image?');
+  const k = w / info.width;
+  const left = Math.max(0, Math.floor(x0 * k));
+  const top = Math.max(0, Math.floor(y0 * k));
+  return {
+    left,
+    top,
+    width: Math.min(w - left, Math.ceil((x1 - x0 + 1) * k)),
+    height: Math.min(h - top, Math.ceil((y1 - y0 + 1) * k)),
+  };
+}
+
+/**
+ * THE PORTRAIT IS A 3:4 TILE THAT SHOWS MORE THAN 3:4 OF THE SOURCE.
+ *
+ * SNK's roster tiles are 277×721 (ratio 0.384). A bare top-anchored 3:4 crop is
+ * their top 369 rows, and on most of the roster that is a face close-up —
+ * correct framing, too tight. Taking 461 rows instead reaches the chest, but a
+ * 277×461 crop is 0.60, not 0.75, so the sides have to be filled.
+ *
+ * The fill is a MIRROR of the subject's own outer edge, blurred, fading into
+ * the page background. Mirroring is what makes it seamless: the band's inner
+ * pixel column IS the subject's edge column, so the two meet exactly, and the
+ * darkening ramp starts at zero there so the brightness matches too. The blur
+ * then removes any readable doubled anatomy, leaving a soft vignette.
+ *
+ * A cover-scaled blur of the whole tile was tried first and is WRONG — cover
+ * rescales the image, so the band and the subject no longer share a scale and
+ * the seam reads as a smear. Sampling a solid background colour is also wrong
+ * here: measured, the tile edges are neither flat nor consistent (per-column
+ * σ 25–87 across the roster), because on a bust crop the fighter's own
+ * shoulders reach the frame.
+ *
+ * The backdrop is flattened onto the page background first: the tiles carry
+ * 10–16% transparent pixels, and holes in a roster tile read as damage.
+ *
+ * Output stays 512×683 — the platform's portrait size, matching SF6 and Tōkon,
+ * so all five grids read as one set. The 277px source is the resolution ceiling.
  */
 async function savePortrait(url: string, out: string): Promise<Written> {
   const res = await get(url);
@@ -162,117 +305,145 @@ async function savePortrait(url: string, out: string): Promise<Written> {
   const meta = await sharp(buf).metadata();
   const w = meta.width!;
   const h = meta.height!;
-  const targetH = Math.round(w / 0.75);
-  const img = sharp(buf);
-  let crop: string;
-  if (targetH <= h) {
-    img.extract({ left: 0, top: 0, width: w, height: targetH });
-    crop = `top-anchored 3:4, ${w}×${targetH} of ${w}×${h}`;
-  } else {
-    // The source is WIDER than 3:4 — centre horizontally, still anchored top.
-    // Does not occur on the current roster; kept so a future tile of another
-    // shape degrades to a sane crop rather than throwing.
-    const targetW = Math.round(h * 0.75);
-    img.extract({ left: Math.round((w - targetW) / 2), top: 0, width: targetW, height: h });
-    crop = `top-anchored 3:4 (wide source), ${targetW}×${h} of ${w}×${h}`;
+
+  const { data, info } = await sharp(buf).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const floor = contentBottom(data, info.width, info.height, info.channels);
+
+  const rows = Math.min(h, Math.round((w / 0.75) * GRID_ZOOM));
+  if (rows > floor) {
+    throw new Error(
+      `${url}: a ${rows}-row crop runs past the artwork, which ends at row ${floor} of ${h}. ` +
+        `Lower GRID_ZOOM (currently ${GRID_ZOOM}) rather than shipping a void across the tile.`,
+    );
   }
-  const webp = await img.resize({ width: 512 }).webp({ quality: 82 }).toBuffer();
-  const out2 = await sharp(webp).metadata();
-  return finish(out, webp, {
-    source: url,
-    sourceDimensions: `${w}×${h}`,
-    dimensions: `${out2.width}×${out2.height}`,
-    crop,
-  });
-}
 
-/**
- * WHERE THE HEAD SITS IN EACH `character_main_*` RENDER, as a fraction of the
- * source's height. The splash is cropped from the top by this much so that one
- * global `heroFocus` frames all thirty.
- *
- * ── WHY THIS TABLE EXISTS, AND WHY IT DEPARTS FROM TOKON ──────────────────
- * Tōkon's pipeline ships its splashes tall and uncropped, on the reasoning that
- * pre-cropping "crops twice and takes away the framing heroFocus exists to
- * control". That reasoning holds for a roster of uniform renders. It does not
- * survive contact with this one.
- *
- * `heroFocus` is a SINGLE value for the whole game — the engine reads
- * `game.heroFocus` and has no per-character override
- * (replay-engine/app/pages/characters/[id].vue). SNK's renders are
- * heterogeneous action poses, so measured against the source height the head
- * sits at 0% for Kain, 12% for Duck King, 15% for Kim Dong Hwan (horizontal,
- * mid-kick), 25% for Billy Kane and 42% for Tizoc, whose feathered headdress
- * occupies everything above his mask. Sweeping Y across the roster confirmed
- * the conflict is bidirectional and genuine: Terry needs a LOW Y or the hero
- * shows the back of his jacket, Hotaru needs a HIGH one or it shows her hair.
- * No single percentage frames both, and about four fighters were wrong at every
- * value tried.
- *
- * So the sources are NORMALISED here and the framing decision still lives in
- * config: `heroFocus` ships as `'70% 0%'` and still owns X — which holds the
- * subject clear of the name/stat scrim over the left quarter — and still owns
- * the Y baseline. What the crop removes is the variance underneath it, so that
- * one Y means the same thing for every fighter instead of meaning thirty
- * different things.
- *
- * Values are read off a percentage-ruled contact sheet of all 30 splashes and
- * then verified against the ACTUAL hero window (scripts/../ hero box is 4.24:1
- * at desktop, wider slices at narrower breakpoints). Anchoring at the top of
- * the head rather than centring on the face is deliberate: the window is wider
- * at every breakpoint below desktop, so it can only ever grow DOWNWARD from
- * here, and a fighter can gain chest but never lose their face.
- *
- * Absent = 0. Re-measure on a DLC drop; `npm run data:art` prints the table.
- */
-const HERO_TOP: Record<string, number> = {
-  'andy-bogard': 0.05,
-  'billy-kane': 0.25,
-  'duck-king': 0.12,
-  gato: 0.08,
-  hokutomaru: 0.1,
-  'hotaru-futaba': 0.09,
-  'kevin-rian': 0.05,
-  'kim-dong-hwan': 0.1,
-  'kim-jae-hoon': 0.2,
-  'marco-rodrigues': 0.03,
-  preecha: 0.05,
-  'rock-howard': 0.06,
-  'salvatore-ganacci': 0.03,
-  tizoc: 0.42,
-  'vox-reaper': 0.05,
-};
+  const crop = await sharp(buf).extract({ left: 0, top: 0, width: w, height: rows }).toBuffer();
 
-/**
- * THE SPLASH IS SHIPPED TALL, CROPPED ONLY AT THE TOP.
- *
- * Height below the head is never trimmed: the hero box is 4.24:1 at desktop but
- * much squarer on a phone, so the visible slice grows downward and the image
- * has to keep something under the chin to grow into. Only the dead space (or
- * headdress) ABOVE the head goes.
- */
-async function saveSplash(id: string, url: string, out: string): Promise<Written> {
-  const res = await get(url);
-  const buf = Buffer.from(await res.arrayBuffer());
-  const meta = await sharp(buf).metadata();
-  const w = meta.width!;
-  const h = meta.height!;
-  const top = Math.round(h * (HERO_TOP[id] ?? 0));
-  const img = sharp(buf);
-  if (top > 0) img.extract({ left: 0, top, width: w, height: h - top });
-  const webp = await img
-    .resize({ width: 1200, withoutEnlargement: true })
+  const OUT_W = 512;
+  const OUT_H = Math.round(OUT_W / 0.75);
+  const subjectW = Math.round((OUT_H * w) / rows);
+  const band = Math.round((OUT_W - subjectW) / 2);
+
+  // Flattened before anything else: the blur below would otherwise pull the
+  // tile's transparent regions into the visible ones as a grey halo.
+  const subject = await sharp(crop)
+    .resize(subjectW, OUT_H, { fit: 'fill' })
+    .flatten({ background: '#0f0d0b' })
+    .toBuffer();
+
+  // `flop` puts the subject's own edge column against the seam, so the band
+  // meets the artwork exactly; the ramp fades it out towards the tile edge.
+  const edge = async (fromLeft: boolean): Promise<Buffer> =>
+    sharp(
+      await sharp(subject)
+        .extract({ left: fromLeft ? 0 : subjectW - band, top: 0, width: band, height: OUT_H })
+        .flop()
+        .blur(14)
+        .toBuffer(),
+    )
+      .composite([
+        {
+          input: Buffer.from(
+            `<svg width="${band}" height="${OUT_H}"><defs><linearGradient id="g" x1="${fromLeft ? 0 : 1}" x2="${fromLeft ? 1 : 0}">` +
+              `<stop offset="0" stop-color="#0f0d0b" stop-opacity=".72"/>` +
+              `<stop offset="1" stop-color="#0f0d0b" stop-opacity="0"/>` +
+              `</linearGradient></defs><rect width="${band}" height="${OUT_H}" fill="url(#g)"/></svg>`,
+          ),
+        },
+      ])
+      .toBuffer();
+
+  const webp = await sharp({
+    create: { width: OUT_W, height: OUT_H, channels: 3, background: '#0f0d0b' },
+  })
+    .composite([
+      { input: await edge(true), left: 0, top: 0 },
+      { input: await edge(false), left: band + subjectW, top: 0 },
+      { input: subject, left: band, top: 0 },
+    ])
     .webp({ quality: 82 })
     .toBuffer();
+
   const out2 = await sharp(webp).metadata();
   return finish(out, webp, {
     source: url,
     sourceDimensions: `${w}×${h}`,
     dimensions: `${out2.width}×${out2.height}`,
     crop:
-      top === 0
-        ? 'none — the head is already at the top'
-        : `top ${Math.round((HERO_TOP[id] ?? 0) * 100)}% removed (${w}×${h - top} of ${w}×${h})`,
+      `top ${rows} of ${h} rows (${(GRID_ZOOM * 100 - 100).toFixed(0)}% past 3:4), ` +
+      `mirror-extended to 3:4; artwork ends at row ${floor}`,
+    figure: `subject ${subjectW}×${OUT_H} centred in ${OUT_W}×${OUT_H}, ${band}px bands`,
+  });
+}
+
+/**
+ * THE SPLASH IS A PRE-COMPOSED FULL-BODY BANNER AT THE HERO'S OWN RATIO.
+ *
+ * This DEPARTS from Tōkon, which ships its splashes tall and uncropped because
+ * "pre-cropping would crop twice and lose the framing the config exists to
+ * control" (tokon/scripts/art.ts:30-40). That holds while you want a crop. It
+ * does not hold when you want the whole fighter, because `heroFocus` cannot
+ * express that: the hero is a 4.2353:1 box with `object-cover`, so a tall render
+ * is cropped to a horizontal band no matter what object-position says — the
+ * config only chooses which band.
+ *
+ * A source that is ALREADY 4.2353:1 is cropped by nothing at desktop. So the
+ * canvas here is exactly 2× the hero box and the whole figure is composited into
+ * it, standing at 70% across on transparency — the engine's diagonal stripe
+ * backplate paints under the img and its accent radial over it, so both still
+ * show through as designed.
+ *
+ * WHAT THIS DELETED: a 15-entry hand-measured HERO_TOP table that existed only
+ * to normalise where each render's HEAD sat, so one global heroFocus Y could
+ * frame all thirty. With the whole body visible there is no slice to choose and
+ * no variance to normalise, so the table and its measurements are gone.
+ *
+ * ONE CONSEQUENCE WORTH KNOWING: heroFocus's X was previously INERT. Our
+ * splashes were ≤1200px wide against a 1440px box, so `object-cover` scaled them
+ * to full width and there was no horizontal overflow for object-position to
+ * move. A 4.24:1 source overflows at every breakpoint below desktop, so X now
+ * does real work and is tuned in app.config.ts for the NARROWEST one.
+ */
+async function saveSplash(url: string, out: string): Promise<Written> {
+  const res = await get(url);
+  const buf = Buffer.from(await res.arrayBuffer());
+  const meta = await sharp(buf).metadata();
+  const w = meta.width!;
+  const h = meta.height!;
+
+  const box = await opaqueBox(buf, w, h);
+  // Height sets the scale; the width cap only ever reduces it.
+  const scale = Math.min((HERO_H * FIGURE_H) / box.height, FIGURE_MAX_W / box.width);
+  const figW = Math.max(1, Math.round(box.width * scale));
+  const figH = Math.max(1, Math.round(box.height * scale));
+  const left = Math.max(0, Math.round(HERO_W * FIGURE_RIGHT) - figW);
+  const top = HERO_H - FIGURE_BASELINE - figH;
+
+  const figure = await sharp(buf).extract(box).resize(figW, figH, { fit: 'fill' }).png().toBuffer();
+
+  const webp = await sharp({
+    create: {
+      width: HERO_W,
+      height: HERO_H,
+      channels: 4,
+      background: { r: 0, g: 0, b: 0, alpha: 0 },
+    },
+  })
+    .composite([{ input: figure, left, top }])
+    .webp({ quality: 82, alphaQuality: 100 })
+    .toBuffer();
+
+  const out2 = await sharp(webp).metadata();
+  return finish(out, webp, {
+    source: url,
+    sourceDimensions: `${w}×${h}`,
+    dimensions: `${out2.width}×${out2.height}`,
+    crop:
+      `full body composed onto the hero's own ${HERO_W}×${HERO_H} ratio ` +
+      `(2× the 1440×340 box, so object-cover crops nothing at desktop)`,
+    figure:
+      `body ${box.width}×${box.height} → ${figW}×${figH} at x${left}` +
+      (figW >= FIGURE_MAX_W ? ' (width-capped)' : ''),
   });
 }
 
@@ -322,16 +493,12 @@ async function main(): Promise<void> {
     const portraitUrl = new URL(portraitRel, BASE).toString();
     const splashUrl = new URL(mains[0]!, `${BASE}${slug}.php`).toString();
     const portrait = await savePortrait(portraitUrl, join(ROOT, 'public/img/char', `${c.id}.webp`));
-    const splash = await saveSplash(
-      c.id,
-      splashUrl,
-      join(ROOT, 'public/img/splash', `${c.id}.webp`),
-    );
+    const splash = await saveSplash(splashUrl, join(ROOT, 'public/img/splash', `${c.id}.webp`));
     provenance.push({ id: c.id, page: pageUrl, portrait, splash });
     const constructed = `img/character_index_${slug}.png`;
-    const heroTop = HERO_TOP[c.id] ?? 0;
     console.log(
-      `  ${c.id.padEnd(20)} ${portrait.dimensions.padEnd(9)} hero ${`${heroTop ? `-${Math.round(heroTop * 100)}%` : '·'}`.padEnd(5)} ${portraitRel.replace('img/', '').padEnd(30)}` +
+      `  ${c.id.padEnd(20)} ${portrait.dimensions.padEnd(9)} ${splash.dimensions.padEnd(9)} ` +
+        `${(splash.figure ?? '').padEnd(46)} ${portraitRel.replace('img/', '').padEnd(30)}` +
         (portraitRel !== constructed ? '  ← a constructed path would have missed this' : ''),
     );
   }

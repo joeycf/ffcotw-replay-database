@@ -190,13 +190,85 @@ check(
   offRatio.slice(0, 3).join(', '),
 );
 
+// ── the hero banner contract ──────────────────────────────────────────────
+// The character hero is a hard-coded 1440×340 `object-cover` letterbox with no
+// config for height or fit, so the ONLY way to show a whole fighter is to hand
+// it a source that is already the shape of the box. Three things have to hold
+// for that to work, and each fails silently:
+//
+//  · the RATIO. A splash that drifts off 4.2353:1 is cropped again, and the
+//    body loses its feet or its head with no error anywhere.
+//  · the ALPHA. A flattened banner paints an opaque box over the engine's
+//    diagonal stripe backplate — the page still renders, it just looks wrong.
+//  · the FIT AT THE NARROWEST BREAKPOINT. Desktop shows the whole canvas, so
+//    desktop can never catch this: at 360×280 the hero shows only 874 of the
+//    2880 columns, and a pose wider than that is clipped on phones only.
+const HERO_RATIO = 1440 / 340;
+const NARROW = { w: 360, h: 280 };
+const splashDir = join(OUT, 'img', 'splash');
+const splashes = existsSync(splashDir)
+  ? readdirSync(splashDir).filter((f) => f.endsWith('.webp'))
+  : [];
+check(
+  'splashes shipped for the whole roster',
+  splashes.length === characters.length,
+  `${splashes.length} files for ${characters.length} fighters`,
+);
+
+const offHero: string[] = [];
+const opaque: string[] = [];
+const clipped: string[] = [];
+for (const f of splashes) {
+  const img = sharp(join(splashDir, f));
+  const m = await img.metadata();
+  if (Math.abs(m.width! / m.height! - HERO_RATIO) > HERO_RATIO / m.height!)
+    offHero.push(`${f} ${m.width}×${m.height}`);
+  if (!m.hasAlpha) opaque.push(f);
+
+  // The visible extent, at alpha > 8 so the soft drop shadow counts too — the
+  // pipeline places the body by its NEAR-opaque box, and this deliberately
+  // checks the wider thing the viewer actually sees.
+  const { data, info } = await img.ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  let x0 = info.width;
+  let x1 = -1;
+  for (let y = 0; y < info.height; y++) {
+    for (let x = 0; x < info.width; x++) {
+      if (data[(y * info.width + x) * info.channels + 3]! > 8) {
+        if (x < x0) x0 = x;
+        if (x > x1) x1 = x;
+      }
+    }
+  }
+  // object-cover scales to cover, then heroFocus's '100%' aligns the window
+  // flush against the source's right edge.
+  const scale = Math.max(NARROW.w / m.width!, NARROW.h / m.height!);
+  const windowLeft = Math.round(m.width! - NARROW.w / scale);
+  if (x0 < windowLeft || x1 > m.width!)
+    clipped.push(`${f} [${x0},${x1}] vs window [${windowLeft},${m.width}]`);
+}
+check(
+  'every splash is the hero box ratio 4.2353:1 (or object-cover re-crops it)',
+  offHero.length === 0,
+  offHero.slice(0, 3).join(', '),
+);
+check(
+  'every splash keeps its alpha (the engine backplate shows through)',
+  opaque.length === 0,
+  opaque.slice(0, 3).join(', '),
+);
+check(
+  `every body fits the narrowest hero window (${NARROW.w}×${NARROW.h})`,
+  clipped.length === 0,
+  clipped.slice(0, 3).join(', ') + ' — clipped on phones, invisible on desktop',
+);
+
 // heroFocus is asserted on the RENDERED page, not on app.config.ts: the config
 // can be right while the value never reaches the style attribute.
 const heroPage = characters.map((c) => `characters/${c.id}/index.html`).find((pth) => has(pth));
 if (heroPage) {
   check(
     'the hero carries an explicit object-position (not the wide-splash default)',
-    /object-position:\s*70%\s*0%/.test(read(heroPage)),
+    /object-position:\s*100%\s*50%/.test(read(heroPage)),
     'heroFocus is unset, or did not reach the rendered hero',
   );
 } else {
