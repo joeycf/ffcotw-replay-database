@@ -85,6 +85,19 @@ export default defineAppConfig({
       metaTimelineTopN: 8,
       metaTimelineFullWidth: true,
     },
+    // The hero crop. The engine default '70% 25%' is documented for WIDE
+    // landscape splashes (2XKO's are 16:9); SNK's character_main_* renders are
+    // tall action poses, so 25% lands on the hip — the hero showed B. Jenet's
+    // waist. Y is 0% rather than Tekken's 4% because this game does the
+    // normalising in the PIPELINE instead: scripts/art.ts crops each splash's
+    // dead space above the head under a measured HERO_TOP table, so every
+    // source arrives with the head at the top and one Y means the same thing
+    // for all 30. That table exists because heroFocus is a single global value
+    // and this roster is not uniform — the head sits at 0% of source height for
+    // Kain and 42% for Tizoc, whose headdress fills everything above his mask.
+    // X stays 70% to hold the subject clear of the name/stat scrim, which is
+    // opaque over the left quarter of the hero.
+    heroFocus: '70% 0%',
     accents: {
       // Base roster (Early Access 2025-04-21)
       'rock-howard': '#9C8CFF',

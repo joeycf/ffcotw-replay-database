@@ -17,6 +17,7 @@
  */
 
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import sharp from 'sharp';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -147,6 +148,60 @@ const characters = JSON.parse(readFileSync(join(ROOT, 'data/characters.json'), '
   accent: string;
 }[];
 check('roster is non-empty', characters.length > 0, `${characters.length} fighters`);
+
+// ── character art framing ─────────────────────────────────────────────────
+// Both surfaces that show a fighter crop the image with `object-cover`, and
+// both cropped past the face before this was fixed. Neither failure is visible
+// to any other gate: the files exist, the build succeeds, the pages render.
+//
+//  · THE GRID has no framing knob. The engine draws imgPortrait at
+//    `aspect-[3/4] w-full object-cover` with no object-position
+//    (app/pages/characters/index.vue), so the browser centre-crops and the art
+//    has to arrive already shaped. SNK's roster tiles are 277×721 — covering a
+//    0.75 box with a 0.384 source cut off every head.
+//  · THE HERO reads GameConfig.heroFocus, whose default '70% 25%' is
+//    documented for wide landscape splashes. On a tall render 25% is the hip.
+//
+// Both assert the SHIPPED ARTEFACTS rather than the source that made them, and
+// both are corpus-independent on purpose: art is Stage 1, so they have to hold
+// in empty-corpus mode, where every record-shaped check below skips.
+console.log('\n▶ character art framing\n');
+const portraitDir = join(OUT, 'img', 'char');
+const portraits = existsSync(portraitDir)
+  ? readdirSync(portraitDir).filter((f) => f.endsWith('.webp'))
+  : [];
+check(
+  'portraits shipped for the whole roster',
+  portraits.length === characters.length,
+  `${portraits.length} files for ${characters.length} fighters`,
+);
+
+const offRatio: string[] = [];
+for (const f of portraits) {
+  const m = await sharp(join(portraitDir, f)).metadata();
+  // One pixel of tolerance: 512/0.75 is 682.67, so the integer height is 682
+  // and the exact shipped ratio is 0.7507.
+  if (Math.abs(m.width! / m.height! - 0.75) > 0.75 / m.height!)
+    offRatio.push(`${f} ${m.width}×${m.height}`);
+}
+check(
+  'every portrait is a 3:4 crop (the grid centre-crops anything else)',
+  offRatio.length === 0,
+  offRatio.slice(0, 3).join(', '),
+);
+
+// heroFocus is asserted on the RENDERED page, not on app.config.ts: the config
+// can be right while the value never reaches the style attribute.
+const heroPage = characters.map((c) => `characters/${c.id}/index.html`).find((pth) => has(pth));
+if (heroPage) {
+  check(
+    'the hero carries an explicit object-position (not the wide-splash default)',
+    /object-position:\s*70%\s*0%/.test(read(heroPage)),
+    'heroFocus is unset, or did not reach the rendered hero',
+  );
+} else {
+  check('a character page prerendered to carry heroFocus', false, 'no character page in the build');
+}
 
 if (EMPTY) {
   skip('every record-shaped assertion', 'empty corpus — 0 replays in the build');

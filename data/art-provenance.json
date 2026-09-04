@@ -1,19 +1,25 @@
 {
   "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/",
-  "fetched": "2026-09-03",
+  "fetched": "2026-09-04",
   "files": [
     {
       "id": "rock-howard",
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/rock.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_rock.png",
-        "bytes": 37666,
-        "sha256": "0ba2d58f1bfb1286"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 62544,
+        "sha256": "3b0def02359d1e84"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_rock.png",
-        "bytes": 129742,
-        "sha256": "59be718a54c3c569"
+        "sourceDimensions": "2143×2319",
+        "dimensions": "1200×1221",
+        "crop": "top 6% removed (2143×2180 of 2143×2319)",
+        "bytes": 125912,
+        "sha256": "752e0af14a3b3709"
       }
     },
     {
@@ -21,11 +27,17 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/terry.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_terry.png",
-        "bytes": 37172,
-        "sha256": "8bfcb142850d2717"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 41080,
+        "sha256": "0841562b0f6dc9d7"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_terry.png",
+        "sourceDimensions": "1639×2500",
+        "dimensions": "1200×1830",
+        "crop": "none — the head is already at the top",
         "bytes": 244562,
         "sha256": "d417b9f9a5488d25"
       }
@@ -35,13 +47,19 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/hotaru.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_hotaru.png",
-        "bytes": 37952,
-        "sha256": "f868d7989e0ea06f"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 45520,
+        "sha256": "d05f77bf350e8837"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_hotaru.png",
-        "bytes": 293902,
-        "sha256": "ed45a3036c207fed"
+        "sourceDimensions": "1263×2500",
+        "dimensions": "1200×2162",
+        "crop": "top 9% removed (1263×2275 of 1263×2500)",
+        "bytes": 280060,
+        "sha256": "b145dfb6d8117c0e"
       }
     },
     {
@@ -49,13 +67,19 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/preecha.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_preecha.png",
-        "bytes": 41200,
-        "sha256": "433ac2fa037786a8"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 57154,
+        "sha256": "8a681e03c14eb0f9"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_preecha.png",
-        "bytes": 184682,
-        "sha256": "cccc16323bd399ed"
+        "sourceDimensions": "2143×2319",
+        "dimensions": "1200×1234",
+        "crop": "top 5% removed (2143×2203 of 2143×2319)",
+        "bytes": 184894,
+        "sha256": "29ca55e2c8a9096c"
       }
     },
     {
@@ -63,13 +87,19 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/vox.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_vox.png",
-        "bytes": 24558,
-        "sha256": "105ab92e7a993b4b"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 25606,
+        "sha256": "6400083b1e243b83"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_vox.png",
-        "bytes": 178640,
-        "sha256": "ea6da2746684d5a6"
+        "sourceDimensions": "1854×2500",
+        "dimensions": "1200×1537",
+        "crop": "top 5% removed (1854×2375 of 1854×2500)",
+        "bytes": 173448,
+        "sha256": "3c962402df022645"
       }
     },
     {
@@ -77,13 +107,19 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/marco.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_marco.png",
-        "bytes": 41160,
-        "sha256": "6fca87f204f919f9"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 34946,
+        "sha256": "ac798fa9ef372cb0"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_marco.png",
-        "bytes": 221452,
-        "sha256": "5d4bd246eff2000d"
+        "sourceDimensions": "2155×2500",
+        "dimensions": "1200×1350",
+        "crop": "top 3% removed (2155×2425 of 2155×2500)",
+        "bytes": 220490,
+        "sha256": "1ece9eb535320800"
       }
     },
     {
@@ -91,13 +127,19 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/kevin.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_kevin.png",
-        "bytes": 29386,
-        "sha256": "80b9177f702ca382"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 30978,
+        "sha256": "7f0e804eb020321f"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_kevin.png",
-        "bytes": 167350,
-        "sha256": "9a18c21418a8c553"
+        "sourceDimensions": "2155×2500",
+        "dimensions": "1200×1323",
+        "crop": "top 5% removed (2155×2375 of 2155×2500)",
+        "bytes": 167882,
+        "sha256": "7bc3932b4f023d63"
       }
     },
     {
@@ -105,11 +147,17 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/jenet.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_janet.png",
-        "bytes": 42544,
-        "sha256": "b7d7144e6e6297a9"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 55410,
+        "sha256": "3657ecfef7402e57"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_jenet.png",
+        "sourceDimensions": "2155×2500",
+        "dimensions": "1200×1392",
+        "crop": "none — the head is already at the top",
         "bytes": 193326,
         "sha256": "7dffd2a251f85f74"
       }
@@ -119,13 +167,19 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/gato.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_gato.png",
-        "bytes": 25866,
-        "sha256": "d052a5ddc2011805"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 23302,
+        "sha256": "93ee26741e8bc7f2"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_gato.png",
-        "bytes": 149948,
-        "sha256": "aa4d1e5f1e84b6c4"
+        "sourceDimensions": "2155×2500",
+        "dimensions": "1200×1281",
+        "crop": "top 8% removed (2155×2300 of 2155×2500)",
+        "bytes": 139776,
+        "sha256": "1cb617de5fb2c177"
       }
     },
     {
@@ -133,13 +187,19 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/tizoc.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_tizoc.png",
-        "bytes": 32982,
-        "sha256": "bad6f39a7f513425"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 42152,
+        "sha256": "f482cd3682e4c4d8"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_tizoc.png",
-        "bytes": 239480,
-        "sha256": "84f1d5c5bbe803d2"
+        "sourceDimensions": "2155×2500",
+        "dimensions": "1200×807",
+        "crop": "top 42% removed (2155×1450 of 2155×2500)",
+        "bytes": 149228,
+        "sha256": "5b6f3fb2187c9dde"
       }
     },
     {
@@ -147,13 +207,19 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/hokutomaru.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_hokutomaru.png",
-        "bytes": 31908,
-        "sha256": "e1cee220ff61dfb4"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 32280,
+        "sha256": "2ee9e6cb61411ae2"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_hokutomaru.png",
-        "bytes": 147880,
-        "sha256": "b425dabfe955421b"
+        "sourceDimensions": "2155×2500",
+        "dimensions": "1200×1253",
+        "crop": "top 10% removed (2155×2250 of 2155×2500)",
+        "bytes": 147342,
+        "sha256": "6531f6a0387e99cc"
       }
     },
     {
@@ -161,11 +227,17 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/kain.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_kain.png",
-        "bytes": 34988,
-        "sha256": "88eaf79c8a4ec624"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 30648,
+        "sha256": "a5661ad4793ebf08"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_kain.png",
+        "sourceDimensions": "1639×2500",
+        "dimensions": "1200×1830",
+        "crop": "none — the head is already at the top",
         "bytes": 166296,
         "sha256": "8bb42f3ed7c52bb5"
       }
@@ -175,13 +247,19 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/billy.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_billy.png",
-        "bytes": 32762,
-        "sha256": "59a35b01cd9deab6"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 46294,
+        "sha256": "d5714b1db63077d9"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_billy.png",
-        "bytes": 161658,
-        "sha256": "d373f35233f59ca9"
+        "sourceDimensions": "2155×2500",
+        "dimensions": "1200×1044",
+        "crop": "top 25% removed (2155×1875 of 2155×2500)",
+        "bytes": 126732,
+        "sha256": "0c9ac3031ff6504d"
       }
     },
     {
@@ -189,11 +267,17 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/mai.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_mai.png",
-        "bytes": 36268,
-        "sha256": "57ce69dfe113d56e"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 25828,
+        "sha256": "df4da376c675df10"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_mai.png",
+        "sourceDimensions": "2155×2500",
+        "dimensions": "1200×1392",
+        "crop": "none — the head is already at the top",
         "bytes": 135818,
         "sha256": "cd4bcb5d5ddb6f27"
       }
@@ -203,13 +287,19 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/donghwan.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_donghwan.png",
-        "bytes": 29324,
-        "sha256": "faeb923a9e96e74f"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 25216,
+        "sha256": "d637993107d5679a"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_donghwan.png",
-        "bytes": 105466,
-        "sha256": "3b474ac2d5631516"
+        "sourceDimensions": "3022×2500",
+        "dimensions": "1200×893",
+        "crop": "top 10% removed (3022×2250 of 3022×2500)",
+        "bytes": 98488,
+        "sha256": "45e101dec9779943"
       }
     },
     {
@@ -217,11 +307,17 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/cr7.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_cr7.png",
-        "bytes": 21842,
-        "sha256": "a8741f8e1fcd7378"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 19258,
+        "sha256": "b9bc34f3fa9a71d6"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_cr7.png",
+        "sourceDimensions": "1077×1549",
+        "dimensions": "1077×1549",
+        "crop": "none — the head is already at the top",
         "bytes": 129648,
         "sha256": "0823fb91303bb536"
       }
@@ -231,13 +327,19 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/ganacci.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_ganacci.png",
-        "bytes": 34700,
-        "sha256": "eff3e50b54d49b4e"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 38802,
+        "sha256": "93eedddec9c52e8f"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_ganacci.png",
-        "bytes": 144678,
-        "sha256": "b5f2d12236e53ada"
+        "sourceDimensions": "1077×1549",
+        "dimensions": "1077×1503",
+        "crop": "top 3% removed (1077×1503 of 1077×1549)",
+        "bytes": 141948,
+        "sha256": "50ac4746b1992c8e"
       }
     },
     {
@@ -245,13 +347,19 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/andy.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_andy.png",
-        "bytes": 33508,
-        "sha256": "7bbffeff76a3f1ed"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 44230,
+        "sha256": "b0859ffae5210459"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_andy.png",
-        "bytes": 136320,
-        "sha256": "ca6b558f8f3b59af"
+        "sourceDimensions": "1077×1549",
+        "dimensions": "1077×1472",
+        "crop": "top 5% removed (1077×1472 of 1077×1549)",
+        "bytes": 129350,
+        "sha256": "5d156200d3abe1ab"
       }
     },
     {
@@ -259,11 +367,17 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/ken.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_ken.png",
-        "bytes": 38506,
-        "sha256": "51266bd3070f2908"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 55536,
+        "sha256": "f5fbbc075c912954"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_ken.png",
+        "sourceDimensions": "2155×2500",
+        "dimensions": "1200×1392",
+        "crop": "none — the head is already at the top",
         "bytes": 172368,
         "sha256": "2fbf1812e6b3b3a6"
       }
@@ -273,11 +387,17 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/joe.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_joe.png",
-        "bytes": 26856,
-        "sha256": "b760c53ab410ced2"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 32786,
+        "sha256": "8226cae08d1f2f86"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_joe.png",
+        "sourceDimensions": "2155×2500",
+        "dimensions": "1200×1392",
+        "crop": "none — the head is already at the top",
         "bytes": 123304,
         "sha256": "05abb5600f8a276b"
       }
@@ -287,11 +407,17 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/chun-li.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_chun-li.png",
-        "bytes": 28404,
-        "sha256": "62b5b98b09daf5f5"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 31928,
+        "sha256": "34fb4af2e002e4a3"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_chun-li.png",
+        "sourceDimensions": "2155×2500",
+        "dimensions": "1200×1392",
+        "crop": "none — the head is already at the top",
         "bytes": 125184,
         "sha256": "882c10f14ea89bea"
       }
@@ -301,11 +427,17 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/mrbig.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_mrbig.webp",
-        "bytes": 25038,
-        "sha256": "1138a0087b746762"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 23870,
+        "sha256": "d9e42d6621982a79"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_mrbig.webp",
+        "sourceDimensions": "2155×2500",
+        "dimensions": "1200×1392",
+        "crop": "none — the head is already at the top",
         "bytes": 94008,
         "sha256": "9d55a5efd7332404"
       }
@@ -315,13 +447,19 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/jaehoon.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_jaehoon.webp",
-        "bytes": 31216,
-        "sha256": "72e6a9c4334bbcfa"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 41104,
+        "sha256": "1d2ddfd76087ae2f"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_jaehoon.webp",
-        "bytes": 125338,
-        "sha256": "26f8134994e5a085"
+        "sourceDimensions": "2155×2500",
+        "dimensions": "1200×1114",
+        "crop": "top 20% removed (2155×2000 of 2155×2500)",
+        "bytes": 123248,
+        "sha256": "076bd20021ddaacd"
       }
     },
     {
@@ -329,11 +467,17 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/geese.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_geese.webp",
-        "bytes": 27452,
-        "sha256": "8657c9a7486b3129"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 25990,
+        "sha256": "de3b03b55c246d49"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_geese.webp",
+        "sourceDimensions": "2155×2500",
+        "dimensions": "1200×1392",
+        "crop": "none — the head is already at the top",
         "bytes": 150084,
         "sha256": "3bc9d6f5341edbf5"
       }
@@ -343,11 +487,17 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/bluemary.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_bluemary.webp",
-        "bytes": 37200,
-        "sha256": "b7e4bc0ee65ff3e8"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 42114,
+        "sha256": "7547b3f8ae9cfb05"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_bluemary.webp",
+        "sourceDimensions": "2155×2500",
+        "dimensions": "1200×1392",
+        "crop": "none — the head is already at the top",
         "bytes": 126958,
         "sha256": "cbf5459ab1677e8d"
       }
@@ -357,11 +507,17 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/krauser.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_krauser.webp",
-        "bytes": 42780,
-        "sha256": "6fc8ae7e33edae5d"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 38098,
+        "sha256": "cd9450599895d80b"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_krauser.webp",
+        "sourceDimensions": "2155×2500",
+        "dimensions": "1200×1392",
+        "crop": "none — the head is already at the top",
         "bytes": 163800,
         "sha256": "4fbe6e3ebb7ca185"
       }
@@ -371,11 +527,17 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/mrkarate.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_karate.webp",
-        "bytes": 35792,
-        "sha256": "bd7db70220cf80fe"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 41698,
+        "sha256": "7652eb678dc08d18"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_karate.webp",
+        "sourceDimensions": "2155×2500",
+        "dimensions": "1200×1392",
+        "crop": "none — the head is already at the top",
         "bytes": 124426,
         "sha256": "2d9ee1bc1e794efe"
       }
@@ -385,11 +547,17 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/kenshiro.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_kenshiro.webp",
-        "bytes": 31068,
-        "sha256": "91cead6adb5b59f7"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 29676,
+        "sha256": "7c6efe30e4b8f2d2"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_kenshiro.webp",
+        "sourceDimensions": "2155×2500",
+        "dimensions": "1200×1392",
+        "crop": "none — the head is already at the top",
         "bytes": 88582,
         "sha256": "7f37f24ee9b35409"
       }
@@ -399,11 +567,17 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/rick.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_rick.webp",
-        "bytes": 37214,
-        "sha256": "1437450e38a370db"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 37958,
+        "sha256": "e2096958d176d1de"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_rick.webp",
+        "sourceDimensions": "2155×2500",
+        "dimensions": "1200×1392",
+        "crop": "none — the head is already at the top",
         "bytes": 133932,
         "sha256": "3e515c3794872ee4"
       }
@@ -413,13 +587,19 @@
       "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/duck.php",
       "portrait": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_duck.webp",
-        "bytes": 28012,
-        "sha256": "786d4e79b6059e6c"
+        "sourceDimensions": "277×721",
+        "dimensions": "512×682",
+        "crop": "top-anchored 3:4, 277×369 of 277×721",
+        "bytes": 24072,
+        "sha256": "7a868150de2df3ff"
       },
       "splash": {
         "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_duck.webp",
-        "bytes": 117062,
-        "sha256": "e1fc75a82f92d23f"
+        "sourceDimensions": "2155×2500",
+        "dimensions": "1200×1225",
+        "crop": "top 12% removed (2155×2200 of 2155×2500)",
+        "bytes": 114890,
+        "sha256": "89e1b25b67fa8f86"
       }
     }
   ]
