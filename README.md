@@ -218,6 +218,36 @@ exact-string work: **43 of 43** U+202F titles produce a different player slug
 raw vs normalized, which mints two pages for one person. A control that only
 checks "does it still parse" passes on a pipeline with no normalization at all.
 
+**FOLLOW-UP — three player ids share a name with the roster, and all three are
+real.** Found 2026-09-07 from Strive's Stage 0 recon, which needed the
+player-registry-vs-roster invariant (checklist 5n) and looked for prior art.
+This repo has no such guard, so nobody had checked. `data/players.json` holds
+`mr-karate` and `mrkarate` against a character whose id is `mr-karate` and whose
+aliases include `MrKarate`, plus `k4karate`.
+
+Every one was adjudicated from its source title before anything was touched, and
+**none is a mis-parse — the parser is correct on all four side-appearances:**
+
+| player id | video | the title that produced it |
+|---|---|---|
+| `mrkarate` | `wuxZI5UWSGw` | `TTVTeiga (Rock Howard) vs MrKarate (Krauser)` |
+| `mrkarate` | `xHslrureiqI` | `MRKARATE (Wolfgang Krauser) vs SOMBRA (#7 Ranked Mr. Karate)` |
+| `mr-karate` | `McTZSWYV7nE` | `DARK ANGEL (Terry Bogard) vs MR KARATE (Mr.Karate)` |
+| `k4karate` | `6_7zQlihiUI` | `DARK ANGEL (#5 Ranked Mr. Karate) vs K4KARATE (#4 Ranked Mr. Karate)` |
+
+`xHslrureiqI` is the one that settles it: the same title carries a PLAYER called
+MRKARATE and an OPPONENT playing Mr. Karate, and the parser separated them
+correctly. `McTZSWYV7nE` is a player named after the fighter they main — the
+"Star Lord" case, genuine.
+
+So this is a true positive for the guard and a false alarm for the defect, which
+is exactly why 5n requires a CONFIRMED list with a video id per entry rather than
+a bare assertion. **Nothing here should be deleted.** The work outstanding is to
+ADD the guard, seeded with these three as its first CONFIRMED entries; until then
+this table is the record. Note also that `mr-karate` and `mrkarate` are two pages
+for what may be one person — a player-redirect question, separate from the guard
+and not settled by this evidence.
+
 ## The tier that was measured and declined
 
 Checklist 5b says look for a cheaper text tier before building an extractor.
