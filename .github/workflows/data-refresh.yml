@@ -6,9 +6,13 @@ on:
     # the platform, after 2XKO's 06:17, Tekken's 06:47, SF6's 07:17 and Tōkon's
     # 07:47, so the five refreshes never contend).
     #
-    # NOTE FOR WHOEVER ADDS GAME SIX: the platform's refresh window was
-    # 06:00–08:00 and this entry widens it to 06:00–08:30. The pattern is +30
-    # minutes alternating :17/:47, so the next free slot is 08:47.
+    # GAME SIX HAS BEEN ADDED and this note is kept as history, not as an
+    # instruction. Guilty Gear Strive took 08:47 on 2026-09-09 and the window is
+    # now 06:00–09:00; its own workflow carries the live note for game seven,
+    # which is 09:17. Left here rather than deleted because the entry above
+    # explains why the window widened to 08:30 in the first place, and a reader
+    # who finds a stale "next free slot" with nothing marking it stale is
+    # exactly how two games end up sharing a minute.
     - cron: '17 8 * * *'
   workflow_dispatch:
 
