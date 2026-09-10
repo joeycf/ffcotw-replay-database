@@ -164,7 +164,7 @@ jobs:
         run: npm run verify:deployed
 
       - name: Flag due expiries
-        # Deliberately LAST and deliberately failing (scripts/expiries.ts).
+        # Deliberately failing (scripts/expiries.ts).
         # The data has already been committed and pushed by the step above, so a
         # red run never costs a refresh — it only makes the pending work
         # impossible to miss. Three things can trip it: an announced Season 3
@@ -175,3 +175,30 @@ jobs:
         # season, and the patch table going 40 days stale.
         # Clear it by doing the work, NOT by deleting this step.
         run: npx tsx scripts/expiries.ts --check
+
+      - name: Flag stale redirects
+        # `if: always()` because the step above is DESIGNED to go red, and a red
+        # step stops the ones after it. These two gates are independent, and both
+        # have to be able to report on the same run.
+        #
+        # WHAT THIS GUARDS HERE IS NOT WHAT IT GUARDS IN THE SIBLINGS, and the
+        # difference is worth stating because copying their reasoning would be
+        # wrong. Tekken and Tokon DERIVE vercel.json redirects from the ledger and
+        # their parse.ts grows that ledger automatically, so their risk is a
+        # derived file silently falling behind — Tokon had accumulated seventeen
+        # missing routes by 2026-09-10. This repo has no vercel.json at all: the
+        # engine reads data/player-redirects.json directly, and that file is
+        # HAND-AUTHORED (parse.ts never writes it), because merging two player ids
+        # is a claim that two handles are the same PERSON and no string distance
+        # can establish that.
+        #
+        # So the ledger here does not drift. THE CORPUS UNDER IT DOES. `--check`
+        # asserts every redirect target still exists and no chain loops, and the
+        # cron rewrites players.json nightly — so a target can stop existing
+        # without anyone touching this file, turning a redirect into a 404 wearing
+        # a 301. That check already lived in `npm run typecheck`, which the cron
+        # does not run, so nothing was watching it between human runs.
+        #
+        # Clear it by fixing the ledger, NOT by deleting this step.
+        if: always()
+        run: npx tsx scripts/redirects.ts --check
