@@ -1737,7 +1737,7 @@
   },
   {
     "id": "dildilfatalfury",
-    "handle": "DildilFatalFury"
+    "handle": "DildilfatalFury"
   },
   {
     "id": "dildilfatalfury-ft2",
@@ -6968,6 +6968,10 @@
     "handle": "Shougo"
   },
   {
+    "id": "show-match-yvessalohan",
+    "handle": "show Match (YvesSalohan"
+  },
+  {
     "id": "shrub",
     "handle": "SHRUB"
   },
@@ -7740,12 +7744,16 @@
     "handle": "TRG BRUNO KOF"
   },
   {
+    "id": "tristero",
+    "handle": "TRISTERO"
+  },
+  {
     "id": "trix-sama",
     "handle": "TRIX SAMA"
   },
   {
     "id": "trixsama",
-    "handle": "TRIXSAMA ️"
+    "handle": "TRIXSAMA"
   },
   {
     "id": "trt-zero",

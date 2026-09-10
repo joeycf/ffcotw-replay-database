@@ -1,30 +1,30 @@
 # CotW pipeline report
 
-- **4529** published records · **2132** players · **30** fighters
-- **634** pending review item(s) — absent from the site, never guessed
+- **4539** published records · **2134** players · **30** fighters
+- **635** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
 
 ## Per intake
 
 | intake | raw uploads | CotW-marked | parsed | published |
 | --- | ---: | ---: | ---: | ---: |
-| fatalFuryReplays | 6456 | 1228 | 1224 | 1224 |
-| wolfFgc | 1788 | 1135 | 1108 | 1108 |
-| svcHighlights | 717 | 666 | 660 | 660 |
+| fatalFuryReplays | 6460 | 1230 | 1226 | 1226 |
+| wolfFgc | 1792 | 1139 | 1112 | 1112 |
+| svcHighlights | 718 | 667 | 661 | 661 |
 | ffCotwReplays | 709 | 708 | 629 | 629 |
-| bestOfSnk | 428 | 217 | 215 | 215 |
+| bestOfSnk | 430 | 218 | 216 | 216 |
 | cotwReplays | 140 | 140 | 119 | 119 |
 | nomiiAegis | 339 | 315 | 134 | 134 |
-| bestOfFgc | 1810 | 309 | 305 | 305 |
-| dildilFatalFury | 2452 | 1710 | 8 | 8 |
+| bestOfFgc | 1812 | 310 | 306 | 306 |
+| dildilFatalFury | 2461 | 1719 | 9 | 9 |
 | evoEvents | 2766 | 97 | 0 | 0 |
 | replayTheater | — | — | — | 127 |
 
 ## Misses
 
-- `no-marker` — 11080
-- `no-char` — 633
-- `vs-count` — 563
+- `no-marker` — 11084
+- `no-char` — 634
+- `vs-count` — 570
 - `no-vs` — 488
 - `too-short` — 252
 - `no-handle` — 156
@@ -76,8 +76,8 @@ line with its literal text, instead of vanishing into a silently shorter side.
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES COUNTER HIT`
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES preencha C`
 - 5× `DildilfatalFury FelpsFGC`
-- … 845 more
+- … 851 more
 
 > Replay Theater: 150 dumped, 150 already known here, 0 candidates, 0 rebuilt, 127 carried (add-only), 127 total.
 
-_Generated 2026-09-09T13:01:42.309Z_
+_Generated 2026-09-10T12:58:38.919Z_
