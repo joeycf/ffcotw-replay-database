@@ -168,8 +168,10 @@ jobs:
         # The data has already been committed and pushed by the step above, so a
         # red run never costs a refresh — it only makes the pending work
         # impossible to miss. Three things can trip it: an announced Season 3
-        # fighter's window closing (Kim Kaphwan 2026-09-30, the October mystery
-        # slot 2026-10-31, Laocorn 2026-11-30, the December slot 2026-12-31), an
-        # unconfirmed season, and the patch table going 40 days stale.
+        # fighter's date arriving (Kim Kaphwan 2026-09-30, then Mikey AND Draken
+        # together on 2026-10-22 — the Tokyo Revengers pair announced 2026-09-09,
+        # the first time this game ships two DLC characters at once — then Laocorn
+        # 2026-11-30 and the unnamed December slot 2026-12-31), an unconfirmed
+        # season, and the patch table going 40 days stale.
         # Clear it by doing the work, NOT by deleting this step.
         run: npx tsx scripts/expiries.ts --check

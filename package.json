@@ -21,6 +21,7 @@
     "data:theater": "tsx --env-file-if-exists=.env scripts/fetch-theater.ts",
     "data:emit": "tsx scripts/emit.ts",
     "data:characters": "tsx scripts/characters.ts",
+    "data:roster-check": "tsx scripts/roster-check.ts",
     "data:art": "tsx scripts/art.ts",
     "data:og": "tsx scripts/og.ts",
     "data:patches": "tsx scripts/patches.ts --check",

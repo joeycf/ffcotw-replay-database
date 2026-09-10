@@ -63,7 +63,21 @@ import type { Expiry } from '../types/index';
  * season-3-…/) names the schedule: Rick Strowd July, Duck King August, Kim
  * Kaphwan September, Laocorn November, with "mystery fighters slated for
  * release in October and December". Rick and Duck have shipped and are on the
- * roster; the four rows below are what is left.
+ * roster; the rows below are what is left.
+ *
+ * THE OCTOBER SLOT WAS REVEALED ON 2026-09-09 AND IT IS TWO FIGHTERS, NOT ONE.
+ * snk-corp.co.jp/us/press/2026/loyalty-brotherhood-revenge-tokyo-revengers-ride-
+ * into-city-of-the-wolves-collaboration-teaser-trailer-out-now/ : "Manjiro
+ * “Mikey” Sano and Ken “Draken” Ryuguji from the popular anime series Tokyo
+ * Revengers will join FATAL FURY: City of the Wolves Season 3 on October 22,
+ * 2026. This marks the first time that two DLC characters will be released
+ * simultaneously for the game. Mikey and Draken will each be available as fully
+ * independent playable fighters".
+ *
+ * PASS ARITHMETIC IS UNSETTLED; THE FIGHTER COUNT IS NOT. Steam's Season Pass 3
+ * page still enumerates SIX slots with October as "???", which makes seven
+ * fighters across six slots. It simply has not been updated since the
+ * announcement. Count fighters here, not slots — this file gates fighters.
  *
  * NOTE WHERE THIS WAS ALMOST GOT WRONG. The game site's own news CMS
  * (fetch_news_en.php) carries a "Character Reveal!" post for every fighter from
@@ -72,10 +86,24 @@ import type { Expiry } from '../types/index';
  * PRESS path, which is a different feed. Two first-party sources, and the one
  * the pipeline already polls is the incomplete one.
  */
-export const UNRELEASED: { id: string; releases: string; accent?: string; note?: string }[] = [
+/** `detect` carries EXTRA residue needles for fighters whose id is not what
+ *  uploaders type. The residue gate matches on the id with hyphens as spaces,
+ *  which is right when the id IS the common name (laocorn) and useless when it
+ *  is not: nobody writes "Manjiro Sano", they write "Mikey". Without these the
+ *  detector this file calls the REAL one is blind to the very fighters whose
+ *  official names carry a nickname. A needle that also matches a player handle
+ *  costs one dismissed warning, which is the trade this file already makes. */
+export const UNRELEASED: {
+  id: string;
+  releases: string;
+  accent?: string;
+  note?: string;
+  detect?: string[];
+}[] = [
   {
     id: 'kim-kaphwan',
     releases: '2026-09-30',
+    detect: ['kaphwan'],
     // Already in design/handoff/tokens.css, measured at 5.83:1 on --color-surface.
     accent: '#4A90FF',
     note:
@@ -92,13 +120,37 @@ export const UNRELEASED: { id: string; releases: string; accent?: string; note?:
       'Season 3, announced for NOVEMBER 2026; fires at window close. Playable debut, from the ' +
       '1994 Fatal Fury film — so uploaders may spell it "Laocorn Gaudeamus".',
   },
+  // ── THE OCTOBER SLOT, REVEALED 2026-09-09: ONE SLOT, TWO FIGHTERS ──────────
+  // These two replace the old 's3-october-mystery' row, which was wrong twice over:
+  // one row for two fighters, and firing 2026-10-31 for a release on the 22nd.
+  // An EXACT DAY was announced, so the fire-at-window-close rule in this file's
+  // header does not apply here — that rule exists for month-granularity windows,
+  // and the rows that still need it (kaphwan, laocorn, december) keep it.
   {
-    id: 's3-october-mystery',
-    releases: '2026-10-31',
+    id: 'manjiro-sano',
+    releases: '2026-10-22',
+    detect: ['mikey'],
     note:
-      'Season 3, October slot. SNK announced that a fighter ships this month but has not named ' +
-      'them, so there is no id and no accent yet. Split this row into a real one on reveal — ' +
-      'the accent comes from a Claude Design session, never invented here.',
+      'Season 3, Tokyo Revengers collaboration, announced 2026-09-09 for OCTOBER 22 with an ' +
+      'exact day. "Manjiro \u201cMikey\u201d Sano" — full-name kebab per this repo\'s id ' +
+      "convention, but CONFIRM the id and spelling against SNK's character index when the page " +
+      'exists; there is none yet. Uploaders will overwhelmingly write "Mikey", the nickname ' +
+      'inside the official name, so that is the alias that matters. Ships alongside ' +
+      '[ken-ryuguji] — the first time this game has released two DLC characters simultaneously.',
+  },
+  {
+    id: 'ken-ryuguji',
+    releases: '2026-10-22',
+    detect: ['draken'],
+    note:
+      'Season 3, Tokyo Revengers collaboration, announced 2026-09-09 for OCTOBER 22. ' +
+      '"Ken \u201cDraken\u201d Ryuguji"; uploaders will write "Draken". ' +
+      'READ THIS BEFORE WRITING HIS ALIASES: he puts a SECOND Ken on this roster, so a bare ' +
+      '"Ken" stops being resolvable the day he ships — exactly the Kim problem the header ' +
+      'describes, and the reason "kim" is on the banned list. Today the id `ken` (Ken Masters, ' +
+      'S1) owns the bare token through its own name. Either Draken never carries a bare "Ken", ' +
+      'or "ken" joins the banned list and both fighters resolve only on a qualified spelling. ' +
+      'Decide it when he ships, with the corpus counts in front of you — never by pattern.',
   },
   {
     id: 's3-december-mystery',
@@ -130,6 +182,29 @@ export const UNRELEASED: { id: string; releases: string; accent?: string; note?:
  * to the vendor's title format, feed shape or CMS can silence it.
  */
 const STALE_PATCH_DAYS = 40;
+
+/**
+ * The residue side of the early-warning system, as a PURE function so it can be
+ * positive-controlled without standing up the parse pipeline.
+ *
+ * `residueTexts` is the literal text of every span no roster alias covered.
+ * A hit means an announced fighter's name is showing up in real uploads, which
+ * is the REAL detector — footage exists, so they shipped, whatever the calendar
+ * says. Matching is case-insensitive substring, on the id (hyphens as spaces)
+ * plus any `detect` needles.
+ */
+export function unreleasedResidueHits(
+  residueTexts: readonly string[],
+  unreleased: readonly { id: string; detect?: string[] }[] = UNRELEASED,
+): string[] {
+  const haystack = residueTexts.map((t) => t.toLowerCase());
+  return unreleased
+    .filter((u) => {
+      const needles = [u.id.replace(/-/g, ' '), ...(u.detect ?? [])].map((n) => n.toLowerCase());
+      return haystack.some((t) => needles.some((n) => t.includes(n)));
+    })
+    .map((u) => u.id);
+}
 
 const today = (): string => new Date().toISOString().slice(0, 10);
 const daysBetween = (a: string, b: string) =>
@@ -211,11 +286,72 @@ export function expiryBlock(due: Expiry[]): string[] {
   ];
 }
 
+// ── standalone `--selftest` ─────────────────────────────────────────────────
+// unreleasedResidueHits() is the REAL detector — the one that fires on footage
+// existing rather than on a date someone guessed — so it gets a permanent
+// positive control on synthetic fixtures. It is wired into verify-gates' clean
+// run, because a detector nobody ever proved can fire is not a detector.
+//
+// It exists because the rule WAS silently blind: matching on the id alone,
+// "manjiro-sano" never appears in a title and "Mikey" always would.
+const SELFTEST: { name: string; residue: string[]; want: string[] }[] = [
+  { name: 'a clean corpus fires nothing', residue: ['DildilFatalFury', 'Rankeadas'], want: [] },
+  {
+    name: 'the nickname, not the id (Mikey)',
+    residue: ['MIKEY vs Terry FT5'],
+    want: ['manjiro-sano'],
+  },
+  {
+    name: 'the nickname, not the id (Draken)',
+    residue: ['Rock Howard vs Draken'],
+    want: ['ken-ryuguji'],
+  },
+  {
+    name: 'both in one title',
+    residue: ['Mikey vs Draken mirror'],
+    want: ['manjiro-sano', 'ken-ryuguji'],
+  },
+  {
+    name: 'the full official name still matches',
+    residue: ['Manjiro Sano combos'],
+    want: ['manjiro-sano'],
+  },
+  { name: 'a surname alone (Kaphwan)', residue: ['KAPHWAN first look'], want: ['kim-kaphwan'] },
+  {
+    name: 'an id that IS the common name still matches',
+    residue: ['Laocorn Gaudeamus'],
+    want: ['laocorn'],
+  },
+  { name: 'matching is case-insensitive', residue: ['dRaKeN'], want: ['ken-ryuguji'] },
+];
+
+function selftest(): number {
+  let failed = 0;
+  for (const c of SELFTEST) {
+    const got = unreleasedResidueHits(c.residue, UNRELEASED);
+    const ok = [...got].sort().join(',') === [...c.want].sort().join(',');
+    if (!ok) {
+      failed++;
+      console.error(`  FAIL  ${c.name}\n        got [${got}] want [${c.want}]`);
+    }
+  }
+  if (failed) {
+    console.error(
+      `\n\u2716 unreleasedResidueHits: ${failed}/${SELFTEST.length} fixture(s) failed.`,
+    );
+    console.error('  A row in UNRELEASED probably needs a `detect` needle — see its comment.');
+    return 1;
+  }
+  console.log(`\u2713 unreleasedResidueHits — ${SELFTEST.length} fixture(s) pass`);
+  return 0;
+}
+
 // ── standalone `--check` ─────────────────────────────────────────────────────
 // The workflow's LAST step. It runs after the data has been committed and
 // pushed, so a red run never costs a refresh — it only makes the pending work
 // impossible to ignore.
 const isMain = !!process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop()!);
+if (isMain && process.argv.includes('--selftest')) process.exit(selftest());
 if (isMain && process.argv.includes('--check')) {
   const due = dueExpiries();
   if (!due.length) {

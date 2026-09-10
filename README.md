@@ -144,21 +144,22 @@ silently — an `<img>` that fails to load renders as blank space.
 
 ## Scripts
 
-| command                    | what it does                                                                                               |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `npm run data:catchup`     | **The maintenance ritual.** fetch → theater → parse → emit, in that order. Use this rather than the parts. |
-| `npm run data:fetch`       | Every upload from the nine channels → `raw/`. No game gate here; parse does the filtering.                 |
-| `npm run data:theater`     | The Replay Theater index. Cursor-bounded; `-- --full` for a whole-catalogue reconcile.                     |
-| `npm run data:parse`       | `raw/` → `data/videos.json` + players + review queue + `report.md`. Every guard lives here.                |
-| `npm run data:emit`        | Substrate → the engine's public contract. Every assertion is a throw.                                      |
-| `npm run data:characters`  | Rebuild the roster from `ROSTER` + the design tokens. Manual; never in the cron.                           |
-| `npm run data:art`         | Character art from SNK's site, with per-file provenance. Manual.                                           |
-| `npm run data:og`          | The OG card. Draws real glyph outlines — see below.                                                        |
-| `npm run data:patch-check` | Diff the patch table against SNK's CMS **and** each patch's own page. Manual.                              |
-| `npm run data:expiries`    | Self-expiring gates. Runs last in the cron and is designed to go red.                                      |
-| `npm run verify:gates`     | **The positive-control suite.** 24 injected defects, each of which must exit non-zero, plus the clean run. |
-| `npm run test:e2e`         | Assertions against the built static output, with a visible empty-corpus mode.                              |
-| `npm run verify:deployed`  | Post-deploy smoke check — the deploy fingerprint (count + side appearances + content hash).                |
+| command                     | what it does                                                                                                                                           |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `npm run data:catchup`      | **The maintenance ritual.** fetch → theater → parse → emit, in that order. Use this rather than the parts.                                             |
+| `npm run data:fetch`        | Every upload from the nine channels → `raw/`. No game gate here; parse does the filtering.                                                             |
+| `npm run data:theater`      | The Replay Theater index. Cursor-bounded; `-- --full` for a whole-catalogue reconcile.                                                                 |
+| `npm run data:parse`        | `raw/` → `data/videos.json` + players + review queue + `report.md`. Every guard lives here.                                                            |
+| `npm run data:emit`         | Substrate → the engine's public contract. Every assertion is a throw.                                                                                  |
+| `npm run data:characters`   | Rebuild the roster from `ROSTER` + the design tokens. Manual; never in the cron.                                                                       |
+| `npm run data:art`          | Character art from SNK's site, with per-file provenance. Manual.                                                                                       |
+| `npm run data:og`           | The OG card. Draws real glyph outlines — see below.                                                                                                    |
+| `npm run data:patch-check`  | Diff the patch table against SNK's CMS **and** each patch's own page. Manual.                                                                          |
+| `npm run data:roster-check` | Diff the roster against SNK's character index. **Network, manual, never in the cron.** Ends `roster-check: CURRENT / DRIFT / UNVERIFIED / UNREADABLE`. |
+| `npm run data:expiries`     | Self-expiring gates. Runs last in the cron and is designed to go red.                                                                                  |
+| `npm run verify:gates`      | **The positive-control suite.** 24 injected defects, each of which must exit non-zero, plus the clean run.                                             |
+| `npm run test:e2e`          | Assertions against the built static output, with a visible empty-corpus mode.                                                                          |
+| `npm run verify:deployed`   | Post-deploy smoke check — the deploy fingerprint (count + side appearances + content hash).                                                            |
 
 ## Things worth knowing
 
@@ -228,12 +229,12 @@ aliases include `MrKarate`, plus `k4karate`.
 Every one was adjudicated from its source title before anything was touched, and
 **none is a mis-parse — the parser is correct on all four side-appearances:**
 
-| player id | video | the title that produced it |
-|---|---|---|
-| `mrkarate` | `wuxZI5UWSGw` | `TTVTeiga (Rock Howard) vs MrKarate (Krauser)` |
-| `mrkarate` | `xHslrureiqI` | `MRKARATE (Wolfgang Krauser) vs SOMBRA (#7 Ranked Mr. Karate)` |
-| `mr-karate` | `McTZSWYV7nE` | `DARK ANGEL (Terry Bogard) vs MR KARATE (Mr.Karate)` |
-| `k4karate` | `6_7zQlihiUI` | `DARK ANGEL (#5 Ranked Mr. Karate) vs K4KARATE (#4 Ranked Mr. Karate)` |
+| player id   | video         | the title that produced it                                             |
+| ----------- | ------------- | ---------------------------------------------------------------------- |
+| `mrkarate`  | `wuxZI5UWSGw` | `TTVTeiga (Rock Howard) vs MrKarate (Krauser)`                         |
+| `mrkarate`  | `xHslrureiqI` | `MRKARATE (Wolfgang Krauser) vs SOMBRA (#7 Ranked Mr. Karate)`         |
+| `mr-karate` | `McTZSWYV7nE` | `DARK ANGEL (Terry Bogard) vs MR KARATE (Mr.Karate)`                   |
+| `k4karate`  | `6_7zQlihiUI` | `DARK ANGEL (#5 Ranked Mr. Karate) vs K4KARATE (#4 Ranked Mr. Karate)` |
 
 `xHslrureiqI` is the one that settles it: the same title carries a PLAYER called
 MRKARATE and an OPPONENT playing Mr. Karate, and the parser separated them

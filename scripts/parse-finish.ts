@@ -16,7 +16,7 @@ import { fileURLToPath } from 'node:url';
 
 import { CHANNELS, stripTheaterSponsor } from './channels';
 import { patchForDate, seasonForDate } from './patches';
-import { dueExpiries, expiryBlock, UNRELEASED } from './expiries';
+import { dueExpiries, expiryBlock, unreleasedResidueHits } from './expiries';
 import { normalizeText, playerId } from './roster';
 import type { AliasMatcher } from './roster';
 import type {
@@ -295,10 +295,9 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
   // checks a calendar. See scripts/expiries.ts on why this is the real
   // detector and the date row is only the backstop.
   const residueRows = [...residue.entries()].sort((a, b) => b[1] - a[1]);
-  const unreleasedHits = UNRELEASED.filter((u) => {
-    const needle = u.id.replace(/-/g, ' ');
-    return residueRows.some(([text]) => text.toLowerCase().includes(needle));
-  });
+  // The rule is pure and lives in expiries.ts beside UNRELEASED, so it can be
+  // positive-controlled on synthetic fixtures without the parse pipeline.
+  const unreleasedHits = unreleasedResidueHits(residueRows.map(([text]) => text));
 
   // ── 9. WRITE (everything above passed) ───────────────────────────────────
   await write('videos.json', records);
@@ -317,7 +316,7 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
       '## ⚠ AN UNRELEASED FIGHTER MAY HAVE SHIPPED',
       '',
       ...unreleasedHits.map(
-        (u) => `- **${u.id}** appears in parser residue. Promote it — see scripts/expiries.ts.`,
+        (id) => `- **${id}** appears in parser residue. Promote it — see scripts/expiries.ts.`,
       ),
       '',
     );

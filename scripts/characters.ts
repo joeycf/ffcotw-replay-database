@@ -90,10 +90,16 @@ interface RosterEntry {
 }
 
 /**
- * Thirty released fighters. Kim Kaphwan (September 2026) and Laocorn (November
- * 2026) are announced and NOT here — they live in UNRELEASED in expiries.ts and
- * arrive on release day. Their accents are already in the design handoff, so
- * promotion is a one-line change rather than a design task.
+ * Thirty released fighters. Five more are announced and NOT here — they live in
+ * UNRELEASED in expiries.ts and arrive on release day: Kim Kaphwan (September
+ * 2026), Mikey and Draken (both 2026-10-22, the Tokyo Revengers pair), Laocorn
+ * (November 2026) and December's unnamed slot.
+ *
+ * Kaphwan's and Laocorn's accents are already in the design handoff, so those
+ * two are a one-line promotion. THE TOKYO REVENGERS PAIR ARE NOT — they were
+ * announced after the handoff, have no --char- token, and need a Claude Design
+ * session before they can ship. Do not invent their accents here; characters.ts
+ * exits 1 on a roster id with no token, which is the intended behaviour.
  */
 const ROSTER: RosterEntry[] = [
   // ── Base roster (Early Access 2025-04-21) ────────────────────────────────

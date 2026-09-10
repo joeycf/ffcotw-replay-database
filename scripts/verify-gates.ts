@@ -421,6 +421,7 @@ console.log('\n▶ clean run');
 const CLEAN: [string, string[]][] = [
   ['patches', ['tsx', 'scripts/patches.ts', '--check']],
   ['expiries', ['tsx', 'scripts/expiries.ts', '--check']],
+  ['expiries selftest', ['tsx', 'scripts/expiries.ts', '--selftest']],
   ['characters', ['tsx', 'scripts/characters.ts']],
   ['redirects', ['tsx', 'scripts/redirects.ts', '--check']],
   ['parse', ['tsx', 'scripts/parse.ts']],
