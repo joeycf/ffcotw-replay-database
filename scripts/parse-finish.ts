@@ -472,6 +472,17 @@ function buildTheaterRecords(
       ...(r.startSeconds !== undefined && r.startSeconds > 0
         ? { videoId: r.videoId, startSeconds: r.startSeconds }
         : {}),
+      // What the badge prints (engine v0.13.0), and EXACTLY ONE of them — the
+      // engine would prefer `event` anyway. On the TAGGED arm that is the
+      // event — the reason this intake is worth having. On the untagged arm —
+      // 96% of this catalogue, and whole videos rather than segments — there is
+      // no event, so it falls to the uploader: those entries are ordinary
+      // uploads the catalogue happened to index, and labelling them
+      // "Tournament" would assert something false about every one of them.
+      ...((tag, up) => (tag ? { event: tag } : up ? { channelName: up } : {}))(
+        (r.tag ?? '').trim(),
+        (r.uploader ?? '').trim(),
+      ),
       sides: [sides[0]!, sides[1]!] as [MatchSide, MatchSide],
     });
   }

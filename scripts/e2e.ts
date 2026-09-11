@@ -140,6 +140,10 @@ const replays = JSON.parse(read('data/replays.json')) as {
   date: string;
   patch?: string;
   source: string;
+  title: string;
+  /** What the badge prints instead of the source name (engine v0.13.0). */
+  event?: string;
+  channelName?: string;
 }[];
 const EMPTY = replays.length === 0;
 
@@ -341,6 +345,56 @@ if (EMPTY) {
     'every emitted source belongs to a sourceGroup',
     ungrouped.length === 0,
     ungrouped.join(', ') + ' — those records cannot be reached from the filter bar',
+  );
+
+  // ── the badge names the EVENT, not the catalogue (engine v0.13.0) ─────────
+  // This intake is one token over many uploaders, so its configured name can
+  // only ever say "a catalogue filed this". Both arms now say more: the tagged
+  // arm publishes the event, and the untagged arm — whole videos the catalogue
+  // merely indexed — publishes the uploader, because calling those a
+  // tournament would be false about every one of them.
+  const theater = replays.filter((r) => r.source === 'replayTheater');
+  const withEvent = theater.filter((r) => r.event);
+  const withChannel = theater.filter((r) => r.channelName);
+  check(
+    'the tagged arm carries an event',
+    withEvent.length === 126,
+    `${withEvent.length} of ${theater.length} (expected 126)`,
+  );
+  check(
+    'no channel-sourced record carries an event or a channelName',
+    replays.every((r) => r.source === 'replayTheater' || (!r.event && !r.channelName)),
+    'labels are emitted only by the index intake',
+  );
+  check(
+    'no emitted label is empty or blank',
+    replays.every((r) => (r.event ?? 'x').trim() !== '' && (r.channelName ?? 'x').trim() !== ''),
+    'an empty label would render a bordered chip with no text',
+  );
+  // The tag rides in the synthesized title too — that is what makes an event
+  // findable by search — so the two must agree or one of them is stale.
+  const disagree = withEvent.filter((r) => !r.title.endsWith(`▰ ${r.event}`));
+  check(
+    "every event matches its title's trailing slot",
+    disagree.length === 0,
+    disagree.length ? disagree[0]!.id : `${withEvent.length} checked`,
+  );
+  // The card caps the chip and ellipsizes past it, so a runaway catalogue tag
+  // should fail HERE rather than render as a two-word fragment.
+  const longest = withEvent.reduce((n, r) => Math.max(n, r.event!.length), 0);
+  check(
+    'longest event label is within the card budget',
+    longest <= 60,
+    `${longest} chars (cap 60)`,
+  );
+  // The one committed record with neither label is the reason the configured
+  // name had to stop saying "Replay Theater": it is the only thing that
+  // renders on it.
+  const bare = theater.filter((r) => !r.event && !r.channelName);
+  check(
+    'exactly one record falls back to the configured source name',
+    bare.length === 1,
+    `${bare.length} bare, ${withChannel.length} by uploader${bare.length ? ` (${bare[0]!.id})` : ''}`,
   );
 
   // A prerendered entity page must contain REAL content, not an empty shell —

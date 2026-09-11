@@ -244,9 +244,12 @@ export const CHANNELS: ChannelConfig[] = [
      * no title to gate. The game is checked per ENTRY against `gameLabel`,
      * because ?game= is a filter the catalogue answers, not one we control.
      */
+    // `name` is kept in lockstep with app/app.config.ts by hand — two TypeScript
+    // tracks, no compiler sees both. Since engine v0.13.0 it is a FALLBACK: the
+    // badge prints each record's own `event` or `channelName` first.
     id: 'replayTheater',
     source: 'replayTheater',
-    name: 'Replay Theater',
+    name: 'Tournament',
     index: {
       endpoint: 'https://replaytheater.app/api/matches',
       // THEIR slug, not ours. `?game=ffcotw` returns HTTP 400 "Invalid game".

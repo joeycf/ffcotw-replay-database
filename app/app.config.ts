@@ -160,8 +160,14 @@ export default defineAppConfig({
       { id: 'bestOfFgc', name: 'The Best of FGC' },
       { id: 'dildilFatalFury', name: 'Dildil Fatal Fury' },
       { id: 'evoEvents', name: 'Evo' },
-      // Named for what the footage IS, not for the catalogue that indexed it.
-      { id: 'replayTheater', name: 'Replay Theater' },
+      // Named for what the footage IS, never for the catalogue that indexed it
+      // — and as of engine v0.13.0 it barely renders at all: every tagged
+      // record publishes its own `event` and every untagged one its uploader,
+      // so the badge names the tournament or the channel and this string is
+      // only the floor under both. Exactly one committed record reaches it
+      // (8SGCrUBwpRo, whose uploader is no longer recoverable), which is why
+      // the floor has to be a word that is true of an unknown tournament VOD.
+      { id: 'replayTheater', name: 'Tournament' },
     ],
     // Filter chips consolidate to two groups (engine v0.5.5). Group ids appear
     // NOWHERE else — not in Replay.source, not in a URL: toggling a group
