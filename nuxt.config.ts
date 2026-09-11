@@ -40,7 +40,7 @@ export default defineNuxtConfig({
   // v0.12.0 is the floor for this app, not a preference: it is the release that
   // shipped the partner registry and the `Combos ↗` nav item, both of which
   // this app's ComboForge block depends on.
-  extends: [process.env.ENGINE_PATH || ['github:joeycf/replay-engine#v0.13.0', { install: true }]],
+  extends: [process.env.ENGINE_PATH || ['github:joeycf/replay-engine#v0.13.3', { install: true }]],
 
   compatibilityDate: '2025-07-01',
 
