@@ -2348,6 +2348,10 @@
     "handle": "FIRELNOUE"
   },
   {
+    "id": "fives",
+    "handle": "FIVES"
+  },
+  {
     "id": "fkang",
     "handle": "FKang"
   },
@@ -4166,6 +4170,10 @@
   {
     "id": "kingofdc",
     "handle": "KingOfDC"
+  },
+  {
+    "id": "kino5831",
+    "handle": "KINO5831"
   },
   {
     "id": "kinoshin",
@@ -6328,6 +6336,10 @@
     "handle": "RAKU95"
   },
   {
+    "id": "ramon-hm",
+    "handle": "RAMON HM"
+  },
+  {
     "id": "ramone",
     "handle": "RAMONE"
   },
@@ -6778,6 +6790,10 @@
   {
     "id": "scio",
     "handle": "SCIO"
+  },
+  {
+    "id": "scoby",
+    "handle": "SCOBY"
   },
   {
     "id": "scooby",
@@ -8377,7 +8393,7 @@
   },
   {
     "id": "yoanp",
-    "handle": "Yoanp"
+    "handle": "yoanp"
   },
   {
     "id": "yomand",
