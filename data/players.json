@@ -1240,6 +1240,10 @@
     "handle": "CIBERNETICO"
   },
   {
+    "id": "ciberneticomx",
+    "handle": "CIBERNETICOMX"
+  },
+  {
     "id": "cientifi",
     "handle": "Cientifi"
   },
@@ -4252,6 +4256,10 @@
     "handle": "KOCHORRERA"
   },
   {
+    "id": "kofandmaury",
+    "handle": "KOFANDMAURY"
+  },
+  {
     "id": "kofchirrera",
     "handle": "KOFCHIRRERA"
   },
@@ -6590,6 +6598,10 @@
   {
     "id": "roma",
     "handle": "ROMA"
+  },
+  {
+    "id": "roman-reighs",
+    "handle": "ROMAN REIGHS"
   },
   {
     "id": "ron-dun",
