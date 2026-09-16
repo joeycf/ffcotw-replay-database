@@ -3481,7 +3481,7 @@
   },
   {
     "id": "ikoliketzal",
-    "handle": "IKOLIKETZAL"
+    "handle": "iKoliKetzal"
   },
   {
     "id": "ikuze",
@@ -6620,6 +6620,10 @@
     "handle": "RONSVAIN"
   },
   {
+    "id": "ronydio",
+    "handle": "RONYDIO"
+  },
+  {
     "id": "rookie",
     "handle": "ROOKIE"
   },
@@ -8526,6 +8530,10 @@
   {
     "id": "zenkai",
     "handle": "Zenkai"
+  },
+  {
+    "id": "zerge",
+    "handle": "Zerge"
   },
   {
     "id": "zero",
