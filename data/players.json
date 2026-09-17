@@ -1040,6 +1040,10 @@
     "handle": "CARRILLO"
   },
   {
+    "id": "cast",
+    "handle": "CAST"
+  },
+  {
     "id": "cast-kenneth",
     "handle": "CAST KENNETH"
   },
@@ -8138,6 +8142,10 @@
   {
     "id": "whisp",
     "handle": "WHISP"
+  },
+  {
+    "id": "white-kaiba",
+    "handle": "WHITE KAIBA"
   },
   {
     "id": "whitebear",
