@@ -268,6 +268,10 @@
     "handle": "AMARAL KOF"
   },
   {
+    "id": "amaralkof",
+    "handle": "AMARALKOF"
+  },
+  {
     "id": "amour",
     "handle": "Amour"
   },
@@ -3846,6 +3850,10 @@
   {
     "id": "juicebox",
     "handle": "JUICEBOX"
+  },
+  {
+    "id": "juliantla",
+    "handle": "Juliantla"
   },
   {
     "id": "justengel",
@@ -8069,7 +8077,7 @@
   },
   {
     "id": "vinblade",
-    "handle": "VINBLADE"
+    "handle": "Vinblade"
   },
   {
     "id": "viola-milano",
