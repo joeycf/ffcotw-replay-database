@@ -1,6 +1,6 @@
 # CotW pipeline report
 
-- **4657** published records · **2157** players · **30** fighters
+- **4670** published records · **2159** players · **30** fighters
 - **642** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
 
@@ -8,21 +8,21 @@
 
 | intake | raw uploads | CotW-marked | parsed | published |
 | --- | ---: | ---: | ---: | ---: |
-| fatalFuryReplays | 6521 | 1263 | 1259 | 1259 |
-| wolfFgc | 1845 | 1192 | 1165 | 1165 |
+| fatalFuryReplays | 6525 | 1265 | 1261 | 1261 |
+| wolfFgc | 1851 | 1198 | 1171 | 1171 |
 | svcHighlights | 726 | 675 | 668 | 668 |
 | ffCotwReplays | 712 | 711 | 632 | 632 |
-| bestOfSnk | 455 | 230 | 228 | 228 |
-| cotwReplays | 144 | 144 | 122 | 122 |
-| nomiiAegis | 341 | 317 | 136 | 136 |
-| bestOfFgc | 1836 | 316 | 311 | 311 |
+| bestOfSnk | 457 | 231 | 229 | 229 |
+| cotwReplays | 145 | 145 | 123 | 123 |
+| nomiiAegis | 343 | 319 | 138 | 138 |
+| bestOfFgc | 1838 | 317 | 312 | 312 |
 | dildilFatalFury | 2492 | 1750 | 9 | 9 |
 | evoEvents | 2772 | 97 | 0 | 0 |
 | replayTheater | — | — | — | 127 |
 
 ## Misses
 
-- `no-marker` — 11149
+- `no-marker` — 11153
 - `no-char` — 641
 - `vs-count` — 586
 - `no-vs` — 489
@@ -80,4 +80,4 @@ line with its literal text, instead of vanishing into a silently shorter side.
 
 > Replay Theater: 150 dumped, 150 already known here, 0 candidates, 0 rebuilt, 127 carried (add-only), 127 total.
 
-_Generated 2026-09-22T13:28:53.634Z_
+_Generated 2026-09-23T13:42:42.381Z_
