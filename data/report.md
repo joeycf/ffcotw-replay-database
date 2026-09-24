@@ -1,33 +1,33 @@
 # CotW pipeline report
 
-- **4670** published records · **2159** players · **30** fighters
-- **642** pending review item(s) — absent from the site, never guessed
+- **4685** published records · **2162** players · **31** fighters
+- **643** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
 
 ## Per intake
 
 | intake | raw uploads | CotW-marked | parsed | published |
 | --- | ---: | ---: | ---: | ---: |
-| fatalFuryReplays | 6525 | 1265 | 1261 | 1261 |
-| wolfFgc | 1851 | 1198 | 1171 | 1171 |
-| svcHighlights | 726 | 675 | 668 | 668 |
-| ffCotwReplays | 712 | 711 | 632 | 632 |
-| bestOfSnk | 457 | 231 | 229 | 229 |
-| cotwReplays | 145 | 145 | 123 | 123 |
-| nomiiAegis | 343 | 319 | 138 | 138 |
-| bestOfFgc | 1838 | 317 | 312 | 312 |
+| fatalFuryReplays | 6532 | 1269 | 1265 | 1265 |
+| wolfFgc | 1855 | 1202 | 1174 | 1174 |
+| svcHighlights | 727 | 676 | 669 | 669 |
+| ffCotwReplays | 718 | 717 | 635 | 635 |
+| bestOfSnk | 459 | 232 | 230 | 230 |
+| cotwReplays | 146 | 146 | 124 | 124 |
+| nomiiAegis | 345 | 321 | 138 | 138 |
+| bestOfFgc | 1840 | 318 | 313 | 313 |
 | dildilFatalFury | 2492 | 1750 | 9 | 9 |
 | evoEvents | 2772 | 97 | 0 | 0 |
-| replayTheater | — | — | — | 127 |
+| replayTheater | — | — | — | 128 |
 
 ## Misses
 
-- `no-marker` — 11153
-- `no-char` — 641
+- `no-marker` — 11158
+- `no-char` — 642
 - `vs-count` — 586
-- `no-vs` — 489
-- `too-short` — 252
-- `no-handle` — 166
+- `no-vs` — 492
+- `too-short` — 253
+- `no-handle` — 167
 - `before-floor` — 30
 - `slot-ambiguous` — 1
 
@@ -76,8 +76,8 @@ line with its literal text, instead of vanishing into a silently shorter side.
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES CO`
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES COUNTER HIT`
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES preencha C`
-- … 869 more
+- … 874 more
 
-> Replay Theater: 150 dumped, 150 already known here, 0 candidates, 0 rebuilt, 127 carried (add-only), 127 total.
+> Replay Theater: 150 dumped, 149 already known here, 1 candidates, 1 rebuilt, 127 carried (add-only), 128 total.
 
-_Generated 2026-09-23T13:42:42.381Z_
+_Generated 2026-09-24T13:37:10.466Z_
