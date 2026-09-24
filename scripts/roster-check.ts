@@ -83,6 +83,7 @@ const SLUG_TO_ID: Record<string, string> = {
   mrkarate: 'mr-karate',
   rick: 'rick-strowd',
   duck: 'duck-king',
+  kaphwan: 'kim-kaphwan',
   // Identity: preecha, tizoc, gato, hokutomaru, ken, chun-li, kenshiro.
 };
 

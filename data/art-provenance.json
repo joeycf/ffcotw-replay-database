@@ -1,6 +1,6 @@
 {
   "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/",
-  "fetched": "2026-09-04",
+  "fetched": "2026-09-24",
   "files": [
     {
       "id": "rock-howard",
@@ -690,6 +690,29 @@
         "figure": "body 1143×2441 → 293×626 at x2501",
         "bytes": 47788,
         "sha256": "dcaa4243d06aec15"
+      }
+    },
+    {
+      "id": "kim-kaphwan",
+      "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/kaphwan.php",
+      "enumeratedTile": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_kim.webp",
+      "portrait": {
+        "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_kim.webp",
+        "sourceDimensions": "2155×2500",
+        "dimensions": "512×683",
+        "crop": "bust 963×1283 at 478,11 on #4A90FF",
+        "figure": "head estimated at 50%,5% of body 1078×2468",
+        "bytes": 56464,
+        "sha256": "09f353cd51db180b"
+      },
+      "splash": {
+        "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_kim.webp",
+        "sourceDimensions": "2155×2500",
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1078×2468 → 273×626 at x2521",
+        "bytes": 47886,
+        "sha256": "2efaa4e897f032fe"
       }
     }
   ]

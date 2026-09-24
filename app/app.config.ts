@@ -46,10 +46,10 @@ import type { GameConfig } from '@engine/types';
  * system's source of truth — scripts/characters.ts reads the same block when
  * building data/characters.json, so config and data cannot drift, and a roster
  * id with no token fails loud rather than shipping an unstyled fighter. The
- * handoff also carries --char-kim-kaphwan and --char-laocorn, which are
- * deliberately ABSENT here: both are announced but unreleased (Season 3,
- * September and November 2026) and live in UNRELEASED in scripts/expiries.ts
- * until they ship.
+ * handoff also carries --char-laocorn, which is deliberately ABSENT here: he is
+ * announced but unreleased (Season 3, November 2026) and lives in UNRELEASED in
+ * scripts/expiries.ts until he ships. Kim Kaphwan was promoted the same way when
+ * he shipped (Ver.3.2.2, 2026-09-18).
  */
 export default defineAppConfig({
   game: {
@@ -80,7 +80,7 @@ export default defineAppConfig({
     },
     // No GameStatsPanels override ships, so the stats page's `beside-timeline`
     // anchor is empty — give the meta-over-time chart the whole row and, with
-    // the room, plot the top 8 of a 30-fighter roster.
+    // the room, plot the top 8 of a 31-fighter roster.
     stats: {
       metaTimelineTopN: 8,
       metaTimelineFullWidth: true,
@@ -143,6 +143,7 @@ export default defineAppConfig({
       // Season 3 · Destined for Revenge (2026)
       'rick-strowd': '#C8895A',
       'duck-king': '#2FCBB0',
+      'kim-kaphwan': '#4A90FF',
     },
     // Order matters: SourceBadge styles by index (0 = filled primary,
     // 1 = secondary outline, 2+ = warning outline). Ids mirror
@@ -233,9 +234,9 @@ export default defineAppConfig({
     // one every release so a gap gets PROMOTED to a real link the release after
     // they add it, instead of rotting as a hub fallback forever.
     //
-    // kim-kaphwan and laocorn are listed although they are not on our roster
-    // yet: the day the UNRELEASED gate promotes them, the null is already here
-    // and their band cannot ship a dead link on day one.
+    // laocorn is listed although he is not on our roster yet: the day the
+    // UNRELEASED gate promotes him, the null is already here and his band cannot
+    // ship a dead link on day one. kim-kaphwan's null got there the same way.
     comboforge: {
       gameId: 'ffcotw',
       characters: {

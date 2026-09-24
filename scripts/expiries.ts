@@ -62,8 +62,14 @@ import type { Expiry } from '../types/index';
  * snk-corp.co.jp/us/press/2026/city-of-the-wolves-is-destined-for-revenge-in-
  * season-3-…/) names the schedule: Rick Strowd July, Duck King August, Kim
  * Kaphwan September, Laocorn November, with "mystery fighters slated for
- * release in October and December". Rick and Duck have shipped and are on the
- * roster; the rows below are what is left.
+ * release in October and December". Rick, Duck and Kaphwan have shipped and
+ * are on the roster; the rows below are what is left.
+ *
+ * Kaphwan shipped on 2026-09-18 (Ver.3.2.2), twelve days before his
+ * window-close row would have fired. The manual data:patch-check and
+ * data:roster-check found him on 2026-09-24; by then no upload had named him,
+ * so the residue gate had nothing to see. For a month-granularity row, the date
+ * is the backstop and the manual checkers are the early warning.
  *
  * THE OCTOBER SLOT WAS REVEALED ON 2026-09-09 AND IT IS TWO FIGHTERS, NOT ONE.
  * snk-corp.co.jp/us/press/2026/loyalty-brotherhood-revenge-tokyo-revengers-ride-
@@ -101,18 +107,6 @@ export const UNRELEASED: {
   detect?: string[];
 }[] = [
   {
-    id: 'kim-kaphwan',
-    releases: '2026-09-30',
-    detect: ['kaphwan'],
-    // Already in design/handoff/tokens.css, measured at 5.83:1 on --color-surface.
-    accent: '#4A90FF',
-    note:
-      'Season 3, announced for SEPTEMBER 2026 with no day; this row fires at window CLOSE. ' +
-      'Verified 2026-09-03: not shipped — Ver.3.1.3 that day is a bugfix, there is no ' +
-      'characters/kaphwan.php, and no reveal post exists. Completes the Kim family beside Dong Hwan and Jae Hoon — which ' +
-      'is also why a bare "Kim" must never become a parse alias.',
-  },
-  {
     id: 'laocorn',
     releases: '2026-11-30',
     accent: '#D4AF37',
@@ -125,7 +119,7 @@ export const UNRELEASED: {
   // one row for two fighters, and firing 2026-10-31 for a release on the 22nd.
   // An EXACT DAY was announced, so the fire-at-window-close rule in this file's
   // header does not apply here — that rule exists for month-granularity windows,
-  // and the rows that still need it (kaphwan, laocorn, december) keep it.
+  // and the rows that still need it (laocorn, december) keep it.
   {
     id: 'manjiro-sano',
     releases: '2026-10-22',
@@ -317,7 +311,6 @@ const SELFTEST: { name: string; residue: string[]; want: string[] }[] = [
     residue: ['Manjiro Sano combos'],
     want: ['manjiro-sano'],
   },
-  { name: 'a surname alone (Kaphwan)', residue: ['KAPHWAN first look'], want: ['kim-kaphwan'] },
   {
     name: 'an id that IS the common name still matches',
     residue: ['Laocorn Gaudeamus'],

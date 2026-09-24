@@ -483,5 +483,18 @@
       "released": "2026-08-27",
       "full name": "Duck King"
     }
+  },
+  {
+    "id": "kim-kaphwan",
+    "name": "Kim Kaphwan",
+    "imgPortrait": "/img/char/kim-kaphwan.webp",
+    "imgSplash": "/img/splash/kim-kaphwan.webp",
+    "accent": "#4A90FF",
+    "extra": {
+      "aliases": [],
+      "season": 3,
+      "released": "2026-09-18",
+      "full name": "Kim Kaphwan"
+    }
   }
 ]

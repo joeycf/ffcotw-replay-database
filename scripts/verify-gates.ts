@@ -168,7 +168,7 @@ const CONTROLS: Control[] = [
       sub(
         'scripts/characters.ts',
         '  // ── Season 3 · Destined for Revenge (2026) ─',
-        "  { id: 'kim-kaphwan', name: 'Kim Kaphwan', season: 3, released: '2026-09-30', aliases: [] },\n  // ── Season 3 ─",
+        "  { id: 'laocorn', name: 'Laocorn', season: 3, released: '2026-11-30', aliases: [] },\n  // ── Season 3 ─",
       ),
   },
 

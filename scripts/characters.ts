@@ -42,7 +42,7 @@
  *   'Duck'                      — a Wolf FGC title reads "DUCK (Kenshiro) vs
  *       GRIFFON LEGEND (Tizoc)". Duck is a player. Only 'Duck King' is safe.
  *   'Kim'                       — three Kims on this roster (Dong Hwan, Jae
- *       Hoon, and Kaphwan in September). A bare Kim cannot resolve and must
+ *       Hoon, and Kaphwan since 2026-09-18). A bare Kim cannot resolve and must
  *       reach the residue gate instead of being guessed.
  *
  * The residue gate (scripts/parse.ts) is the safety net: whatever text no span
@@ -90,13 +90,13 @@ interface RosterEntry {
 }
 
 /**
- * Thirty released fighters. Five more are announced and NOT here — they live in
- * UNRELEASED in expiries.ts and arrive on release day: Kim Kaphwan (September
- * 2026), Mikey and Draken (both 2026-10-22, the Tokyo Revengers pair), Laocorn
- * (November 2026) and December's unnamed slot.
+ * Thirty-one released fighters. Four more are announced and NOT here — they
+ * live in UNRELEASED in expiries.ts and arrive on release day: Mikey and Draken
+ * (both 2026-10-22, the Tokyo Revengers pair), Laocorn (November 2026) and
+ * December's unnamed slot.
  *
- * Kaphwan's and Laocorn's accents are already in the design handoff, so those
- * two are a one-line promotion. THE TOKYO REVENGERS PAIR ARE NOT — they were
+ * Laocorn's accent is already in the design handoff, so he is a one-line
+ * promotion, as Kaphwan was. THE TOKYO REVENGERS PAIR ARE NOT — they were
  * announced after the handoff, have no --char- token, and need a Claude Design
  * session before they can ship. Do not invent their accents here; characters.ts
  * exits 1 on a roster id with no token, which is the intended behaviour.
@@ -270,6 +270,14 @@ const ROSTER: RosterEntry[] = [
     // Bare 'Duck' is deliberately absent: "DUCK (Kenshiro) vs GRIFFON LEGEND
     // (Tizoc)" is a real title, and Duck is the PLAYER there.
     aliases: ['DuckKing'],
+  },
+  {
+    id: 'kim-kaphwan',
+    name: 'Kim Kaphwan',
+    season: 3,
+    // Ver.3.2.2's own patch page: "New Playable Character: KIM KAPHWAN".
+    released: '2026-09-18',
+    aliases: [],
   },
 ];
 

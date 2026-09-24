@@ -127,13 +127,15 @@ major bump that its own notes place _inside_ Season 2.
 **Nothing folds.** 1.1.3 → 1.1.7 are five separately announced balance updates
 in six weeks; folding on Z would erase all five.
 
-## The roster is 30, plus 2 announced
+## The roster is 31, plus 4 announced
 
-Enumerated from SNK's own character index. Kim Kaphwan (September 2026) and
-Laocorn (November 2026) are announced on SNK's **press** path — a different feed
-from the game site's news CMS, which has no reveal post for either — and are
-held in `UNRELEASED` (`scripts/expiries.ts`) until they ship. Their accents are
-already in the design handoff, so promotion is a one-line change.
+Enumerated from SNK's own character index. Kim Kaphwan joined with Ver.3.2.2 on
+2026-09-18. Laocorn (November 2026), the Tokyo Revengers pair Mikey and Draken
+(2026-10-22) and December's unnamed slot are announced on SNK's **press** path —
+a different feed from the game site's news CMS — and are held in `UNRELEASED`
+(`scripts/expiries.ts`) until they ship. Laocorn's accent is already in the
+design handoff, so his promotion is a one-line change; Mikey and Draken need a
+design session for theirs first.
 
 Character art is **enumerated, never constructed**, from SNK's own markup.
 Their filenames disagree with their own page slugs three different ways
