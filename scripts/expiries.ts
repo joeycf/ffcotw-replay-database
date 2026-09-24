@@ -247,7 +247,8 @@ export function dueExpiries(asOf: string = today()): Expiry[] {
         action:
           `Season ${s.season} was scheduled for ${s.start} and is still unconfirmed. Verify the ` +
           `balance patch landed, add its opening patch to PATCHES in scripts/patches.ts, set ` +
-          `confirmed: true, and re-run \`npm run data:emit\`. The era opens on the patch whose ` +
+          `confirmed: true, and re-run \`npm run data:parse\` (not emit alone: parse stamps each ` +
+          `record's season and patch, and emit only copies them). The era opens on the patch whose ` +
           `own notes page says it opens the season — NEVER on the marketing start date and ` +
           `NEVER on a major-version bump (Ver.2.0.1 is the counter-example that ships).`,
       });

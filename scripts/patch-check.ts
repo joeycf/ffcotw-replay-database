@@ -184,7 +184,10 @@ if (missing.length) {
     console.log(`    announcedOn: 'snk-news',`);
     console.log(`  },\n`);
   }
-  console.log('  Add them in date order, then re-run `npm run data:emit`.');
+  console.log('  Add them in date order, run `npm run data:patches` to validate, then');
+  console.log("  `npm run data:parse` — not `data:emit` alone: parse stamps each record's patch");
+  console.log('  and emit copies it, so only a re-parse refiles the replays. (Pushing the table');
+  console.log('  is enough too: the daily cron re-parses from fresh raw/.)');
   console.log('  Every replay published since a missing patch is currently filed under the');
   console.log('  previous token — it renders and filters cleanly, and is wrong.\n');
 }
