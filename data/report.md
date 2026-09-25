@@ -1,33 +1,33 @@
 # CotW pipeline report
 
-- **4685** published records · **2162** players · **31** fighters
-- **643** pending review item(s) — absent from the site, never guessed
+- **4698** published records · **2167** players · **31** fighters
+- **646** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
 
 ## Per intake
 
 | intake | raw uploads | CotW-marked | parsed | published |
 | --- | ---: | ---: | ---: | ---: |
-| fatalFuryReplays | 6532 | 1269 | 1265 | 1265 |
-| wolfFgc | 1855 | 1202 | 1174 | 1174 |
-| svcHighlights | 727 | 676 | 669 | 669 |
-| ffCotwReplays | 718 | 717 | 635 | 635 |
-| bestOfSnk | 459 | 232 | 230 | 230 |
-| cotwReplays | 146 | 146 | 124 | 124 |
+| fatalFuryReplays | 6536 | 1273 | 1269 | 1269 |
+| wolfFgc | 1862 | 1208 | 1180 | 1180 |
+| svcHighlights | 728 | 677 | 670 | 670 |
+| ffCotwReplays | 722 | 721 | 635 | 635 |
+| bestOfSnk | 461 | 234 | 231 | 231 |
+| cotwReplays | 147 | 147 | 125 | 125 |
 | nomiiAegis | 345 | 321 | 138 | 138 |
-| bestOfFgc | 1840 | 318 | 313 | 313 |
+| bestOfFgc | 1842 | 319 | 313 | 313 |
 | dildilFatalFury | 2492 | 1750 | 9 | 9 |
 | evoEvents | 2772 | 97 | 0 | 0 |
 | replayTheater | — | — | — | 128 |
 
 ## Misses
 
-- `no-marker` — 11158
-- `no-char` — 642
+- `no-marker` — 11160
+- `no-char` — 645
 - `vs-count` — 586
 - `no-vs` — 492
 - `too-short` — 253
-- `no-handle` — 167
+- `no-handle` — 170
 - `before-floor` — 30
 - `slot-ambiguous` — 1
 
@@ -76,8 +76,8 @@ line with its literal text, instead of vanishing into a silently shorter side.
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES CO`
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES COUNTER HIT`
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES preencha C`
-- … 874 more
+- … 880 more
 
-> Replay Theater: 150 dumped, 149 already known here, 1 candidates, 1 rebuilt, 127 carried (add-only), 128 total.
+> Replay Theater: 149 dumped, 148 already known here, 1 candidates, 1 rebuilt, 127 carried (add-only), 128 total.
 
-_Generated 2026-09-24T13:37:10.466Z_
+_Generated 2026-09-25T13:52:23.028Z_

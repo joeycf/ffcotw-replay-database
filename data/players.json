@@ -528,6 +528,10 @@
     "handle": "AYATAKABUN"
   },
   {
+    "id": "ayuko",
+    "handle": "AYUKO"
+  },
+  {
     "id": "azou",
     "handle": "Azou"
   },
@@ -3856,6 +3860,10 @@
     "handle": "JUANZERO"
   },
   {
+    "id": "juego",
+    "handle": "JUEGO"
+  },
+  {
     "id": "juicebox",
     "handle": "JUICEBOX"
   },
@@ -3946,6 +3954,10 @@
   {
     "id": "kaka",
     "handle": "KAKA"
+  },
+  {
+    "id": "kakunoji",
+    "handle": "KAKUNOJI"
   },
   {
     "id": "kakuzu",
@@ -6042,6 +6054,10 @@
   {
     "id": "pegamento",
     "handle": "PEGAMENTO"
+  },
+  {
+    "id": "pekasken",
+    "handle": "Pekasken"
   },
   {
     "id": "pelucaarg",
@@ -8166,6 +8182,10 @@
   {
     "id": "wakapon",
     "handle": "WAKAPON"
+  },
+  {
+    "id": "warayama",
+    "handle": "WARAYAMA"
   },
   {
     "id": "wauhti",
