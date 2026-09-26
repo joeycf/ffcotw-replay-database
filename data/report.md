@@ -1,33 +1,33 @@
 # CotW pipeline report
 
-- **4698** published records · **2167** players · **31** fighters
-- **646** pending review item(s) — absent from the site, never guessed
+- **4709** published records · **2172** players · **31** fighters
+- **647** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
 
 ## Per intake
 
 | intake | raw uploads | CotW-marked | parsed | published |
 | --- | ---: | ---: | ---: | ---: |
-| fatalFuryReplays | 6536 | 1273 | 1269 | 1269 |
-| wolfFgc | 1862 | 1208 | 1180 | 1180 |
-| svcHighlights | 728 | 677 | 670 | 670 |
-| ffCotwReplays | 722 | 721 | 635 | 635 |
-| bestOfSnk | 461 | 234 | 231 | 231 |
-| cotwReplays | 147 | 147 | 125 | 125 |
-| nomiiAegis | 345 | 321 | 138 | 138 |
-| bestOfFgc | 1842 | 319 | 313 | 313 |
+| fatalFuryReplays | 6541 | 1277 | 1273 | 1273 |
+| wolfFgc | 1867 | 1213 | 1185 | 1185 |
+| svcHighlights | 730 | 679 | 670 | 670 |
+| ffCotwReplays | 724 | 723 | 635 | 635 |
+| bestOfSnk | 463 | 235 | 231 | 231 |
+| cotwReplays | 148 | 148 | 126 | 126 |
+| nomiiAegis | 346 | 322 | 139 | 139 |
+| bestOfFgc | 1844 | 320 | 313 | 313 |
 | dildilFatalFury | 2492 | 1750 | 9 | 9 |
 | evoEvents | 2772 | 97 | 0 | 0 |
 | replayTheater | — | — | — | 128 |
 
 ## Misses
 
-- `no-marker` — 11160
-- `no-char` — 645
+- `no-marker` — 11163
+- `no-char` — 646
 - `vs-count` — 586
 - `no-vs` — 492
 - `too-short` — 253
-- `no-handle` — 170
+- `no-handle` — 175
 - `before-floor` — 30
 - `slot-ambiguous` — 1
 
@@ -76,8 +76,8 @@ line with its literal text, instead of vanishing into a silently shorter side.
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES CO`
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES COUNTER HIT`
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES preencha C`
-- … 880 more
+- … 886 more
 
 > Replay Theater: 149 dumped, 148 already known here, 1 candidates, 1 rebuilt, 127 carried (add-only), 128 total.
 
-_Generated 2026-09-25T13:52:23.028Z_
+_Generated 2026-09-26T13:10:28.770Z_

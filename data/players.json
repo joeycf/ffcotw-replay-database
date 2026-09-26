@@ -180,6 +180,10 @@
     "handle": "AKIRA"
   },
   {
+    "id": "akrock",
+    "handle": "AKROCK"
+  },
+  {
     "id": "aks-vitor",
     "handle": "AKS VITOR"
   },
@@ -218,6 +222,10 @@
   {
     "id": "alex5mith",
     "handle": "Alex5mith"
+  },
+  {
+    "id": "alexein",
+    "handle": "ALEXEIN"
   },
   {
     "id": "alexkidd",
@@ -306,6 +314,10 @@
   {
     "id": "antonio-furby",
     "handle": "ANTONIO FURBY"
+  },
+  {
+    "id": "antser",
+    "handle": "ANTSER"
   },
   {
     "id": "anunnakinirsh",
@@ -2474,6 +2486,10 @@
   {
     "id": "frydryse",
     "handle": "FRYDRYSE"
+  },
+  {
+    "id": "furby",
+    "handle": "FURBY"
   },
   {
     "id": "future",
@@ -5428,6 +5444,10 @@
     "handle": "MUAYTHAIVISA"
   },
   {
+    "id": "muhkimbunz",
+    "handle": "MUHKIMBUNZ"
+  },
+  {
     "id": "mujina",
     "handle": "Mujina"
   },
@@ -5449,7 +5469,7 @@
   },
   {
     "id": "musubi",
-    "handle": "Musubi"
+    "handle": "musubi"
   },
   {
     "id": "mutekiyama",
