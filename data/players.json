@@ -316,6 +316,10 @@
     "handle": "ANTONIO FURBY"
   },
   {
+    "id": "antoniofurby",
+    "handle": "AntonioFurby"
+  },
+  {
     "id": "antser",
     "handle": "ANTSER"
   },
@@ -1917,7 +1921,7 @@
   },
   {
     "id": "duck",
-    "handle": "DUCK"
+    "handle": "Duck"
   },
   {
     "id": "duke-silver",
@@ -2254,6 +2258,10 @@
   {
     "id": "far-c-far-c",
     "handle": "FAR C FAR C"
+  },
+  {
+    "id": "farhanchin",
+    "handle": "FarhanChin"
   },
   {
     "id": "fatalfuryfan",
