@@ -1,33 +1,33 @@
 # CotW pipeline report
 
-- **4725** published records · **2174** players · **31** fighters
-- **648** pending review item(s) — absent from the site, never guessed
+- **4738** published records · **2174** players · **31** fighters
+- **649** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
 
 ## Per intake
 
 | intake | raw uploads | CotW-marked | parsed | published |
 | --- | ---: | ---: | ---: | ---: |
-| fatalFuryReplays | 6547 | 1282 | 1278 | 1278 |
-| wolfFgc | 1873 | 1219 | 1191 | 1191 |
-| svcHighlights | 730 | 679 | 670 | 670 |
-| ffCotwReplays | 726 | 725 | 636 | 636 |
-| bestOfSnk | 465 | 236 | 232 | 232 |
-| cotwReplays | 149 | 149 | 127 | 127 |
-| nomiiAegis | 350 | 326 | 141 | 141 |
-| bestOfFgc | 1846 | 320 | 313 | 313 |
+| fatalFuryReplays | 6554 | 1288 | 1284 | 1284 |
+| wolfFgc | 1878 | 1224 | 1196 | 1196 |
+| svcHighlights | 731 | 680 | 670 | 670 |
+| ffCotwReplays | 729 | 728 | 636 | 636 |
+| bestOfSnk | 467 | 237 | 233 | 233 |
+| cotwReplays | 150 | 150 | 128 | 128 |
+| nomiiAegis | 349 | 325 | 141 | 141 |
+| bestOfFgc | 1848 | 321 | 313 | 313 |
 | dildilFatalFury | 2492 | 1750 | 9 | 9 |
-| evoEvents | 2772 | 97 | 0 | 0 |
+| evoEvents | 2773 | 97 | 0 | 0 |
 | replayTheater | — | — | — | 128 |
 
 ## Misses
 
-- `no-marker` — 11167
-- `no-char` — 647
+- `no-marker` — 11171
+- `no-char` — 648
 - `vs-count` — 586
 - `no-vs` — 493
-- `too-short` — 254
-- `no-handle` — 175
+- `too-short` — 253
+- `no-handle` — 179
 - `before-floor` — 30
 - `slot-ambiguous` — 1
 
@@ -76,8 +76,8 @@ line with its literal text, instead of vanishing into a silently shorter side.
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES CO`
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES COUNTER HIT`
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES preencha C`
-- … 888 more
+- … 893 more
 
 > Replay Theater: 149 dumped, 148 already known here, 1 candidates, 1 rebuilt, 127 carried (add-only), 128 total.
 
-_Generated 2026-09-27T14:03:04.667Z_
+_Generated 2026-09-28T16:49:45.981Z_
