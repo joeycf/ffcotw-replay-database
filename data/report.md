@@ -1,33 +1,33 @@
 # CotW pipeline report
 
-- **4738** published records · **2174** players · **31** fighters
-- **649** pending review item(s) — absent from the site, never guessed
+- **4749** published records · **2175** players · **31** fighters
+- **650** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
 
 ## Per intake
 
 | intake | raw uploads | CotW-marked | parsed | published |
 | --- | ---: | ---: | ---: | ---: |
-| fatalFuryReplays | 6554 | 1288 | 1284 | 1284 |
-| wolfFgc | 1878 | 1224 | 1196 | 1196 |
+| fatalFuryReplays | 6560 | 1292 | 1288 | 1288 |
+| wolfFgc | 1883 | 1229 | 1201 | 1201 |
 | svcHighlights | 731 | 680 | 670 | 670 |
-| ffCotwReplays | 729 | 728 | 636 | 636 |
-| bestOfSnk | 467 | 237 | 233 | 233 |
-| cotwReplays | 150 | 150 | 128 | 128 |
-| nomiiAegis | 349 | 325 | 141 | 141 |
-| bestOfFgc | 1848 | 321 | 313 | 313 |
-| dildilFatalFury | 2492 | 1750 | 9 | 9 |
+| ffCotwReplays | 731 | 730 | 636 | 636 |
+| bestOfSnk | 469 | 238 | 233 | 233 |
+| cotwReplays | 151 | 151 | 129 | 129 |
+| nomiiAegis | 351 | 327 | 142 | 142 |
+| bestOfFgc | 1850 | 322 | 313 | 313 |
+| dildilFatalFury | 2497 | 1755 | 9 | 9 |
 | evoEvents | 2773 | 97 | 0 | 0 |
 | replayTheater | — | — | — | 128 |
 
 ## Misses
 
-- `no-marker` — 11171
-- `no-char` — 648
-- `vs-count` — 586
-- `no-vs` — 493
+- `no-marker` — 11175
+- `no-char` — 649
+- `vs-count` — 590
+- `no-vs` — 495
 - `too-short` — 253
-- `no-handle` — 179
+- `no-handle` — 182
 - `before-floor` — 30
 - `slot-ambiguous` — 1
 
@@ -76,8 +76,8 @@ line with its literal text, instead of vanishing into a silently shorter side.
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES CO`
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES COUNTER HIT`
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES preencha C`
-- … 893 more
+- … 903 more
 
 > Replay Theater: 149 dumped, 148 already known here, 1 candidates, 1 rebuilt, 127 carried (add-only), 128 total.
 
-_Generated 2026-09-28T16:49:45.981Z_
+_Generated 2026-09-29T14:54:59.529Z_
