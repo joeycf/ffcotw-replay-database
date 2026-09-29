@@ -283,6 +283,13 @@ The commit step stages files **by name**, never `git add data/` — a blanket ad
 would sweep up a half-finished hand edit to `overrides.json` in an unattended
 run.
 
+Player redirects live in `data/player-redirects.json`, which is hand-authored,
+and are served from `vercel.json`, which `npm run data:redirects` derives from it.
+The cron regenerates `vercel.json` before its commit. `redirects.ts --drift` then
+refuses to commit, holding the whole day's data, if a row cannot ship: a target
+that stopped being a player, or a retired id that came back as one. The refusal
+names the row and its fix.
+
 ## Vercel
 
 Project `ffcotw-replay-database`, built from this repo's `main`.
