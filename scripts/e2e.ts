@@ -406,9 +406,14 @@ if (EMPTY) {
       `/characters/${sample} prerenders with a data-derived <title>`,
       /<title>[^<]*\w[^<]*<\/title>/.test(html),
     );
+    // Its accent by reference: the page styles itself with var(--accent-<id>),
+    // and engine v0.16.0 compiles that variable into the entry stylesheet.
+    // (This used to look for the hex in the page, which only ever matched the
+    // inline accents block every page carried; the character's own markup has
+    // never spelled the hex out.)
     check(
       `/characters/${sample} carries its accent`,
-      html.toLowerCase().includes(characters[0]!.accent.toLowerCase()),
+      html.includes(`var(--accent-${sample}`),
     );
   } else {
     check(`/characters/${sample} prerendered`, false, 'missing from the build');

@@ -4,7 +4,7 @@
    Transcribed from design/handoff/tokens.css, which is the design system's
    source of truth. Only the ENGINE'S semantic tokens live here; the 32
    --char-* accents are NOT in this file — they go to app.config.ts `accents`,
-   which the engine injects as --accent-<id> (app/plugins/accents.ts), and
+   which the engine emits as --accent-<id> (modules/accents-css.ts), and
    scripts/characters.ts reads the same handoff block so the two cannot drift.
 
    THE CONTRACT (STACK §5.13, engine README "Theming"):
