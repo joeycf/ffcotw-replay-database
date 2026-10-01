@@ -27,6 +27,7 @@
  * afterwards, so a control that corrupted state would show up immediately.
  *
  * Run: npm run verify:gates
+ *      npm run verify:gates -- --no-network   (skip the one control that opens a socket)
  */
 
 import { spawnSync } from 'node:child_process';
@@ -36,6 +37,7 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const only = process.argv.find((a) => a.startsWith('--only='))?.slice('--only='.length);
+const NO_NETWORK = process.argv.includes('--no-network');
 
 interface Control {
   /** What the gate protects, phrased as the failure it refuses. */
@@ -46,6 +48,15 @@ interface Control {
   files: string[];
   /** Apply the defect. Return false to SKIP (with a reason printed). */
   inject: () => boolean | string;
+  /** Extra environment for the run. */
+  env?: NodeJS.ProcessEnv;
+  /** This control opens a socket (even to a closed local port); skipped under
+   *  `--no-network`. */
+  network?: boolean;
+  /** Replaces the default "exits non-zero" assertion, for a gate that is a
+   *  MEASUREMENT rather than an exit code. Return null to pass, or the
+   *  reason it failed. */
+  assert?: (r: ReturnType<typeof run>) => string | null;
 }
 
 const read = (p: string) => readFileSync(join(ROOT, p), 'utf8');
@@ -59,7 +70,87 @@ const sub = (p: string, from: string, to: string): boolean => {
   return true;
 };
 
+/** The default assertion plus a name check: the command exited non-zero AND
+ *  its output names the rule under test, so a failure for some other reason
+ *  (a pre-existing defect in the same file) cannot pass as this control. */
+const failsNaming = (r: ReturnType<typeof run>, rule: RegExp): string | null => {
+  const out = `${r.stdout}${r.stderr}`;
+  const head = out.split('\n').slice(0, 4).join(' | ');
+  if (r.error) return `the command never ran: ${r.error.message}`;
+  if (r.status === 0) return 'exited 0 with the defect present';
+  if (!rule.test(out)) return `exited ${r.status} but not on ${rule}. Got: ${head}`;
+  return null;
+};
+
 const CONTROLS: Control[] = [
+  // ── tournament placements (scripts/tournaments.ts --check) ───────────────
+  // Both offline. The file is Liquipedia's Tier 1–2 table as fetched; the
+  // validator is what keeps a hand-edit (or a half-written fetch) from
+  // reaching parse-finish.ts, which features whoever the file names.
+  {
+    name: 'tournaments: the same event page listed twice (a double-counted title)',
+    cmd: ['tsx', 'scripts/tournaments.ts', '--check'],
+    files: ['data/tournaments.json'],
+    inject: () => {
+      if (!existsSync(join(ROOT, 'data/tournaments.json'))) return 'no data/tournaments.json yet';
+      const f = JSON.parse(read('data/tournaments.json')) as { events: unknown[] };
+      if (!f.events.length) return 'tournaments.json carries no events';
+      f.events.push(f.events[0]);
+      write('data/tournaments.json', `${JSON.stringify(f, null, 2)}\n`);
+      return true;
+    },
+    // Non-zero is not enough: the run must fail ON THIS RULE, or a stale row
+    // elsewhere in the file could pass the control as a false positive.
+    assert: (r) => failsNaming(r, /duplicate event page/),
+  },
+  {
+    name: 'tournaments: an alias row pointing at a player who is not in the registry',
+    cmd: ['tsx', 'scripts/tournaments.ts', '--check'],
+    files: ['data/tournament-aliases.json'],
+    inject: () => {
+      if (!existsSync(join(ROOT, 'data/tournament-aliases.json')))
+        return 'no data/tournament-aliases.json yet';
+      const f = JSON.parse(read('data/tournament-aliases.json')) as {
+        aliases: Record<string, string | null>;
+      };
+      const k = Object.keys(f.aliases)[0];
+      if (!k) return 'the aliases file has no rows to corrupt';
+      f.aliases[k] = 'no-such-player';
+      write('data/tournament-aliases.json', `${JSON.stringify(f, null, 2)}\n`);
+      return true;
+    },
+    assert: (r) => failsNaming(r, /unknown player id "no-such-player"/),
+  },
+  {
+    // THE KEEP-THE-FILE GUARANTEE. An unreachable Liquipedia must be
+    // UNVERIFIED (exit 0, yellow in ../sync-tournaments.sh) and must leave the
+    // committed table byte-identical — a fetch failure that wrote an empty file
+    // would un-feature every champion on the next parse. A measurement, not an
+    // exit code, so it brings its own assert. Needs no real network: the
+    // endpoint is pointed at a closed local port, but it is a `fetch`, so it
+    // is filed as a network control and skipped under --no-network.
+    name: 'tournaments: Liquipedia unreachable → UNVERIFIED and data/tournaments.json untouched',
+    cmd: ['tsx', 'scripts/tournaments.ts'],
+    files: ['data/tournaments.json'],
+    env: { TOURNAMENTS_URL: 'http://127.0.0.1:9/api.php' },
+    network: true,
+    inject: () =>
+      existsSync(join(ROOT, 'data/tournaments.json')) ? true : 'no data/tournaments.json yet',
+    assert: (r) => {
+      const out = `${r.stdout}${r.stderr}`;
+      const head = out.split('\n').slice(0, 4).join(' | ');
+      if (r.error) return `the command never ran: ${r.error.message}`;
+      if (r.status !== 0)
+        return `exited ${r.status}; an unreachable upstream is UNVERIFIED, never a failure. Got: ${head}`;
+      if (!/tournaments: UNVERIFIED/.test(out)) return `no UNVERIFIED trailer. Got: ${head}`;
+      const before = snapshots.get('data/tournaments.json');
+      const after = readFileSync(join(ROOT, 'data/tournaments.json'));
+      if (!before || !before.equals(after))
+        return 'data/tournaments.json changed on a failed fetch';
+      return null;
+    },
+  },
+
   // ── the patch table ──────────────────────────────────────────────────────
   {
     name: 'patches: two patches share a start date (the real 2.2.0 CMS error)',
@@ -375,8 +466,8 @@ const restore = (files: string[]) => {
   }
 };
 
-const run = (cmd: string[]) =>
-  spawnSync('npx', cmd, { cwd: ROOT, encoding: 'utf8', env: { ...process.env } });
+const run = (cmd: string[], env: NodeJS.ProcessEnv = {}) =>
+  spawnSync('npx', cmd, { cwd: ROOT, encoding: 'utf8', env: { ...process.env, ...env } });
 
 let pass = 0;
 let fail = 0;
@@ -386,6 +477,11 @@ const failures: string[] = [];
 console.log(`▶ ${CONTROLS.length} positive control(s)\n`);
 for (const c of CONTROLS) {
   if (only && !c.name.includes(only)) continue;
+  if (c.network && NO_NETWORK) {
+    skip++;
+    console.log(`  SKIP  ${c.name}\n        --no-network was given; this control opens a socket`);
+    continue;
+  }
   snapshot(c.files);
   let injected: boolean | string = false;
   try {
@@ -404,15 +500,18 @@ for (const c of CONTROLS) {
     }
     continue;
   }
-  const r = run(c.cmd);
+  const r = run(c.cmd, c.env);
+  // A control with its own `assert` is a measurement: it reads the snapshot
+  // taken before the run, so it must judge BEFORE the restore.
+  const why = c.assert ? c.assert(r) : r.status !== 0 ? null : 'exited 0 with the defect present';
   restore(c.files);
-  if (r.status !== 0) {
+  if (why === null) {
     pass++;
     console.log(`  PASS  ${c.name}`);
   } else {
     fail++;
     failures.push(c.name);
-    console.log(`  FAIL  ${c.name}  — exited 0 with the defect present`);
+    console.log(`  FAIL  ${c.name}  — ${why}`);
   }
 }
 
@@ -424,6 +523,7 @@ const CLEAN: [string, string[]][] = [
   ['expiries selftest', ['tsx', 'scripts/expiries.ts', '--selftest']],
   ['characters', ['tsx', 'scripts/characters.ts']],
   ['redirects', ['tsx', 'scripts/redirects.ts', '--check']],
+  ['tournaments', ['tsx', 'scripts/tournaments.ts', '--check']],
   ['parse', ['tsx', 'scripts/parse.ts']],
   ['emit', ['tsx', 'scripts/emit.ts']],
 ];

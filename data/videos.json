@@ -1,11 +1,61 @@
 [
   {
+    "id": "J7w50PnLKSI",
+    "channel": "fatalFuryReplays",
+    "intake": "fatalFuryReplays",
+    "title": "FF COTW ▰ AMARAL (Kim Kaphwan) vs WHIP (#1 Ranked Blue Mary) ▰ High Level Gameplay",
+    "publishedAt": "2026-10-01T18:00:33Z",
+    "durationSec": 610,
+    "viewCount": 24,
+    "season": 3,
+    "patch": "3.2.2",
+    "sides": [
+      {
+        "player": "amaral",
+        "handle": "AMARAL",
+        "characters": [
+          "kim-kaphwan"
+        ],
+        "provenance": {
+          "tier": "title",
+          "tiers": [
+            "title"
+          ],
+          "fromTitle": [
+            "kim-kaphwan"
+          ],
+          "slotOrder": "handle-first",
+          "complete": true
+        }
+      },
+      {
+        "player": "whip",
+        "handle": "WHIP",
+        "characters": [
+          "blue-mary"
+        ],
+        "provenance": {
+          "tier": "title",
+          "tiers": [
+            "title"
+          ],
+          "fromTitle": [
+            "blue-mary"
+          ],
+          "slotOrder": "handle-first",
+          "complete": true
+        }
+      }
+    ]
+  },
+  {
     "id": "0E0EH8MdMP0",
     "channel": "wolfFgc",
     "intake": "wolfFgc",
     "title": "FF:CotW 🐺 CDM RINO (Kim Kaphwan) vs HIGHTIERBUM (Blue Mary)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-10-01T15:30:01Z",
     "durationSec": 596,
+    "viewCount": 85,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -54,7 +104,7 @@
     "title": "FF:CotW 🐺 MUSUBI (Kim Kaphwan) vs BONHOON (Duck King)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-10-01T14:28:15Z",
     "durationSec": 550,
-    "viewCount": 68,
+    "viewCount": 290,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -103,7 +153,7 @@
     "title": "FF COTW ▰ SCOOBY (Kim Kaphwan) vs ZERGE (Duck King) ▰ High Level Gameplay",
     "publishedAt": "2026-10-01T14:00:00Z",
     "durationSec": 827,
-    "viewCount": 87,
+    "viewCount": 399,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -152,7 +202,7 @@
     "title": "FF Season 3 ▰ Lumpy (TERRY) VS DarkAngelMX (KAIN) ▰ FATAL FURY: CoTW High Level Gameplay",
     "publishedAt": "2026-10-01T12:06:08Z",
     "durationSec": 489,
-    "viewCount": 40,
+    "viewCount": 86,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -201,7 +251,7 @@
     "title": "FF COTW ▰ SOMBRA (#1 Ranked Kevin) vs SEISMX (Mr. Karate) ▰ High Level Gameplay",
     "publishedAt": "2026-10-01T10:00:28Z",
     "durationSec": 802,
-    "viewCount": 395,
+    "viewCount": 594,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -250,7 +300,7 @@
     "title": "FF:CotW 🐺 HIGHTIERBUM (Blue Mary) vs IKUOG (Kim Kaphwan)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-10-01T10:00:11Z",
     "durationSec": 471,
-    "viewCount": 602,
+    "viewCount": 983,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -299,7 +349,7 @@
     "title": "FF:CotW 🐺 KIM22B (Kim Kaphwan) vs JJKC (Ken Masters)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-10-01T08:30:28Z",
     "durationSec": 554,
-    "viewCount": 428,
+    "viewCount": 642,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -348,7 +398,7 @@
     "title": "FF COTW ▰ MUSUBI (#2 Ranked Kim Kaphwan) vs ARUSU (#2 Ranked Vox) ▰ High Level Gameplay",
     "publishedAt": "2026-10-01T02:00:05Z",
     "durationSec": 681,
-    "viewCount": 998,
+    "viewCount": 1116,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -397,7 +447,7 @@
     "title": "FF:CotW 🐺 ALEX5MITH (B.Jenet) vs FERNO (Kim Kaphwan)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-30T22:21:17Z",
     "durationSec": 442,
-    "viewCount": 625,
+    "viewCount": 689,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -446,7 +496,7 @@
     "title": "FF COTW ▰ AMARAL (#9 Ranked Kim Kaphwan) vs KANG (Mr. Karate) ▰ High Level Gameplay",
     "publishedAt": "2026-09-30T22:00:35Z",
     "durationSec": 1004,
-    "viewCount": 934,
+    "viewCount": 937,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -495,7 +545,7 @@
     "title": "FF COTW ▰ MUSUBI (#2 Ranked Kim Kaphwan) vs MIKI (#5 Ranked Wolfgang Krauser) ▰ High Level Gameplay",
     "publishedAt": "2026-09-30T18:00:12Z",
     "durationSec": 839,
-    "viewCount": 3003,
+    "viewCount": 3156,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -544,7 +594,7 @@
     "title": "FF:CotW 🐺 DRKAJITSU (Dong Hwan) vs MUSUBI (Kim Kaphwan)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-30T15:00:39Z",
     "durationSec": 533,
-    "viewCount": 3181,
+    "viewCount": 3290,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -593,7 +643,7 @@
     "title": "FF:CotW 🐺 MICHELLE (Cristiano Ronaldo) vs KULA (Kim Kaphwan)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-30T14:16:45Z",
     "durationSec": 528,
-    "viewCount": 813,
+    "viewCount": 886,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -642,7 +692,7 @@
     "title": "FF COTW ▰ FERNO (#1 Ranked Kim Kaphwan) vs MICHELLE (#6 Ranked C. Ronaldo) ▰ High Level Gameplay",
     "publishedAt": "2026-09-30T14:00:04Z",
     "durationSec": 711,
-    "viewCount": 1230,
+    "viewCount": 1276,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -691,7 +741,7 @@
     "title": "FF COTW ▰ FERNO (#1 Ranked Kim Kaphwan) vs ALEX5MITH (#1 Ranked B.Jenet) ▰ High Level Gameplay",
     "publishedAt": "2026-09-30T10:29:44Z",
     "durationSec": 625,
-    "viewCount": 2966,
+    "viewCount": 3028,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -740,7 +790,7 @@
     "title": "FF:CotW 🐺 AUDIO (Rick Strowd) vs KUU (Kim Kaphwan)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-30T10:00:32Z",
     "durationSec": 418,
-    "viewCount": 1266,
+    "viewCount": 1320,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -789,7 +839,7 @@
     "title": "FF:CotW 🐺 AZULITO (Kenshiro) vs RAKU (Kim Kaphwan)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-30T08:30:33Z",
     "durationSec": 598,
-    "viewCount": 1460,
+    "viewCount": 1507,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -838,7 +888,7 @@
     "title": "FF COTW ▰ ARUSU (Kim Kaphwan) vs XIAOKOU (#8 Ranked Duck King) ▰ High Level Gameplay",
     "publishedAt": "2026-09-30T02:00:24Z",
     "durationSec": 908,
-    "viewCount": 1764,
+    "viewCount": 1783,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -887,7 +937,7 @@
     "title": "FF:CotW 🐺 FERNO (Kim Kaphwan) vs TAMAGO (Mr.Karate)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-29T22:00:33Z",
     "durationSec": 536,
-    "viewCount": 2103,
+    "viewCount": 2145,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -936,7 +986,7 @@
     "title": "FF COTW ▰ AUDIO33 (#1 Ranked Rick Strowd) vs SOMBRA (#3 Ranked Kevin) ▰ High Level Gameplay",
     "publishedAt": "2026-09-29T22:00:01Z",
     "durationSec": 593,
-    "viewCount": 910,
+    "viewCount": 911,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -985,7 +1035,7 @@
     "title": "VOX 🐺 ARUSULAVISION VS MIKI 🐺 KRAUSER | FATAL FURY COTW",
     "publishedAt": "2026-09-29T21:00:28Z",
     "durationSec": 472,
-    "viewCount": 52,
+    "viewCount": 56,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -1034,7 +1084,7 @@
     "title": "FF COTW ▰ FEVER (#2 Ranked Kenshiro) vs HASUMI (#9 Ranked Ken) ▰ High Level Gameplay",
     "publishedAt": "2026-09-29T18:00:31Z",
     "durationSec": 917,
-    "viewCount": 1134,
+    "viewCount": 1140,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -1083,7 +1133,7 @@
     "title": "FF:CotW 🐺 BETOWEST (Mai Shiranui) vs SCOOBY (Kim Kaphwan)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-29T14:45:10Z",
     "durationSec": 558,
-    "viewCount": 806,
+    "viewCount": 819,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -1132,7 +1182,7 @@
     "title": "FF COTW ▰ FERNO (#1 Ranked Kim Kaphwan) vs TAMAGO (Mr. Karate) ▰ High Level Gameplay",
     "publishedAt": "2026-09-29T14:00:01Z",
     "durationSec": 812,
-    "viewCount": 8310,
+    "viewCount": 8411,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -1181,7 +1231,7 @@
     "title": "FF:CotW 🐺 ZERGE (Kim Kaphwan) vs MAROMERO (Kenshiro)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-29T13:53:13Z",
     "durationSec": 658,
-    "viewCount": 1139,
+    "viewCount": 1143,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -1230,7 +1280,7 @@
     "title": "FF:CotW 🐺 KULA (Kim Kaphwan) vs RONDUN (Rock Howard)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-29T10:00:25Z",
     "durationSec": 527,
-    "viewCount": 1877,
+    "viewCount": 1885,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -1279,7 +1329,7 @@
     "title": "FF COTW ▰ FERNO (#1 Ranked Kim Kaphwan) vs SOMBRA (#1 Ranked Kevin) ▰ High Level Gameplay",
     "publishedAt": "2026-09-29T09:53:45Z",
     "durationSec": 803,
-    "viewCount": 3670,
+    "viewCount": 3701,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -1328,7 +1378,7 @@
     "title": "FF:CotW 🐺 MIKI (Wolfgang Krauser) vs PANPINA (Kim Kaphwan)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-29T08:30:05Z",
     "durationSec": 575,
-    "viewCount": 1887,
+    "viewCount": 1909,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -1377,7 +1427,7 @@
     "title": "FF Season 3 ▰ Keitoless (KIM KAPHWAN) Vs TLRMDCPAOLO (RICK) ▰ FATAL FURY: CoTW High Level Gameplay",
     "publishedAt": "2026-09-29T03:47:28Z",
     "durationSec": 482,
-    "viewCount": 158,
+    "viewCount": 176,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -1426,7 +1476,7 @@
     "title": "AmaralKOF (Kim Kaphwan) vs BrotherBogard (Andy Bogard) | Fatal Fury: City of the Wolves",
     "publishedAt": "2026-09-29T00:30:16Z",
     "durationSec": 469,
-    "viewCount": 40,
+    "viewCount": 41,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -1475,7 +1525,7 @@
     "title": "FF:CotW 🐺 AUDIO (Rick Strowd) vs SCOOBY (Kim Kaphwan)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-28T22:10:43Z",
     "durationSec": 459,
-    "viewCount": 2377,
+    "viewCount": 2475,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -1524,7 +1574,7 @@
     "title": "FF COTW ▰ BLCKSPIDER (Kim Kaphwan) vs TAMAGO (Mr. Karate) ▰ High Level Gameplay",
     "publishedAt": "2026-09-28T22:00:02Z",
     "durationSec": 872,
-    "viewCount": 1400,
+    "viewCount": 1403,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -1573,7 +1623,7 @@
     "title": "FF COTW ▰ KUU (#4 Ranked Kim Kaphwan) vs AUDIO33 (#2 Ranked Rick Strowd) ▰ High Level Gameplay",
     "publishedAt": "2026-09-28T18:00:01Z",
     "durationSec": 769,
-    "viewCount": 2806,
+    "viewCount": 2812,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -1622,7 +1672,7 @@
     "title": "FF:CotW 🐺 KUU (Kim Kaphwan) vs MAROMERO (Kenshiro)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-28T14:21:33Z",
     "durationSec": 548,
-    "viewCount": 4694,
+    "viewCount": 5016,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -1671,7 +1721,7 @@
     "title": "FF COTW ▰ PANPINA (#2 Ranked Kim Kaphwan) vs MIKI (#9 Ranked Wolfgang Krauser) ▰ High Level Gameplay",
     "publishedAt": "2026-09-28T14:00:14Z",
     "durationSec": 951,
-    "viewCount": 5723,
+    "viewCount": 6014,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -1720,7 +1770,7 @@
     "title": "FF:CotW 🐺 ENIGMA KOF (Ken Masters) vs KUU (Kim Kaphwan)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-28T11:30:15Z",
     "durationSec": 392,
-    "viewCount": 9134,
+    "viewCount": 9200,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -1769,7 +1819,7 @@
     "title": "FF:CotW 🐺 NEBU (Duck King) vs FERNO (Kim Kaphwan)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-28T10:00:23Z",
     "durationSec": 499,
-    "viewCount": 3950,
+    "viewCount": 3966,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -1818,7 +1868,7 @@
     "title": "FF COTW ▰ FERNO (#1 Ranked Kim Kaphwan) vs SORIKU (#1 Ranked Chun-Li) ▰ High Level Gameplay",
     "publishedAt": "2026-09-28T09:46:00Z",
     "durationSec": 824,
-    "viewCount": 1926,
+    "viewCount": 1938,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -2014,7 +2064,7 @@
     "title": "FF COTW ▰ SCOOBY (Kim Kaphwan) vs SORIKU (#1 Ranked Chun-Li) ▰ High Level Gameplay",
     "publishedAt": "2026-09-27T22:00:15Z",
     "durationSec": 550,
-    "viewCount": 1310,
+    "viewCount": 1313,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -2112,7 +2162,7 @@
     "title": "FF:CotW 🐺 KOFCHORRERA (Kim Kaphwan) vs AUDIO (Rick Strowd)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-27T19:00:39Z",
     "durationSec": 515,
-    "viewCount": 2208,
+    "viewCount": 2209,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -2161,7 +2211,7 @@
     "title": "FF COTW ▰ ARUSU (Kim Kaphwan) vs HMMA (Duck King) ▰ High Level Gameplay",
     "publishedAt": "2026-09-27T18:00:01Z",
     "durationSec": 1103,
-    "viewCount": 3585,
+    "viewCount": 3612,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -2210,7 +2260,7 @@
     "title": "FF COTW ▰ KUU (#2 Ranked Kim Kaphwan) vs MICHELLE (#9 Ranked C. Ronaldo) ▰ High Level Gameplay",
     "publishedAt": "2026-09-27T14:00:31Z",
     "durationSec": 722,
-    "viewCount": 3428,
+    "viewCount": 3425,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -2259,7 +2309,7 @@
     "title": "FF:CotW 🐺 KUU (Kim Kaphwan) vs AUDIO (Rick Strowd)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-27T13:05:29Z",
     "durationSec": 535,
-    "viewCount": 3050,
+    "viewCount": 3055,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -2357,7 +2407,7 @@
     "title": "FF:CotW 🐺 MUSUBI (Kim Kaphwan) vs ICE SKY RAIN (Chun-Li)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-27T12:27:44Z",
     "durationSec": 527,
-    "viewCount": 3635,
+    "viewCount": 3636,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -2406,7 +2456,7 @@
     "title": "FF Season 3 ▰ NoMiiAegis (KIM KAPHWAN) Vs SulianLamu (ROCK) 🔥 ▰ FATAL FURY: CoTW High Level Gameplay",
     "publishedAt": "2026-09-27T11:05:28Z",
     "durationSec": 302,
-    "viewCount": 562,
+    "viewCount": 563,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -2455,7 +2505,7 @@
     "title": "FF:CotW 🐺 MUSUBI (Kim Kaphwan) vs MIKI (Wolfgang Krauser)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-27T10:00:02Z",
     "durationSec": 540,
-    "viewCount": 3866,
+    "viewCount": 3868,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -2504,7 +2554,7 @@
     "title": "FF COTW ▰ ZEUS (#3 Ranked Kim Kaphwan) vs AUDIO33 (#2 Ranked Rick Strowd) ▰ High Level Gameplay",
     "publishedAt": "2026-09-27T09:46:57Z",
     "durationSec": 745,
-    "viewCount": 2391,
+    "viewCount": 2397,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -2651,7 +2701,7 @@
     "title": "FF COTW ▰ MUSUBI (#3 Ranked Kim Kaphwan) vs ICESKYRAIN (Chun-Li) ▰ High Level Gameplay",
     "publishedAt": "2026-09-27T01:30:13Z",
     "durationSec": 841,
-    "viewCount": 6856,
+    "viewCount": 6857,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -2749,7 +2799,7 @@
     "title": "FF COTW ▰ YOANP (#5 Ranked Kim Kaphwan) vs POETRY CHEF (#3 Ranked Joe) ▰ High Level Gameplay",
     "publishedAt": "2026-09-26T21:30:09Z",
     "durationSec": 591,
-    "viewCount": 2210,
+    "viewCount": 2260,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -2798,7 +2848,7 @@
     "title": "GATO 🐺 SSTRATO VS DANIELFOKA 🐺 CHUN-LI | FATAL FURY COTW",
     "publishedAt": "2026-09-26T21:00:13Z",
     "durationSec": 299,
-    "viewCount": 64,
+    "viewCount": 67,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -2847,7 +2897,7 @@
     "title": "FF COTW ▰ VERMI (#3 Ranked Kim Kaphwan) vs SSTRATO (Gato) ▰ High Level Gameplay",
     "publishedAt": "2026-09-26T17:30:31Z",
     "durationSec": 501,
-    "viewCount": 2150,
+    "viewCount": 2152,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -2945,7 +2995,7 @@
     "title": "FF COTW ▰ YOANP (#5 Ranked Kim Kaphwan) vs ALEX5MITH (#1 Ranked B.Jenet) ▰ High Level Gameplay",
     "publishedAt": "2026-09-26T13:30:18Z",
     "durationSec": 566,
-    "viewCount": 4974,
+    "viewCount": 4976,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -2994,7 +3044,7 @@
     "title": "FF:CotW 🐺 ETO7 (Kenshiro) vs AE PDPDR (Kim Kaphwan)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-26T13:18:00Z",
     "durationSec": 522,
-    "viewCount": 1517,
+    "viewCount": 1518,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -3043,7 +3093,7 @@
     "title": "FF:CotW 🐺 MUSUBI (Kim Kaphwan) vs RIMEI (Nightmare Geese)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-26T10:00:03Z",
     "durationSec": 426,
-    "viewCount": 2512,
+    "viewCount": 2520,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -3190,7 +3240,7 @@
     "title": "FF:CotW 🐺 MUHKIMBUNZ (Kim Kaphwan) vs KRIS4URER (Dong Hwan)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-26T08:30:16Z",
     "durationSec": 466,
-    "viewCount": 5973,
+    "viewCount": 5980,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -3239,7 +3289,7 @@
     "title": "FF COTW ▰ FERNO (#1 Ranked Kim Kaphwan) vs EDUARDOMTZ (#7 Ranked Terry) ▰ High Level Gameplay",
     "publishedAt": "2026-09-25T22:00:08Z",
     "durationSec": 673,
-    "viewCount": 8300,
+    "viewCount": 8318,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -3288,7 +3338,7 @@
     "title": "FF:CotW 🐺 ALEXEIN (Rick Strowd) vs ANTSER (Kim Kaphwan)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-25T21:00:39Z",
     "durationSec": 635,
-    "viewCount": 11511,
+    "viewCount": 11523,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -3386,7 +3436,7 @@
     "title": "FF:CotW 🐺 TZK ZEUS (Mr.Big) vs KULA (Kim Kaphwan)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-25T19:09:45Z",
     "durationSec": 401,
-    "viewCount": 2168,
+    "viewCount": 2179,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -3435,7 +3485,7 @@
     "title": "FF COTW ▰ FURBY (#9 Ranked Kim Kaphwan) vs ZERGE (Duck King) ▰ High Level Gameplay",
     "publishedAt": "2026-09-25T19:00:17Z",
     "durationSec": 1022,
-    "viewCount": 4223,
+    "viewCount": 4228,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -3484,7 +3534,7 @@
     "title": "FF COTW ▰ LEO DECKO (Kim Kaphwan) vs DARK ANGEL (#9 Ranked Kain) ▰ High Level Gameplay",
     "publishedAt": "2026-09-25T15:30:31Z",
     "durationSec": 505,
-    "viewCount": 2631,
+    "viewCount": 2632,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -3533,7 +3583,7 @@
     "title": "FF:CotW 🐺 MUSUBI (Kim Kaphwan) vs R04 (Wolfgang Krauser)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-25T14:00:36Z",
     "durationSec": 427,
-    "viewCount": 8050,
+    "viewCount": 8054,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -3582,7 +3632,7 @@
     "title": "FF:CotW 🐺 FERNO (Kim Kaphwan) vs MINILORD (Mr.Karate)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-25T13:08:01Z",
     "durationSec": 534,
-    "viewCount": 9084,
+    "viewCount": 9224,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -3680,7 +3730,7 @@
     "title": "FF:CotW 🐺 KULA (Kim Kaphwan) vs JUEGO (Nightmare Geese)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-25T10:00:33Z",
     "durationSec": 487,
-    "viewCount": 14200,
+    "viewCount": 14299,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -3729,7 +3779,7 @@
     "title": "FF COTW ▰ FERNO (#1 Ranked Kim Kaphwan) vs KULA (#5 Ranked Cristiano Ronaldo) ▰ High Level Gameplay",
     "publishedAt": "2026-09-25T09:30:40Z",
     "durationSec": 321,
-    "viewCount": 8080,
+    "viewCount": 8084,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -3778,7 +3828,7 @@
     "title": "FF:CotW 🐺 BETOWEST (Mai Shiranui) vs KULA (Kim Kaphwan)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-25T08:30:28Z",
     "durationSec": 498,
-    "viewCount": 2684,
+    "viewCount": 2685,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -3876,7 +3926,7 @@
     "title": "FF:CotW 🌟KAZUNOKO (Kim Kaphwan) vs AYUKO (Kim Kaphwan)🌟Replay Match - FATAL FURY: City of the Wolves",
     "publishedAt": "2026-09-24T21:45:11Z",
     "durationSec": 591,
-    "viewCount": 604,
+    "viewCount": 607,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -3925,7 +3975,7 @@
     "title": "FF COTW ▰ MARINCHAN (Kim Kaphwan) vs FEVER (#2 Ranked Kenshiro) ▰ High Level Gameplay",
     "publishedAt": "2026-09-24T21:00:12Z",
     "durationSec": 481,
-    "viewCount": 4380,
+    "viewCount": 4381,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -3974,7 +4024,7 @@
     "title": "ROCK 🐺 SKEME237 VS JAK22 🐺 ROCK | FATAL FURY COTW",
     "publishedAt": "2026-09-24T21:00:04Z",
     "durationSec": 387,
-    "viewCount": 28,
+    "viewCount": 29,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -4023,7 +4073,7 @@
     "title": "FF:CotW 🐺 PANPINA (Kim Kaphwan) vs AAA (Mr.Karate)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-24T20:08:38Z",
     "durationSec": 454,
-    "viewCount": 22140,
+    "viewCount": 22162,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -4072,7 +4122,7 @@
     "title": "FF COTW ▰ HAREGORO (Kim Kaphwan) vs SUDOCHO (#4 Ranked Tizoc) ▰ High Level Gameplay",
     "publishedAt": "2026-09-24T18:00:17Z",
     "durationSec": 405,
-    "viewCount": 4160,
+    "viewCount": 4161,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -4121,7 +4171,7 @@
     "title": "FF:CotW 🐺 KAZUNOKO (Kim Kaphwan) vs WARAYAMA (Mai Shiranui)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-24T15:30:12Z",
     "durationSec": 434,
-    "viewCount": 5292,
+    "viewCount": 5293,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -4170,7 +4220,7 @@
     "title": "FF COTW ▰ MOK (Kim Kaphwan) vs ZIE (Rock) ▰ CotW DLC: Kim Kaphwan Day 1",
     "publishedAt": "2026-09-24T15:16:33Z",
     "durationSec": 505,
-    "viewCount": 5094,
+    "viewCount": 5101,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -4219,7 +4269,7 @@
     "title": "FF:CotW 🐺 FAIRNM (Kim Kaphwan) vs KAKUNOJI (Jae Hoon)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-24T14:50:36Z",
     "durationSec": 408,
-    "viewCount": 4313,
+    "viewCount": 4319,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -4317,7 +4367,7 @@
     "title": "FF COTW ▰ PANPINA (Kim Kaphwan) vs MUSUBI (Kim Kaphwan) ▰ CotW DLC: Kim Kaphwan Day 1",
     "publishedAt": "2026-09-24T12:45:15Z",
     "durationSec": 875,
-    "viewCount": 2319,
+    "viewCount": 2320,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -4366,7 +4416,7 @@
     "title": "FF:CotW 🐺 KOJI KOG (Kim Kaphwan) vs GO1 (Kim Kaphwan)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-24T10:43:59Z",
     "durationSec": 669,
-    "viewCount": 38199,
+    "viewCount": 38953,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -4415,7 +4465,7 @@
     "title": "FF COTW ▰ GO1 (Kim Kaphwan) vs ETO7 (Kenshiro) ▰ CotW DLC: Kim Kaphwan Day 1",
     "publishedAt": "2026-09-24T09:29:27Z",
     "durationSec": 429,
-    "viewCount": 26005,
+    "viewCount": 26023,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -4464,7 +4514,7 @@
     "title": "FF COTW ▰ GO1 (Kim Kaphwan) vs SYUJI (Kim Kaphwan) ▰ CotW DLC: Kim Kaphwan Day 1",
     "publishedAt": "2026-09-24T08:06:03Z",
     "durationSec": 364,
-    "viewCount": 11493,
+    "viewCount": 11499,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -4856,7 +4906,7 @@
     "title": "FF:CotW 🐺 DIDIMOKOF (Mr.Karate) vs PLSX (Nightmare Geese)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-23T14:15:08Z",
     "durationSec": 538,
-    "viewCount": 1418,
+    "viewCount": 1420,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -5199,7 +5249,7 @@
     "title": "FF Season 3 ▰ NoMiiAegis (RICK) VS MrZee (KEVIN) ▰ FATAL FURY: CoTW High Level Gameplay",
     "publishedAt": "2026-09-23T01:43:54Z",
     "durationSec": 1005,
-    "viewCount": 288,
+    "viewCount": 290,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -5346,7 +5396,7 @@
     "title": "Season 3 ▰ ArusuGrant (VOX) VS Omen0121 (KEVIN) ▰ FATAL FURY CoTW High Level Gameplay",
     "publishedAt": "2026-09-22T17:12:27Z",
     "durationSec": 507,
-    "viewCount": 393,
+    "viewCount": 394,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -5444,7 +5494,7 @@
     "title": "FF:CotW 🐺 AUDIO33 (Rick Strowd) vs YOANP (Vox Reaper)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-22T15:45:07Z",
     "durationSec": 468,
-    "viewCount": 962,
+    "viewCount": 969,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -5493,7 +5543,7 @@
     "title": "FF COTW ▰ VIOLENT KAIN (Terry) vs TAMAGO (Mr. Karate) ▰ High Level Gameplay",
     "publishedAt": "2026-09-22T15:00:18Z",
     "durationSec": 513,
-    "viewCount": 2574,
+    "viewCount": 2598,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -5542,7 +5592,7 @@
     "title": "FF:CotW 🐺 BETOWEST (Mai Shiranui) vs AUDIO (Rick Strowd)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-22T14:55:31Z",
     "durationSec": 510,
-    "viewCount": 2152,
+    "viewCount": 2155,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -5591,7 +5641,7 @@
     "title": "FF COTW ▰ CIENTIFIKOF (#3 Ranked Gato) vs DARK ANGEL (#2 Ranked Billy) ▰ High Level Gameplay",
     "publishedAt": "2026-09-22T12:30:06Z",
     "durationSec": 738,
-    "viewCount": 1315,
+    "viewCount": 1320,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -5640,7 +5690,7 @@
     "title": "FF COTW ▰ VIOLENT KAIN (Terry) vs KBZON (#1 Ranked Tizoc) ▰ High Level Gameplay",
     "publishedAt": "2026-09-22T10:04:46Z",
     "durationSec": 532,
-    "viewCount": 1651,
+    "viewCount": 1654,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -5689,7 +5739,7 @@
     "title": "FF:CotW 🐺 SKEME (Kenshiro) vs ALEX 5MITH (B.Jenet)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-22T10:00:22Z",
     "durationSec": 602,
-    "viewCount": 27716,
+    "viewCount": 28211,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -5738,7 +5788,7 @@
     "title": "FF:CotW 🐺 AAA (Mr.Karate) vs HAMATAI (Blue Mary)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-22T08:30:24Z",
     "durationSec": 574,
-    "viewCount": 1742,
+    "viewCount": 1743,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -6081,7 +6131,7 @@
     "title": "FF:CotW 🐺 MIKI (Wolfgang Krauser) vs ARUSU (Vox Reaper)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-21T13:45:02Z",
     "durationSec": 614,
-    "viewCount": 2183,
+    "viewCount": 2185,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -6130,7 +6180,7 @@
     "title": "FF:CotW 🐺 FAALEX (Rock Howard) vs KAISER (Terry Bogard)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-21T12:50:45Z",
     "durationSec": 484,
-    "viewCount": 2440,
+    "viewCount": 2443,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -6179,7 +6229,7 @@
     "title": "FF COTW ▰ AUDIO33 (#1 Ranked Rick Strowd) vs ALEX5MITH (#1 Ranked B.Jenet) ▰ High Level Gameplay",
     "publishedAt": "2026-09-21T12:30:39Z",
     "durationSec": 721,
-    "viewCount": 6117,
+    "viewCount": 6147,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -6277,7 +6327,7 @@
     "title": "FF:CotW 🐺 SCOOBY (Rick Strowd) vs NAPPA JOESTAR (C. Ronaldo)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-21T10:00:12Z",
     "durationSec": 534,
-    "viewCount": 3228,
+    "viewCount": 3229,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -6326,7 +6376,7 @@
     "title": "FF COTW ▰ FERNO (#7 Ranked Duck King) vs CHOCO (#3 Ranked Wolfgang Krauser) ▰ High Level Gameplay",
     "publishedAt": "2026-09-21T09:48:50Z",
     "durationSec": 720,
-    "viewCount": 3272,
+    "viewCount": 3284,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -6473,7 +6523,7 @@
     "title": "FF:CotW 🐺 JINTY (Ken Masters) vs PIDA (Duck King)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-20T15:15:27Z",
     "durationSec": 627,
-    "viewCount": 3873,
+    "viewCount": 3876,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -6522,7 +6572,7 @@
     "title": "FF COTW ▰ FRIEREN (#1 Ranked Marco) vs SOMBRA (#1 Ranked Kevin) ▰ High Level Gameplay",
     "publishedAt": "2026-09-20T14:30:07Z",
     "durationSec": 605,
-    "viewCount": 1288,
+    "viewCount": 1290,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -6620,7 +6670,7 @@
     "title": "FF COTW ▰ SORIKU (#1 Ranked Chun-Li) vs HIGHTIERBUM (#1 Ranked Blue Mary) ▰ High Level Gameplay",
     "publishedAt": "2026-09-20T12:00:06Z",
     "durationSec": 666,
-    "viewCount": 7990,
+    "viewCount": 7991,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -6669,7 +6719,7 @@
     "title": "FF:CotW 🐺 KAISER (Terry Bogard) vs MABE (Nightmare Geese)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-20T10:00:14Z",
     "durationSec": 490,
-    "viewCount": 3765,
+    "viewCount": 3775,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -6718,7 +6768,7 @@
     "title": "FF COTW ▰ KAISER (#2 Ranked Terry) vs FAALEX (#4 Ranked Rock) ▰ High Level Gameplay",
     "publishedAt": "2026-09-20T09:42:56Z",
     "durationSec": 371,
-    "viewCount": 911,
+    "viewCount": 912,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -6865,7 +6915,7 @@
     "title": "ROCK 🐺 AMARALKOF VS GRIFFON LEGEND 🐺 DUCK KING | FATAL FURY COTW",
     "publishedAt": "2026-09-19T21:00:11Z",
     "durationSec": 410,
-    "viewCount": 62,
+    "viewCount": 63,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -6963,7 +7013,7 @@
     "title": "FF:CotW 🐺 PLSX (Nightmare Geese) vs GRIFFON LEGEND (Duck King)⭐Replay Match - FATAL FURY: CotW 9/26",
     "publishedAt": "2026-09-19T14:30:10Z",
     "durationSec": 659,
-    "viewCount": 1823,
+    "viewCount": 1829,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -7061,7 +7111,7 @@
     "title": "FF:CotW 🐺 GRIFFON LEGEND (Duck King) vs FKANG (Mr.Karate)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-19T13:47:50Z",
     "durationSec": 669,
-    "viewCount": 1296,
+    "viewCount": 1297,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -7110,7 +7160,7 @@
     "title": "FF COTW ▰ DARK ANGEL (#3 Ranked Mr. Karate) vs XIZZOU (#4 Ranked Andy) ▰ High Level Gameplay",
     "publishedAt": "2026-09-19T12:00:03Z",
     "durationSec": 1037,
-    "viewCount": 1674,
+    "viewCount": 1675,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -7159,7 +7209,7 @@
     "title": "FF:CotW 🐺 MABE (Nightmare Geese) vs NICHO TAPIA (Jae Hoon)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-19T10:00:06Z",
     "durationSec": 592,
-    "viewCount": 2832,
+    "viewCount": 2834,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -7306,7 +7356,7 @@
     "title": "FF:CotW 🐺 FERNO (Duck King) vs DISINTE (Mai Shiranui)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-18T21:36:23Z",
     "durationSec": 586,
-    "viewCount": 5158,
+    "viewCount": 5160,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -7502,7 +7552,7 @@
     "title": "FF:CotW 🐺 HAMATAI (Blue Mary) vs AAA (Mr.Karate)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-18T14:09:33Z",
     "durationSec": 654,
-    "viewCount": 3715,
+    "viewCount": 3716,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -7649,7 +7699,7 @@
     "title": "FF:CotW 🐺 YOANP (Kenshiro) vs FRANSXAVIER (Rock Howard)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-18T13:06:41Z",
     "durationSec": 511,
-    "viewCount": 5923,
+    "viewCount": 5945,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -7747,7 +7797,7 @@
     "title": "FF COTW ▰ DARK ANGEL (#1 Ranked Mr. Karate) vs ELMAZA (#3 Ranked Gato) ▰ High Level Gameplay",
     "publishedAt": "2026-09-18T09:16:09Z",
     "durationSec": 697,
-    "viewCount": 2624,
+    "viewCount": 2629,
     "season": 3,
     "patch": "3.2.2",
     "sides": [
@@ -7943,7 +7993,7 @@
     "title": "FF COTW ▰ FEVER (#2 Ranked Cristiano Ronaldo) vs HMMA (#3 Ranked Duck King) ▰ High Level Gameplay",
     "publishedAt": "2026-09-17T15:00:04Z",
     "durationSec": 730,
-    "viewCount": 2329,
+    "viewCount": 2330,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -7992,7 +8042,7 @@
     "title": "FF:CotW 🐺 KOFCHORRERA (Nightmare Geese) vs SCOOBY (Duck King)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-17T14:40:39Z",
     "durationSec": 595,
-    "viewCount": 7375,
+    "viewCount": 7382,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -8090,7 +8140,7 @@
     "title": "FF COTW ▰ SORIKU (#1 Ranked Chun-Li) vs MOMO AYASE (#7 Ranked Kevin) ▰ High Level Gameplay",
     "publishedAt": "2026-09-17T12:30:29Z",
     "durationSec": 626,
-    "viewCount": 3073,
+    "viewCount": 3086,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -8188,7 +8238,7 @@
     "title": "FF:CotW 🐺 KLEBER YAGAMI (N. Geese) vs KAISER (Terry Bogard)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-17T10:00:16Z",
     "durationSec": 450,
-    "viewCount": 2965,
+    "viewCount": 2969,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -8384,7 +8434,7 @@
     "title": "FF:CotW 🐺 PLSX (Nightmare Geese) vs BROTHER BOGARD (Mai Shiranui)⭐Replay Match - FATAL FURY: CotW",
     "publishedAt": "2026-09-16T20:45:13Z",
     "durationSec": 633,
-    "viewCount": 2165,
+    "viewCount": 2169,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -8482,7 +8532,7 @@
     "title": "FF COTW ▰ SULIAN LAMU (#1 Ranked Hotaru) vs PIDA (Duck King) ▰ High Level Gameplay",
     "publishedAt": "2026-09-16T15:00:04Z",
     "durationSec": 819,
-    "viewCount": 2494,
+    "viewCount": 2500,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -8531,7 +8581,7 @@
     "title": "FF:CotW 🐺 MIKI (Wolfgang Krauser) vs ADACHIKUS (Preecha)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-16T13:30:06Z",
     "durationSec": 574,
-    "viewCount": 2132,
+    "viewCount": 2134,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -8580,7 +8630,7 @@
     "title": "FF:CotW 🐺 KAISER (Terry Bogard) vs GRIFFON LEGEND (Duck King)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-16T12:39:12Z",
     "durationSec": 555,
-    "viewCount": 4757,
+    "viewCount": 4756,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -8629,7 +8679,7 @@
     "title": "FF COTW ▰ BLCKSPIDER (#1 Ranked Marco) vs KBZON (#4 Ranked Tizoc) ▰ High Level Gameplay",
     "publishedAt": "2026-09-16T12:30:03Z",
     "durationSec": 738,
-    "viewCount": 1955,
+    "viewCount": 1956,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -8727,7 +8777,7 @@
     "title": "FF:CotW 🐺 XIZZOU (Andy Bogard) vs SORIKU (Chun-Li)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-16T10:30:13Z",
     "durationSec": 571,
-    "viewCount": 1408,
+    "viewCount": 1409,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -8825,7 +8875,7 @@
     "title": "FF:CotW 🐺 KOFCHORRERA (Mr.Big) vs AUDIO (Rick Strowd)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-16T09:00:08Z",
     "durationSec": 513,
-    "viewCount": 1205,
+    "viewCount": 1207,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -9021,7 +9071,7 @@
     "title": "FF:CotW 🐺 COMAN DANTE TY (Tizoc) vs PLSX (Nightmare Geese)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-15T15:28:56Z",
     "durationSec": 486,
-    "viewCount": 5097,
+    "viewCount": 5098,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -9070,7 +9120,7 @@
     "title": "FF COTW ▰ SCOOBY (#1 Ranked Duck King) vs SORIKU (#1 Ranked Chun-Li) ▰ High Level Gameplay",
     "publishedAt": "2026-09-15T15:00:30Z",
     "durationSec": 512,
-    "viewCount": 2241,
+    "viewCount": 2245,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -9364,7 +9414,7 @@
     "title": "FF:CotW 🐺 XIZZOU (Andy Bogard) vs YOANP (Kenshiro)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-14T21:16:13Z",
     "durationSec": 527,
-    "viewCount": 7971,
+    "viewCount": 7979,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -9658,7 +9708,7 @@
     "title": "FF:CotW 🐺 HIGHTIERBUM (Blue Mary) vs KINO5831 (W. Krauser)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-14T11:15:18Z",
     "durationSec": 504,
-    "viewCount": 2704,
+    "viewCount": 2706,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -9952,7 +10002,7 @@
     "title": "FF:CotW 🐺 SCOBY (Duck King) vs THEWIND (Dong Hwan)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-13T15:00:24Z",
     "durationSec": 574,
-    "viewCount": 1950,
+    "viewCount": 1951,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -10197,7 +10247,7 @@
     "title": "FF COTW ▰ KAISER (#3 Ranked Terry) vs GRIFFON LEGEND (#3 Ranked Duck King) ▰ High Level Gameplay",
     "publishedAt": "2026-09-13T09:29:46Z",
     "durationSec": 592,
-    "viewCount": 10936,
+    "viewCount": 10938,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -10344,7 +10394,7 @@
     "title": "FF COTW ▰ FAALEX (Ken) vs PLSX (#1 Ranked Nightmare Geese) ▰ High Level Gameplay",
     "publishedAt": "2026-09-12T15:00:00Z",
     "durationSec": 410,
-    "viewCount": 2825,
+    "viewCount": 2834,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -10393,7 +10443,7 @@
     "title": "FF:CotW 🐺 MIKI (Wolfgang Krauser) vs CARELAGE (Kenshiro)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-12T14:59:28Z",
     "durationSec": 591,
-    "viewCount": 1345,
+    "viewCount": 1348,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -11226,7 +11276,7 @@
     "title": "FF:CotW 🐺 BROTHER BOGARD (Kenshiro) vs PLSX (Nightmare Geese)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-10T15:19:33Z",
     "durationSec": 526,
-    "viewCount": 36829,
+    "viewCount": 36870,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -11961,7 +12011,7 @@
     "title": "FF:CotW 🐺 FAALEX (Rock Howard) vs BONES (Duck King)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-09T09:45:05Z",
     "durationSec": 518,
-    "viewCount": 1921,
+    "viewCount": 1922,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -12010,7 +12060,7 @@
     "title": "FF:CotW 🐺 HAMATAI (Blue Mary) vs NIMAYSU (Duck King)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-09T08:30:34Z",
     "durationSec": 533,
-    "viewCount": 1152,
+    "viewCount": 1153,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -12745,7 +12795,7 @@
     "title": "FF:CotW 🐺 KOFCHORRERA (Nightmare Geese) vs BASHER (Mr.Karate)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-07T13:00:01Z",
     "durationSec": 855,
-    "viewCount": 2417,
+    "viewCount": 2416,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -13137,7 +13187,7 @@
     "title": "FF:CotW 🐺 GT22 (Kenshiro) vs GRIFFON LEGEND (Duck King)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-06T12:09:15Z",
     "durationSec": 596,
-    "viewCount": 5917,
+    "viewCount": 5940,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -13186,7 +13236,7 @@
     "title": "FF:CotW 🐺 KOFCHORRERA (Nightmare Geese) vs AUDIO (Rick Strowd)⭐Replay Match - FATAL FURY: CotW 9/26",
     "publishedAt": "2026-09-06T11:00:20Z",
     "durationSec": 522,
-    "viewCount": 5223,
+    "viewCount": 5224,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -13529,7 +13579,7 @@
     "title": "FF COTW ▰ KBZON (#1 Ranked Tizoc) vs CIENTIFIKOF (#2 Ranked Gato) ▰ High Level Gameplay",
     "publishedAt": "2026-09-05T12:15:38Z",
     "durationSec": 440,
-    "viewCount": 2088,
+    "viewCount": 2091,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -13578,7 +13628,7 @@
     "title": "FF:CotW 🐺 GRIFFON LEGEND (Duck King) vs AMARAL KOF (Kenshiro)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-05T11:00:17Z",
     "durationSec": 587,
-    "viewCount": 15827,
+    "viewCount": 15882,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -13725,7 +13775,7 @@
     "title": "FF:CotW 🐺 FERNO (Duck King) vs DISINTE (Mai Shiranui)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-05T08:30:02Z",
     "durationSec": 476,
-    "viewCount": 1161,
+    "viewCount": 1162,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -13970,7 +14020,7 @@
     "title": "FF:CotW 🐺 SUPERGRENAS (Duck King) vs PLSX (Nightmare Geese)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-04T14:06:58Z",
     "durationSec": 593,
-    "viewCount": 3590,
+    "viewCount": 3591,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -14019,7 +14069,7 @@
     "title": "FF COTW ▰ GRENAS (#1 Ranked Duck King) vs ZEUS (#2 Ranked Mr. Big) ▰ High Level Gameplay",
     "publishedAt": "2026-09-04T12:30:18Z",
     "durationSec": 584,
-    "viewCount": 13034,
+    "viewCount": 13038,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -14117,7 +14167,7 @@
     "title": "FF COTW ▰ GRENAS (#1 Ranked Duck King) vs PLSX (#4 Ranked Nightmare Geese) ▰ High Level Gameplay",
     "publishedAt": "2026-09-04T10:24:39Z",
     "durationSec": 819,
-    "viewCount": 11834,
+    "viewCount": 11852,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -14411,7 +14461,7 @@
     "title": "FF:CotW 🐺 LUMPY (Terry Bogard) vs SCOOBY (Duck King)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-03T13:15:26Z",
     "durationSec": 482,
-    "viewCount": 1155,
+    "viewCount": 1156,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -14558,7 +14608,7 @@
     "title": "FF:CotW 🐺 KOFCHORRERA (Duck King) vs NICHO TAPIA (Jae Hoon)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-03T10:15:39Z",
     "durationSec": 460,
-    "viewCount": 11462,
+    "viewCount": 11464,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -14656,7 +14706,7 @@
     "title": "FF:CotW 🐺 GRIFFON LEGEND (Duck King) vs MABE (Wolfgang Krauser)⭐Replay Match - FATAL FURY: CotW 9/26",
     "publishedAt": "2026-09-03T08:45:10Z",
     "durationSec": 589,
-    "viewCount": 5988,
+    "viewCount": 5990,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -14705,7 +14755,7 @@
     "title": "FF Season 3 ▰ NoMiiAegis (Duck King) VS Cloud (Kim Dong Hwan) ▰ FATAL FURY: CoTW High Level Gameplay",
     "publishedAt": "2026-09-03T01:00:32Z",
     "durationSec": 481,
-    "viewCount": 281,
+    "viewCount": 283,
     "season": 3,
     "patch": "3.1.3",
     "sides": [
@@ -14999,7 +15049,7 @@
     "title": "FF Season 3 ▰ NoMiiAegis (Duck King) VS GeeseSAMAaaa (Geese) ▰ FATAL FURY: CoTW High Level Gameplay",
     "publishedAt": "2026-09-02T14:52:48Z",
     "durationSec": 415,
-    "viewCount": 306,
+    "viewCount": 307,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -15146,7 +15196,7 @@
     "title": "FF COTW ▰ SCOOBY (#3 Ranked Duck King) vs HIGHTIERBUM (#3 Ranked Blue Mary) ▰ High Level Gameplay",
     "publishedAt": "2026-09-02T11:15:02Z",
     "durationSec": 635,
-    "viewCount": 3440,
+    "viewCount": 3441,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -15244,7 +15294,7 @@
     "title": "FF:CotW 🐺 HOKUTO (Mr.Karate) vs FERNO (Duck King)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-02T09:45:26Z",
     "durationSec": 585,
-    "viewCount": 784,
+    "viewCount": 785,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -15538,7 +15588,7 @@
     "title": "Fatal Fury COTW LeoVegaBrasil Ronaldo VS BrotherBogard Kenshiro High Level Gameplay",
     "publishedAt": "2026-09-01T15:14:09Z",
     "durationSec": 399,
-    "viewCount": 41,
+    "viewCount": 42,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -15587,7 +15637,7 @@
     "title": "FF:CotW 🐺 FERNO (Duck King) vs CIENTIFI KOF (W.Krauser)⭐Replay Match - FATAL FURY: CotW - 9/26",
     "publishedAt": "2026-09-01T14:01:24Z",
     "durationSec": 512,
-    "viewCount": 5552,
+    "viewCount": 5553,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -15636,7 +15686,7 @@
     "title": "FF COTW ▰ FERNO (#2 Ranked Duck King) vs RONDUN (#3 Ranked Rock) ▰ High Level Gameplay",
     "publishedAt": "2026-09-01T13:50:58Z",
     "durationSec": 467,
-    "viewCount": 3090,
+    "viewCount": 3093,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -15685,7 +15735,7 @@
     "title": "FF COTW ▰ HIGHTIERBUM (#3 Ranked Duck King) vs BONES (#5 Ranked S. Ganacci) ▰ High Level Gameplay",
     "publishedAt": "2026-09-01T11:30:33Z",
     "durationSec": 505,
-    "viewCount": 8022,
+    "viewCount": 8023,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -15783,7 +15833,7 @@
     "title": "FF COTW ▰ FERNO (#1 Ranked Duck King) vs ALEX5MITH (#1 Ranked B.Jenet) ▰ High Level Gameplay",
     "publishedAt": "2026-09-01T09:24:45Z",
     "durationSec": 641,
-    "viewCount": 3422,
+    "viewCount": 3423,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -16126,7 +16176,7 @@
     "title": "FF COTW ▰ FERNO (#1 Ranked Duck King) vs SORIKU (#1 Ranked Chun-Li) ▰ High Level Gameplay",
     "publishedAt": "2026-08-31T12:26:05Z",
     "durationSec": 576,
-    "viewCount": 9037,
+    "viewCount": 9041,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -16226,7 +16276,7 @@
     "title": "FF:CotW 🐺 PXZAITO (Rick Strowd) vs KOFCHORRERA (Duck King)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-31T11:00:23Z",
     "durationSec": 545,
-    "viewCount": 2114,
+    "viewCount": 2115,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -16373,7 +16423,7 @@
     "title": "FF:CotW 🐺 FERNO (Duck King) vs SORIKU (Duck King)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-31T08:30:31Z",
     "durationSec": 652,
-    "viewCount": 7055,
+    "viewCount": 7062,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -16569,7 +16619,7 @@
     "title": "FF:CotW 🐺 FORTIER (Andy Bogard) vs MINILORD (Duck King)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-30T17:30:03Z",
     "durationSec": 480,
-    "viewCount": 4836,
+    "viewCount": 4839,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -16618,7 +16668,7 @@
     "title": "FF:CotW 🐺 DMINA (Kenshiro) vs KOFCHORRERA (Duck King)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-30T16:41:58Z",
     "durationSec": 507,
-    "viewCount": 12651,
+    "viewCount": 12653,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -16912,7 +16962,7 @@
     "title": "FF:CotW 🐺 EL LEONES (Mai Shiranui) vs KULA (Duck King)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-29T13:30:37Z",
     "durationSec": 473,
-    "viewCount": 6193,
+    "viewCount": 6194,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -17059,7 +17109,7 @@
     "title": "FF COTW ▰ FERNO (#1 Ranked Duck King) vs SULIAN LAMU (#2 Ranked Hotaru) ▰ High Level Gameplay",
     "publishedAt": "2026-08-29T09:54:38Z",
     "durationSec": 704,
-    "viewCount": 10377,
+    "viewCount": 10379,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -17108,7 +17158,7 @@
     "title": "FF:CotW 🐺 WILEY (Duck King) vs JOE BREW (Duck King)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-29T09:30:14Z",
     "durationSec": 589,
-    "viewCount": 4759,
+    "viewCount": 4760,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -17206,7 +17256,7 @@
     "title": "FF:CotW 🐺 KURUMIMOCHA (Kevin Rian) vs KAZUNOKO (Duck King)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-29T00:00:37Z",
     "durationSec": 596,
-    "viewCount": 11783,
+    "viewCount": 11785,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -17500,7 +17550,7 @@
     "title": "FF:CotW 🐺 HIGHTIERBUM (Duck King) vs AREA 51 (Kenshiro)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-28T16:15:16Z",
     "durationSec": 443,
-    "viewCount": 7298,
+    "viewCount": 7303,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -17549,7 +17599,7 @@
     "title": "FF:CotW 🐺 KULA (Duck King) vs EL LEONES (Mai Shiranui)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-28T15:17:08Z",
     "durationSec": 502,
-    "viewCount": 7454,
+    "viewCount": 7458,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -17598,7 +17648,7 @@
     "title": "FF COTW ▰ NIMAYSU (#8 Ranked Duck King) vs SUDOCHO (#5 Ranked Tizoc) ▰ High Level Gameplay",
     "publishedAt": "2026-08-28T14:57:23Z",
     "durationSec": 530,
-    "viewCount": 16142,
+    "viewCount": 16145,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -17647,7 +17697,7 @@
     "title": "FF COTW ▰ PANPINA (#1 Ranked Duck King) vs MUSUBI (Mr. Karate) ▰ High Level Gameplay",
     "publishedAt": "2026-08-28T13:30:01Z",
     "durationSec": 791,
-    "viewCount": 8588,
+    "viewCount": 8589,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -17745,7 +17795,7 @@
     "title": "FF:CotW 🐺 PACE (Gato) vs DIAPHONE (Duck King)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-28T11:49:52Z",
     "durationSec": 586,
-    "viewCount": 2594,
+    "viewCount": 2595,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -17794,7 +17844,7 @@
     "title": "FF COTW ▰ FERNO (#1 Ranked Duck King) vs RONDUN (#1 Ranked Rock) ▰ High Level Gameplay",
     "publishedAt": "2026-08-28T11:16:20Z",
     "durationSec": 618,
-    "viewCount": 5125,
+    "viewCount": 5127,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -17990,7 +18040,7 @@
     "title": "FF:CotW 🐺 HMMA (Duck King) vs VERY FUZ (Terry Bogard)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-27T21:43:31Z",
     "durationSec": 599,
-    "viewCount": 1103,
+    "viewCount": 1104,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -18088,7 +18138,7 @@
     "title": "FF:CotW 🐺 FENRITTI (Duck King) vs BLUE MARY KUN (Blue Mary)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-27T16:55:38Z",
     "durationSec": 562,
-    "viewCount": 11924,
+    "viewCount": 11933,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -18284,7 +18334,7 @@
     "title": "FF:CotW 🐺 CHAYITA (Joe Higashi) vs FERNO (Duck King)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-27T14:15:28Z",
     "durationSec": 537,
-    "viewCount": 8927,
+    "viewCount": 8936,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -18431,7 +18481,7 @@
     "title": "FF:CotW 🐺 FERNO (Duck King) vs EVILSUB (Ken Masters)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-27T13:41:14Z",
     "durationSec": 563,
-    "viewCount": 12403,
+    "viewCount": 12418,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -18529,7 +18579,7 @@
     "title": "FF:CotW 🐺 AAA (Mr.Karate) vs FENRITTI (Duck King)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-27T12:30:14Z",
     "durationSec": 526,
-    "viewCount": 18024,
+    "viewCount": 18025,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -18970,7 +19020,7 @@
     "title": "FF:CotW 🐺 BROTHER BOGARD (Kenshiro) vs SAGAZ (Wolfgang Krauser)⭐Replay Match - FATAL FURY: CotW 8/26",
     "publishedAt": "2026-08-26T15:00:30Z",
     "durationSec": 583,
-    "viewCount": 1083,
+    "viewCount": 1085,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -19068,7 +19118,7 @@
     "title": "FF COTW ▰ KENURAN (#3 Ranked Joe) vs KBZON (#3 Ranked Tizoc) ▰ High Level Gameplay",
     "publishedAt": "2026-08-26T14:00:08Z",
     "durationSec": 615,
-    "viewCount": 1941,
+    "viewCount": 1942,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -19511,7 +19561,7 @@
     "title": "FF:CotW 🐺 VANESSO SAN (Mai Shiranui) vs HAKAANA (Blue Mary)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-25T14:01:22Z",
     "durationSec": 476,
-    "viewCount": 1661,
+    "viewCount": 1663,
     "season": 3,
     "patch": "3.1.2",
     "sides": [
@@ -20491,7 +20541,7 @@
     "title": "Fatal Fury COTW MRGATO Mr Karate VS XiaoBai Krauser High Level Gameplay",
     "publishedAt": "2026-08-23T14:00:09Z",
     "durationSec": 355,
-    "viewCount": 33,
+    "viewCount": 34,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -20638,7 +20688,7 @@
     "title": "FF:CotW 🐺 COMAN DANTE TY (Tizoc) vs PLSX (Rick Strowd)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-23T10:15:18Z",
     "durationSec": 592,
-    "viewCount": 644,
+    "viewCount": 645,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -20834,7 +20884,7 @@
     "title": "FF COTW ▰ ICESKYRAIN (#2 Ranked Chun-Li) vs PETERWONG (#1 Ranked W. Krauser) ▰ High Level Gameplay",
     "publishedAt": "2026-08-22T15:00:22Z",
     "durationSec": 671,
-    "viewCount": 739,
+    "viewCount": 740,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -21030,7 +21080,7 @@
     "title": "FF COTW ▰ SORIKU (#1 Ranked Chun-Li) vs KBZON (#2 Ranked Tizoc) ▰ High Level Gameplay",
     "publishedAt": "2026-08-22T10:25:57Z",
     "durationSec": 628,
-    "viewCount": 608,
+    "viewCount": 610,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -21079,7 +21129,7 @@
     "title": "FF:CotW 🐺 GRIFFON LEGEND (Tizoc) vs OSF MXY (Chun-Li)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-22T10:15:15Z",
     "durationSec": 416,
-    "viewCount": 417,
+    "viewCount": 418,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -21128,7 +21178,7 @@
     "title": "FF:CotW 🐺 BROTHER BOGARD (Andy Bogard) vs PLSX (Rick Strowd)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-22T08:45:31Z",
     "durationSec": 532,
-    "viewCount": 1282,
+    "viewCount": 1283,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -21520,7 +21570,7 @@
     "title": "FF:CotW 🐺 DARK ANGEL (Terry Bogard) vs SORIKU (Chun-Li)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-21T08:45:40Z",
     "durationSec": 555,
-    "viewCount": 1010,
+    "viewCount": 1011,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -21667,7 +21717,7 @@
     "title": "FF:CotW 🐺 GRIFFON LEGEND (Tizoc) vs DUCK (Kenshiro)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-20T15:30:36Z",
     "durationSec": 488,
-    "viewCount": 1013,
+    "viewCount": 1014,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -21716,7 +21766,7 @@
     "title": "FF COTW ▰ ZEUS (#1 Ranked Mr. Big) vs DARK ANGEL (#1 Ranked Terry) ▰ High Level Gameplay",
     "publishedAt": "2026-08-20T15:00:25Z",
     "durationSec": 519,
-    "viewCount": 1777,
+    "viewCount": 1778,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -21765,7 +21815,7 @@
     "title": "FF:CotW 🐺 SAGAZ (Wolfgang Krauser) vs FAALEX (Blue Mary)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-20T14:44:29Z",
     "durationSec": 478,
-    "viewCount": 1870,
+    "viewCount": 1874,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -22206,7 +22256,7 @@
     "title": "FF:CotW 🐺 TIGER (Andy Bogard) vs SULIAN LAMU (Hotaru Futaba)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-19T15:30:05Z",
     "durationSec": 576,
-    "viewCount": 620,
+    "viewCount": 621,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -22353,7 +22403,7 @@
     "title": "DONG HWAN 🐺 DR CHAZ VS HIGH TIER BUM 🐺 BLUE MARY | FATAL FURY COTW",
     "publishedAt": "2026-08-19T11:00:34Z",
     "durationSec": 481,
-    "viewCount": 129,
+    "viewCount": 131,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -22402,7 +22452,7 @@
     "title": "FF COTW ▰ MOMO AYASE (#7 Ranked Kevin) vs CIBERNETICO (#4 Ranked S. Ganacci) ▰ High Level Gameplay",
     "publishedAt": "2026-08-19T11:00:26Z",
     "durationSec": 594,
-    "viewCount": 487,
+    "viewCount": 488,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -22941,7 +22991,7 @@
     "title": "FF COTW ▰ MJORDAN (#6 Ranked Kain) vs JOHNY (#1 Ranked Ken) ▰ High Level Gameplay",
     "publishedAt": "2026-08-18T09:36:59Z",
     "durationSec": 618,
-    "viewCount": 775,
+    "viewCount": 776,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -23284,7 +23334,7 @@
     "title": "FF COTW ▰ PANPINA (#6 Ranked Ken) vs AAA (#2 Ranked Hotaru) ▰ High Level Gameplay",
     "publishedAt": "2026-08-17T13:30:13Z",
     "durationSec": 527,
-    "viewCount": 809,
+    "viewCount": 810,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -23480,7 +23530,7 @@
     "title": "FF:CotW 🐺 GRIFFON LEGEND (Jae Hoon) vs OSF MXY (Chun-Li)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-17T08:45:31Z",
     "durationSec": 534,
-    "viewCount": 1136,
+    "viewCount": 1137,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -23823,7 +23873,7 @@
     "title": "FF:CotW 🐺 EL LEONES (Mai Shiranui) vs GENESIS (Kenshiro)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-16T08:30:13Z",
     "durationSec": 547,
-    "viewCount": 751,
+    "viewCount": 752,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -24019,7 +24069,7 @@
     "title": "FF COTW ▰ TAMAGO (#1 Ranked Mr. Karate) vs KBZON (#1 Ranked Tizoc) ▰ High Level Gameplay",
     "publishedAt": "2026-08-15T13:30:38Z",
     "durationSec": 640,
-    "viewCount": 5961,
+    "viewCount": 5962,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -24215,7 +24265,7 @@
     "title": "FF:CotW 🐺 LEODECKO (Ken Masters) vs GAMMA (Rick Strowd)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-15T09:15:29Z",
     "durationSec": 461,
-    "viewCount": 1161,
+    "viewCount": 1162,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -24656,7 +24706,7 @@
     "title": "FF COTW ▰ TAMAGO (#1 Ranked Mr. Karate) vs GAMMA (#1 Ranked Rick Strowd) ▰ High Level Gameplay",
     "publishedAt": "2026-08-14T10:29:51Z",
     "durationSec": 385,
-    "viewCount": 914,
+    "viewCount": 913,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -25097,7 +25147,7 @@
     "title": "FF COTW ▰ KULA (#7 Ranked Mr. Karate) vs GAMMA (#1 Ranked Rick Strowd) ▰ High Level Gameplay",
     "publishedAt": "2026-08-13T10:33:10Z",
     "durationSec": 779,
-    "viewCount": 2471,
+    "viewCount": 2472,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -25587,7 +25637,7 @@
     "title": "FF:CotW 🐺 YAGAMI MX (Terry Bogard) vs PHANPY (Blue Mary)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-12T10:45:37Z",
     "durationSec": 473,
-    "viewCount": 705,
+    "viewCount": 707,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -25685,7 +25735,7 @@
     "title": "FF COTW ▰ JOHNY (#1 Ranked Mr. Karate) vs CAST KENNETH (#3 Ranked Kain) ▰ High Level Gameplay",
     "publishedAt": "2026-08-12T08:56:36Z",
     "durationSec": 810,
-    "viewCount": 894,
+    "viewCount": 895,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -26126,7 +26176,7 @@
     "title": "FF COTW ▰ FIBEL (#2 Ranked Hotaru) vs FEVER (#1 Ranked Kenshiro) ▰ High Level Gameplay",
     "publishedAt": "2026-08-11T12:00:07Z",
     "durationSec": 960,
-    "viewCount": 1613,
+    "viewCount": 1614,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -26175,7 +26225,7 @@
     "title": "FF:CotW 🐺 ALEX MAZI (Joe Higashi) vs KUU (Kenshiro)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-11T10:45:21Z",
     "durationSec": 480,
-    "viewCount": 824,
+    "viewCount": 826,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -27598,7 +27648,7 @@
     "title": "FF COTW ▰ FRIEREN (#1 Ranked Vox) vs YOANP (Kenshiro) ▰ High Level Gameplay",
     "publishedAt": "2026-08-08T15:00:12Z",
     "durationSec": 425,
-    "viewCount": 718,
+    "viewCount": 719,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -28333,7 +28383,7 @@
     "title": "FF COTW ▰ ALEX5MITH (#1 Ranked B.Jenet) vs SENDOTXAU (#3 Ranked Kenshiro) ▰ High Level Gameplay",
     "publishedAt": "2026-08-07T11:14:13Z",
     "durationSec": 679,
-    "viewCount": 3814,
+    "viewCount": 3816,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -28431,7 +28481,7 @@
     "title": "FF:CotW 🐺 YAMAGIT (Rick Strowd) vs SUDOCHO (Tizoc)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-07T09:15:16Z",
     "durationSec": 553,
-    "viewCount": 639,
+    "viewCount": 640,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -28480,7 +28530,7 @@
     "title": "FF COTW ▰ KULA (#3 Ranked Mr. Karate) vs SORIKU (#2 Ranked Chun-Li) ▰ High Level Gameplay",
     "publishedAt": "2026-08-07T08:40:57Z",
     "durationSec": 498,
-    "viewCount": 964,
+    "viewCount": 965,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -29999,7 +30049,7 @@
     "title": "FF:CotW 🐺 REVBLOW (Kenshiro) vs FAALEX (Blue Mary)⭐Replay Match - FATAL FURY: CotW - 8/26",
     "publishedAt": "2026-08-04T15:45:20Z",
     "durationSec": 605,
-    "viewCount": 7769,
+    "viewCount": 7770,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -30195,7 +30245,7 @@
     "title": "FF COTW ▰ FEVER (#1 Ranked Kenshiro) vs CHAOSBREAKER (#1 Ranked Kevin) ▰ High Level Gameplay",
     "publishedAt": "2026-08-04T12:47:29Z",
     "durationSec": 541,
-    "viewCount": 1819,
+    "viewCount": 1820,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -30293,7 +30343,7 @@
     "title": "FF COTW ▰ MIKADO (#7 Ranked Rock) vs FEVER (#1 Ranked Kenshiro) ▰ High Level Gameplay",
     "publishedAt": "2026-08-04T10:01:59Z",
     "durationSec": 749,
-    "viewCount": 2372,
+    "viewCount": 2373,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -30538,7 +30588,7 @@
     "title": "FF COTW ▰ JINTY (#2 Ranked Ken) vs PIDA (#1 Ranked Andy) ▰ High Level Gameplay",
     "publishedAt": "2026-08-03T15:30:14Z",
     "durationSec": 519,
-    "viewCount": 6197,
+    "viewCount": 6240,
     "season": 3,
     "patch": "3.0.1",
     "sides": [
@@ -31224,7 +31274,7 @@
     "title": "FF COTW ▰ RINO (Rick Strowd) vs 1STFORCE (Hokutomaru) ▰ High Level Gameplay",
     "publishedAt": "2026-08-02T15:00:09Z",
     "durationSec": 514,
-    "viewCount": 920,
+    "viewCount": 922,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -31567,7 +31617,7 @@
     "title": "FF COTW ▰ GAMMA (#1 Ranked Rick Strowd) vs SENDOTXAU (#3 Ranked Kenshiro) ▰ High Level Gameplay",
     "publishedAt": "2026-08-02T09:06:38Z",
     "durationSec": 644,
-    "viewCount": 1123,
+    "viewCount": 1124,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -31861,7 +31911,7 @@
     "title": "FF COTW ▰ SENDOTXAU (#3 Ranked Kenshiro) vs DRACOV (#1 Ranked Tizoc) ▰ High Level Gameplay",
     "publishedAt": "2026-08-01T11:00:25Z",
     "durationSec": 874,
-    "viewCount": 2664,
+    "viewCount": 2665,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -32008,7 +32058,7 @@
     "title": "FF COTW ▰ GAMMA (#1 Ranked Rick Strowd) vs JIBBO (Tizoc) ▰ High Level Gameplay",
     "publishedAt": "2026-08-01T09:03:14Z",
     "durationSec": 497,
-    "viewCount": 1243,
+    "viewCount": 1244,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -32253,7 +32303,7 @@
     "title": "FF COTW ▰ ELKKS (#2 Ranked Mr. Karate) vs JOHNY (#1 Ranked Ken) ▰ High Level Gameplay",
     "publishedAt": "2026-07-31T16:00:11Z",
     "durationSec": 651,
-    "viewCount": 2605,
+    "viewCount": 2606,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -33037,7 +33087,7 @@
     "title": "FF COTW ▰ GAMMA (#1 Ranked Rick Strowd) vs CAST KENNETH (#2 Ranked Kain) ▰ High Level Gameplay",
     "publishedAt": "2026-07-30T10:00:24Z",
     "durationSec": 581,
-    "viewCount": 1478,
+    "viewCount": 1479,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -33821,7 +33871,7 @@
     "title": "FF:CotW 🐺 PHANPY BOGARD (Rick Strowd) vs ZINC974 (Kenshiro)⭐Replay Match - FATAL FURY: CotW - 7/26",
     "publishedAt": "2026-07-28T21:00:12Z",
     "durationSec": 551,
-    "viewCount": 848,
+    "viewCount": 849,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -34899,7 +34949,7 @@
     "title": "FF:CotW 🐺 PANPINA (Rick Strowd) vs FEVER (Kenshiro)⭐Replay Match - FATAL FURY: CotW - 7/26",
     "publishedAt": "2026-07-27T10:45:28Z",
     "durationSec": 525,
-    "viewCount": 2762,
+    "viewCount": 2764,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -34997,7 +35047,7 @@
     "title": "FF:CotW 🐺 FRESCKO (Mai Shiranui) vs GAMMA (Rick Strowd)⭐Replay Match - FATAL FURY: CotW - 7/26",
     "publishedAt": "2026-07-27T09:15:30Z",
     "durationSec": 492,
-    "viewCount": 1309,
+    "viewCount": 1310,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -35046,7 +35096,7 @@
     "title": "FF:CotW 🐺 RAKU95 (Rock Howard) vs FERNO (Rick Strowd)⭐Replay Match - FATAL FURY: CotW - 7/26",
     "publishedAt": "2026-07-26T21:27:18Z",
     "durationSec": 609,
-    "viewCount": 1705,
+    "viewCount": 1706,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -35683,7 +35733,7 @@
     "title": "FF COTW ▰ PANPINA (#2 Ranked Rick Strowd) vs ADACHIKUS (#2 Ranked Preecha) ▰ High Level Gameplay",
     "publishedAt": "2026-07-25T16:59:57Z",
     "durationSec": 906,
-    "viewCount": 1495,
+    "viewCount": 1496,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -36075,7 +36125,7 @@
     "title": "FF COTW ▰ PLSX (#2 Ranked Rick Strowd) vs RATAO SARRANT (#1 Ranked N. Geese) ▰ High Level Gameplay",
     "publishedAt": "2026-07-25T11:00:38Z",
     "durationSec": 813,
-    "viewCount": 5762,
+    "viewCount": 5772,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -37349,7 +37399,7 @@
     "title": "FF:CotW 🥊 KIMWEXLER (Salvatore) vs WAZZLER (Rick Strowd)🪶Replay Match - FATAL FURY: CotW - 7/26",
     "publishedAt": "2026-07-23T22:38:41Z",
     "durationSec": 620,
-    "viewCount": 662,
+    "viewCount": 663,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -37643,7 +37693,7 @@
     "title": "FF:CotW 🥊 FENRITTI (Rick Strowd) vs MAYU (Kevin Rian)🪶Replay Match - FATAL FURY: CotW - 7/26",
     "publishedAt": "2026-07-23T16:39:03Z",
     "durationSec": 483,
-    "viewCount": 2725,
+    "viewCount": 2726,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -37692,7 +37742,7 @@
     "title": "FF:CotW 🥊 FENRITTI (Rick Strowd) vs RINDAI (Preecha)🪶Replay Match - FATAL FURY: CotW - 7/26",
     "publishedAt": "2026-07-23T15:30:29Z",
     "durationSec": 528,
-    "viewCount": 2244,
+    "viewCount": 2246,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -37839,7 +37889,7 @@
     "title": "FF COTW ▰ FENRITTI (#1 Ranked Rick S.) vs MAROPIS (#1 Ranked J. Hoon)▰FF CotW DLC: Rick Strowd Day 1",
     "publishedAt": "2026-07-23T14:32:22Z",
     "durationSec": 510,
-    "viewCount": 14563,
+    "viewCount": 14576,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -38084,7 +38134,7 @@
     "title": "FF:CotW 🥊 BLUE SKY GUY (Rick Strowd) vs ELPANADERO (Krauser)🪶Replay Match - FATAL FURY: CotW - 7/26",
     "publishedAt": "2026-07-23T09:34:45Z",
     "durationSec": 619,
-    "viewCount": 4982,
+    "viewCount": 4985,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -38574,7 +38624,7 @@
     "title": "FF COTW ▰ LOKOF (Mr. Karate) vs DARK ANGEL (Gato) ▰ High Level Gameplay",
     "publishedAt": "2026-07-22T11:30:04Z",
     "durationSec": 535,
-    "viewCount": 832,
+    "viewCount": 833,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -38721,7 +38771,7 @@
     "title": "FF COTW ▰ CIENTIFIKOF (#4 Ranked Kenshiro) vs BLCKSPIDER (#2 Ranked Marco) ▰ High Level Gameplay",
     "publishedAt": "2026-07-22T09:17:30Z",
     "durationSec": 800,
-    "viewCount": 883,
+    "viewCount": 884,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -39064,7 +39114,7 @@
     "title": "FF:CotW 🐺 HAMATAI (Blue Mary) vs HMMA (Preecha)⭐Replay Match - FATAL FURY: CotW - 7/26",
     "publishedAt": "2026-07-21T14:00:38Z",
     "durationSec": 589,
-    "viewCount": 1174,
+    "viewCount": 1184,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -39954,7 +40004,7 @@
     "title": "FF:CotW 🐺 JIBBO (Kenshiro) vs ONIMUSHA (Andy Bogard)⭐Replay Match - FATAL FURY: CotW - 7/26",
     "publishedAt": "2026-07-20T13:49:10Z",
     "durationSec": 608,
-    "viewCount": 625,
+    "viewCount": 626,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -40591,7 +40641,7 @@
     "title": "FF:CotW 🐺 HMMA (Preecha) vs MUSUBI (Kenshiro)⭐Replay Match - FATAL FURY: CotW - 7/26",
     "publishedAt": "2026-07-19T10:45:39Z",
     "durationSec": 645,
-    "viewCount": 930,
+    "viewCount": 931,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -40983,7 +41033,7 @@
     "title": "FF COTW ▰ FERNO (#7 Ranked Kenshiro) vs JIBBO (Tizoc) ▰ High Level Gameplay",
     "publishedAt": "2026-07-18T12:00:12Z",
     "durationSec": 747,
-    "viewCount": 690,
+    "viewCount": 691,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -41473,7 +41523,7 @@
     "title": "FF:CotW 🐺 KAISER (Terry Bogard) vs AMARAL KOF (Kenshiro)⭐Replay Match - FATAL FURY: CotW - 7/26",
     "publishedAt": "2026-07-17T13:59:30Z",
     "durationSec": 516,
-    "viewCount": 628,
+    "viewCount": 629,
     "season": 3,
     "patch": "3.0.0",
     "sides": [
@@ -42796,7 +42846,7 @@
     "title": "FF:CotW 🐺 FAALEX (Rock Howard) vs REVBLOW (Kenshiro)⭐Replay Match - FATAL FURY: CotW - 7/26",
     "publishedAt": "2026-07-15T10:45:04Z",
     "durationSec": 564,
-    "viewCount": 1090,
+    "viewCount": 1091,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -42845,7 +42895,7 @@
     "title": "FF:CotW 🐺 KAISER (Terry Bogard) vs VVV (Mr.Karate)⭐Replay Match - FATAL FURY: CotW - 7/26",
     "publishedAt": "2026-07-15T09:15:35Z",
     "durationSec": 564,
-    "viewCount": 1418,
+    "viewCount": 1417,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -43776,7 +43826,7 @@
     "title": "FF COTW ▰ XIZZOU (#4 Ranked Andy) vs ARMISAEL (#5 Ranked Hotaru) ▰ High Level Gameplay",
     "publishedAt": "2026-07-13T17:00:08Z",
     "durationSec": 574,
-    "viewCount": 625,
+    "viewCount": 627,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -44168,7 +44218,7 @@
     "title": "MR BIG 🐺 BIG VS OVERHEADSKY 🐺 ROCK | FATAL FURY COTW",
     "publishedAt": "2026-07-13T11:00:18Z",
     "durationSec": 396,
-    "viewCount": 61,
+    "viewCount": 62,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -44217,7 +44267,7 @@
     "title": "FF:CotW 🐺 DENJO (B.Jenet) vs ZIOL (Blue Mary)⭐Replay Match - FATAL FURY: CotW - 7/26",
     "publishedAt": "2026-07-13T10:45:11Z",
     "durationSec": 569,
-    "viewCount": 5874,
+    "viewCount": 5876,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -44609,7 +44659,7 @@
     "title": "FF:CotW 🐺 HMMA (Preecha) vs ARUSU (Kenshiro)⭐Replay Match - FATAL FURY: CotW - 7/26",
     "publishedAt": "2026-07-12T12:15:11Z",
     "durationSec": 604,
-    "viewCount": 2420,
+    "viewCount": 2421,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -45785,7 +45835,7 @@
     "title": "FF:CotW 🐺 PUNK (Kenshiro) vs TTWINS31 (Terry Bogard)⭐Replay Match - FATAL FURY: CotW - 7/26",
     "publishedAt": "2026-07-10T10:45:14Z",
     "durationSec": 501,
-    "viewCount": 1547,
+    "viewCount": 1548,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -45883,7 +45933,7 @@
     "title": "FF:CotW 🐺 KOFCHORRERA (Kenshiro) vs ROCKOUTS (Chun-Li)⭐Replay Match - FATAL FURY: CotW - 7/26",
     "publishedAt": "2026-07-10T09:15:37Z",
     "durationSec": 665,
-    "viewCount": 878,
+    "viewCount": 879,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -46079,7 +46129,7 @@
     "title": "Fatal Fury COTW Snake Eyez Kenshiro VS Deivid Preecha",
     "publishedAt": "2026-07-09T14:00:21Z",
     "durationSec": 703,
-    "viewCount": 8,
+    "viewCount": 9,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -46324,7 +46374,7 @@
     "title": "Fatal Fury COTW — Hokutomaru (JohnyKOF) vs. Mai (Terrgeta)",
     "publishedAt": "2026-07-09T07:30:10Z",
     "durationSec": 502,
-    "viewCount": 237,
+    "viewCount": 238,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -46667,7 +46717,7 @@
     "title": "FF:CotW 🐺 ELRAYOMAC (Marco Rodrigues) vs TMG SOMBRA (Kenshiro)⭐Replay Match - FATAL FURY: CotW 7/26",
     "publishedAt": "2026-07-08T12:30:14Z",
     "durationSec": 569,
-    "viewCount": 1156,
+    "viewCount": 1157,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -47598,7 +47648,7 @@
     "title": "FF COTW ▰ FERNO (#6 Ranked Kenshiro) vs SULIAN LAMU (#1 Ranked Hotaru) ▰ High Level Gameplay",
     "publishedAt": "2026-07-06T19:30:04Z",
     "durationSec": 531,
-    "viewCount": 789,
+    "viewCount": 791,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -47941,7 +47991,7 @@
     "title": "FF:CotW 🐺 ACERO (Jae Hoon) vs PRODIGIO (Wolfgang Krauser)⭐Replay Match - FATAL FURY: CotW - 7/26",
     "publishedAt": "2026-07-06T12:15:11Z",
     "durationSec": 597,
-    "viewCount": 3130,
+    "viewCount": 3131,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -49705,7 +49755,7 @@
     "title": "FF:CotW 🐺 KIRAMASTERS (Ken Masters) vs PAKO (Kenshiro)⭐Replay Match - FATAL FURY: CotW - 7/26",
     "publishedAt": "2026-07-03T09:15:03Z",
     "durationSec": 518,
-    "viewCount": 4783,
+    "viewCount": 4784,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -50146,7 +50196,7 @@
     "title": "FF COTW ▰ CIENTIFIKOF (#9 Ranked Kenshiro) vs ALEX MAZI (#9 Ranked Joe) ▰ High Level Gameplay",
     "publishedAt": "2026-07-02T11:37:45Z",
     "durationSec": 492,
-    "viewCount": 3075,
+    "viewCount": 3076,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -50832,7 +50882,7 @@
     "title": "FF COTW ▰ FERNO (#1 Ranked Kenshiro) vs SORIKU (#1 Ranked Chun-Li) ▰ High Level Gameplay",
     "publishedAt": "2026-07-01T11:45:24Z",
     "durationSec": 568,
-    "viewCount": 9292,
+    "viewCount": 9293,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -50930,7 +50980,7 @@
     "title": "FF COTW ▰ FERNO (#1 Ranked Kenshiro) vs EXCELANCER (#9 Ranked Mr. Karate) ▰ High Level Gameplay",
     "publishedAt": "2026-07-01T09:42:57Z",
     "durationSec": 630,
-    "viewCount": 7180,
+    "viewCount": 7181,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -50979,7 +51029,7 @@
     "title": "FF:CotW 🐺 PUNK (Kenshiro) vs ROMA (Mr.Karate)⭐Replay Match - FATAL FURY: CotW - 6/26",
     "publishedAt": "2026-07-01T09:15:00Z",
     "durationSec": 499,
-    "viewCount": 13623,
+    "viewCount": 13624,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -51665,7 +51715,7 @@
     "title": "FF COTW ▰ FERNO (#1 Ranked Kenshiro) vs SEISMX (Billy) ▰ High Level Gameplay",
     "publishedAt": "2026-06-30T12:00:19Z",
     "durationSec": 745,
-    "viewCount": 6739,
+    "viewCount": 6740,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -51959,7 +52009,7 @@
     "title": "FF:CotW 🐺 TOALHA (Wolfgang Krauser) vs LAUYAGAMI (Kenshiro)⭐Replay Match - FATAL FURY: CotW - 6/26",
     "publishedAt": "2026-06-29T22:02:38Z",
     "durationSec": 568,
-    "viewCount": 12992,
+    "viewCount": 12997,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -52008,7 +52058,7 @@
     "title": "FF:CotW 🌟 SOUGAKU (Salvatore) vs KAZUNOKO (Kenshiro)🌟Replay Match - FATAL FURY: City of the Wolves!",
     "publishedAt": "2026-06-29T21:40:20Z",
     "durationSec": 546,
-    "viewCount": 22420,
+    "viewCount": 22422,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -52302,7 +52352,7 @@
     "title": "FF COTW ▰ FERNO (#2 Ranked Kenshiro) vs OVERHEADSKY (#2 Ranked Rock) ▰ High Level Gameplay",
     "publishedAt": "2026-06-29T15:58:44Z",
     "durationSec": 670,
-    "viewCount": 3254,
+    "viewCount": 3255,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -52449,7 +52499,7 @@
     "title": "FF:CotW 🐺 KULA (Kenshiro) vs TKFDR CHAZ (Dong Hwan)⭐Replay Match - FATAL FURY: CotW - 6/26",
     "publishedAt": "2026-06-29T13:25:35Z",
     "durationSec": 627,
-    "viewCount": 4565,
+    "viewCount": 4586,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -52596,7 +52646,7 @@
     "title": "FF COTW ▰ KULA (#1 Ranked Kenshiro) vs GGAMESSA (#1 Ranked Tizoc) ▰ FF CotW DLC: Kenshiro Day 1",
     "publishedAt": "2026-06-29T10:52:31Z",
     "durationSec": 498,
-    "viewCount": 21623,
+    "viewCount": 21630,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -52743,7 +52793,7 @@
     "title": "FF:CotW 🐺 KUU (Kenshiro) vs HOKUTO (Kenshiro)⭐Replay Match - FATAL FURY: CotW - 6/26",
     "publishedAt": "2026-06-29T04:19:31Z",
     "durationSec": 498,
-    "viewCount": 2998,
+    "viewCount": 2999,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -52792,7 +52842,7 @@
     "title": "FF:CotW 🐺 FERNO (Kenshiro) vs TYPH (Vox Reaper)⭐Replay Match - FATAL FURY: CotW - 6/26",
     "publishedAt": "2026-06-29T03:10:50Z",
     "durationSec": 576,
-    "viewCount": 5556,
+    "viewCount": 5571,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -53919,7 +53969,7 @@
     "title": "FF:CotW 🐺 KAISER (Terry Bogard) vs ALEX5MITH (B.Jene)⭐Replay Match - FATAL FURY: CotW - 6/26",
     "publishedAt": "2026-06-26T10:45:31Z",
     "durationSec": 544,
-    "viewCount": 1422,
+    "viewCount": 1423,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -54654,7 +54704,7 @@
     "title": "FF COTW ▰ DRACOV (#2 Ranked Tizoc) vs DARK KING (Terry) ▰ High Level Gameplay",
     "publishedAt": "2026-06-24T17:00:35Z",
     "durationSec": 372,
-    "viewCount": 1578,
+    "viewCount": 1579,
     "season": 2,
     "patch": "2.2.0",
     "sides": [
@@ -57006,7 +57056,7 @@
     "title": "FF COTW ▰ KULA (#1 Ranked Cristiano Ronaldo) vs SORIKU (#1 Ranked Chun-Li) ▰ High Level Gameplay",
     "publishedAt": "2026-06-19T14:30:34Z",
     "durationSec": 701,
-    "viewCount": 3749,
+    "viewCount": 3755,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -57055,7 +57105,7 @@
     "title": "FF:CotW 🐺 DEL CIBER (Mai Shiranui) vs OVERLORD (Tizoc)⭐Replay Match - FATAL FURY: CotW - 6/26",
     "publishedAt": "2026-06-19T12:00:20Z",
     "durationSec": 622,
-    "viewCount": 1093,
+    "viewCount": 1095,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -57447,7 +57497,7 @@
     "title": "FF COTW ▰ KULA (Mr. Karate) vs KBZON (#3 Ranked Tizoc) ▰ High Level Gameplay",
     "publishedAt": "2026-06-18T14:00:36Z",
     "durationSec": 504,
-    "viewCount": 19784,
+    "viewCount": 19785,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -57692,7 +57742,7 @@
     "title": "Hotaru vs Mr. Karate — FieritaGG vs Kinta | Fatal Fury: City of the Wolves (4K)",
     "publishedAt": "2026-06-17T23:00:17Z",
     "durationSec": 421,
-    "viewCount": 90,
+    "viewCount": 91,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -59407,7 +59457,7 @@
     "title": "FF COTW ▰ TAMAGO (#1 Ranked Mr. Karate) vs ZEUS (#1 Ranked Mr. Big) ▰ High Level Gameplay",
     "publishedAt": "2026-06-13T18:00:16Z",
     "durationSec": 720,
-    "viewCount": 1401,
+    "viewCount": 1402,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -60191,7 +60241,7 @@
     "title": "FF:CotW 🐺 KAISER (Terry Bogard) vs KOJACKKIRA (Ken Masters)⭐Replay Match - FATAL FURY: CotW - 6/26",
     "publishedAt": "2026-06-12T09:15:07Z",
     "durationSec": 554,
-    "viewCount": 2160,
+    "viewCount": 2161,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -60975,7 +61025,7 @@
     "title": "FF:CotW 🐺 UMG (Nightmare Geese) vs QIUQIU (Mr.Karate)⭐Replay Match - FATAL FURY: CotW - 6/26",
     "publishedAt": "2026-06-10T14:21:04Z",
     "durationSec": 539,
-    "viewCount": 1951,
+    "viewCount": 1952,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -61269,7 +61319,7 @@
     "title": "FF COTW ▰ FEVER (#3 Ranked Cristiano Ronaldo) vs HAREGORO (Wolfgang Krauser) ▰ High Level Gameplay",
     "publishedAt": "2026-06-09T15:00:07Z",
     "durationSec": 435,
-    "viewCount": 452,
+    "viewCount": 453,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -61465,7 +61515,7 @@
     "title": "FF COTW ▰ DARK ANGEL (#2 Ranked Mr. Karate) vs SEISMX (Billy) ▰ High Level Gameplay",
     "publishedAt": "2026-06-09T10:11:47Z",
     "durationSec": 844,
-    "viewCount": 2097,
+    "viewCount": 2098,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -61661,7 +61711,7 @@
     "title": "FF COTW ▰ DARK ANGEL (#5 Ranked Mr. Karate) vs TAMAGO (#1 Ranked Mr. Karate) ▰ High Level Gameplay",
     "publishedAt": "2026-06-08T19:26:13Z",
     "durationSec": 970,
-    "viewCount": 3190,
+    "viewCount": 3198,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -62984,7 +63034,7 @@
     "title": "FF:CotW 👺 FERNO (Mr.Karate) vs DARK ANGEL (Mr.Big)⭐Replay Match - FATAL FURY: CotW - 6/26",
     "publishedAt": "2026-06-05T20:58:50Z",
     "durationSec": 1145,
-    "viewCount": 1202,
+    "viewCount": 1203,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -65336,7 +65386,7 @@
     "title": "FF COTW ▰ KUU (#9 Ranked Mr. Karate) vs ELMAZA (#3 Ranked Billy) ▰ High Level Gameplay",
     "publishedAt": "2026-06-01T14:30:11Z",
     "durationSec": 633,
-    "viewCount": 5646,
+    "viewCount": 5647,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -65728,7 +65778,7 @@
     "title": "FF COTW ▰ NIMAYSU (Mr. Karate) vs CONTINUE (Wolfgang Krauser) ▰ High Level Gameplay",
     "publishedAt": "2026-05-31T15:30:55Z",
     "durationSec": 497,
-    "viewCount": 1978,
+    "viewCount": 1980,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -65875,7 +65925,7 @@
     "title": "FF:CotW 🐺 SCORE (Mr.Karate) vs FATHER (Nightmare Geese)⭐Replay Match - FATAL FURY: CotW - 5/26",
     "publishedAt": "2026-05-31T10:45:10Z",
     "durationSec": 1006,
-    "viewCount": 12975,
+    "viewCount": 12977,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -66316,7 +66366,7 @@
     "title": "FF COTW ▰ FERNO (#1 Ranked Mr. Karate) vs SUCIO DAN (#5 Ranked Terry) ▰ High Level Gameplay",
     "publishedAt": "2026-05-30T12:12:44Z",
     "durationSec": 843,
-    "viewCount": 9722,
+    "viewCount": 9727,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -66659,7 +66709,7 @@
     "title": "FF:CotW 👺 DARK ANGEL (Mr.Karate) vs KIHARA (Marco Rodrigues)⭐Replay Match - FATAL FURY: CotW - 5/26",
     "publishedAt": "2026-05-29T18:00:22Z",
     "durationSec": 519,
-    "viewCount": 15603,
+    "viewCount": 15605,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -67002,7 +67052,7 @@
     "title": "FF:CotW 👺 LAUYAGAMI (Mr.Karate) vs MORANGO (Wolfgang Krauser)⭐Replay Match - FATAL FURY: CotW - 5/26",
     "publishedAt": "2026-05-29T11:45:18Z",
     "durationSec": 491,
-    "viewCount": 1198,
+    "viewCount": 1201,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -67394,7 +67444,7 @@
     "title": "FF COTW ▰ MOK (Mr. Karate) vs FIBEL (#3 Ranked Hotaru) ▰ High Level Gameplay",
     "publishedAt": "2026-05-28T15:00:26Z",
     "durationSec": 583,
-    "viewCount": 2462,
+    "viewCount": 2465,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -67541,7 +67591,7 @@
     "title": "FF:CotW 🌟 PUNK (Mr.Karate) vs HIDDENXGEAR (Ken)🌟Replay Match - FATAL FURY: City of the Wolves!",
     "publishedAt": "2026-05-28T13:53:45Z",
     "durationSec": 543,
-    "viewCount": 4885,
+    "viewCount": 4886,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -67737,7 +67787,7 @@
     "title": "FF:CotW 👺 LAUYAGAMI (Mr.Karate) vs HANTER BR ( Krauser)⭐Replay Match - FATAL FURY: CotW - 5/26",
     "publishedAt": "2026-05-28T09:00:10Z",
     "durationSec": 980,
-    "viewCount": 9160,
+    "viewCount": 9161,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -67884,7 +67934,7 @@
     "title": "FF:CotW 👺 GO1 (Mr.Karate) vs HATCH (Tizoc)⭐Replay Match - FATAL FURY: CotW - 5/26",
     "publishedAt": "2026-05-27T22:42:04Z",
     "durationSec": 534,
-    "viewCount": 13682,
+    "viewCount": 13683,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -68080,7 +68130,7 @@
     "title": "FF:CotW 👺 KAZUNOKO (Mr.Karate) vs HASINA (Wolfgang Krauser)⭐Replay Match - FATAL FURY: CotW - 5/26",
     "publishedAt": "2026-05-27T17:00:26Z",
     "durationSec": 587,
-    "viewCount": 38666,
+    "viewCount": 38670,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -68619,7 +68669,7 @@
     "title": "FF COTW ▰ GO1 (Mr. Karate) vs LACID (Rock) ▰ Fatal Fury CotW DLC: Mr. Karate Day 1",
     "publishedAt": "2026-05-27T11:39:44Z",
     "durationSec": 902,
-    "viewCount": 53021,
+    "viewCount": 53024,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -68815,7 +68865,7 @@
     "title": "FF:CotW 👺 WAZZLER (Mr.Karate) vs META ABE (Mr.Karate)⭐Replay Match - FATAL FURY: CotW - 5/26",
     "publishedAt": "2026-05-27T09:17:42Z",
     "durationSec": 648,
-    "viewCount": 2726,
+    "viewCount": 2727,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -69403,7 +69453,7 @@
     "title": "Fatal Fury COTW GriffonLegend Jae Hoon VS HeroHuman Andy High Level Gameplay",
     "publishedAt": "2026-05-25T14:47:54Z",
     "durationSec": 515,
-    "viewCount": 46,
+    "viewCount": 47,
     "season": 2,
     "patch": "2.1.2",
     "sides": [
@@ -70089,7 +70139,7 @@
     "title": "FF:CotW 🐺 HAREGORO (Jae Hoon) vs HMMA (Preecha)⭐Replay Match - FATAL FURY: CotW - 5/26",
     "publishedAt": "2026-05-22T15:34:15Z",
     "durationSec": 622,
-    "viewCount": 3226,
+    "viewCount": 3228,
     "season": 2,
     "patch": "2.0.3",
     "sides": [
@@ -70432,7 +70482,7 @@
     "title": "FF:CotW 🐺 HAMATAI (Blue Mary) vs PANPINA (Ken Masters)⭐Replay Match - FATAL FURY: CotW - 5/26",
     "publishedAt": "2026-05-21T15:06:37Z",
     "durationSec": 484,
-    "viewCount": 1485,
+    "viewCount": 1487,
     "season": 2,
     "patch": "2.0.3",
     "sides": [
@@ -71167,7 +71217,7 @@
     "title": "FF:CotW 🐺 HAREGORO (Jae Hoon) vs RK0726 (Andy Bogard)⭐Replay Match - FATAL FURY: CotW - 5/26",
     "publishedAt": "2026-05-19T14:45:30Z",
     "durationSec": 537,
-    "viewCount": 2925,
+    "viewCount": 2926,
     "season": 2,
     "patch": "2.0.2",
     "sides": [
@@ -71657,7 +71707,7 @@
     "title": "FF:CotW 🐺 SORIKU (Chun-Li) vs BETOWEST (Mai Shiranui)⭐Replay Match - FATAL FURY: CotW - 5/26",
     "publishedAt": "2026-05-18T11:15:03Z",
     "durationSec": 487,
-    "viewCount": 3690,
+    "viewCount": 3691,
     "season": 2,
     "patch": "2.0.2",
     "sides": [
@@ -71951,7 +72001,7 @@
     "title": "FF COTW ▰ KBZON (#4 Ranked Tizoc) vs SOMBRA (#1 Ranked Kevin) ▰ High Level Gameplay",
     "publishedAt": "2026-05-17T10:14:33Z",
     "durationSec": 629,
-    "viewCount": 1451,
+    "viewCount": 1474,
     "season": 2,
     "patch": "2.0.2",
     "sides": [
@@ -75675,7 +75725,7 @@
     "title": "FF:CotW 🐺 HAREGORO (Wolfgang Krauser) vs MAYU1221 (Kevin Rian)⭐Replay Match - FATAL FURY: CotW -5/26",
     "publishedAt": "2026-05-09T10:45:01Z",
     "durationSec": 528,
-    "viewCount": 2630,
+    "viewCount": 2631,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -75969,7 +76019,7 @@
     "title": "FF:CotW 🐺 DEL CIBER (Mai Shiranui) vs HEROEDEL ASUR (Krauser)⭐Replay Match - FATAL FURY: CotW - 5/26",
     "publishedAt": "2026-05-08T15:04:17Z",
     "durationSec": 798,
-    "viewCount": 1021,
+    "viewCount": 1022,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -76165,7 +76215,7 @@
     "title": "FF COTW ▰ ZEUS (#1 Ranked Mr. Big) vs SCOOBY (#2 Ranked Wolfgang Krauser) ▰ High Level Gameplay",
     "publishedAt": "2026-05-08T10:12:06Z",
     "durationSec": 644,
-    "viewCount": 1995,
+    "viewCount": 1996,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -76459,7 +76509,7 @@
     "title": "Fatal Fury COTW High Level Replay! Madkof (Krauser) vs. NoHairGNZ (Kevin). (4K)",
     "publishedAt": "2026-05-07T16:01:18Z",
     "durationSec": 457,
-    "viewCount": 2347,
+    "viewCount": 2348,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -77096,7 +77146,7 @@
     "title": "FF COTW ▰ TEIGA (Nightmare Geese) vs KUU (Wolfgang Krauser) ▰ High Level Gameplay",
     "publishedAt": "2026-05-06T10:18:32Z",
     "durationSec": 804,
-    "viewCount": 3482,
+    "viewCount": 3486,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -77488,7 +77538,7 @@
     "title": "FF COTW ▰ OMEN (#2 Ranked Gato) vs MOK (#7 Ranked Marco) ▰ High Level Gameplay",
     "publishedAt": "2026-05-05T13:59:18Z",
     "durationSec": 679,
-    "viewCount": 1220,
+    "viewCount": 1221,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -77537,7 +77587,7 @@
     "title": "FF COTW ▰ KUU (Wolfgang Krauser) vs MINILORD (#1 Ranked Salvatore Ganacci) ▰ High Level Gameplay",
     "publishedAt": "2026-05-05T10:18:28Z",
     "durationSec": 350,
-    "viewCount": 2182,
+    "viewCount": 2183,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -77831,7 +77881,7 @@
     "title": "FF COTW ▰ JACVINJACK (#1 Ranked Dong Hwan) vs IMU (#3 Ranked Preecha) ▰ High Level Gameplay",
     "publishedAt": "2026-05-04T12:58:08Z",
     "durationSec": 1208,
-    "viewCount": 2337,
+    "viewCount": 2338,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -78027,7 +78077,7 @@
     "title": "FF COTW ▰ PLSX (#1 Ranked Nightmare Geese) vs ALFINETE (Billy) ▰ High Level Gameplay",
     "publishedAt": "2026-05-04T10:36:26Z",
     "durationSec": 821,
-    "viewCount": 1351,
+    "viewCount": 1350,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -78321,7 +78371,7 @@
     "title": "FF COTW ▰ RINO (#7 Ranked Wolfgang Krauser) vs ZEUS (#1 Ranked Mr. Big) ▰ High Level Gameplay",
     "publishedAt": "2026-05-03T10:25:57Z",
     "durationSec": 805,
-    "viewCount": 3983,
+    "viewCount": 3984,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -78958,7 +79008,7 @@
     "title": "Dracov (Tizoc) vs. Lintu (Ken). Fatal Fury COTW Replay! (4K)",
     "publishedAt": "2026-05-01T21:30:05Z",
     "durationSec": 481,
-    "viewCount": 786,
+    "viewCount": 787,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -79693,7 +79743,7 @@
     "title": "FF:CotW 🐺 DARK ANGEL (Rock) vs SCOOBY (Wolfgang Krauser)⭐Replay Match - FATAL FURY: CotW - 4/26",
     "publishedAt": "2026-04-30T12:15:03Z",
     "durationSec": 505,
-    "viewCount": 3119,
+    "viewCount": 3120,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -80428,7 +80478,7 @@
     "title": "FF COTW ▰ MRGATO (#1 Ranked Wolfgang Krauser) vs HAMUSI (#4 Ranked Ken) ▰ High Level Gameplay",
     "publishedAt": "2026-04-28T18:00:45Z",
     "durationSec": 659,
-    "viewCount": 3690,
+    "viewCount": 3694,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -80624,7 +80674,7 @@
     "title": "FF COTW ▰ SOMBRA (Wolfgang Krauser) vs SORIKU (#2 Ranked Chun-Li) ▰ High Level Gameplay",
     "publishedAt": "2026-04-28T15:30:26Z",
     "durationSec": 815,
-    "viewCount": 2785,
+    "viewCount": 2792,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -80820,7 +80870,7 @@
     "title": "FF COTW ▰ PLSX (#1 Ranked N. Geese) vs KOFCHORRERA (#9 Ranked W. Krauser) ▰ High Level Gameplay",
     "publishedAt": "2026-04-28T10:35:58Z",
     "durationSec": 765,
-    "viewCount": 32842,
+    "viewCount": 32853,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -81114,7 +81164,7 @@
     "title": "FF COTW ▰ MRGATO (#3 Ranked Wolfgang Krauser) vs MOK (#1 Ranked Marco) ▰ High Level Gameplay",
     "publishedAt": "2026-04-27T16:22:56Z",
     "durationSec": 757,
-    "viewCount": 3712,
+    "viewCount": 3714,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -81702,7 +81752,7 @@
     "title": "FF:CotW 🐺 NEMO (Wolfgang Krauser) vs SEIPA (Hotaru Futaba)⭐Replay Match - FATAL FURY: CotW - 4/26",
     "publishedAt": "2026-04-26T15:30:10Z",
     "durationSec": 471,
-    "viewCount": 9901,
+    "viewCount": 9902,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -82339,7 +82389,7 @@
     "title": "FF COTW ▰ MRGATO (#3 Ranked Wolfgang Krauser) vs POONGKO (#2 Ranked Gato) ▰ High Level Gameplay",
     "publishedAt": "2026-04-25T14:54:36Z",
     "durationSec": 532,
-    "viewCount": 8561,
+    "viewCount": 8564,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -82633,7 +82683,7 @@
     "title": "FF COTW ▰ BETOWEST (#2 Ranked Mai) vs CHEEKS (#1 Ranked Wolfgang Krauser) ▰ High Level Gameplay",
     "publishedAt": "2026-04-25T09:58:28Z",
     "durationSec": 439,
-    "viewCount": 2441,
+    "viewCount": 2442,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -82731,7 +82781,7 @@
     "title": "FF:CotW 🌟 KAZUNOKO (Krauser) vs KAISER JUMP (Krauser)🌟Replay Match - FATAL FURY: City of the Wolves!",
     "publishedAt": "2026-04-25T09:00:00Z",
     "durationSec": 648,
-    "viewCount": 335,
+    "viewCount": 336,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -82927,7 +82977,7 @@
     "title": "FF COTW ▰ FRIONEL (#1 Ranked W. Krauser) vs SULIAN LAMU (#1 Ranked Hotaru) ▰ High Level Gameplay",
     "publishedAt": "2026-04-24T18:46:58Z",
     "durationSec": 529,
-    "viewCount": 5422,
+    "viewCount": 5430,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -83074,7 +83124,7 @@
     "title": "FF:CotW 🌟 TARU VT (Krauser) vs BABY STAR (Kain)🌟Replay Match - FATAL FURY: City of the Wolves!",
     "publishedAt": "2026-04-24T14:52:54Z",
     "durationSec": 421,
-    "viewCount": 1290,
+    "viewCount": 1292,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -83319,7 +83369,7 @@
     "title": "FF COTW ▰ JUSTIN WONG (Wolfgang Krauser) vs YAGAMI MX (Terry) ▰ FF CotW DLC: Krauser Day 1",
     "publishedAt": "2026-04-24T08:52:05Z",
     "durationSec": 521,
-    "viewCount": 9567,
+    "viewCount": 9580,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -83564,7 +83614,7 @@
     "title": "FF COTW ▰ GO1 (#5 Ranked Marco) vs CIENTIFIKOF (#1 Ranked Gato) ▰ High Level Gameplay",
     "publishedAt": "2026-04-23T10:34:30Z",
     "durationSec": 955,
-    "viewCount": 4730,
+    "viewCount": 4740,
     "season": 2,
     "patch": "2.0.1",
     "sides": [
@@ -84299,7 +84349,7 @@
     "title": "FF COTW ▰ ZJZ (Cristiano Ronaldo) vs LACID (Tizoc) ▰ High Level Gameplay",
     "publishedAt": "2026-04-20T15:08:02Z",
     "durationSec": 514,
-    "viewCount": 1089,
+    "viewCount": 1090,
     "season": 2,
     "patch": "1.9.0",
     "sides": [
@@ -86112,7 +86162,7 @@
     "title": "FF:CotW 🌟 WAZZLER (Blue Mary) vs SCUNSION (Rock)🌟Replay Match - FATAL FURY: City of the Wolves!",
     "publishedAt": "2026-04-13T13:14:00Z",
     "durationSec": 557,
-    "viewCount": 386,
+    "viewCount": 387,
     "season": 2,
     "patch": "1.9.0",
     "sides": [
@@ -86161,7 +86211,7 @@
     "title": "FF COTW ▰ ZEUS (#2 Ranked Mr. Big) vs SCAR (Blue Mary) ▰ High Level Gameplay",
     "publishedAt": "2026-04-13T12:19:51Z",
     "durationSec": 535,
-    "viewCount": 1022,
+    "viewCount": 1024,
     "season": 2,
     "patch": "1.9.0",
     "sides": [
@@ -86700,7 +86750,7 @@
     "title": "FF:CotW 🌟 LAU YAGAMI (Blue Mary) vs SILVA JR (Rock)🌟Replay Match - FATAL FURY: City of the Wolves!",
     "publishedAt": "2026-04-10T16:56:42Z",
     "durationSec": 448,
-    "viewCount": 185,
+    "viewCount": 187,
     "season": 2,
     "patch": "1.9.0",
     "sides": [
@@ -86994,7 +87044,7 @@
     "title": "FF COTW ▰ LOKOF (#4 Ranked Marco) vs DARK ANGEL (Preecha) ▰ High Level Gameplay",
     "publishedAt": "2026-04-09T11:59:07Z",
     "durationSec": 624,
-    "viewCount": 1921,
+    "viewCount": 1920,
     "season": 2,
     "patch": "1.9.0",
     "sides": [
@@ -87631,7 +87681,7 @@
     "title": "FF COTW ▰ FERNO (#4 Ranked Blue Mary) vs CIENTIFIKOF (#4 Ranked Gato) ▰ High Level Gameplay",
     "publishedAt": "2026-04-07T10:34:43Z",
     "durationSec": 682,
-    "viewCount": 1338,
+    "viewCount": 1339,
     "season": 2,
     "patch": "1.9.0",
     "sides": [
@@ -88023,7 +88073,7 @@
     "title": "FF COTW ▰ FEVER (#4 Ranked Blue Mary) vs FIBEL (#4 Ranked Hotaru) ▰ High Level Gameplay",
     "publishedAt": "2026-04-06T10:50:20Z",
     "durationSec": 1013,
-    "viewCount": 1620,
+    "viewCount": 1624,
     "season": 2,
     "patch": "1.9.0",
     "sides": [
@@ -88317,7 +88367,7 @@
     "title": "FF COTW ▰ BS DANG (#1 Ranked Blue Mary) vs ELDONDELCIBER (#1 Ranked Mai) ▰ High Level Gameplay",
     "publishedAt": "2026-04-05T14:00:26Z",
     "durationSec": 927,
-    "viewCount": 3740,
+    "viewCount": 3746,
     "season": 2,
     "patch": "1.9.0",
     "sides": [
@@ -89297,7 +89347,7 @@
     "title": "FF COTW ▰ TAMAGO (Blue Mary) vs ELMAZA (#3 Ranked Billy) ▰ High Level Gameplay",
     "publishedAt": "2026-04-02T12:29:01Z",
     "durationSec": 441,
-    "viewCount": 1442,
+    "viewCount": 1443,
     "season": 2,
     "patch": "1.9.0",
     "sides": [
@@ -89983,7 +90033,7 @@
     "title": "FF COTW ▰ HAPPYB (Blue Mary) vs KILZYOU (Preecha) ▰ High Level Gameplay",
     "publishedAt": "2026-03-31T17:11:03Z",
     "durationSec": 609,
-    "viewCount": 3235,
+    "viewCount": 3237,
     "season": 2,
     "patch": "1.9.0",
     "sides": [
@@ -90522,7 +90572,7 @@
     "title": "FF:CotW 🐺 KUMAISYOUI (Blue Mary) vs VIP (Mai Shiranui)⭐Replay Match - FATAL FURY: CotW - 3/26",
     "publishedAt": "2026-03-30T09:15:00Z",
     "durationSec": 543,
-    "viewCount": 3337,
+    "viewCount": 3338,
     "season": 2,
     "patch": "1.9.0",
     "sides": [
@@ -90669,7 +90719,7 @@
     "title": "FF COTW ▰ OMEN (#3 Ranked Gato) vs KUMAISYOUI (#2 Ranked Blue Mary) ▰ High Level Gameplay",
     "publishedAt": "2026-03-29T15:00:27Z",
     "durationSec": 1039,
-    "viewCount": 3527,
+    "viewCount": 3528,
     "season": 2,
     "patch": "1.9.0",
     "sides": [
@@ -91404,7 +91454,7 @@
     "title": "FF COTW ▰ PANPINA (#1 Ranked Blue Mary) vs LACID (Tizoc) ▰ High Level Gameplay",
     "publishedAt": "2026-03-27T14:43:34Z",
     "durationSec": 398,
-    "viewCount": 3772,
+    "viewCount": 3773,
     "season": 2,
     "patch": "1.9.0",
     "sides": [
@@ -92041,7 +92091,7 @@
     "title": "FF COTW ▰ MARINCHAN (Blue Mary) vs LUCID (Nightmare Geese) ▰ FF CotW DLC: Blue Mary Day 1",
     "publishedAt": "2026-03-26T13:51:15Z",
     "durationSec": 971,
-    "viewCount": 9534,
+    "viewCount": 9535,
     "season": 2,
     "patch": "1.9.0",
     "sides": [
@@ -92678,7 +92728,7 @@
     "title": "FF COTW ▰ PLSX (#3 Ranked Nightmare Geese) vs LOKOF (#4 Ranked Marco) ▰ High Level Gameplay",
     "publishedAt": "2026-03-25T12:01:57Z",
     "durationSec": 616,
-    "viewCount": 1267,
+    "viewCount": 1268,
     "season": 2,
     "patch": "1.9.0",
     "sides": [
@@ -92776,7 +92826,7 @@
     "title": "FF:CotW 🐺 HAREGORO (Dong Hwan) vs ZJZ (Preecha)⭐Replay Match - FATAL FURY: CotW - 3/26",
     "publishedAt": "2026-03-25T09:15:04Z",
     "durationSec": 557,
-    "viewCount": 1545,
+    "viewCount": 1547,
     "season": 2,
     "patch": "1.9.0",
     "sides": [
@@ -93021,7 +93071,7 @@
     "title": "FF COTW ▰ PIDA (#1 Ranked Andy) vs JDM (#1 Ranked Nightmare Geese) ▰ High Level Gameplay",
     "publishedAt": "2026-03-24T10:52:58Z",
     "durationSec": 549,
-    "viewCount": 3256,
+    "viewCount": 3257,
     "season": 2,
     "patch": "1.9.0",
     "sides": [
@@ -93364,7 +93414,7 @@
     "title": "FF COTW ▰ DARK ANGEL (Hotaru) vs SCAR (#6 Ranked Ken) ▰ High Level Gameplay",
     "publishedAt": "2026-03-23T11:11:06Z",
     "durationSec": 740,
-    "viewCount": 1778,
+    "viewCount": 1780,
     "season": 2,
     "patch": "1.9.0",
     "sides": [
@@ -93707,7 +93757,7 @@
     "title": "FF COTW ▰ MICHELLEKCM (#2 Ranked C. Ronaldo) vs TAMAGO (#3 Ranked Hotaru) ▰ High Level Gameplay",
     "publishedAt": "2026-03-21T12:42:44Z",
     "durationSec": 398,
-    "viewCount": 473,
+    "viewCount": 474,
     "season": 2,
     "patch": "1.8.0",
     "sides": [
@@ -94883,7 +94933,7 @@
     "title": "FF COTW ▰ KULA (#1 Ranked Cristiano Ronaldo) vs ZEUS (#5 Ranked B.Jenet) ▰ High Level Gameplay",
     "publishedAt": "2026-03-16T18:27:57Z",
     "durationSec": 440,
-    "viewCount": 1068,
+    "viewCount": 1069,
     "season": 2,
     "patch": "1.8.0",
     "sides": [
@@ -95667,7 +95717,7 @@
     "title": "FF COTW ▰ PSLX (#3 Ranked Nightmare Geese) vs CHUCHUZERA (#1 Ranked Hotaru) ▰ High Level Gameplay",
     "publishedAt": "2026-03-14T12:57:06Z",
     "durationSec": 898,
-    "viewCount": 2388,
+    "viewCount": 2390,
     "season": 2,
     "patch": "1.8.0",
     "sides": [
@@ -95814,7 +95864,7 @@
     "title": "FF COTW ▰ FAALEX (#1 Ranked Rock) vs JVARGAS (Vox) ▰ High Level Gameplay",
     "publishedAt": "2026-03-13T19:23:59Z",
     "durationSec": 361,
-    "viewCount": 1548,
+    "viewCount": 1549,
     "season": 2,
     "patch": "1.8.0",
     "sides": [
@@ -96549,7 +96599,7 @@
     "title": "FF COTW ▰ ARUSU GRANT (#1 Ranked Vox) vs ZJZ (Mai) ▰ High Level Gameplay",
     "publishedAt": "2026-03-11T18:48:03Z",
     "durationSec": 804,
-    "viewCount": 1317,
+    "viewCount": 1318,
     "season": 2,
     "patch": "1.8.0",
     "sides": [
@@ -97725,7 +97775,7 @@
     "title": "FF COTW ▰ SAYFF (#1 Ranked Ken) vs BIGEESE (#2 Ranked Nightmare Geese) ▰ High Level Gameplay",
     "publishedAt": "2026-03-08T12:00:48Z",
     "durationSec": 474,
-    "viewCount": 6649,
+    "viewCount": 6651,
     "season": 2,
     "patch": "1.8.0",
     "sides": [
@@ -98264,7 +98314,7 @@
     "title": "FF COTW ▰ FERNO (#6 Ranked Nightmare Geese) vs RINO (#1 Ranked Mr. Big) ▰ High Level Gameplay",
     "publishedAt": "2026-03-06T12:45:37Z",
     "durationSec": 752,
-    "viewCount": 2886,
+    "viewCount": 2887,
     "season": 2,
     "patch": "1.8.0",
     "sides": [
@@ -98460,7 +98510,7 @@
     "title": "FF COTW ▰ LOKOF (#9 Ranked Marco) vs RINO (#1 Ranked Mr. Big) ▰ High Level Gameplay",
     "publishedAt": "2026-03-05T16:01:34Z",
     "durationSec": 422,
-    "viewCount": 1307,
+    "viewCount": 1308,
     "season": 2,
     "patch": "1.8.0",
     "sides": [
@@ -98705,7 +98755,7 @@
     "title": "FF:CotW 🐺 SAYFF (Ken Masters) vs REDSTELL (Nightmare Geese)⭐Replay Match - FATAL FURY: CotW - 3/26",
     "publishedAt": "2026-03-05T09:00:35Z",
     "durationSec": 450,
-    "viewCount": 1705,
+    "viewCount": 1706,
     "season": 2,
     "patch": "1.8.0",
     "sides": [
@@ -100077,7 +100127,7 @@
     "title": "FF:CotW🐺 OBLIVION (Rock Howard) vs KOJI KOG (Nightmare Geese)⭐Replay Match - FATAL FURY: CotW - 3/26",
     "publishedAt": "2026-03-02T10:45:03Z",
     "durationSec": 536,
-    "viewCount": 1489,
+    "viewCount": 1490,
     "season": 2,
     "patch": "1.8.0",
     "sides": [
@@ -100224,7 +100274,7 @@
     "title": "FF COTW ▰ MARINCHAN (#1 Ranked Nightmare Geese) vs NIMAYSU (Preecha) ▰ High Level Gameplay",
     "publishedAt": "2026-03-01T15:19:39Z",
     "durationSec": 402,
-    "viewCount": 5758,
+    "viewCount": 5767,
     "season": 2,
     "patch": "1.8.0",
     "sides": [
@@ -101008,7 +101058,7 @@
     "title": "FF COTW ▰ FERNO (#5 Ranked Nightmare Geese) vs JINTY (#2 Ranked Ken) ▰ High Level Gameplay",
     "publishedAt": "2026-02-27T18:14:06Z",
     "durationSec": 588,
-    "viewCount": 2263,
+    "viewCount": 2264,
     "season": 2,
     "patch": "1.8.0",
     "sides": [
@@ -101204,7 +101254,7 @@
     "title": "FF COTW ▰ PANPINA (#2 Ranked Nightmare Geese) vs KOGU (Salvatore Ganacci) ▰ High Level Gameplay",
     "publishedAt": "2026-02-27T14:39:00Z",
     "durationSec": 589,
-    "viewCount": 2722,
+    "viewCount": 2723,
     "season": 2,
     "patch": "1.8.0",
     "sides": [
@@ -101302,7 +101352,7 @@
     "title": "FF:CotW 🐺 LAUYAGAMI (Nightmare Geese) vs CAPISTRANO (Gato)⭐Replay Match - FATAL FURY: CotW - 2/26",
     "publishedAt": "2026-02-27T13:48:00Z",
     "durationSec": 575,
-    "viewCount": 6652,
+    "viewCount": 6653,
     "season": 2,
     "patch": "1.8.0",
     "sides": [
@@ -101792,7 +101842,7 @@
     "title": "FF:CotW 🐺 KAZUNOKO (Nightmare Geese) vs TAKSAN (Gato)⭐Replay Match - FATAL FURY: CotW - 2/26",
     "publishedAt": "2026-02-26T17:59:24Z",
     "durationSec": 513,
-    "viewCount": 2242,
+    "viewCount": 2243,
     "season": 2,
     "patch": "1.8.0",
     "sides": [
@@ -101988,7 +102038,7 @@
     "title": "FF:CotW 🐺 KOJI KOG (Nightmare Geese) vs KAZUNOKO (Nightmare Geese)⭐Replay Match - FATAL FURY: CotW",
     "publishedAt": "2026-02-26T15:24:56Z",
     "durationSec": 549,
-    "viewCount": 3358,
+    "viewCount": 3359,
     "season": 2,
     "patch": "1.8.0",
     "sides": [
@@ -102184,7 +102234,7 @@
     "title": "FF:CotW 🐺 MIKADO (Nightmare Geese) vs GO1(Nightmare Geese)⭐Replay Match - FATAL FURY: CotW - 2/26",
     "publishedAt": "2026-02-26T12:14:39Z",
     "durationSec": 672,
-    "viewCount": 6549,
+    "viewCount": 6551,
     "season": 2,
     "patch": "1.8.0",
     "sides": [
@@ -102282,7 +102332,7 @@
     "title": "FF COTW ▰ IMSTILLDADADDY (Nightmare Geese) vs KULA (Nightmare Geese) ▰ FF CotW DLC: N. Geese Day 1",
     "publishedAt": "2026-02-26T11:09:39Z",
     "durationSec": 679,
-    "viewCount": 5123,
+    "viewCount": 5124,
     "season": 2,
     "patch": "1.8.0",
     "sides": [
@@ -103360,7 +103410,7 @@
     "title": "FF:CotW 🐺 SAYFF (Ken Masters) vs CDM LOKLON (Terry Bogard)⭐Replay Match - FATAL FURY: CotW - 2/26",
     "publishedAt": "2026-02-23T09:15:04Z",
     "durationSec": 550,
-    "viewCount": 3162,
+    "viewCount": 3164,
     "season": 2,
     "patch": "1.7.3",
     "sides": [
@@ -104193,7 +104243,7 @@
     "title": "FF:CotW🐺DEL CIBER (Mai Shiranui) vs CDM LOKLON (Terry Bogard)⭐Replay Match - FATAL FURY: CotW - 2/26",
     "publishedAt": "2026-02-20T15:02:07Z",
     "durationSec": 576,
-    "viewCount": 1635,
+    "viewCount": 1636,
     "season": 2,
     "patch": "1.7.3",
     "sides": [
@@ -104830,7 +104880,7 @@
     "title": "FF Season 2 ▰ AbuOmar (DONG HWAN) VS FREZZER (ROCK) ▰ FATAL FURY: CoTW High Level Gameplay",
     "publishedAt": "2026-02-17T23:07:15Z",
     "durationSec": 415,
-    "viewCount": 269,
+    "viewCount": 270,
     "season": 2,
     "patch": "1.7.3",
     "sides": [
@@ -105565,7 +105615,7 @@
     "title": "FF:CotW🐺GRIFFON LEGEND (Jae Hoon) vs ARACNEEDYOU (Mai Shiranui)⭐Replay Match - FATAL FURY: CotW",
     "publishedAt": "2026-02-16T09:15:05Z",
     "durationSec": 554,
-    "viewCount": 1494,
+    "viewCount": 1495,
     "season": 2,
     "patch": "1.7.3",
     "sides": [
@@ -108554,7 +108604,7 @@
     "title": "FF:CotW 🌟 CIBERMETICO (Salvatore) vs PERRO (Joe)🌟Replay Match - FATAL FURY: City of the Wolves!",
     "publishedAt": "2026-02-09T09:45:00Z",
     "durationSec": 503,
-    "viewCount": 242,
+    "viewCount": 243,
     "season": 2,
     "patch": "1.7.3",
     "sides": [
@@ -108848,7 +108898,7 @@
     "title": "FF:CotW 🐺 MINILORD (Salvatore Ganacci) vs WIILLII (Jae Hoon)⭐Replay Match - FATAL FURY: CotW - 2/26",
     "publishedAt": "2026-02-08T14:13:26Z",
     "durationSec": 673,
-    "viewCount": 1774,
+    "viewCount": 1775,
     "season": 2,
     "patch": "1.7.3",
     "sides": [
@@ -108995,7 +109045,7 @@
     "title": "FF:CotW 🐺 HAREGORO (Dong Hwan) vs MARINCHAN (Jae Hoon)⭐Replay Match - FATAL FURY: CotW - 2/26",
     "publishedAt": "2026-02-08T09:15:01Z",
     "durationSec": 862,
-    "viewCount": 4528,
+    "viewCount": 4529,
     "season": 2,
     "patch": "1.7.3",
     "sides": [
@@ -109289,7 +109339,7 @@
     "title": "FF COTW ▰ FAALEX (#1 Ranked Rock) vs KAISER (#2 Ranked Terry) ▰ High Level Gameplay",
     "publishedAt": "2026-02-07T11:24:28Z",
     "durationSec": 668,
-    "viewCount": 3017,
+    "viewCount": 3018,
     "season": 2,
     "patch": "1.7.3",
     "sides": [
@@ -110612,7 +110662,7 @@
     "title": "FF:CotW 🐺 PIDA (Andy Bogard) vs IKUZE (Chun-Li)⭐Replay Match - FATAL FURY: CotW - 1/26",
     "publishedAt": "2026-02-04T12:01:15Z",
     "durationSec": 532,
-    "viewCount": 1067,
+    "viewCount": 1068,
     "season": 2,
     "patch": "1.7.3",
     "sides": [
@@ -114679,7 +114729,7 @@
     "title": "FF:CotW 🐺 KOJI KOG (Tizoc) vs ARUSU GRANT (Vox Reaper)⭐Replay Match - FATAL FURY: CotW - 1/26",
     "publishedAt": "2026-01-27T14:52:15Z",
     "durationSec": 519,
-    "viewCount": 2715,
+    "viewCount": 2716,
     "season": 2,
     "patch": "1.7.2",
     "sides": [
@@ -116002,7 +116052,7 @@
     "title": "FF COTW ▰ MOK (Rock) vs OMEN (#1 Ranked Gato) ▰ High Level Gameplay",
     "publishedAt": "2026-01-25T15:40:04Z",
     "durationSec": 606,
-    "viewCount": 2550,
+    "viewCount": 2551,
     "season": 2,
     "patch": "1.7.2",
     "sides": [
@@ -116100,7 +116150,7 @@
     "title": "FF COTW ▰ KURIGOHAN (#9 Ranked Jae Hoon) vs HITOHIRA (#2 Ranked Marco) ▰ High Level Gameplay",
     "publishedAt": "2026-01-25T13:38:51Z",
     "durationSec": 379,
-    "viewCount": 4163,
+    "viewCount": 4165,
     "season": 2,
     "patch": "1.7.2",
     "sides": [
@@ -116394,7 +116444,7 @@
     "title": "FF:CotW🐺PERFECT LEGEND (Andy Bogard) vs CDM GRENAS (Jae Hoon)⭐Replay Match - FATAL FURY: CotW - 1/26",
     "publishedAt": "2026-01-24T22:00:29Z",
     "durationSec": 548,
-    "viewCount": 2432,
+    "viewCount": 2435,
     "season": 2,
     "patch": "1.7.2",
     "sides": [
@@ -116688,7 +116738,7 @@
     "title": "FF COTW ▰ RINO (#6 Ranked Jae Hoon) vs TAMAGO (#1 Ranked Hotaru) ▰ High Level Gameplay",
     "publishedAt": "2026-01-24T16:51:26Z",
     "durationSec": 520,
-    "viewCount": 2861,
+    "viewCount": 2864,
     "season": 2,
     "patch": "1.7.2",
     "sides": [
@@ -117913,7 +117963,7 @@
     "title": "FF:CotW 🐺 LAUYAGAMI (Jae Hoon) vs LAGRANBESTIA (Dong Hwan)⭐Replay Match - FATAL FURY: CotW - 1/26",
     "publishedAt": "2026-01-22T22:27:30Z",
     "durationSec": 441,
-    "viewCount": 17069,
+    "viewCount": 17072,
     "season": 2,
     "patch": "1.7.2",
     "sides": [
@@ -118550,7 +118600,7 @@
     "title": "FF COTW ▰ PANPINA (Jae Hoon) vs KUBO (Mr. Big) ▰ Fatal Fury CotW DLC: Kim Jae Hoon Day One",
     "publishedAt": "2026-01-22T10:26:02Z",
     "durationSec": 561,
-    "viewCount": 8972,
+    "viewCount": 8973,
     "season": 2,
     "patch": "1.7.2",
     "sides": [
@@ -119579,7 +119629,7 @@
     "title": "FF COTW ▰ ALEX (Billy) vs ARUSU GRANT (#1 Ranked Vox) ▰ High Level Gameplay",
     "publishedAt": "2026-01-18T18:00:27Z",
     "durationSec": 906,
-    "viewCount": 1191,
+    "viewCount": 1192,
     "season": 1,
     "patch": "1.6.0",
     "sides": [
@@ -120069,7 +120119,7 @@
     "title": "FF:CotW 🐺 SCAR (Ken Masters) vs YOANP (Andy Bogard)⭐Replay Match - FATAL FURY: CotW - 1/26",
     "publishedAt": "2026-01-16T15:55:49Z",
     "durationSec": 532,
-    "viewCount": 19662,
+    "viewCount": 19663,
     "season": 1,
     "patch": "1.6.0",
     "sides": [
@@ -120461,7 +120511,7 @@
     "title": "FF COTW ▰ FAALEX (#1 Ranked Rock) vs KAISER (Terry) ▰ High Level Gameplay",
     "publishedAt": "2026-01-15T11:25:47Z",
     "durationSec": 755,
-    "viewCount": 9511,
+    "viewCount": 9521,
     "season": 1,
     "patch": "1.6.0",
     "sides": [
@@ -120951,7 +121001,7 @@
     "title": "FF COTW ▰ GRIFFON LEGEND (#1 Ranked Tizoc) vs FAALEX (#1 Ranked Rock) ▰ High Level Gameplay",
     "publishedAt": "2026-01-13T09:58:37Z",
     "durationSec": 780,
-    "viewCount": 2203,
+    "viewCount": 2204,
     "season": 1,
     "patch": "1.6.0",
     "sides": [
@@ -121539,7 +121589,7 @@
     "title": "FF COTW ▰ WILLII (#2 Ranked Chun-Li) vs BBTAGXKOF (#4 Ranked Mai) ▰ High Level Gameplay",
     "publishedAt": "2026-01-10T10:47:35Z",
     "durationSec": 1007,
-    "viewCount": 1797,
+    "viewCount": 1796,
     "season": 1,
     "patch": "1.6.0",
     "sides": [
@@ -121783,7 +121833,7 @@
     "title": "FF:CotW 🐺 IORI GORDO (Dong Hwan) vs BASHER (Marco Rodrigues)⭐Replay Match - FATAL FURY: CotW - 1/26",
     "publishedAt": "2026-01-09T10:45:01Z",
     "durationSec": 532,
-    "viewCount": 1563,
+    "viewCount": 1564,
     "season": 1,
     "patch": "1.6.0",
     "sides": [
@@ -122518,7 +122568,7 @@
     "title": "FF COTW ▰ SEISMX (#2 Ranked Kain) vs RINO (#3 Ranked Mr. Big) ▰ High Level Gameplay",
     "publishedAt": "2026-01-06T13:00:50Z",
     "durationSec": 663,
-    "viewCount": 1369,
+    "viewCount": 1370,
     "season": 1,
     "patch": "1.6.0",
     "sides": [
@@ -123155,7 +123205,7 @@
     "title": "FF COTW ▰ PIDA (#1 Ranked Andy) vs FREZZER (#3 Ranked Hokutomaru) ▰ High Level Gameplay",
     "publishedAt": "2026-01-03T10:50:43Z",
     "durationSec": 851,
-    "viewCount": 2003,
+    "viewCount": 2004,
     "season": 1,
     "patch": "1.6.0",
     "sides": [
@@ -123645,7 +123695,7 @@
     "title": "FF COTW ▰ LUCHS (#2 Ranked Vox) vs SOMBRA (#1 Ranked Marco) ▰ High Level Gameplay",
     "publishedAt": "2026-01-01T10:29:40Z",
     "durationSec": 668,
-    "viewCount": 1680,
+    "viewCount": 1681,
     "season": 1,
     "patch": "1.6.0",
     "sides": [
@@ -123792,7 +123842,7 @@
     "title": "FF COTW ▰ KULA (#1 Ranked Cristiano Ronaldo) vs WILLII (#2 Ranked Chun-Li) ▰ High Level Gameplay",
     "publishedAt": "2025-12-31T10:18:13Z",
     "durationSec": 671,
-    "viewCount": 1926,
+    "viewCount": 1928,
     "season": 1,
     "patch": "1.6.0",
     "sides": [
@@ -125164,7 +125214,7 @@
     "title": "FF COTW ▰ FERNO (Andy) vs SOMBRA (#1 Ranked Marco) ▰ High Level Gameplay",
     "publishedAt": "2025-12-24T13:56:37Z",
     "durationSec": 457,
-    "viewCount": 2627,
+    "viewCount": 2628,
     "season": 1,
     "patch": "1.6.0",
     "sides": [
@@ -125752,7 +125802,7 @@
     "title": "FF COTW ▰ PANPINA (Ken) vs OMEN (#1 Ranked Gato) ▰ High Level Gameplay",
     "publishedAt": "2025-12-21T11:56:31Z",
     "durationSec": 767,
-    "viewCount": 4914,
+    "viewCount": 4918,
     "season": 1,
     "patch": "1.6.0",
     "sides": [
@@ -127957,7 +128007,7 @@
     "title": "FF COTW ▰ FERNO (#3 Ranked Mr. Big) vs LOKOF (#4 Ranked Marco) ▰ High Level Gameplay",
     "publishedAt": "2025-12-11T09:57:43Z",
     "durationSec": 633,
-    "viewCount": 2455,
+    "viewCount": 2456,
     "season": 1,
     "patch": "1.6.0",
     "sides": [
@@ -128545,7 +128595,7 @@
     "title": "FF COTW ▰ MOK (#1 Ranked Mr. Big) vs HEBERICA (#1 Ranked B.Jenet) ▰ FF CotW DLC: Mr. Big Day One",
     "publishedAt": "2025-12-09T18:31:21Z",
     "durationSec": 580,
-    "viewCount": 7334,
+    "viewCount": 7335,
     "season": 1,
     "patch": "1.6.0",
     "sides": [
@@ -128986,7 +129036,7 @@
     "title": "FF COTW ▰ FENRITTI (Mr. Big) vs MILLION DOLLAR (Billy) ▰ Fatal Fury CotW DLC: Mr. Big Day One",
     "publishedAt": "2025-12-09T10:10:59Z",
     "durationSec": 536,
-    "viewCount": 7243,
+    "viewCount": 7244,
     "season": 1,
     "patch": "1.6.0",
     "sides": [
@@ -131681,7 +131731,7 @@
     "title": "FF COTW ▰ JACVINJACK (#1 Ranked Dong Hwan) vs FREZZER (#4 Ranked Hokutomaru) ▰ High Level Gameplay",
     "publishedAt": "2025-11-26T12:36:05Z",
     "durationSec": 498,
-    "viewCount": 1542,
+    "viewCount": 1544,
     "season": 1,
     "patch": "1.5.0",
     "sides": [
@@ -133151,7 +133201,7 @@
     "title": "FF:CotW🐺SOSICK NASHFAN (Chun-Li) vs DEL CIBER (Mai Shiranui)⭐Replay Match - FATAL FURY: CotW - 11/25",
     "publishedAt": "2025-11-20T12:01:22Z",
     "durationSec": 613,
-    "viewCount": 1990,
+    "viewCount": 1992,
     "season": 1,
     "patch": "1.5.0",
     "sides": [
@@ -133200,7 +133250,7 @@
     "title": "FF COTW ▰ RINO (Chun-Li) vs SOMBRA (#2 Ranked Marco) ▰ High Level Gameplay",
     "publishedAt": "2025-11-20T09:55:25Z",
     "durationSec": 385,
-    "viewCount": 1125,
+    "viewCount": 1126,
     "season": 1,
     "patch": "1.5.0",
     "sides": [
@@ -135601,7 +135651,7 @@
     "title": "FF COTW ▰ BETOWEST (#5 Ranked Mai) vs WILLII (#1 Ranked Chun-Li) ▰ High Level Gameplay",
     "publishedAt": "2025-11-12T09:33:42Z",
     "durationSec": 710,
-    "viewCount": 2887,
+    "viewCount": 2890,
     "season": 1,
     "patch": "1.5.0",
     "sides": [
@@ -136042,7 +136092,7 @@
     "title": "FF:CotW 🐺 JINTY (Ken Masters) vs VRYU (Chun-Li)⭐Replay Match - FATAL FURY: CotW - 11/25",
     "publishedAt": "2025-11-11T10:45:02Z",
     "durationSec": 478,
-    "viewCount": 1255,
+    "viewCount": 1256,
     "season": 1,
     "patch": "1.5.0",
     "sides": [
@@ -136875,7 +136925,7 @@
     "title": "FF COTW ▰ PDPDR (#1 Ranked Chun-Li) vs ARUSU GRANT (#1 Ranked Vox) ▰ High Level Gameplay",
     "publishedAt": "2025-11-09T09:53:11Z",
     "durationSec": 523,
-    "viewCount": 3392,
+    "viewCount": 3393,
     "season": 1,
     "patch": "1.5.0",
     "sides": [
@@ -138345,7 +138395,7 @@
     "title": "FF:CotW 🐺 PUNK (Chun-Li) vs COACH (Mai Shiranui)⭐Replay Match - FATAL FURY: CotW - 11/25",
     "publishedAt": "2025-11-06T09:00:21Z",
     "durationSec": 609,
-    "viewCount": 44509,
+    "viewCount": 44513,
     "season": 1,
     "patch": "1.5.0",
     "sides": [
@@ -138982,7 +139032,7 @@
     "title": "FF COTW ▰ KULA (Chun-Li) vs JOHNY (Chun-Li) ▰ Fatal Fury CotW DLC: Chun-Li Day 1",
     "publishedAt": "2025-11-05T10:04:42Z",
     "durationSec": 715,
-    "viewCount": 3340,
+    "viewCount": 3347,
     "season": 1,
     "patch": "1.5.0",
     "sides": [
@@ -139276,7 +139326,7 @@
     "title": "FF COTW ▰ FERNO (#2 Ranked S. Ganacci) vs KULA (#1 Ranked Cristiano Ronaldo) ▰ High Level Gameplay",
     "publishedAt": "2025-11-04T12:30:51Z",
     "durationSec": 719,
-    "viewCount": 4550,
+    "viewCount": 4551,
     "season": 1,
     "patch": "1.5.0",
     "sides": [
@@ -141383,7 +141433,7 @@
     "title": "FF COTW ▰ ZJZ (#4 Ranked Hotaru) vs KUMAISYOUI (#1 Ranked Kain) ▰ FF CotW High Level Gameplay",
     "publishedAt": "2025-10-26T10:37:00Z",
     "durationSec": 465,
-    "viewCount": 1141,
+    "viewCount": 1142,
     "season": 1,
     "patch": "1.4.0",
     "sides": [
@@ -141530,7 +141580,7 @@
     "title": "FF COTW ▰ ABRAHAM (#1 Ranked B.Jenet) vs SOMBRA (#2 Ranked Joe) ▰ FF CotW High Level Gameplay",
     "publishedAt": "2025-10-25T10:30:07Z",
     "durationSec": 741,
-    "viewCount": 4670,
+    "viewCount": 4671,
     "season": 1,
     "patch": "1.4.0",
     "sides": [
@@ -142559,7 +142609,7 @@
     "title": "FF COTW ▰ JOHNY (#1 Ranked Joe) vs KULA (#1 Ranked Cristiano Ronaldo) ▰ FF CotW High Level Gameplay",
     "publishedAt": "2025-10-21T09:33:59Z",
     "durationSec": 389,
-    "viewCount": 5366,
+    "viewCount": 5369,
     "season": 1,
     "patch": "1.4.0",
     "sides": [
@@ -143049,7 +143099,7 @@
     "title": "FF COTW ▰ ZEUS (#1 Ranked B.Jenet) vs EL DON DEL CIBER (#1 Ranked Mai) ▰ FF CotW High Level Gameplay",
     "publishedAt": "2025-10-18T15:01:07Z",
     "durationSec": 532,
-    "viewCount": 3038,
+    "viewCount": 3040,
     "season": 1,
     "patch": "1.4.0",
     "sides": [
@@ -143637,7 +143687,7 @@
     "title": "FF:CotW 🐺 SOSICK NASHFAN (Joe) vs TERRGETA (Terry Bogard)⭐Replay Match - FATAL FURY: CotW - 10/25",
     "publishedAt": "2025-10-16T11:45:09Z",
     "durationSec": 546,
-    "viewCount": 1562,
+    "viewCount": 1564,
     "season": 1,
     "patch": "1.4.0",
     "sides": [
@@ -144129,7 +144179,7 @@
     "title": "FF COTW ▰ HISA (#1 Ranked Joe) vs POONGKO (#1 Ranked Gato) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-10-14T18:32:19Z",
     "durationSec": 327,
-    "viewCount": 6029,
+    "viewCount": 6031,
     "season": 1,
     "patch": "1.4.0",
     "sides": [
@@ -150548,7 +150598,7 @@
     "title": "FF COTW ▰ ZEUS (B.Jenet) vs ELMAZA (Billy) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-09-20T12:00:19Z",
     "durationSec": 812,
-    "viewCount": 1260,
+    "viewCount": 1261,
     "season": 1,
     "patch": "1.3.1",
     "sides": [
@@ -155343,7 +155393,7 @@
     "title": "FF COTW ▰ FERNO (Marco) vs TAMAGO (Hotaru) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-09-03T18:08:37Z",
     "durationSec": 610,
-    "viewCount": 1435,
+    "viewCount": 1436,
     "season": 1,
     "patch": "1.3.1",
     "sides": [
@@ -157205,7 +157255,7 @@
     "title": "FF:CotW 🌟 MASOMA (Gato) vs SKEME (Rock)🌟Replay Match - FATAL FURY: City of the Wolves!",
     "publishedAt": "2025-08-28T10:01:12Z",
     "durationSec": 411,
-    "viewCount": 219,
+    "viewCount": 220,
     "season": 1,
     "patch": "1.3.1",
     "sides": [
@@ -159067,7 +159117,7 @@
     "title": "FF COTW ▰ LAUYAGAMI (Hokutomaru) vs KANG (Hotaru) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-08-21T15:27:27Z",
     "durationSec": 620,
-    "viewCount": 797,
+    "viewCount": 799,
     "season": 1,
     "patch": "1.3.1",
     "sides": [
@@ -159949,7 +159999,7 @@
     "title": "FF COTW ▰ JOHNY (Ken) vs ARMISAEL (Hotaru) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-08-19T09:44:23Z",
     "durationSec": 521,
-    "viewCount": 1452,
+    "viewCount": 1453,
     "season": 1,
     "patch": "1.3.1",
     "sides": [
@@ -160047,7 +160097,7 @@
     "title": "FF COTW ▰ KIONECIMO (Ken) vs SULIAN LAMU (Hotaru) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-08-18T19:15:39Z",
     "durationSec": 411,
-    "viewCount": 1502,
+    "viewCount": 1503,
     "season": 1,
     "patch": "1.3.1",
     "sides": [
@@ -163036,7 +163086,7 @@
     "title": "FF:CotW 🌟BAIRUSH (Ken) vs OMEN (Gato)🌟Replay Match - FATAL FURY: City of the Wolves!",
     "publishedAt": "2025-08-11T09:15:01Z",
     "durationSec": 413,
-    "viewCount": 295,
+    "viewCount": 296,
     "season": 1,
     "patch": "1.3.1",
     "sides": [
@@ -163722,7 +163772,7 @@
     "title": "FF:CotW 🐺 MILD PUNISH (Andy Bogard) vs POONGKO (Ken Masters)⭐Replay Match - FATAL FURY: CotW - 08/25",
     "publishedAt": "2025-08-09T13:29:19Z",
     "durationSec": 528,
-    "viewCount": 18295,
+    "viewCount": 18297,
     "season": 1,
     "patch": "1.3.1",
     "sides": [
@@ -165241,7 +165291,7 @@
     "title": "FF COTW ▰ JOHNY (Ken) vs MAIGO (Andy) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-08-06T13:22:19Z",
     "durationSec": 766,
-    "viewCount": 6825,
+    "viewCount": 6827,
     "season": 1,
     "patch": "1.3.1",
     "sides": [
@@ -167054,7 +167104,7 @@
     "title": "FF:CotW 🐺 MOROZIN (Ken) vs NEGUINHO (Ken)⭐Replay Match - FATAL FURY: CotW - 08/25",
     "publishedAt": "2025-08-04T02:32:03Z",
     "durationSec": 553,
-    "viewCount": 3256,
+    "viewCount": 3257,
     "season": 1,
     "patch": "1.3.1",
     "sides": [
@@ -167152,7 +167202,7 @@
     "title": "FF COTW ▰ BOBDYLAN (Ken) vs HOOKGANGGOD (Cristiano Ronaldo) ▰ Fatal Fury CotW DLC: Ken Day 0",
     "publishedAt": "2025-08-04T02:04:41Z",
     "durationSec": 269,
-    "viewCount": 5570,
+    "viewCount": 5571,
     "season": 1,
     "patch": "1.3.1",
     "sides": [
@@ -168034,7 +168084,7 @@
     "title": "FF COTW ▰ KAISER (Terry) vs FAALEX (Rock) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-07-31T10:01:52Z",
     "durationSec": 557,
-    "viewCount": 1255,
+    "viewCount": 1256,
     "season": 1,
     "patch": "1.2.1",
     "sides": [
@@ -171384,7 +171434,7 @@
     "title": "FF COTW ▰ FAALEX (Rock) vs CHUCHUZERA (Hotaru) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-07-22T14:37:59Z",
     "durationSec": 816,
-    "viewCount": 994,
+    "viewCount": 995,
     "season": 1,
     "patch": "1.2.1",
     "sides": [
@@ -172413,7 +172463,7 @@
     "title": "FF COTW ▰ GO1 (Kain) vs HAREGORO (Dong Hwan) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-07-19T12:47:50Z",
     "durationSec": 466,
-    "viewCount": 1598,
+    "viewCount": 1599,
     "season": 1,
     "patch": "1.2.1",
     "sides": [
@@ -172903,7 +172953,7 @@
     "title": "FF COTW ▰ GO1 (Kain) vs NAKASHIMA (Gato) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-07-17T15:41:38Z",
     "durationSec": 506,
-    "viewCount": 1735,
+    "viewCount": 1736,
     "season": 1,
     "patch": "1.2.1",
     "sides": [
@@ -180787,7 +180837,7 @@
     "title": "FF COTW ▰ DIAPHONE (Andy) vs TAMAGO (Hotaru) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-06-27T09:56:26Z",
     "durationSec": 444,
-    "viewCount": 2845,
+    "viewCount": 2846,
     "season": 1,
     "patch": "1.2.0",
     "sides": [
@@ -181767,7 +181817,7 @@
     "title": "FF COTW ▰ RINO (Andy) vs KCO PEDRO (Terry) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-06-25T11:36:24Z",
     "durationSec": 413,
-    "viewCount": 10823,
+    "viewCount": 10826,
     "season": 1,
     "patch": "1.2.0",
     "sides": [
@@ -182306,7 +182356,7 @@
     "title": "FF COTW ▰ FENRITTI (Andy) vs SEL (Hokutomaru) ▰ Fatal Fury CotW DLC: Andy Bogard Day One",
     "publishedAt": "2025-06-24T13:35:57Z",
     "durationSec": 474,
-    "viewCount": 11971,
+    "viewCount": 11972,
     "season": 1,
     "patch": "1.2.0",
     "sides": [
@@ -182649,7 +182699,7 @@
     "title": "FF COTW ▰ FENRITTI (Andy) vs POMEN (Kain) ▰ Fatal Fury CotW DLC: Andy Bogard Day One",
     "publishedAt": "2025-06-24T09:13:23Z",
     "durationSec": 347,
-    "viewCount": 7928,
+    "viewCount": 7929,
     "season": 1,
     "patch": "1.2.0",
     "sides": [
@@ -184217,7 +184267,7 @@
     "title": "FF COTW ▰ FENRITTI (Kain) vs ARUSU GRANT (Vox) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-06-19T16:16:46Z",
     "durationSec": 506,
-    "viewCount": 1149,
+    "viewCount": 1150,
     "season": 1,
     "patch": "1.1.7",
     "sides": [
@@ -187990,7 +188040,7 @@
     "title": "FF COTW ▰ OIL KING (Hokutomaru) vs ARUSU GRANT (Vox) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-06-09T18:49:07Z",
     "durationSec": 402,
-    "viewCount": 720,
+    "viewCount": 721,
     "season": 1,
     "patch": "1.1.7",
     "sides": [
@@ -189666,7 +189716,7 @@
     "title": "FF COTW ▰ POONGKO (Gato) vs AZUO (Terry) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-06-06T12:22:55Z",
     "durationSec": 475,
-    "viewCount": 2654,
+    "viewCount": 2655,
     "season": 1,
     "patch": "1.1.7",
     "sides": [
@@ -198203,7 +198253,7 @@
     "title": "FF COTW ▰ LOKOF (Marco) vs DISINTE (Mai) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-05-23T09:43:01Z",
     "durationSec": 499,
-    "viewCount": 1585,
+    "viewCount": 1586,
     "season": 1,
     "patch": "1.1.6",
     "sides": [
@@ -198448,7 +198498,7 @@
     "title": "Fatal Fury COTW ReallyKANE Billy VS MrPotato Mai High Level Gameplay",
     "publishedAt": "2025-05-22T18:01:00Z",
     "durationSec": 691,
-    "viewCount": 102,
+    "viewCount": 103,
     "season": 1,
     "patch": "1.1.6",
     "sides": [
@@ -199183,7 +199233,7 @@
     "title": "FF COTW ▰ SOMBRA (Marco) vs TAMAGO (Hotaru) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-05-21T14:31:16Z",
     "durationSec": 705,
-    "viewCount": 2139,
+    "viewCount": 2140,
     "season": 1,
     "patch": "1.1.6",
     "sides": [
@@ -201257,7 +201307,7 @@
     "title": "FF:CotW🐺 ALIOUNE (Hotaru Futaba) vs LUIGI FGC (Terry Bogard)⭐Replay Match - FATAL FURY: CotW - 05/25",
     "publishedAt": "2025-05-18T16:30:01Z",
     "durationSec": 382,
-    "viewCount": 954,
+    "viewCount": 955,
     "season": 1,
     "patch": "1.1.6",
     "sides": [
@@ -203764,7 +203814,7 @@
     "title": "FF COTW ▰ KULA (Cristiano Ronaldo) vs YASUSAN (B.Jenet) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-05-15T11:52:54Z",
     "durationSec": 448,
-    "viewCount": 1585,
+    "viewCount": 1588,
     "season": 1,
     "patch": "1.1.6",
     "sides": [
@@ -204499,7 +204549,7 @@
     "title": "FF COTW ▰ DARK ANGEL (Terry) vs ALPHA (B.Jenet) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-05-14T10:33:58Z",
     "durationSec": 529,
-    "viewCount": 5838,
+    "viewCount": 5839,
     "season": 1,
     "patch": "1.1.6",
     "sides": [
@@ -205283,7 +205333,7 @@
     "title": "FF COTW ▰ NEMO (Billy) vs FENRITTI (Kain) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-05-13T10:45:55Z",
     "durationSec": 676,
-    "viewCount": 3366,
+    "viewCount": 3367,
     "season": 1,
     "patch": "1.1.6",
     "sides": [
@@ -205920,7 +205970,7 @@
     "title": "FF COTW ▰ YASUSAN (B.Jenet) vs NIMAYSU (Hokutomaru) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-05-12T11:40:04Z",
     "durationSec": 425,
-    "viewCount": 1675,
+    "viewCount": 1676,
     "season": 1,
     "patch": "1.1.6",
     "sides": [
@@ -209840,7 +209890,7 @@
     "title": "FF COTW ▰ POONGKO (Gato) vs OIL KING (Hokutomaru) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-05-07T11:12:31Z",
     "durationSec": 552,
-    "viewCount": 1813,
+    "viewCount": 1814,
     "season": 1,
     "patch": "1.1.6",
     "sides": [
@@ -209889,7 +209939,7 @@
     "title": "FF COTW ▰ KULA (Cristiano Ronaldo) vs LOKOF (Marco) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-05-07T10:01:28Z",
     "durationSec": 496,
-    "viewCount": 1529,
+    "viewCount": 1530,
     "season": 1,
     "patch": "1.1.6",
     "sides": [
@@ -211947,7 +211997,7 @@
     "title": "FF COTW ▰ FREEZER (Rock) vs LORD VENOM (Kain) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-05-04T13:12:32Z",
     "durationSec": 346,
-    "viewCount": 2520,
+    "viewCount": 2521,
     "season": 1,
     "patch": "1.1.6",
     "sides": [
@@ -212927,7 +212977,7 @@
     "title": "FF COTW ▰ FREEZER (Rock) vs WAUHTI (B.Jenet) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-05-03T12:22:05Z",
     "durationSec": 573,
-    "viewCount": 3982,
+    "viewCount": 3983,
     "season": 1,
     "patch": "1.1.6",
     "sides": [
@@ -213172,7 +213222,7 @@
     "title": "FF:CotW 🐺 FREZZER (Rock Howard) vs WAUHTI (B.Jenet)⭐Replay Match - [FATAL FURY: CotW] - 04/25",
     "publishedAt": "2025-05-03T01:00:59Z",
     "durationSec": 530,
-    "viewCount": 2015,
+    "viewCount": 2017,
     "season": 1,
     "patch": "1.1.6",
     "sides": [
@@ -213809,7 +213859,7 @@
     "title": "FF COTW ▰ SHIRAITSUKI (Mai) vs FENRITTI (Kain) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-05-02T12:26:31Z",
     "durationSec": 409,
-    "viewCount": 4666,
+    "viewCount": 4667,
     "season": 1,
     "patch": "1.1.5",
     "sides": [
@@ -215965,7 +216015,7 @@
     "title": "FF COTW ▰ JIBBO (Tizoc) vs KULA (Cristiano Ronaldo) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-04-29T23:06:36Z",
     "durationSec": 498,
-    "viewCount": 9936,
+    "viewCount": 9937,
     "season": 1,
     "patch": "1.1.3",
     "sides": [
@@ -217190,7 +217240,7 @@
     "title": "FF COTW ▰ KROZEBA (Salvatore Ganacci) vs PANPINA (Vox) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-04-28T16:53:37Z",
     "durationSec": 409,
-    "viewCount": 9286,
+    "viewCount": 9288,
     "season": 1,
     "patch": "1.1.3",
     "sides": [
@@ -220578,7 +220628,7 @@
     "title": "FF COTW ▰ YASUSAN (B.Jenet) vs XIAN (Gato) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-04-26T12:25:42Z",
     "durationSec": 607,
-    "viewCount": 24767,
+    "viewCount": 24776,
     "season": 1,
     "patch": "1.1.3",
     "sides": [
@@ -221705,7 +221755,7 @@
     "title": "FF COTW ▰ NEMO (Billy) vs MARN (Hokutomaru) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-04-25T10:07:08Z",
     "durationSec": 466,
-    "viewCount": 13737,
+    "viewCount": 13740,
     "season": 1,
     "patch": "1.1.3",
     "sides": [
@@ -224498,7 +224548,7 @@
     "title": "FF COTW ▰ MOONYBLUES (Salvatore Ganacci) vs JEY (Hokutomaru) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-04-22T14:28:19Z",
     "durationSec": 413,
-    "viewCount": 14388,
+    "viewCount": 14389,
     "season": 1,
     "patch": "2025-04-21",
     "sides": [
@@ -225282,7 +225332,7 @@
     "title": "Fatal Fury COTW Kumi Kevin VS Mike Ross Marco Gameplay",
     "publishedAt": "2025-04-21T21:19:27Z",
     "durationSec": 489,
-    "viewCount": 49,
+    "viewCount": 50,
     "season": 1,
     "patch": "2025-04-21",
     "sides": [
@@ -229888,7 +229938,7 @@
     "title": "FF COTW ▰ LOKOF (Kain) vs ALEXMAZI (Rock) ▰ Fatal Fury CotW High Level Gameplay",
     "publishedAt": "2025-03-29T10:16:24Z",
     "durationSec": 1282,
-    "viewCount": 9152,
+    "viewCount": 9154,
     "season": 0,
     "patch": "2025-03-26",
     "sides": [
@@ -230672,7 +230722,7 @@
     "title": "FF COTW ▰ GO1 (Tizoc) vs GDMS (Terry Bogard) ▰ Fatal Fury City of the Wolves OPEN BETA",
     "publishedAt": "2025-03-27T09:25:29Z",
     "durationSec": 340,
-    "viewCount": 29164,
+    "viewCount": 29167,
     "season": 0,
     "patch": "2025-03-26",
     "sides": [
@@ -233759,7 +233809,7 @@
     "title": "FF:CotW ⭐ JOINJOIN (Kain R. Heinlein) vs KUTBVF (B.Jenet)⭐Replay Match - [FATAL FURY: CotW]",
     "publishedAt": "2025-02-21T17:59:35Z",
     "durationSec": 1080,
-    "viewCount": 13888,
+    "viewCount": 13889,
     "season": 0,
     "patch": "2025-02-20",
     "sides": [
@@ -233906,7 +233956,7 @@
     "title": "FF:CotW ⭐ FERNANDO (Vox Reaper) vs J-O-E-Y (Rock Howard)⭐Ranked Match - [FATAL FURY: CotW]",
     "publishedAt": "2025-02-20T18:58:36Z",
     "durationSec": 331,
-    "viewCount": 5935,
+    "viewCount": 5942,
     "season": 0,
     "patch": "2025-02-20",
     "sides": [
@@ -233955,7 +234005,7 @@
     "title": "FF:CotW ⭐ LAU YAGAMI (Hotaru) vs DARK RAY (Terry)⭐Ranked Match - [FATAL FURY: CotW]",
     "publishedAt": "2025-02-20T17:02:48Z",
     "durationSec": 239,
-    "viewCount": 13948,
+    "viewCount": 13949,
     "season": 0,
     "patch": "2025-02-20",
     "sides": [

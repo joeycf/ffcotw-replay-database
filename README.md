@@ -146,22 +146,49 @@ silently — an `<img>` that fails to load renders as blank space.
 
 ## Scripts
 
-| command                     | what it does                                                                                                                                           |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `npm run data:catchup`      | **The maintenance ritual.** fetch → theater → parse → emit, in that order. Use this rather than the parts.                                             |
-| `npm run data:fetch`        | Every upload from the nine channels → `raw/`. No game gate here; parse does the filtering.                                                             |
-| `npm run data:theater`      | The Replay Theater index. Cursor-bounded; `-- --full` for a whole-catalogue reconcile.                                                                 |
-| `npm run data:parse`        | `raw/` → `data/videos.json` + players + review queue + `report.md`. Every guard lives here.                                                            |
-| `npm run data:emit`         | Substrate → the engine's public contract. Every assertion is a throw.                                                                                  |
-| `npm run data:characters`   | Rebuild the roster from `ROSTER` + the design tokens. Manual; never in the cron.                                                                       |
-| `npm run data:art`          | Character art from SNK's site, with per-file provenance. Manual.                                                                                       |
-| `npm run data:og`           | The OG card. Draws real glyph outlines — see below.                                                                                                    |
-| `npm run data:patch-check`  | Diff the patch table against SNK's CMS **and** each patch's own page. Manual.                                                                          |
-| `npm run data:roster-check` | Diff the roster against SNK's character index. **Network, manual, never in the cron.** Ends `roster-check: CURRENT / DRIFT / UNVERIFIED / UNREADABLE`. |
-| `npm run data:expiries`     | Self-expiring gates. Runs last in the cron and is designed to go red.                                                                                  |
-| `npm run verify:gates`      | **The positive-control suite.** 24 injected defects, each of which must exit non-zero, plus the clean run.                                             |
-| `npm run test:e2e`          | Assertions against the built static output, with a visible empty-corpus mode.                                                                          |
-| `npm run verify:deployed`   | Post-deploy smoke check — the deploy fingerprint (count + side appearances + content hash).                                                            |
+| command                     | what it does                                                                                                                                                                 |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `npm run data:catchup`      | **The maintenance ritual.** fetch → theater → parse → emit, in that order. Use this rather than the parts.                                                                   |
+| `npm run data:fetch`        | Every upload from the nine channels → `raw/`. No game gate here; parse does the filtering.                                                                                   |
+| `npm run data:theater`      | The Replay Theater index. Cursor-bounded; `-- --full` for a whole-catalogue reconcile.                                                                                       |
+| `npm run data:parse`        | `raw/` → `data/videos.json` + players + review queue + `report.md`. Every guard lives here.                                                                                  |
+| `npm run data:emit`         | Substrate → the engine's public contract. Every assertion is a throw.                                                                                                        |
+| `npm run data:characters`   | Rebuild the roster from `ROSTER` + the design tokens. Manual; never in the cron.                                                                                             |
+| `npm run data:art`          | Character art from SNK's site, with per-file provenance. Manual.                                                                                                             |
+| `npm run data:og`           | The OG card. Draws real glyph outlines — see below.                                                                                                                          |
+| `npm run data:patch-check`  | Diff the patch table against SNK's CMS **and** each patch's own page. Manual.                                                                                                |
+| `npm run data:roster-check` | Diff the roster against SNK's character index. **Network, manual, never in the cron.** Ends `roster-check: CURRENT / DRIFT / UNVERIFIED / UNREADABLE`.                       |
+| `npm run data:tournaments`  | Liquipedia's Tier 1–2 winners/runners-up → `data/tournaments.json`. **Network, manual, never in the cron.** `-- --match` is the worklist; `--check` runs inside `typecheck`. |
+| `npm run data:expiries`     | Self-expiring gates. Runs last in the cron and is designed to go red.                                                                                                        |
+| `npm run verify:gates`      | **The positive-control suite.** 27 injected defects, each of which must exit non-zero, plus the clean run.                                                                   |
+| `npm run test:e2e`          | Assertions against the built static output, with a visible empty-corpus mode.                                                                                                |
+| `npm run verify:deployed`   | Post-deploy smoke check — the deploy fingerprint (count + side appearances + content hash).                                                                                  |
+
+## Featured players come from tournament results
+
+A player is **featured** when they won or placed second at a Liquipedia Tier 1 or
+Tier 2 event, or when they rank in the top 2% of the unflagged players by
+appearances (engine v0.17.0; the old rule, "25+ replays", was a count and not
+a judgement). The placements are `data/tournaments.json`, pulled by
+`npm run data:tournaments` — **manual, network, never in the cron** — through
+Liquipedia's MediaWiki API (its HTML pages are bot-walled and off limits by its
+terms; the API wants gzip, a contact User-Agent and one `parse` call per 30 s,
+which is why two tiers take 35 s). The daily parse re-matches the file against
+the registry it just built and stamps `featured: true` + `extra.titles` on every
+hit, so a champion with no replay yet costs nothing today and is featured the
+morning their first video is ingested.
+
+The matcher never guesses between people. A name that is also a fighter
+(`Rock`, `Mai`, `Mary`), has under three alphanumerics (`TY`), or resolves to
+two registry ids is reported in `data/report.md` and
+`npm run data:tournaments -- --match`, and a human closes it in
+`data/tournament-aliases.json` (an id, or `null` to ignore).
+`tsx scripts/tournaments.ts --check` validates both files inside
+`npm run typecheck`.
+
+Liquipedia's content is **CC BY-SA 3.0**: the credit is in the file's `source`
+block and the engine renders it beside every title on the player page.
+Pacing across all eight games is `../sync-tournaments.sh`.
 
 ## Things worth knowing
 

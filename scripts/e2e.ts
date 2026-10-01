@@ -411,22 +411,48 @@ if (EMPTY) {
     // (This used to look for the hex in the page, which only ever matched the
     // inline accents block every page carried; the character's own markup has
     // never spelled the hex out.)
-    check(
-      `/characters/${sample} carries its accent`,
-      html.includes(`var(--accent-${sample}`),
-    );
+    check(`/characters/${sample} carries its accent`, html.includes(`var(--accent-${sample}`));
   } else {
     check(`/characters/${sample} prerendered`, false, 'missing from the build');
   }
 
   const players = JSON.parse(readFileSync(join(ROOT, 'data/players.json'), 'utf8')) as {
     id: string;
+    featured?: boolean;
+    extra?: { titles?: { event: string }[] };
   }[];
   const p = players[0]?.id;
   check(
     'player pages prerendered (they must not 404 on static hosting)',
     !!p && has(`players/${p}/index.html`),
   );
+
+  // ── tournament placements (engine v0.17.0; scripts/tournaments.ts) ────────
+  // A title makes a player featured, and the page that shows it must carry the
+  // Liquipedia credit — CC BY-SA 3.0 is a condition of using the table at all.
+  const titled = players.filter((x) => (x.extra?.titles?.length ?? 0) > 0);
+  if (existsSync(join(ROOT, 'data', 'tournaments.json')) && titled.length) {
+    check(
+      `every tournament-placed player is featured (${titled.length})`,
+      titled.every((x) => x.featured === true),
+      titled
+        .filter((x) => x.featured !== true)
+        .map((x) => x.id)
+        .join(', '),
+    );
+    const t = titled[0]!;
+    if (has(`players/${t.id}/index.html`)) {
+      const html = read(`players/${t.id}/index.html`);
+      check(
+        `/players/${t.id} renders its placements with the Liquipedia credit`,
+        html.includes('data-testid="player-titles"') && html.includes('Liquipedia'),
+      );
+    } else {
+      check(`/players/${t.id} prerendered`, false, 'missing from the build');
+    }
+  } else {
+    skip('tournament placement assertions', 'no data/tournaments.json or nobody titled yet');
+  }
 
   check(
     'summary.json replay count matches the emitted archive',

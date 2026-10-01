@@ -1,6 +1,6 @@
 {
   "totals": {
-    "replays": 4771,
+    "replays": 4772,
     "characters": 31,
     "players": 2179,
     "byPatch": {
@@ -31,12 +31,12 @@
       "3.0.1": 219,
       "3.1.2": 114,
       "3.1.3": 142,
-      "3.2.2": 159
+      "3.2.2": 160
     }
   },
   "characterUsage": {
-    "kim-kaphwan": 88,
-    "blue-mary": 196,
+    "kim-kaphwan": 89,
+    "blue-mary": 197,
     "duck-king": 165,
     "terry-bogard": 597,
     "kain-r-heinlein": 444,
@@ -698,8 +698,8 @@
       "billy-kane": 2
     },
     "3.2.2": {
-      "kim-kaphwan": 88,
-      "blue-mary": 7,
+      "kim-kaphwan": 89,
+      "blue-mary": 8,
       "duck-king": 21,
       "terry-bogard": 17,
       "kain-r-heinlein": 3,
@@ -732,6 +732,14 @@
   "playerCharacters": {
     "123456": {
       "marco-rodrigues": 1
+    },
+    "amaral": {
+      "kim-kaphwan": 2,
+      "kenshiro": 3,
+      "b-jenet": 1
+    },
+    "whip": {
+      "blue-mary": 3
     },
     "cdm-rino": {
       "kim-kaphwan": 1,
@@ -833,11 +841,6 @@
       "b-jenet": 1,
       "terry-bogard": 1,
       "tizoc": 1
-    },
-    "amaral": {
-      "kim-kaphwan": 1,
-      "kenshiro": 3,
-      "b-jenet": 1
     },
     "kang": {
       "mr-karate": 1,
@@ -4335,9 +4338,6 @@
     },
     "oten": {
       "andy-bogard": 2
-    },
-    "whip": {
-      "blue-mary": 2
     },
     "high-level-match-heroedelsur": {
       "wolfgang-krauser": 1

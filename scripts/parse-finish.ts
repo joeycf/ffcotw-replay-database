@@ -18,6 +18,13 @@ import { CHANNELS, stripTheaterSponsor } from './channels';
 import { patchForDate, seasonForDate } from './patches';
 import { dueExpiries, expiryBlock, unreleasedResidueHits } from './expiries';
 import { normalizeText, playerId } from './roster';
+import {
+  applyTournamentTitles,
+  describeOutcome,
+  matchTournaments,
+  readAliases,
+  readTournaments,
+} from './tournaments';
 import type { AliasMatcher } from './roster';
 import type {
   CharacterRecord,
@@ -87,6 +94,9 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
   // ── 1. the INDEX intake ──────────────────────────────────────────────────
   const idx = CHANNELS.find((c) => c.index);
   let theaterStats: Record<string, number> = {};
+  // The theater cursor this run will commit, or null to leave the file alone.
+  // Decided in the merge below; written in step 9, after every guard.
+  let cursorWrite: number | null = null;
   if (idx) {
     const dumpFile = join(RAW, 'replayTheater.json');
     const statsFile = join(RAW, '.replayTheater.stats.json');
@@ -141,10 +151,14 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
         );
       }
       pins.replayTheater = theaterRecords.length;
-      // THE CURSOR IS WRITTEN HERE, not by the fetcher, because every data/
+      // THE CURSOR IS PARSE'S TO WRITE, not the fetcher's, because every data/
       // write is parse's — a fetcher that wrote it would advance the cursor for
       // a pull whose records parse then refused, and the next run would skip
-      // those pages forever. It only ever moves FORWARD: a bounded cursor read
+      // those pages forever. The value is COMPUTED here and WRITTEN in step 9
+      // with everything else, for the same reason: every guard below this line
+      // (collapse, tournaments.json, residue) is a hard stop, and a cursor
+      // already on disk when one of them throws is a cursor advanced past pages
+      // nothing ingested. It only ever moves FORWARD: a bounded cursor read
       // sees a lower highest-id than a full sweep did, and letting that move the
       // committed cursor backwards would re-read pages every morning.
       const highest = Number(theaterStats.highestId ?? 0);
@@ -152,7 +166,7 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
         const prev = Number(
           (await readJsonLocal<{ highestId?: number }>('theater-cursor.json', {})).highestId ?? 0,
         );
-        if (highest > prev) await write('theater-cursor.json', { highestId: highest });
+        if (highest > prev) cursorWrite = highest;
       }
     } else {
       // CARRY. The cron works from a fresh checkout and raw/ is gitignored, so
@@ -285,6 +299,25 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
     }
   }
 
+  // ── 6b. tournament placements → featured + extra.titles ──────────────────
+  // data/tournaments.json is Liquipedia's Tier 1–2 winners and runners-up,
+  // fetched by hand (scripts/tournaments.ts — NETWORK, MANUAL, NEVER IN THE
+  // CRON). The match runs HERE, against the registry this run just built, so a
+  // champion with no replay yet costs nothing today and is featured the morning
+  // their first video is ingested. Names the matcher will not decide on its own
+  // (a fighter's name, under three alphanumerics, two candidates) are reported
+  // for data/tournament-aliases.json, never guessed: a wrong person featured is
+  // worse than a right one missed. `playerId` is the normaliser that minted
+  // every `s.player` above, so a match IS a registry id.
+  const tournaments = matchTournaments(
+    players.values(),
+    readTournaments(),
+    readAliases().aliases,
+    playerId,
+    (h) => matcher.ids(h).length > 0,
+  );
+  const titled = applyTournamentTitles(players, tournaments);
+
   // ── 7. review queue — regenerated, and pending items never ship ──────────
   const publishedIds = new Set(records.map((r) => r.id));
   const pending = queue.filter((q) => !overrides[q.id] && !publishedIds.has(q.id));
@@ -307,6 +340,7 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
   );
   await write('review-queue.json', pending);
   await write('source-pins.json', pins);
+  if (cursorWrite !== null) await write('theater-cursor.json', { highestId: cursorWrite });
 
   const due = dueExpiries();
   const lines: string[] = [];
@@ -339,6 +373,16 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
       return `| ${c.id} | ${p?.raw ?? '—'} | ${p?.marked ?? '—'} | ${p?.parsed ?? '—'} | ${pub} |`;
     }),
     '',
+    // ── tournament placements (Liquipedia, CC BY-SA 3.0) ───────────────────
+    '## Tournament placements — Liquipedia Tier 1–2, CC BY-SA 3.0',
+    '',
+    ...(tournaments.events
+      ? describeOutcome(tournaments, players.size)
+      : [
+          'No data/tournaments.json — run `npm run data:tournaments` (manual, network) to pull ' +
+            "Liquipedia's winner and runner-up tables.",
+          '',
+        ]),
     '## Misses',
     '',
     ...Object.entries(
@@ -362,7 +406,7 @@ export async function writeReportAndData(input: FinishInput): Promise<void> {
   await writeFile(join(DATA, 'report.md'), `${lines.filter((l) => l !== undefined).join('\n')}\n`);
 
   console.log(
-    `✓ ${records.length} records · ${players.size} players · ${pending.length} pending · ` +
+    `✓ ${records.length} records · ${players.size} players · ${titled} titled · ${pending.length} pending · ` +
       `${residueRows.length} residue line(s)`,
   );
   if (due.length) {

@@ -61,7 +61,30 @@
   },
   {
     "id": "abao",
-    "handle": "ABAO"
+    "handle": "ABAO",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Esports World Cup 2026 Last Chance Qualifier",
+          "place": 1,
+          "date": "2026-07-26",
+          "url": "https://liquipedia.net/fighters/Esports_World_Cup/2026/CotW/Last_Chance_Qualifier"
+        },
+        {
+          "event": "Kansai Gaming Party 2026",
+          "place": 1,
+          "date": "2026-07-26",
+          "url": "https://liquipedia.net/fighters/Kansai_Gaming_Party/2026/CotW"
+        },
+        {
+          "event": "SNK Championship Series 2025: Beijing",
+          "place": 2,
+          "date": "2025-06-25",
+          "url": "https://liquipedia.net/fighters/SNK_Championship_Series/2025/Beijing/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "abcfury",
@@ -85,7 +108,24 @@
   },
   {
     "id": "abuomar",
-    "handle": "AbuOmar"
+    "handle": "AbuOmar",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "SNK x Qiddiya Middle East Championship 2026 Finals",
+          "place": 2,
+          "date": "2026-09-26",
+          "url": "https://liquipedia.net/fighters/SNK_x_Qiddiya_Middle_East_Championship/2026"
+        },
+        {
+          "event": "Saudi eLeague Fighting: Season 5 Championship",
+          "place": 1,
+          "date": "2026-05-26",
+          "url": "https://liquipedia.net/fighters/Saudi_eLeague/Season_5/Championship/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "acero",
@@ -205,7 +245,18 @@
   },
   {
     "id": "alex",
-    "handle": "Alex"
+    "handle": "Alex",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Versus One",
+          "place": 2,
+          "date": "2026-05-26",
+          "url": "https://liquipedia.net/fighters/Versus_One/2026"
+        }
+      ]
+    }
   },
   {
     "id": "alex-5mith",
@@ -241,7 +292,18 @@
   },
   {
     "id": "alfinete",
-    "handle": "Alfinete"
+    "handle": "Alfinete",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "SWC 2025 Online Round: Brazil",
+          "place": 1,
+          "date": "2025-09-25",
+          "url": "https://liquipedia.net/fighters/SNK_World_Championship/2025/Online_Round/Brazil"
+        }
+      ]
+    }
   },
   {
     "id": "alias",
@@ -249,7 +311,18 @@
   },
   {
     "id": "alioune",
-    "handle": "Alioune"
+    "handle": "Alioune",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "SWC 2025 Online Round: Europe #1",
+          "place": 2,
+          "date": "2025-08-25",
+          "url": "https://liquipedia.net/fighters/SNK_World_Championship/2025/Online_Round/Europe/1"
+        }
+      ]
+    }
   },
   {
     "id": "aliounesensei",
@@ -433,7 +506,18 @@
   },
   {
     "id": "arusu",
-    "handle": "Arusu"
+    "handle": "Arusu",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "VSFighting XIV",
+          "place": 2,
+          "date": "2026-07-26",
+          "url": "https://liquipedia.net/fighters/VSFighting/2026/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "arusu-grant",
@@ -601,7 +685,24 @@
   },
   {
     "id": "basher",
-    "handle": "Basher"
+    "handle": "Basher",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "The Fight 2026",
+          "place": 1,
+          "date": "2026-07-26",
+          "url": "https://liquipedia.net/fighters/The_Fight/2026/CotW"
+        },
+        {
+          "event": "Comitê Arena 2025",
+          "place": 2,
+          "date": "2025-08-25",
+          "url": "https://liquipedia.net/fighters/Comit%C3%AA_Arena/2025/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "basicinstinct",
@@ -869,7 +970,18 @@
   },
   {
     "id": "boros",
-    "handle": "BOROS"
+    "handle": "BOROS",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "SWC 2025 Online Round: Latin America North",
+          "place": 2,
+          "date": "2025-08-25",
+          "url": "https://liquipedia.net/fighters/SNK_World_Championship/2025/Online_Round/Latin_America_North"
+        }
+      ]
+    }
   },
   {
     "id": "boroshin",
@@ -1289,7 +1401,18 @@
   },
   {
     "id": "cientifikof",
-    "handle": "CientifiKOF"
+    "handle": "CientifiKOF",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "SWC 2025 Online Round: North America #2",
+          "place": 1,
+          "date": "2025-08-25",
+          "url": "https://liquipedia.net/fighters/SNK_World_Championship/2025/Online_Round/North_America/2"
+        }
+      ]
+    }
   },
   {
     "id": "cirder",
@@ -1533,7 +1656,24 @@
   },
   {
     "id": "dai",
-    "handle": "DAI"
+    "handle": "DAI",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Hessen Crash XXIII",
+          "place": 2,
+          "date": "2026-06-26",
+          "url": "https://liquipedia.net/fighters/Hessen_Crash/23/CotW"
+        },
+        {
+          "event": "SWC 2025 Online Round: Europe #1",
+          "place": 1,
+          "date": "2025-08-25",
+          "url": "https://liquipedia.net/fighters/SNK_World_Championship/2025/Online_Round/Europe/1"
+        }
+      ]
+    }
   },
   {
     "id": "daikusa",
@@ -1605,7 +1745,42 @@
   },
   {
     "id": "darkangel",
-    "handle": "DarkAngel"
+    "handle": "DarkAngel",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Esports World Cup 2026",
+          "place": 1,
+          "date": "2026-07-26",
+          "url": "https://liquipedia.net/fighters/Esports_World_Cup/2026/CotW"
+        },
+        {
+          "event": "BIG BANG 7",
+          "place": 1,
+          "date": "2026-06-26",
+          "url": "https://liquipedia.net/fighters/BIG_BANG/7/CotW"
+        },
+        {
+          "event": "GEMA LIVE",
+          "place": 1,
+          "date": "2026-03-26",
+          "url": "https://liquipedia.net/fighters/GEMA_LIVE/2026/CotW"
+        },
+        {
+          "event": "DreamHack Birmingham 2026",
+          "place": 2,
+          "date": "2026-03-26",
+          "url": "https://liquipedia.net/fighters/DreamHack/2026/Birmingham/CotW"
+        },
+        {
+          "event": "Headstomper 2025",
+          "place": 1,
+          "date": "2025-06-25",
+          "url": "https://liquipedia.net/fighters/Headstomper/2025/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "darkangelmx",
@@ -1761,7 +1936,18 @@
   },
   {
     "id": "diaphone",
-    "handle": "Diaphone"
+    "handle": "Diaphone",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "SWC 2025 Online Round: North America #1",
+          "place": 1,
+          "date": "2025-08-25",
+          "url": "https://liquipedia.net/fighters/SNK_World_Championship/2025/Online_Round/North_America/1"
+        }
+      ]
+    }
   },
   {
     "id": "diaz",
@@ -1773,7 +1959,48 @@
   },
   {
     "id": "didimokof",
-    "handle": "DidimoKOF"
+    "handle": "DidimoKOF",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "TRETA Championship 2026",
+          "place": 2,
+          "date": "2026-09-26",
+          "url": "https://liquipedia.net/fighters/TRETA/2026/CotW"
+        },
+        {
+          "event": "Hype Night III",
+          "place": 1,
+          "date": "2026-05-26",
+          "url": "https://liquipedia.net/fighters/Hype_Night/3/CotW"
+        },
+        {
+          "event": "Fight For Glory 2026",
+          "place": 2,
+          "date": "2026-05-26",
+          "url": "https://liquipedia.net/fighters/Fight_For_Glory/2026/CotW"
+        },
+        {
+          "event": "Texas Showdown 2026",
+          "place": 2,
+          "date": "2026-03-26",
+          "url": "https://liquipedia.net/fighters/Texas_Showdown/2026/CotW"
+        },
+        {
+          "event": "Battle Coliseum 2025",
+          "place": 1,
+          "date": "2025-11-25",
+          "url": "https://liquipedia.net/fighters/Battle_Coliseum/2025/CotW"
+        },
+        {
+          "event": "Comitê Arena 2025",
+          "place": 1,
+          "date": "2025-08-25",
+          "url": "https://liquipedia.net/fighters/Comit%C3%AA_Arena/2025/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "diegochris",
@@ -2045,7 +2272,66 @@
   },
   {
     "id": "el-maza",
-    "handle": "EL MAZA"
+    "handle": "EL MAZA",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "S Factor X3",
+          "place": 2,
+          "date": "2026-07-26",
+          "url": "https://liquipedia.net/fighters/S_Factor/13/CotW"
+        },
+        {
+          "event": "CHAIN SHIFT 2026",
+          "place": 1,
+          "date": "2026-06-26",
+          "url": "https://liquipedia.net/fighters/Chain_Shift/2026/CotW"
+        },
+        {
+          "event": "Fight For Glory 2026",
+          "place": 1,
+          "date": "2026-05-26",
+          "url": "https://liquipedia.net/fighters/Fight_For_Glory/2026/CotW"
+        },
+        {
+          "event": "DreamHack Atlanta 2026",
+          "place": 2,
+          "date": "2026-05-26",
+          "url": "https://liquipedia.net/fighters/DreamHack/2026/Atlanta/CotW"
+        },
+        {
+          "event": "LVL UP EXPO 2026",
+          "place": 1,
+          "date": "2026-04-26",
+          "url": "https://liquipedia.net/fighters/LVL_UP_EXPO/2026/CotW"
+        },
+        {
+          "event": "Vegas Climax VI",
+          "place": 1,
+          "date": "2026-04-26",
+          "url": "https://liquipedia.net/fighters/Vegas_Climax/2026/CotW"
+        },
+        {
+          "event": "GEMA LIVE",
+          "place": 2,
+          "date": "2026-03-26",
+          "url": "https://liquipedia.net/fighters/GEMA_LIVE/2026/CotW"
+        },
+        {
+          "event": "Astral Finish 2025",
+          "place": 2,
+          "date": "2025-11-25",
+          "url": "https://liquipedia.net/fighters/Astral_Finish/2025/CotW"
+        },
+        {
+          "event": "S Factor 12",
+          "place": 1,
+          "date": "2025-07-25",
+          "url": "https://liquipedia.net/fighters/S_Factor/12/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "el-papa-stj",
@@ -2329,7 +2615,36 @@
   },
   {
     "id": "fenritti",
-    "handle": "Fenritti"
+    "handle": "Fenritti",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Kansai Gaming Party 2026",
+          "place": 2,
+          "date": "2026-07-26",
+          "url": "https://liquipedia.net/fighters/Kansai_Gaming_Party/2026/CotW"
+        },
+        {
+          "event": "DreamHack Atlanta 2026",
+          "place": 1,
+          "date": "2026-05-26",
+          "url": "https://liquipedia.net/fighters/DreamHack/2026/Atlanta/CotW"
+        },
+        {
+          "event": "Brussels Challenge Major Edition 2025",
+          "place": 1,
+          "date": "2025-05-25",
+          "url": "https://liquipedia.net/fighters/Brussels_Challenge/2025/Major_Edition/CotW"
+        },
+        {
+          "event": "SNK Official Tournament in EVO Japan 2025",
+          "place": 2,
+          "date": "2025-05-25",
+          "url": "https://liquipedia.net/fighters/Evolution_Championship_Series/2025/Japan/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "fer",
@@ -2481,7 +2796,24 @@
   },
   {
     "id": "frezzer",
-    "handle": "Frezzer"
+    "handle": "Frezzer",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "SNK x Qiddiya Middle East Championship 2026 Finals",
+          "place": 1,
+          "date": "2026-09-26",
+          "url": "https://liquipedia.net/fighters/SNK_x_Qiddiya_Middle_East_Championship/2026"
+        },
+        {
+          "event": "SWC 2025 Online Round: MENA",
+          "place": 1,
+          "date": "2025-08-25",
+          "url": "https://liquipedia.net/fighters/SNK_World_Championship/2025/Online_Round/MENA"
+        }
+      ]
+    }
   },
   {
     "id": "frieren",
@@ -2753,7 +3085,66 @@
   },
   {
     "id": "go1",
-    "handle": "GO1"
+    "handle": "GO1",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Combo Breaker 2026",
+          "place": 1,
+          "date": "2026-05-26",
+          "url": "https://liquipedia.net/fighters/Combo_Breaker/2026/CotW"
+        },
+        {
+          "event": "LVL UP EXPO 2026",
+          "place": 2,
+          "date": "2026-04-26",
+          "url": "https://liquipedia.net/fighters/LVL_UP_EXPO/2026/CotW"
+        },
+        {
+          "event": "GENESIS X3",
+          "place": 1,
+          "date": "2026-02-26",
+          "url": "https://liquipedia.net/fighters/GENESIS/X3/CotW"
+        },
+        {
+          "event": "Frosty Faustings XVIII",
+          "place": 1,
+          "date": "2026-01-26",
+          "url": "https://liquipedia.net/fighters/Frosty_Faustings/2026/CotW"
+        },
+        {
+          "event": "SNK World Championship 2025 Finals",
+          "place": 2,
+          "date": "2025-11-25",
+          "url": "https://liquipedia.net/fighters/SNK_World_Championship/2025/Finals/CotW"
+        },
+        {
+          "event": "Evolution Championship Series 2025",
+          "place": 1,
+          "date": "2025-08-25",
+          "url": "https://liquipedia.net/fighters/Evolution_Championship_Series/2025/CotW"
+        },
+        {
+          "event": "Esports World Cup 2025",
+          "place": 1,
+          "date": "2025-07-25",
+          "url": "https://liquipedia.net/fighters/Esports_World_Cup/2025/CotW"
+        },
+        {
+          "event": "Combo Breaker 2025",
+          "place": 1,
+          "date": "2025-05-25",
+          "url": "https://liquipedia.net/fighters/Combo_Breaker/2025/CotW"
+        },
+        {
+          "event": "Brussels Challenge Major Edition 2025",
+          "place": 2,
+          "date": "2025-05-25",
+          "url": "https://liquipedia.net/fighters/Brussels_Challenge/2025/Major_Edition/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "gob",
@@ -3505,7 +3896,18 @@
   },
   {
     "id": "iceskyrain",
-    "handle": "IceSkyRain"
+    "handle": "IceSkyRain",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "SNK Championship Series 2026 Last Chance Qualifier",
+          "place": 2,
+          "date": "2026-09-26",
+          "url": "https://liquipedia.net/fighters/SNK_Championship_Series/2026/Finals/CotW/Last_Chance_Qualifier"
+        }
+      ]
+    }
   },
   {
     "id": "ichiru",
@@ -3693,7 +4095,18 @@
   },
   {
     "id": "javier-yagami",
-    "handle": "JAVIER YAGAMI"
+    "handle": "JAVIER YAGAMI",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "The Fight 2026",
+          "place": 2,
+          "date": "2026-07-26",
+          "url": "https://liquipedia.net/fighters/The_Fight/2026/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "javo-clean",
@@ -3981,7 +4394,18 @@
   },
   {
     "id": "kaiser666",
-    "handle": "KAISER666"
+    "handle": "KAISER666",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "SWC 2025 Online Round: Latin America South",
+          "place": 1,
+          "date": "2025-09-25",
+          "url": "https://liquipedia.net/fighters/SNK_World_Championship/2025/Online_Round/Latin_America_South"
+        }
+      ]
+    }
   },
   {
     "id": "kajurin",
@@ -4233,7 +4657,36 @@
   },
   {
     "id": "kindevu",
-    "handle": "KindEVU"
+    "handle": "KindEVU",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "The MIXUP 2026",
+          "place": 2,
+          "date": "2026-06-26",
+          "url": "https://liquipedia.net/fighters/The_MIXUP/2026/CotW"
+        },
+        {
+          "event": "Evolution Championship Series: France 2025",
+          "place": 2,
+          "date": "2025-10-25",
+          "url": "https://liquipedia.net/fighters/Evolution_Championship_Series/2025/France/CotW"
+        },
+        {
+          "event": "Saudi eLeague Fighting: Season 4 Major",
+          "place": 2,
+          "date": "2025-09-25",
+          "url": "https://liquipedia.net/fighters/Saudi_eLeague/Season_4/Major/CotW"
+        },
+        {
+          "event": "Ultimate Fighting Arena 2025",
+          "place": 2,
+          "date": "2025-09-25",
+          "url": "https://liquipedia.net/fighters/Ultimate_Fighting_Arena/2025/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "king",
@@ -4369,7 +4822,36 @@
   },
   {
     "id": "kojikog",
-    "handle": "KojiKOG"
+    "handle": "KojiKOG",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Battle Arena Melbourne 16",
+          "place": 1,
+          "date": "2026-07-26",
+          "url": "https://liquipedia.net/fighters/Battle_Arena_Melbourne/16/CotW"
+        },
+        {
+          "event": "Brussels Challenge Major Edition 2026",
+          "place": 1,
+          "date": "2026-05-26",
+          "url": "https://liquipedia.net/fighters/Brussels_Challenge/2026/Major_Edition/CotW"
+        },
+        {
+          "event": "SNK Championship Series 2026: Guangzhou",
+          "place": 2,
+          "date": "2026-05-26",
+          "url": "https://liquipedia.net/fighters/SNK_Championship_Series/2026/Guangzhou/CotW"
+        },
+        {
+          "event": "Vegas Climax V",
+          "place": 2,
+          "date": "2025-10-25",
+          "url": "https://liquipedia.net/fighters/Vegas_Climax/2025/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "koko",
@@ -4457,7 +4939,30 @@
   },
   {
     "id": "kula",
-    "handle": "Kula"
+    "handle": "Kula",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "TRETA Championship 2026",
+          "place": 1,
+          "date": "2026-09-26",
+          "url": "https://liquipedia.net/fighters/TRETA/2026/CotW"
+        },
+        {
+          "event": "Komitê Arena 2026",
+          "place": 1,
+          "date": "2026-08-26",
+          "url": "https://liquipedia.net/fighters/Komit%C3%AA_Arena/2026/CotW"
+        },
+        {
+          "event": "Blink Respawn 2026",
+          "place": 1,
+          "date": "2026-06-26",
+          "url": "https://liquipedia.net/fighters/Blink_Respawn/2026/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "kumaisyoui",
@@ -4541,7 +5046,36 @@
   },
   {
     "id": "laggia",
-    "handle": "LAGGIA"
+    "handle": "LAGGIA",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Evolution Championship Series: Japan 2026",
+          "place": 2,
+          "date": "2026-05-26",
+          "url": "https://liquipedia.net/fighters/Evolution_Championship_Series/2026/Japan/CotW"
+        },
+        {
+          "event": "SNK World Championship 2025 Finals",
+          "place": 1,
+          "date": "2025-11-25",
+          "url": "https://liquipedia.net/fighters/SNK_World_Championship/2025/Finals/CotW"
+        },
+        {
+          "event": "SNK Championship Series 2025: Huzhou Villa Cup",
+          "place": 1,
+          "date": "2025-09-25",
+          "url": "https://liquipedia.net/fighters/SNK_Championship_Series/2025/Huzhou_Villa_Cup"
+        },
+        {
+          "event": "SWC 2025 Online Round: East Asia #1",
+          "place": 1,
+          "date": "2025-08-25",
+          "url": "https://liquipedia.net/fighters/SNK_World_Championship/2025/Online_Round/East_Asia/1"
+        }
+      ]
+    }
   },
   {
     "id": "lagranbestia",
@@ -4613,7 +5147,18 @@
   },
   {
     "id": "leffen",
-    "handle": "Leffen"
+    "handle": "Leffen",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Headstomper 2025",
+          "place": 2,
+          "date": "2025-06-25",
+          "url": "https://liquipedia.net/fighters/Headstomper/2025/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "legendario",
@@ -4753,7 +5298,30 @@
   },
   {
     "id": "lokof",
-    "handle": "Lokof"
+    "handle": "Lokof",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "MAX MODE 2026",
+          "place": 2,
+          "date": "2026-03-26",
+          "url": "https://liquipedia.net/fighters/MAX_MODE/2026/CotW"
+        },
+        {
+          "event": "Frosty Faustings XVIII",
+          "place": 2,
+          "date": "2026-01-26",
+          "url": "https://liquipedia.net/fighters/Frosty_Faustings/2026/CotW"
+        },
+        {
+          "event": "SWC 2025 Online Round: Mexico & Central America",
+          "place": 1,
+          "date": "2025-09-25",
+          "url": "https://liquipedia.net/fighters/SNK_World_Championship/2025/Online_Round/Central_America"
+        }
+      ]
+    }
   },
   {
     "id": "lord-jinzo",
@@ -5301,7 +5869,18 @@
   },
   {
     "id": "mok",
-    "handle": "Mok"
+    "handle": "Mok",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "SNK Championship Series 2025: Beijing",
+          "place": 1,
+          "date": "2025-06-25",
+          "url": "https://liquipedia.net/fighters/SNK_Championship_Series/2025/Beijing/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "moke",
@@ -5333,7 +5912,18 @@
   },
   {
     "id": "monib",
-    "handle": "MONIB"
+    "handle": "MONIB",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "SWC 2025 Online Round: North America #2",
+          "place": 2,
+          "date": "2025-08-25",
+          "url": "https://liquipedia.net/fighters/SNK_World_Championship/2025/Online_Round/North_America/2"
+        }
+      ]
+    }
   },
   {
     "id": "monokof",
@@ -5657,7 +6247,24 @@
   },
   {
     "id": "neku",
-    "handle": "Neku"
+    "handle": "Neku",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Just Frame 2026",
+          "place": 2,
+          "date": "2026-09-26",
+          "url": "https://liquipedia.net/fighters/Just_Frame/2026/CotW"
+        },
+        {
+          "event": "Astral Finish 2025",
+          "place": 1,
+          "date": "2025-11-25",
+          "url": "https://liquipedia.net/fighters/Astral_Finish/2025/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "neloalchemist",
@@ -5665,7 +6272,42 @@
   },
   {
     "id": "nemo",
-    "handle": "Nemo"
+    "handle": "Nemo",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Ultimate Fighting Arena 2026",
+          "place": 1,
+          "date": "2026-09-26",
+          "url": "https://liquipedia.net/fighters/Ultimate_Fighting_Arena/2026/CotW"
+        },
+        {
+          "event": "SNK Championship Series 2026: Shanghai",
+          "place": 2,
+          "date": "2026-08-26",
+          "url": "https://liquipedia.net/fighters/SNK_Championship_Series/2026/Shanghai/CotW"
+        },
+        {
+          "event": "Combo Breaker 2026",
+          "place": 2,
+          "date": "2026-05-26",
+          "url": "https://liquipedia.net/fighters/Combo_Breaker/2026/CotW"
+        },
+        {
+          "event": "GENESIS X3",
+          "place": 2,
+          "date": "2026-02-26",
+          "url": "https://liquipedia.net/fighters/GENESIS/X3/CotW"
+        },
+        {
+          "event": "CEO 2025",
+          "place": 2,
+          "date": "2025-06-25",
+          "url": "https://liquipedia.net/fighters/Community_Effort_Orlando/2025/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "nemoto",
@@ -6021,7 +6663,24 @@
   },
   {
     "id": "pangma",
-    "handle": "PANGMA"
+    "handle": "PANGMA",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "VSFighting XIV",
+          "place": 1,
+          "date": "2026-07-26",
+          "url": "https://liquipedia.net/fighters/VSFighting/2026/CotW"
+        },
+        {
+          "event": "SNK Championship Series 2025: Shanghai",
+          "place": 1,
+          "date": "2025-08-25",
+          "url": "https://liquipedia.net/fighters/SNK_Championship_Series/2025/Shanghai/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "panpina",
@@ -6193,7 +6852,18 @@
   },
   {
     "id": "pida",
-    "handle": "Pida"
+    "handle": "Pida",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "SWC 2025 Online Round: Europe #2",
+          "place": 2,
+          "date": "2025-09-25",
+          "url": "https://liquipedia.net/fighters/SNK_World_Championship/2025/Online_Round/Europe/2"
+        }
+      ]
+    }
   },
   {
     "id": "pinyan",
@@ -6261,7 +6931,42 @@
   },
   {
     "id": "poongko",
-    "handle": "PoongKo"
+    "handle": "PoongKo",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "GTW 2026 New Year Championship",
+          "place": 2,
+          "date": "2026-02-26",
+          "url": "https://liquipedia.net/fighters/GTW/2026/New_Year_Championship/CotW"
+        },
+        {
+          "event": "Vegas Climax V",
+          "place": 1,
+          "date": "2025-10-25",
+          "url": "https://liquipedia.net/fighters/Vegas_Climax/2025/CotW"
+        },
+        {
+          "event": "SNK Championship Series 2025 Finals",
+          "place": 2,
+          "date": "2025-10-25",
+          "url": "https://liquipedia.net/fighters/SNK_Championship_Series/2025/Finals/CotW"
+        },
+        {
+          "event": "SNK Championship Series 2025 Last Chance Qualifier",
+          "place": 2,
+          "date": "2025-09-25",
+          "url": "https://liquipedia.net/fighters/SNK_Championship_Series/2025/Finals/CotW/Last_Chance_Qualifier"
+        },
+        {
+          "event": "Battle Arena Melbourne 15",
+          "place": 2,
+          "date": "2025-06-25",
+          "url": "https://liquipedia.net/fighters/Battle_Arena_Melbourne/15/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "poonkgo",
@@ -6561,7 +7266,30 @@
   },
   {
     "id": "reynald",
-    "handle": "Reynald"
+    "handle": "Reynald",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "CHAIN SHIFT 2026",
+          "place": 2,
+          "date": "2026-06-26",
+          "url": "https://liquipedia.net/fighters/Chain_Shift/2026/CotW"
+        },
+        {
+          "event": "S Factor 12",
+          "place": 2,
+          "date": "2025-07-25",
+          "url": "https://liquipedia.net/fighters/S_Factor/12/CotW"
+        },
+        {
+          "event": "Combo Breaker 2025",
+          "place": 2,
+          "date": "2025-05-25",
+          "url": "https://liquipedia.net/fighters/Combo_Breaker/2025/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "rf",
@@ -6585,7 +7313,18 @@
   },
   {
     "id": "rigosam",
-    "handle": "Rigosam"
+    "handle": "Rigosam",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Battle Coliseum 2025",
+          "place": 2,
+          "date": "2025-11-25",
+          "url": "https://liquipedia.net/fighters/Battle_Coliseum/2025/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "rikir",
@@ -6705,7 +7444,18 @@
   },
   {
     "id": "rondun",
-    "handle": "RonDun"
+    "handle": "RonDun",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "SWC 2025 Online Round: North America #3",
+          "place": 2,
+          "date": "2025-09-25",
+          "url": "https://liquipedia.net/fighters/SNK_World_Championship/2025/Online_Round/North_America/3"
+        }
+      ]
+    }
   },
   {
     "id": "ronsvain",
@@ -6921,7 +7671,42 @@
   },
   {
     "id": "score",
-    "handle": "Score"
+    "handle": "Score",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Casablanca Fighting Championship 2026",
+          "place": 2,
+          "date": "2026-05-26",
+          "url": "https://liquipedia.net/fighters/Casablanca_Fighting_Championship/2026/CotW"
+        },
+        {
+          "event": "MAX MODE 2026",
+          "place": 1,
+          "date": "2026-03-26",
+          "url": "https://liquipedia.net/fighters/MAX_MODE/2026/CotW"
+        },
+        {
+          "event": "SWC 2025 Online Round: East Asia #2",
+          "place": 1,
+          "date": "2025-09-25",
+          "url": "https://liquipedia.net/fighters/SNK_World_Championship/2025/Online_Round/East_Asia/2"
+        },
+        {
+          "event": "SNK Championship Series 2025: Shanghai",
+          "place": 2,
+          "date": "2025-08-25",
+          "url": "https://liquipedia.net/fighters/SNK_Championship_Series/2025/Shanghai/CotW"
+        },
+        {
+          "event": "SWC 2025 Online Round: East Asia #1",
+          "place": 2,
+          "date": "2025-08-25",
+          "url": "https://liquipedia.net/fighters/SNK_World_Championship/2025/Online_Round/East_Asia/1"
+        }
+      ]
+    }
   },
   {
     "id": "scott-kaye",
@@ -6965,7 +7750,18 @@
   },
   {
     "id": "seis-mx",
-    "handle": "SEIS MX"
+    "handle": "SEIS MX",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "S Factor X3",
+          "place": 1,
+          "date": "2026-07-26",
+          "url": "https://liquipedia.net/fighters/S_Factor/13/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "seis6",
@@ -7025,7 +7821,24 @@
   },
   {
     "id": "shadow-x",
-    "handle": "Shadow X"
+    "handle": "Shadow X",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Versus One",
+          "place": 1,
+          "date": "2026-05-26",
+          "url": "https://liquipedia.net/fighters/Versus_One/2026"
+        },
+        {
+          "event": "Saudi eLeague Fighting: Season 5 Major 2",
+          "place": 2,
+          "date": "2026-04-26",
+          "url": "https://liquipedia.net/fighters/Saudi_eLeague/Season_5/Major/2/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "shadowar",
@@ -7045,7 +7858,24 @@
   },
   {
     "id": "sharkurien",
-    "handle": "SharkUrien"
+    "handle": "SharkUrien",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Komitê Arena 2026",
+          "place": 2,
+          "date": "2026-08-26",
+          "url": "https://liquipedia.net/fighters/Komit%C3%AA_Arena/2026/CotW"
+        },
+        {
+          "event": "RAGNAROK 2026",
+          "place": 2,
+          "date": "2026-08-26",
+          "url": "https://liquipedia.net/fighters/Ragnarok/2026/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "sherlock",
@@ -7313,7 +8143,18 @@
   },
   {
     "id": "sosicknashfan",
-    "handle": "SosickNASHFAN"
+    "handle": "SosickNASHFAN",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "SWC 2025 Online Round: North America #3",
+          "place": 1,
+          "date": "2025-09-25",
+          "url": "https://liquipedia.net/fighters/SNK_World_Championship/2025/Online_Round/North_America/3"
+        }
+      ]
+    }
   },
   {
     "id": "sota",
@@ -7557,7 +8398,24 @@
   },
   {
     "id": "tamago",
-    "handle": "Tamago"
+    "handle": "Tamago",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "SNK World Championship 2025 Finals Last Chance Qualifier",
+          "place": 1,
+          "date": "2025-10-25",
+          "url": "https://liquipedia.net/fighters/SNK_World_Championship/2025/Finals/CotW/Last_Chance_Qualifier"
+        },
+        {
+          "event": "SWC 2025 Online Round: Mexico & Central America",
+          "place": 2,
+          "date": "2025-09-25",
+          "url": "https://liquipedia.net/fighters/SNK_World_Championship/2025/Online_Round/Central_America"
+        }
+      ]
+    }
   },
   {
     "id": "tamai",
@@ -7705,7 +8563,30 @@
   },
   {
     "id": "thegio",
-    "handle": "TheGio"
+    "handle": "TheGio",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Brussels Challenge Major Edition 2026",
+          "place": 2,
+          "date": "2026-05-26",
+          "url": "https://liquipedia.net/fighters/Brussels_Challenge/2026/Major_Edition/CotW"
+        },
+        {
+          "event": "Hype Night III",
+          "place": 2,
+          "date": "2026-05-26",
+          "url": "https://liquipedia.net/fighters/Hype_Night/3/CotW"
+        },
+        {
+          "event": "City of the Cream LIVE",
+          "place": 1,
+          "date": "2025-06-25",
+          "url": "https://liquipedia.net/fighters/City_of_the_Cream/2025/Live"
+        }
+      ]
+    }
   },
   {
     "id": "thelasthero97",
@@ -8405,7 +9286,72 @@
   },
   {
     "id": "xiaohai",
-    "handle": "Xiaohai"
+    "handle": "Xiaohai",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "SNK Championship Series 2026 Last Chance Qualifier",
+          "place": 1,
+          "date": "2026-09-26",
+          "url": "https://liquipedia.net/fighters/SNK_Championship_Series/2026/Finals/CotW/Last_Chance_Qualifier"
+        },
+        {
+          "event": "CEO 2026",
+          "place": 1,
+          "date": "2026-08-26",
+          "url": "https://liquipedia.net/fighters/Community_Effort_Orlando/2026/CotW"
+        },
+        {
+          "event": "Evolution Championship Series 2026",
+          "place": 1,
+          "date": "2026-06-26",
+          "url": "https://liquipedia.net/fighters/Evolution_Championship_Series/2026/CotW"
+        },
+        {
+          "event": "Evolution Championship Series: Japan 2026",
+          "place": 1,
+          "date": "2026-05-26",
+          "url": "https://liquipedia.net/fighters/Evolution_Championship_Series/2026/Japan/CotW"
+        },
+        {
+          "event": "Evolution Championship Series: France 2025",
+          "place": 1,
+          "date": "2025-10-25",
+          "url": "https://liquipedia.net/fighters/Evolution_Championship_Series/2025/France/CotW"
+        },
+        {
+          "event": "SNK Championship Series 2025 Finals",
+          "place": 1,
+          "date": "2025-10-25",
+          "url": "https://liquipedia.net/fighters/SNK_Championship_Series/2025/Finals/CotW"
+        },
+        {
+          "event": "SNK Championship Series 2025 Last Chance Qualifier",
+          "place": 1,
+          "date": "2025-09-25",
+          "url": "https://liquipedia.net/fighters/SNK_Championship_Series/2025/Finals/CotW/Last_Chance_Qualifier"
+        },
+        {
+          "event": "Esports World Cup 2025",
+          "place": 2,
+          "date": "2025-07-25",
+          "url": "https://liquipedia.net/fighters/Esports_World_Cup/2025/CotW"
+        },
+        {
+          "event": "CEO 2025",
+          "place": 1,
+          "date": "2025-06-25",
+          "url": "https://liquipedia.net/fighters/Community_Effort_Orlando/2025/CotW"
+        },
+        {
+          "event": "SNK Official Tournament in EVO Japan 2025",
+          "place": 1,
+          "date": "2025-05-25",
+          "url": "https://liquipedia.net/fighters/Evolution_Championship_Series/2025/Japan/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "xiaohu",
@@ -8453,7 +9399,18 @@
   },
   {
     "id": "xyzzy",
-    "handle": "Xyzzy"
+    "handle": "Xyzzy",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Hessen Crash XXII",
+          "place": 1,
+          "date": "2025-06-25",
+          "url": "https://liquipedia.net/fighters/Hessen_Crash/22/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "yagami",
@@ -8693,7 +9650,36 @@
   },
   {
     "id": "zjz",
-    "handle": "ZJZ"
+    "handle": "ZJZ",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Vegas Climax VI",
+          "place": 2,
+          "date": "2026-04-26",
+          "url": "https://liquipedia.net/fighters/Vegas_Climax/2026/CotW"
+        },
+        {
+          "event": "DreamHack Birmingham 2026",
+          "place": 1,
+          "date": "2026-03-26",
+          "url": "https://liquipedia.net/fighters/DreamHack/2026/Birmingham/CotW"
+        },
+        {
+          "event": "BeePro Cup 2025",
+          "place": 2,
+          "date": "2025-11-25",
+          "url": "https://liquipedia.net/fighters/BeePro_Cup/2025/CotW"
+        },
+        {
+          "event": "Battle Arena Melbourne 15",
+          "place": 1,
+          "date": "2025-06-25",
+          "url": "https://liquipedia.net/fighters/Battle_Arena_Melbourne/15/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "zook",
