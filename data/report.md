@@ -1,33 +1,33 @@
 # CotW pipeline report
 
-- **4759** published records · **2175** players · **31** fighters
-- **650** pending review item(s) — absent from the site, never guessed
+- **4771** published records · **2179** players · **31** fighters
+- **651** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
 
 ## Per intake
 
 | intake | raw uploads | CotW-marked | parsed | published |
 | --- | ---: | ---: | ---: | ---: |
-| fatalFuryReplays | 6566 | 1297 | 1293 | 1293 |
-| wolfFgc | 1887 | 1233 | 1205 | 1205 |
-| svcHighlights | 732 | 681 | 670 | 670 |
-| ffCotwReplays | 733 | 732 | 636 | 636 |
-| bestOfSnk | 471 | 239 | 234 | 234 |
+| fatalFuryReplays | 6531 | 1302 | 1298 | 1298 |
+| wolfFgc | 1893 | 1239 | 1211 | 1211 |
+| svcHighlights | 733 | 682 | 670 | 670 |
+| ffCotwReplays | 734 | 733 | 636 | 636 |
+| bestOfSnk | 473 | 240 | 234 | 234 |
 | cotwReplays | 151 | 151 | 129 | 129 |
-| nomiiAegis | 351 | 327 | 142 | 142 |
-| bestOfFgc | 1852 | 323 | 313 | 313 |
+| nomiiAegis | 352 | 328 | 143 | 143 |
+| bestOfFgc | 1854 | 324 | 313 | 313 |
 | dildilFatalFury | 2497 | 1755 | 9 | 9 |
-| evoEvents | 2774 | 97 | 0 | 0 |
+| evoEvents | 2775 | 97 | 0 | 0 |
 | replayTheater | — | — | — | 128 |
 
 ## Misses
 
-- `no-marker` — 11179
-- `no-char` — 649
+- `no-marker` — 11142
+- `no-char` — 650
 - `vs-count` — 590
 - `no-vs` — 495
 - `too-short` — 253
-- `no-handle` — 186
+- `no-handle` — 189
 - `before-floor` — 30
 - `slot-ambiguous` — 1
 
@@ -76,8 +76,8 @@ line with its literal text, instead of vanishing into a silently shorter side.
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES CO`
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES COUNTER HIT`
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES preencha C`
-- … 907 more
+- … 911 more
 
 > Replay Theater: 149 dumped, 148 already known here, 1 candidates, 1 rebuilt, 127 carried (add-only), 128 total.
 
-_Generated 2026-09-30T14:59:34.960Z_
+_Generated 2026-10-01T15:34:59.417Z_
