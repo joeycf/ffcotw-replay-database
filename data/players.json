@@ -276,7 +276,7 @@
   },
   {
     "id": "alexein",
-    "handle": "ALEXEIN"
+    "handle": "Alexein"
   },
   {
     "id": "alexkidd",
@@ -2664,7 +2664,7 @@
   },
   {
     "id": "ferno",
-    "handle": "ferno"
+    "handle": "Ferno"
   },
   {
     "id": "fever",
@@ -3409,6 +3409,21 @@
   {
     "id": "hayuki",
     "handle": "HAYUKI"
+  },
+  {
+    "id": "hazz",
+    "handle": "Hazz",
+    "featured": true,
+    "extra": {
+      "titles": [
+        {
+          "event": "Takedown 2026",
+          "place": 2,
+          "date": "2026-09-26",
+          "url": "https://liquipedia.net/fighters/Takedown/2026/CotW"
+        }
+      ]
+    }
   },
   {
     "id": "hb98",
@@ -4979,6 +4994,10 @@
   {
     "id": "kuno",
     "handle": "️ KUNO"
+  },
+  {
+    "id": "kuraudokin",
+    "handle": "KURAUDOKIN"
   },
   {
     "id": "kurigohan",
@@ -7555,7 +7574,7 @@
   },
   {
     "id": "sai",
-    "handle": "SAI"
+    "handle": "Sai"
   },
   {
     "id": "saic-xsan",
