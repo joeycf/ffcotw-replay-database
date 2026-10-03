@@ -31,7 +31,7 @@
  */
 
 import { spawnSync } from 'node:child_process';
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, unlinkSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -67,6 +67,56 @@ const sub = (p: string, from: string, to: string): boolean => {
   const s = read(p);
   if (!s.includes(from)) return false;
   write(p, s.replace(from, to));
+  return true;
+};
+
+// Everything scripts/parse.ts (via parse-finish.ts) writes. Listed so a
+// control whose run COMPLETES restores the committed artifacts byte-exactly
+// rather than leaving a pruned corpus on disk for the next control to read.
+const PARSE_OUTPUTS = [
+  'data/videos.json',
+  'data/players.json',
+  'data/review-queue.json',
+  'data/source-pins.json',
+  'data/theater-cursor.json',
+  'data/report.md',
+];
+
+/** The departure controls' fixture: cut the newest committed svcHighlights
+ *  record (and everything newer) out of the dump, then write a departure file
+ *  naming it. `bound` decides whether that file matches the cut dump or the
+ *  dump as it was before the cut. */
+let departedId = '';
+const departureFixture = (bound: boolean): boolean | string => {
+  const p = 'raw/svcHighlights.json';
+  if (!existsSync(join(ROOT, p))) return 'no raw dump — run `npm run data:fetch`';
+  const dump = JSON.parse(read(p)) as { id: string; publishedAt: string }[];
+  const newest = (
+    JSON.parse(read('data/videos.json')) as { id: string; intake: string; publishedAt: string }[]
+  )
+    .filter((v) => v.intake === 'svcHighlights')
+    .reduce<{ id: string; publishedAt: string } | undefined>(
+      (a, v) => (!a || v.publishedAt > a.publishedAt ? v : a),
+      undefined,
+    );
+  if (!newest) return 'no committed svcHighlights record';
+  if (!dump.some((r) => r.id === newest.id))
+    return `${p} does not hold the newest committed record ${newest.id} — run \`npm run data:fetch\``;
+  const was = dump.reduce((a, r) => (r.publishedAt > a ? r.publishedAt : a), '');
+  const kept = dump.filter((r) => r.publishedAt < newest.publishedAt);
+  if (!kept.length) return `cutting ${newest.id} would empty ${p}`;
+  const now = kept.reduce((a, r) => (r.publishedAt > a ? r.publishedAt : a), '');
+  departedId = newest.id;
+  write(p, JSON.stringify(kept));
+  write(
+    'raw/svcHighlights.departed.json',
+    JSON.stringify({
+      channel: 'svcHighlights',
+      newestInDump: bound ? now : was,
+      checkedAt: 'verify-gates',
+      ids: [newest.id],
+    }),
+  );
   return true;
 };
 
@@ -374,6 +424,37 @@ const CONTROLS: Control[] = [
       return true;
     },
   },
+  // ── the departure carve-out, from both sides ─────────────────────────────
+  //
+  // The newest committed svcHighlights record is cut from the dump along with
+  // everything newer, which is exactly what deleting a channel's newest upload
+  // does to the next fetch (the Strive cron, 2026-10-02). With a departure file
+  // BOUND to that dump the run must complete and prune the record. With one
+  // bound to a DIFFERENT dump it must still be refused as stale, or a leftover
+  // file from an earlier fetch could launder a genuinely stale dump.
+  {
+    name: 'parse: a departure the fetch confirmed is pruned, not refused as stale',
+    cmd: ['tsx', 'scripts/parse.ts'],
+    files: ['raw/svcHighlights.json', 'raw/svcHighlights.departed.json', ...PARSE_OUTPUTS],
+    inject: () => departureFixture(true),
+    assert: (r) => {
+      if (r.status !== 0)
+        return `parse exited ${r.status}: ${(r.stderr || r.stdout).slice(0, 200)}`;
+      if (!/left YouTube[\s\S]*Pruned, not read as staleness/.test(r.stdout))
+        return 'parse completed without naming the departure it pruned';
+      const kept = (JSON.parse(read('data/videos.json')) as { id: string }[]).some(
+        (v) => v.id === departedId,
+      );
+      return kept ? `${departedId} is still in data/videos.json` : null;
+    },
+  },
+  {
+    name: 'parse: a departure file bound to a different dump is ignored (the guard stays strict)',
+    cmd: ['tsx', 'scripts/parse.ts'],
+    files: ['raw/svcHighlights.json', 'raw/svcHighlights.departed.json'],
+    inject: () => departureFixture(false),
+    assert: (r) => failsNaming(r, /raw\/svcHighlights\.json is stale/),
+  },
   {
     name: 'parse: videos.json unreadable is a hard stop, never "treat as empty"',
     cmd: ['tsx', 'scripts/parse.ts'],
@@ -448,12 +529,15 @@ const CONTROLS: Control[] = [
 ];
 
 // ── runner ──────────────────────────────────────────────────────────────────
-const snapshots = new Map<string, Buffer>();
+// null marks a file that did not exist, so restore() UNLINKS it rather than
+// writing a zero-length file in its place: a departure control creates
+// raw/<id>.departed.json, and an empty one left behind would make every later
+// parse warn that it will not parse.
+const snapshots = new Map<string, Buffer | null>();
 const snapshot = (files: string[]) => {
   for (const f of files) {
     const abs = join(ROOT, f);
-    if (existsSync(abs)) snapshots.set(f, readFileSync(abs));
-    else snapshots.set(f, Buffer.alloc(0));
+    snapshots.set(f, existsSync(abs) ? readFileSync(abs) : null);
   }
 };
 const restore = (files: string[]) => {
@@ -461,7 +545,10 @@ const restore = (files: string[]) => {
     const abs = join(ROOT, f);
     const snap = snapshots.get(f);
     if (snap === undefined) continue;
-    if (snap.length === 0 && !existsSync(abs)) continue;
+    if (snap === null) {
+      if (existsSync(abs)) unlinkSync(abs);
+      continue;
+    }
     writeFileSync(abs, snap);
   }
 };
