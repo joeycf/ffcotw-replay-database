@@ -3000,6 +3000,10 @@
     "handle": "GERMINAL"
   },
   {
+    "id": "gero",
+    "handle": "GERO"
+  },
+  {
     "id": "geysar",
     "handle": "GEYSAR"
   },
@@ -3409,21 +3413,6 @@
   {
     "id": "hayuki",
     "handle": "HAYUKI"
-  },
-  {
-    "id": "hazz",
-    "handle": "Hazz",
-    "featured": true,
-    "extra": {
-      "titles": [
-        {
-          "event": "Takedown 2026",
-          "place": 2,
-          "date": "2026-09-26",
-          "url": "https://liquipedia.net/fighters/Takedown/2026/CotW"
-        }
-      ]
-    }
   },
   {
     "id": "hb98",
@@ -8958,6 +8947,10 @@
   {
     "id": "uwlminilord",
     "handle": "UWLMinilord"
+  },
+  {
+    "id": "uyama",
+    "handle": "UYAMA"
   },
   {
     "id": "vader",
