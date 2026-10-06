@@ -801,6 +801,10 @@
     "handle": "BILLY THE KID"
   },
   {
+    "id": "billyagain",
+    "handle": "BILLYAGAIN"
+  },
+  {
     "id": "billynerf",
     "handle": "BILLYNERF"
   },
@@ -5748,6 +5752,10 @@
     "handle": "MIKELOU"
   },
   {
+    "id": "mikelou-mx",
+    "handle": "MIKELOU MX"
+  },
+  {
     "id": "mikeross",
     "handle": "MikeRoss"
   },
@@ -6568,6 +6576,10 @@
   {
     "id": "omj",
     "handle": "OMJ"
+  },
+  {
+    "id": "omni-source",
+    "handle": "OMNI SOURCE"
   },
   {
     "id": "ond",
