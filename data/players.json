@@ -24,6 +24,10 @@
     "handle": "1stforce"
   },
   {
+    "id": "201gen",
+    "handle": "201GeN"
+  },
+  {
     "id": "2xkmi3rda",
     "handle": "2XKMI3RDA"
   },
@@ -2340,6 +2344,10 @@
   {
     "id": "el-papa-stj",
     "handle": "EL PAPA STJ"
+  },
+  {
+    "id": "elchiapasko",
+    "handle": "ELCHIAPASKO"
   },
   {
     "id": "elcomandante",
@@ -5786,6 +5794,10 @@
   {
     "id": "million-dollar",
     "handle": "MILLION DOLLAR"
+  },
+  {
+    "id": "millionaire",
+    "handle": "MILLIONAIRE"
   },
   {
     "id": "mimikyu",
