@@ -1,6 +1,6 @@
 # CotW pipeline report
 
-- **4859** published records · **2197** players · **31** fighters
+- **4866** published records · **2197** players · **31** fighters
 - **656** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
 
@@ -8,16 +8,16 @@
 
 | intake | raw uploads | CotW-marked | parsed | published |
 | --- | ---: | ---: | ---: | ---: |
-| fatalFuryReplays | 6612 | 1328 | 1324 | 1324 |
-| wolfFgc | 1934 | 1280 | 1252 | 1252 |
+| fatalFuryReplays | 6613 | 1329 | 1325 | 1325 |
+| wolfFgc | 1939 | 1285 | 1257 | 1257 |
 | svcHighlights | 740 | 689 | 671 | 671 |
-| ffCotwReplays | 741 | 740 | 637 | 637 |
-| bestOfSnk | 491 | 249 | 241 | 241 |
+| ffCotwReplays | 742 | 741 | 638 | 638 |
+| bestOfSnk | 493 | 250 | 241 | 241 |
 | cotwReplays | 156 | 156 | 134 | 134 |
 | nomiiAegis | 359 | 335 | 147 | 147 |
-| bestOfFgc | 1872 | 328 | 316 | 316 |
+| bestOfFgc | 1874 | 328 | 316 | 316 |
 | dildilFatalFury | 2497 | 1755 | 9 | 9 |
-| evoEvents | 2797 | 102 | 0 | 0 |
+| evoEvents | 2815 | 102 | 0 | 0 |
 | replayTheater | — | — | — | 128 |
 
 ## Tournament placements — Liquipedia Tier 1–2, CC BY-SA 3.0
@@ -43,12 +43,12 @@
 
 ## Misses
 
-- `no-marker` — 11237
+- `no-marker` — 11258
 - `no-char` — 655
 - `vs-count` — 590
 - `no-vs` — 499
 - `too-short` — 253
-- `no-handle` — 203
+- `no-handle` — 204
 - `before-floor` — 30
 - `slot-ambiguous` — 1
 
@@ -97,8 +97,8 @@ line with its literal text, instead of vanishing into a silently shorter side.
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES CO`
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES COUNTER HIT`
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES preencha C`
-- … 933 more
+- … 934 more
 
 > Replay Theater: 149 dumped, 148 already known here, 1 candidates, 1 rebuilt, 127 carried (add-only), 128 total.
 
-_Generated 2026-10-10T14:31:44.831Z_
+_Generated 2026-10-11T14:58:35.231Z_
