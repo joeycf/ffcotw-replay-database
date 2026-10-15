@@ -3723,6 +3723,10 @@
     "handle": "Hightierbum"
   },
   {
+    "id": "higthtierbum",
+    "handle": "HIGTHTIERBUM"
+  },
+  {
     "id": "hikari",
     "handle": "HIKARI"
   },
@@ -4171,6 +4175,10 @@
   {
     "id": "jdm",
     "handle": "JDM"
+  },
+  {
+    "id": "jdvent",
+    "handle": "JDVENT"
   },
   {
     "id": "jebus",
@@ -4653,7 +4661,7 @@
   },
   {
     "id": "kikofight",
-    "handle": "KIKOFIGHT"
+    "handle": "Kikofight"
   },
   {
     "id": "killer-bee",
@@ -6078,6 +6086,10 @@
     "handle": "MRGATO"
   },
   {
+    "id": "mrk",
+    "handle": "MRK"
+  },
+  {
     "id": "mrkarate",
     "handle": "MrKarate"
   },
@@ -6099,7 +6111,7 @@
   },
   {
     "id": "mrwolf",
-    "handle": "MRWOLF"
+    "handle": "MrWolf"
   },
   {
     "id": "mrzee",
@@ -6329,6 +6341,10 @@
         }
       ]
     }
+  },
+  {
+    "id": "nelo",
+    "handle": "NELO"
   },
   {
     "id": "neloalchemist",
