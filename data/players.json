@@ -132,6 +132,10 @@
     }
   },
   {
+    "id": "ace",
+    "handle": "ACE"
+  },
+  {
     "id": "acero",
     "handle": "ACERO"
   },
@@ -1836,7 +1840,7 @@
   },
   {
     "id": "datezi",
-    "handle": "DaTeZi"
+    "handle": "Datezi"
   },
   {
     "id": "dawn",
@@ -2383,7 +2387,7 @@
   },
   {
     "id": "elkks",
-    "handle": "ELKKS"
+    "handle": "elkks"
   },
   {
     "id": "elmaum",
@@ -4060,6 +4064,10 @@
   {
     "id": "itasoba-hage",
     "handle": "ITASOBA HAGE"
+  },
+  {
+    "id": "itddy",
+    "handle": "ITDDY"
   },
   {
     "id": "itsmebums",
@@ -6222,6 +6230,10 @@
     "handle": "NAGAO"
   },
   {
+    "id": "nagasaki",
+    "handle": "NAGASAKI"
+  },
+  {
     "id": "nakashima",
     "handle": "Nakashima"
   },
@@ -6656,6 +6668,10 @@
   {
     "id": "onionbubs",
     "handle": "ONIONBUBS"
+  },
+  {
+    "id": "only-pants",
+    "handle": "ONLY PANTS"
   },
   {
     "id": "oracle",
