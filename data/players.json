@@ -2139,6 +2139,10 @@
     "handle": "DRACULA"
   },
   {
+    "id": "dragon-boi",
+    "handle": "DRAGON BOI"
+  },
+  {
     "id": "dranzermx",
     "handle": "Dranzermx"
   },
@@ -5496,6 +5500,10 @@
     "handle": "LVIANNA"
   },
   {
+    "id": "lvienna",
+    "handle": "LVienna"
+  },
+  {
     "id": "lynnlynn",
     "handle": "Lynnlynn"
   },
@@ -5761,7 +5769,7 @@
   },
   {
     "id": "michellemx",
-    "handle": "MICHELLEMX"
+    "handle": "MichelleMx"
   },
   {
     "id": "mictlan",
@@ -6996,6 +7004,14 @@
   {
     "id": "playav",
     "handle": "PlayaV"
+  },
+  {
+    "id": "player1",
+    "handle": "Player1"
+  },
+  {
+    "id": "player2",
+    "handle": "Player2"
   },
   {
     "id": "playuni",
@@ -8475,6 +8491,10 @@
   {
     "id": "syuji",
     "handle": "SYUJI"
+  },
+  {
+    "id": "syuji1108",
+    "handle": "SYUJI1108"
   },
   {
     "id": "tak",
