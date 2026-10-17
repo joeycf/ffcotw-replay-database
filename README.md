@@ -159,7 +159,7 @@ silently — an `<img>` that fails to load renders as blank space.
 | `npm run data:patch-check`  | Diff the patch table against SNK's CMS **and** each patch's own page. Manual.                                                                                                |
 | `npm run data:roster-check` | Diff the roster against SNK's character index. **Network, manual, never in the cron.** Ends `roster-check: CURRENT / DRIFT / UNVERIFIED / UNREADABLE`.                       |
 | `npm run data:tournaments`  | Liquipedia's Tier 1–2 winners/runners-up → `data/tournaments.json`. **Network, manual, never in the cron.** `-- --match` is the worklist; `--check` runs inside `typecheck`. |
-| `npm run data:expiries`     | Self-expiring gates. Runs last in the cron and is designed to go red.                                                                                                        |
+| `npm run data:expiries`     | Self-expiring gates. Runs in the "Pending work" workflow after every data run and is designed to go red.                                                                     |
 | `npm run verify:gates`      | **The positive-control suite.** 27 injected defects, each of which must exit non-zero, plus the clean run.                                                                   |
 | `npm run test:e2e`          | Assertions against the built static output, with a visible empty-corpus mode.                                                                                                |
 | `npm run verify:deployed`   | Post-deploy smoke check — the deploy fingerprint (count + side appearances + content hash).                                                                                  |

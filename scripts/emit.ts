@@ -37,6 +37,30 @@ const PUBLIC_DATA = join(ROOT, 'public', 'data');
 const GAME_ID = 'ffcotw';
 const GAME_NAME = 'FATAL FURY: City of the Wolves';
 
+/**
+ * THE ENGINE PIN, READ OUT OF nuxt.config.ts (checklist 10i; Avatar's reader).
+ * The literal is production truth because Vercel leaves ENGINE_PATH unset: the
+ * `||` only short-circuits when Nuxt evaluates the config locally. Exactly one
+ * match is required — scripts/verify-deployed.ts compares the deployment's
+ * summary.engine with this pin, so two pins (or none) would make that
+ * comparison meaningless. Never import nuxt.config.ts or read an engine
+ * package.json for this: node_modules/.c12 holds several hashed clones.
+ */
+async function enginePin(root: string): Promise<string> {
+  const src = await readFile(join(root, 'nuxt.config.ts'), 'utf8');
+  const hits = [...src.matchAll(/github:joeycf\/replay-engine#(v\d+\.\d+\.\d+)/g)].map(
+    (m) => m[1]!,
+  );
+  const unique = [...new Set(hits)];
+  if (unique.length !== 1) {
+    throw new Error(
+      `emit: nuxt.config.ts pins ${unique.length} engine tag(s) (${unique.join(', ') || 'none'}) — ` +
+        `summary.json carries the deployed CODE version (checklist 10i), so there must be exactly one.`,
+    );
+  }
+  return unique[0]!;
+}
+
 // ── the engine contract, restated locally ───────────────────────────────────
 // The pipeline can't resolve the Nuxt `@engine` alias, so the emitted shapes
 // are declared here. They must mirror replay-engine/types/replay.ts.
@@ -109,6 +133,7 @@ async function main(): Promise<void> {
   const records = existsSync(join(DATA, 'videos.json'))
     ? (JSON.parse(await readFile(join(DATA, 'videos.json'), 'utf8')) as MatchVideo[])
     : [];
+  const engine = await enginePin(ROOT);
 
   /**
    * EMPTY-CORPUS MODE, AND IT SKIPS VISIBLY.
@@ -281,7 +306,14 @@ async function main(): Promise<void> {
     players: players.length,
     characters: characters.length,
     updated: newestReplayDay,
+    // THE CODE VERSION (checklist 10i): read from the pin, asserted by
+    // scripts/verify-deployed.ts against the deployment, so a pin-only change
+    // cannot pass the smoke check on unchanged data.
+    engine,
   };
+  if (!/^v\d+\.\d+\.\d+$/.test(summary.engine)) {
+    throw new Error(`emit: engine pin "${summary.engine}" is not a vX.Y.Z tag`);
+  }
   const summaryJson = `${JSON.stringify(summary, null, 2)}\n`;
   await writeFile(join(DATA, 'summary.json'), summaryJson, 'utf8');
   await writeFile(join(PUBLIC_DATA, 'summary.json'), summaryJson, 'utf8');

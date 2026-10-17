@@ -37,6 +37,15 @@
  * cannot tell a slow build from a wrong one and builds here are async. What the
  * hash changes is that the success claim is TRUE when it is made.
  *
+ * AND THE CODE VERSION (checklist 10i). The digest says which DATA is live and
+ * nothing about which CODE: a pin bump on unchanged data deploys a build whose
+ * replays.json is byte-identical to the old one, so this check would call
+ * success on a deployment still building. scripts/emit.ts writes the engine tag
+ * it reads out of nuxt.config.ts into data/summary.json; this script fetches
+ * summary.json FIRST (a wrong `game` there is the copied-env failure, 10h, and
+ * no polling fixes it) and passes only when the served tag is the pin. The
+ * archive matching while the tag does not is a hard failure at the deadline.
+ *
  * Run: npm run verify:deployed
  *   SMOKE_HOST     default https://replaydatabase.com — point at the game's own
  *                  *.vercel.app before the shell rewrite exists
@@ -57,6 +66,32 @@ const HOST = (process.env.SMOKE_HOST ?? 'https://replaydatabase.com').replace(/\
 
 const TIMEOUT_SEC = Number(process.env.SMOKE_TIMEOUT_SEC ?? 900);
 const INTERVAL_SEC = Number(process.env.SMOKE_INTERVAL_SEC ?? 20);
+
+/** This app's identity — app/app.config.ts game.id, which summary.json carries as
+ *  `game`. Never compare it with SLUG: on Tekken the two differ (tekken8 / tekken). */
+const GAME_ID = 'ffcotw';
+
+/**
+ * THE ENGINE PIN, READ OUT OF nuxt.config.ts — the same strict reader
+ * scripts/emit.ts uses: exactly one `github:joeycf/replay-engine#vX.Y.Z`
+ * literal, or this check cannot say what "the pinned code" is and exits 1.
+ */
+function enginePin(): string {
+  const src = readFileSync(join(ROOT, 'nuxt.config.ts'), 'utf8');
+  const hits = [...src.matchAll(/github:joeycf\/replay-engine#(v\d+\.\d+\.\d+)/g)].map(
+    (m) => m[1]!,
+  );
+  const unique = [...new Set(hits)];
+  if (unique.length !== 1) {
+    console.error(
+      `✖ nuxt.config.ts pins ${unique.length} engine tag(s) (${unique.join(', ') || 'none'}) — ` +
+        'the code-version half of this check needs exactly one (checklist 10i).',
+    );
+    process.exit(1);
+  }
+  return unique[0]!;
+}
+const ENGINE_PIN = enginePin();
 
 // The collapse guard's thresholds, deliberately identical (scripts/parse-finish.ts).
 //
@@ -115,6 +150,26 @@ async function servedDigest(url: string): Promise<Digest | null> {
   }
 }
 
+/** summary.json, cache-cold like the payload: the identity (`game`) and the
+ *  deployed code version (`engine`) that emit copied out of the pin. */
+async function servedSummary(url: string): Promise<{ game?: string; engine?: string } | null> {
+  try {
+    const res = await fetch(`${url}?_cb=${Date.now()}`, {
+      cache: 'no-store',
+      headers: { 'cache-control': 'no-cache', pragma: 'no-cache' },
+      redirect: 'follow',
+    });
+    if (!res.ok) {
+      console.log(`   … HTTP ${res.status} (summary.json)`);
+      return null;
+    }
+    return (await res.json()) as { game?: string; engine?: string };
+  } catch (e) {
+    console.log(`   … ${(e as Error).message}`);
+    return null;
+  }
+}
+
 const local = digest(JSON.parse(readFileSync(join(ROOT, 'data', 'replays.json'), 'utf8')));
 if (!local) {
   console.error('✖ data/replays.json is not an array — nothing to compare against.');
@@ -122,14 +177,50 @@ if (!local) {
 }
 const committed = local.count;
 const url = `${HOST}/${SLUG}/data/replays.json`;
+const summaryUrl = `${HOST}/${SLUG}/data/summary.json`;
+
+// LOCAL CONSISTENCY FIRST. A pin bump that did not re-run emit leaves
+// data/summary.json saying yesterday's tag; polling production could then
+// never pass, and the failure would read as a deploy problem. In the cron emit
+// always runs first, so this fires for a human after a pin-only commit.
+const committedEngine = (
+  JSON.parse(readFileSync(join(ROOT, 'data', 'summary.json'), 'utf8')) as { engine?: string }
+).engine;
+if (committedEngine !== ENGINE_PIN) {
+  console.error(
+    `✖ data/summary.json carries engine ${committedEngine ?? '(absent)'} but nuxt.config.ts pins ` +
+      `${ENGINE_PIN} — a pin-only commit. Run \`npm run data:emit\` and commit data/summary.json.`,
+  );
+  process.exit(1);
+}
 
 console.log(`Smoke check: ${url}`);
-console.log(`  committed ${show(local)} · polling ${TIMEOUT_SEC}s`);
+console.log(`  committed ${show(local)} · engine pin ${ENGINE_PIN} · polling ${TIMEOUT_SEC}s`);
 
 const deadline = Date.now() + TIMEOUT_SEC * 1000;
 let last: Digest | null = null;
+let lastEngine: string | null = null;
 
 for (let attempt = 1; ; attempt++) {
+  // summary.json FIRST, because the base-path failure makes every other reading
+  // meaningless: a wrong `game` means the archive at that path belongs to another
+  // project, and comparing digests against it would be comparing two games.
+  const summary = await servedSummary(summaryUrl);
+  if (summary && typeof summary.game === 'string' && summary.game !== GAME_ID) {
+    console.error(
+      `\n✖ THE DEPLOYMENT AT ${HOST}/${SLUG}/ IS NOT THIS GAME.\n` +
+        `  summary.json says game "${summary.game}"; this project is "${GAME_ID}".\n\n` +
+        '  This is the copied-env failure (checklist 10h): NUXT_APP_BASE_URL carried over from\n' +
+        "  another project, so the build mounted at that game's base path. Nothing about the\n" +
+        '  deployment looks wrong — it builds, it renders, the JSON parses — and polling longer\n' +
+        '  will never make it true.\n\n' +
+        `  Fix NUXT_APP_BASE_URL (/${SLUG}/) and NUXT_PUBLIC_SITE_URL on Production AND Preview,\n` +
+        '  then redeploy.',
+    );
+    process.exit(1);
+  }
+  if (summary && typeof summary.engine === 'string') lastEngine = summary.engine;
+
   const d = await servedDigest(url);
   if (d !== null) {
     last = d;
@@ -139,10 +230,24 @@ for (let attempt = 1; ; attempt++) {
       lost !== 0
         ? `  (${lost > 0 ? '-' : '+'}${Math.abs(lost)} records, ${pct.toFixed(1)}%)`
         : `  (same count, content differs — ${d.appearances} appearances vs ${local.appearances})`;
-    console.log(`  [${attempt}] served ${show(d)}${same(local, d) ? '  ✓ matches' : why}`);
-    if (same(local, d)) {
-      console.log(`\n✓ Production serves the committed archive — ${show(d)}.`);
+    const enginesAgree = lastEngine === ENGINE_PIN;
+    console.log(
+      `  [${attempt}] served ${show(d)} · engine ${lastEngine ?? '(absent)'}${
+        same(local, d) && enginesAgree ? '  ✓ matches' : same(local, d) ? '' : why
+      }`,
+    );
+    if (same(local, d) && enginesAgree) {
+      console.log(`\n✓ Production serves the committed archive on ${ENGINE_PIN} — ${show(d)}.`);
       process.exit(0);
+    }
+    if (same(local, d) && !enginesAgree) {
+      // The records match and the CODE does not. This is exactly the case 10i
+      // was written from, and it is why a digest-only check claimed success on a
+      // deployment that was still building.
+      console.log(
+        `   … the archive matches but the deployment is on engine ${lastEngine ?? '(absent)'}, ` +
+          `not ${ENGINE_PIN} — a build still in flight, or a pin that never deployed.`,
+      );
     }
   }
   if (Date.now() + INTERVAL_SEC * 1000 >= deadline) break;
@@ -163,11 +268,27 @@ const lost = committed - last.count;
 // checkout is behind production, which is not a collapse.
 const collapsed = lost > COLLAPSE_ABS && lost / committed > COLLAPSE_PCT;
 
+// THE DEADLINE VERDICT ON THE CODE VERSION. The archive matches and the engine
+// does not: the data landed, so this is not "a deploy that has not landed" — it
+// is a deployment that is not on the pinned code (checklist 10i), or a
+// summary.json that never learned the pin. A hard failure, not a warning: a
+// warning that exits 0 is a success gate, and this is an assertion.
+if (same(local, last) && lastEngine !== ENGINE_PIN) {
+  console.error(
+    `\n✖ STALE BUILD: production serves the committed archive but engine ` +
+      `${lastEngine ?? 'absent from summary.json'}, not ${ENGINE_PIN}.\n` +
+      `  The records are right and the CODE is not — a build still in flight after ${TIMEOUT_SEC}s,\n` +
+      '  or a pin that never deployed. Check the latest Vercel deployment for this project and\n' +
+      '  re-run this check once it is live.',
+  );
+  process.exit(1);
+}
+
 if (!collapsed) {
   console.warn(
     `\n⚠ Deploy has not landed within ${TIMEOUT_SEC}s.\n` +
-      `  committed ${show(local)}\n` +
-      `  served    ${show(last)}\n` +
+      `  committed ${show(local)}  (engine ${ENGINE_PIN})\n` +
+      `  served    ${show(last)}  (engine ${lastEngine ?? 'absent from summary.json'})\n` +
       (lost === 0
         ? '  The record count matches and the CONTENT does not, so this is a build that\n' +
           '  has not shipped the latest characters yet — the failure mode a count-only\n' +

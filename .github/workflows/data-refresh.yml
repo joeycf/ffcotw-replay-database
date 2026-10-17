@@ -25,6 +25,7 @@ concurrency:
 
 jobs:
   refresh:
+    name: Refresh the archive — red means the live archive is stale or wrong
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -74,10 +75,10 @@ jobs:
         env:
           YT_API_KEY: ${{ secrets.YT_API_KEY }}
 
-      - name: Parse
+      - name: Parse — red means a wrong archive was refused, nothing committed
         run: npm run data:parse
 
-      - name: Emit
+      - name: Emit — red means an invalid table or pin, nothing committed
         run: npm run data:emit
 
       # THE ROUTING IS REGENERATED HERE, SO IT LANDS IN THE SAME COMMIT AS THE
@@ -100,10 +101,10 @@ jobs:
       # workflow that goes red BEFORE the commit, so a failure holds the whole
       # day's data. The refusal names each row and its fix, and a held day loses
       # nothing because every run re-fetches every upload.
-      - name: Refuse redirect drift
+      - name: Refuse redirect drift — red means today's data is held
         run: npx tsx scripts/redirects.ts --drift
 
-      - name: Commit if changed
+      - name: Commit if changed — red means nothing was published
         run: |
           git config user.name "ffcotw-data-refresh[bot]"
           git config user.email "data-refresh@users.noreply.github.com"
@@ -186,20 +187,8 @@ jobs:
       # guard in parse.ts protects the repository; this protects what visitors
       # get.
       #
-      # Deliberately BEFORE "Flag due expiries": that step is designed to go
-      # red, and a red step stops the ones after it.
-      - name: Post-deploy smoke check
+      # The last step. A red anywhere in this workflow now means ONE thing: the
+      # archive is stale or wrong, or visitors are served the wrong one. Steps
+      # that mean "a person has work" live in pending-work.yml.
+      - name: Post-deploy smoke check — red means visitors get the wrong archive
         run: npm run verify:deployed
-
-      - name: Flag due expiries
-        # Deliberately failing (scripts/expiries.ts).
-        # The data has already been committed and pushed by the step above, so a
-        # red run never costs a refresh — it only makes the pending work
-        # impossible to miss. Three things can trip it: an announced Season 3
-        # fighter's date arriving (Kim Kaphwan 2026-09-30, then Mikey AND Draken
-        # together on 2026-10-22 — the Tokyo Revengers pair announced 2026-09-09,
-        # the first time this game ships two DLC characters at once — then Laocorn
-        # 2026-11-30 and the unnamed December slot 2026-12-31), an unconfirmed
-        # season, and the patch table going 40 days stale.
-        # Clear it by doing the work, NOT by deleting this step.
-        run: npx tsx scripts/expiries.ts --check
