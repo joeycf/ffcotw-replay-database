@@ -1948,7 +1948,7 @@
   },
   {
     "id": "diamond2k2",
-    "handle": "DIAMOND2k2"
+    "handle": "Diamond2k2"
   },
   {
     "id": "diandian",
@@ -4612,6 +4612,10 @@
     "handle": "Keitoless"
   },
   {
+    "id": "kelyan",
+    "handle": "KELYAN"
+  },
+  {
     "id": "kemukemu",
     "handle": "KEMUKEMU"
   },
@@ -6710,6 +6714,10 @@
     "handle": "OSFMxy"
   },
   {
+    "id": "osfxmy",
+    "handle": "OSFXmy"
+  },
+  {
     "id": "ostyas",
     "handle": "OSTYAS ️"
   },
@@ -7004,14 +7012,6 @@
   {
     "id": "playav",
     "handle": "PlayaV"
-  },
-  {
-    "id": "player1",
-    "handle": "Player1"
-  },
-  {
-    "id": "player2",
-    "handle": "Player2"
   },
   {
     "id": "playuni",
