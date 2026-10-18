@@ -77,6 +77,20 @@ check(
   'pending-work.yml reads only and takes no secret',
   /^permissions:\n {2}contents: read$/m.test(pwText) && !/secrets\./.test(pwText),
 );
+// Every Actions expression opens with `${{`. A collapsed `${ … }` is a bash
+// "bad substitution" that fails the step before its command runs: on
+// 2026-10-18 the context echo did exactly that in all eight Pending work
+// runs, and no chore ran. Bash's own `${N}` has no space after the brace,
+// so dollar-brace-whitespace is never legitimate in either file.
+const halfBrace = /\$\{\s[^}\n]*\}?/g;
+const halfBraces = [...pwText.matchAll(halfBrace), ...drText.matchAll(halfBrace)].map((m) =>
+  m[0].trim(),
+);
+check(
+  'every ${ in both workflows opens a ${{ … }} expression',
+  halfBraces.length === 0,
+  halfBraces.length ? `found ${halfBraces.length}: ${halfBraces.join(' · ')}` : '',
+);
 const TASK_STEPS = [
   'Flag due expiries',
   'Flag stale redirects',
