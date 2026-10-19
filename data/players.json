@@ -1591,6 +1591,10 @@
     "handle": "Crisis"
   },
   {
+    "id": "cristobal",
+    "handle": "CRISTOBAL"
+  },
+  {
     "id": "crmadkof",
     "handle": "CRMADKOF ️"
   },
@@ -2217,6 +2221,10 @@
   {
     "id": "ecuador-cui",
     "handle": "ECUADOR CUI"
+  },
+  {
+    "id": "eddykofer",
+    "handle": "EDDYKOFER"
   },
   {
     "id": "edergui",
@@ -4155,6 +4163,10 @@
         }
       ]
     }
+  },
+  {
+    "id": "javiz2015",
+    "handle": "javiz2015"
   },
   {
     "id": "javo-clean",
@@ -8301,6 +8313,10 @@
     "handle": "Soyupapa"
   },
   {
+    "id": "spectremx",
+    "handle": "SPECTREMX"
+  },
+  {
     "id": "speedycrib",
     "handle": "SPEEDYCRIB ️"
   },
@@ -9831,7 +9847,7 @@
   },
   {
     "id": "zuza",
-    "handle": "ZuZa"
+    "handle": "Zuza"
   },
   {
     "id": "zvezda",
