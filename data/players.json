@@ -4409,6 +4409,10 @@
     "handle": "K4KARATE"
   },
   {
+    "id": "kabu",
+    "handle": "KABU"
+  },
+  {
     "id": "kaede",
     "handle": "KAEDE"
   },
@@ -7383,6 +7387,10 @@
   {
     "id": "revblowrevblo",
     "handle": "REVBLOWREVBLO"
+  },
+  {
+    "id": "revbrow",
+    "handle": "REVBROW"
   },
   {
     "id": "reve",
