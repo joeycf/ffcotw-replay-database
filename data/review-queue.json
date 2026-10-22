@@ -1,11 +1,51 @@
 [
   {
+    "id": "BQn4ybpadJs",
+    "kind": "character-completion",
+    "channel": "fatalFuryReplays",
+    "title": "FF COTW ▰ FERNO (#1 Ranked Draken) vs MINILORD (#3 Ranked Mr. Karate) ▰ Tokyo Revengers DLC Day 1",
+    "publishedAt": "2026-10-22T12:45:55Z",
+    "durationSec": 719
+  },
+  {
+    "id": "aed8O-4_oPM",
+    "kind": "character-completion",
+    "channel": "fatalFuryReplays",
+    "title": "FF COTW ▰ PANPINA (Draken) vs PDPDR (Mikey) ▰ Tokyo Revengers DLC Day 1",
+    "publishedAt": "2026-10-22T11:00:19Z",
+    "durationSec": 481
+  },
+  {
+    "id": "KmU2S1_Ct7c",
+    "kind": "character-completion",
+    "channel": "fatalFuryReplays",
+    "title": "FF COTW ▰ IMSTILLDADDADY (Mikey) vs FERNO (Draken) ▰ Tokyo Revengers DLC Day 1",
+    "publishedAt": "2026-10-22T09:15:54Z",
+    "durationSec": 514
+  },
+  {
     "id": "EFFbsSVV-ko",
     "kind": "slot-ambiguous",
     "channel": "fatalFuryReplays",
     "title": "FF:CotW 🔥 GGGGGG (Rock) vs AIGOO (Vox Reaper) & OPANTS (Kain) 🔥 FATAL FURY CotW OPEN BETA GAMEPLAY",
     "publishedAt": "2025-02-21T15:54:32Z",
     "durationSec": 481
+  },
+  {
+    "id": "eqPzqe1ZAWA",
+    "kind": "character-completion",
+    "channel": "wolfFgc",
+    "title": "FF:CotW 🐺 PANPINA (Draken) vs AE PDPDR (Mikey)⭐Replay Match - FATAL FURY: CotW - 10/26",
+    "publishedAt": "2026-10-22T12:30:20Z",
+    "durationSec": 502
+  },
+  {
+    "id": "R8_3RQ-rqqA",
+    "kind": "character-completion",
+    "channel": "wolfFgc",
+    "title": "FF:CotW 🐺 ARUSU (Mikey) vs GO1 (Mikey)⭐Replay Match - FATAL FURY: CotW - 10/26",
+    "publishedAt": "2026-10-22T11:23:45Z",
+    "durationSec": 570
   },
   {
     "id": "F0ApUr9aoIo",
@@ -126,6 +166,30 @@
     "title": "Fatal Fury COTW Kenshiro vs Hotaru",
     "publishedAt": "2026-07-05T16:00:02Z",
     "durationSec": 574
+  },
+  {
+    "id": "7SlznPNkSJo",
+    "kind": "character-completion",
+    "channel": "nomiiAegis",
+    "title": "MIKEY vs WOLFGANG KRAUSER ▰ Early Access Matches ▰ Fatal Fury: City of the Wolves",
+    "publishedAt": "2026-10-22T08:30:02Z",
+    "durationSec": 650
+  },
+  {
+    "id": "AisBsnQ8cvg",
+    "kind": "character-completion",
+    "channel": "nomiiAegis",
+    "title": "DRAKEN vs KENSHIRO ▰ Early Access Matches ▰ Fatal Fury: City of the Wolves",
+    "publishedAt": "2026-10-22T08:00:19Z",
+    "durationSec": 735
+  },
+  {
+    "id": "c-ezbMBEmXk",
+    "kind": "character-completion",
+    "channel": "nomiiAegis",
+    "title": "MIKEY vs GEESE HOWARD ▰ Early Access Matches ▰ Fatal Fury: City of the Wolves",
+    "publishedAt": "2026-10-22T07:34:06Z",
+    "durationSec": 647
   },
   {
     "id": "sm-0_VTE_Zs",
