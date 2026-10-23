@@ -7,12 +7,12 @@ on:
     # 07:47, so the five refreshes never contend).
     #
     # GAME SIX HAS BEEN ADDED and this note is kept as history, not as an
-    # instruction. Guilty Gear Strive took 08:47 on 2026-09-09 and the window is
-    # now 06:00–09:00; its own workflow carries the live note for game seven,
-    # which is 09:17. Left here rather than deleted because the entry above
-    # explains why the window widened to 08:30 in the first place, and a reader
-    # who finds a stale "next free slot" with nothing marking it stale is
-    # exactly how two games end up sharing a minute.
+    # instruction. Guilty Gear Strive took 08:47 on 2026-09-09, and its own
+    # workflow records games seven (09:17) and eight (09:47); Granblue Rising's
+    # workflow carries the live note for game nine. Left here rather than
+    # deleted because the entry above explains why the window widened to 08:30
+    # in the first place, and a reader who finds a stale "next free slot" with
+    # nothing marking it stale is exactly how two games end up sharing a minute.
     - cron: '17 8 * * *'
   workflow_dispatch:
 
@@ -28,9 +28,9 @@ jobs:
     name: Refresh the archive — red means the live archive is stale or wrong
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           # matches engines.node (the platform's Node policy — STACK.md §1)
           node-version: 24

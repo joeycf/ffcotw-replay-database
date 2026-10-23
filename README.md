@@ -298,9 +298,11 @@ platform" is simply not needed here.
 ## Daily data refresh
 
 `.github/workflows/data-refresh.yml`, **08:17 UTC** — the fifth stagger slot,
-after 2XKO 06:17, Tekken 06:47, SF6 07:17 and Tōkon 07:47. This entry widens the
-platform's refresh window from 06:00–08:00 to 06:00–08:30; the next free slot is
-08:47.
+after 2XKO 06:17, Tekken 06:47, SF6 07:17 and Tōkon 07:47. Strive took 08:47,
+Avatar Legends 09:17 (2026-09-19) and Granblue Rising 09:47 (2026-09-30), and
+Granblue's workflow carries the note for game nine. GitHub starts these slots
+hours late (11:00–19:21 UTC over 223 runs, ending by 19:25), so check the
+Actions tab before any push, whatever the slot.
 
 The Replay Theater step is `continue-on-error` on purpose: the cron never
 depends on a third party succeeding. A failed pull means no dump, parse carries
