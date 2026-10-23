@@ -1,8 +1,8 @@
 {
   "totals": {
-    "replays": 4969,
+    "replays": 4971,
     "characters": 31,
-    "players": 2221,
+    "players": 2223,
     "byPatch": {
       "2025-02-20": 65,
       "2025-03-26": 86,
@@ -31,20 +31,20 @@
       "3.0.1": 219,
       "3.1.2": 114,
       "3.1.3": 142,
-      "3.2.2": 357
+      "3.2.2": 359
     }
   },
   "characterUsage": {
+    "mr-karate": 443,
+    "ken": 442,
+    "wolfgang-krauser": 308,
     "kain-r-heinlein": 449,
     "rick-strowd": 228,
     "kim-kaphwan": 177,
-    "mr-karate": 442,
-    "ken": 440,
     "andy-bogard": 329,
     "tizoc": 435,
     "gato": 370,
     "vox-reaper": 339,
-    "wolfgang-krauser": 307,
     "kenshiro": 324,
     "mr-big": 252,
     "kevin-rian": 275,
@@ -698,16 +698,16 @@
       "billy-kane": 2
     },
     "3.2.2": {
+      "mr-karate": 47,
+      "ken": 21,
+      "wolfgang-krauser": 31,
       "kain-r-heinlein": 8,
       "rick-strowd": 40,
       "kim-kaphwan": 177,
-      "mr-karate": 46,
-      "ken": 19,
       "andy-bogard": 18,
       "tizoc": 21,
       "gato": 22,
       "vox-reaper": 11,
-      "wolfgang-krauser": 30,
       "kenshiro": 40,
       "mr-big": 16,
       "kevin-rian": 18,
@@ -733,6 +733,30 @@
   "playerCharacters": {
     "123456": {
       "marco-rodrigues": 1
+    },
+    "minilord": {
+      "mr-karate": 9,
+      "duck-king": 3,
+      "salvatore-ganacci": 13,
+      "cristiano-ronaldo": 1
+    },
+    "ryuguji": {
+      "ken": 1
+    },
+    "nomiiaegis": {
+      "ken": 1,
+      "duck-king": 4,
+      "kim-kaphwan": 5,
+      "rick-strowd": 9,
+      "kim-jae-hoon": 4,
+      "mr-karate": 4,
+      "terry-bogard": 3,
+      "blue-mary": 3,
+      "kim-dong-hwan": 1,
+      "joe-higashi": 2
+    },
+    "fathersigvald": {
+      "wolfgang-krauser": 1
     },
     "cancer2k2": {
       "kain-r-heinlein": 2
@@ -1595,17 +1619,6 @@
     "alex5mith": {
       "b-jenet": 16
     },
-    "nomiiaegis": {
-      "duck-king": 4,
-      "kim-kaphwan": 5,
-      "rick-strowd": 9,
-      "kim-jae-hoon": 4,
-      "mr-karate": 4,
-      "terry-bogard": 3,
-      "blue-mary": 3,
-      "kim-dong-hwan": 1,
-      "joe-higashi": 2
-    },
     "moizjp": {
       "mr-karate": 1
     },
@@ -1792,12 +1805,6 @@
     "r04": {
       "wolfgang-krauser": 1,
       "mr-big": 1
-    },
-    "minilord": {
-      "mr-karate": 8,
-      "duck-king": 3,
-      "salvatore-ganacci": 13,
-      "cristiano-ronaldo": 1
     },
     "juego": {
       "nightmare-geese": 1
