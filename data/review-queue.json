@@ -88,6 +88,14 @@
     "durationSec": 570
   },
   {
+    "id": "uQiRQjFIp0Q",
+    "kind": "character-completion",
+    "channel": "svcHighlights",
+    "title": "FF:CotW 🌟 WEIWEI (Kim) vs ZJZ (Mikey)🌟Replay Match - FATAL FURY: City of the Wolves!",
+    "publishedAt": "2026-10-23T15:40:20Z",
+    "durationSec": 451
+  },
+  {
     "id": "F0ApUr9aoIo",
     "kind": "character-completion",
     "channel": "svcHighlights",
@@ -102,6 +110,22 @@
     "title": "FF:CotW 🌟 PANPINA (Kim) vs MUSUBI (Kim)🌟Replay Match - FATAL FURY: City of the Wolves!",
     "publishedAt": "2026-09-30T15:49:15Z",
     "durationSec": 549
+  },
+  {
+    "id": "BGYTa7tfzb4",
+    "kind": "character-completion",
+    "channel": "ffCotwReplays",
+    "title": "Fatal Fury COTW Madkof Mikey VS Haregoro Draken",
+    "publishedAt": "2026-10-23T19:01:40Z",
+    "durationSec": 421
+  },
+  {
+    "id": "0X8uOPgUZRk",
+    "kind": "character-completion",
+    "channel": "ffCotwReplays",
+    "title": "Fatal Fury COTW Arusu Mikey VS GO1 Mikey",
+    "publishedAt": "2026-10-23T15:00:16Z",
+    "durationSec": 542
   },
   {
     "id": "VuvTG1zf46c",
@@ -152,12 +176,28 @@
     "durationSec": 436
   },
   {
+    "id": "gqVX0Wm5RQI",
+    "kind": "character-completion",
+    "channel": "bestOfSnk",
+    "title": "MANJIRO SANO 🐺 ARUSULAVISION VS GO1 🐺 MANJIRO SANO | FATAL FURY COTW",
+    "publishedAt": "2026-10-23T21:00:06Z",
+    "durationSec": 514
+  },
+  {
     "id": "_CGvYzt3Kjk",
     "kind": "character-completion",
     "channel": "bestOfSnk",
     "title": "KIM 🐺 PANPINA VS MOK 🐺 KIM | FATAL FURY COTW",
     "publishedAt": "2026-09-25T13:00:20Z",
     "durationSec": 311
+  },
+  {
+    "id": "rRnO5ZJd8CI",
+    "kind": "character-completion",
+    "channel": "cotwReplays",
+    "title": "Draken (ferno) vs Mikey (Audio33) | Fatal Fury: City of the Wolves",
+    "publishedAt": "2026-10-23T19:00:33Z",
+    "durationSec": 527
   },
   {
     "id": "jR8EhpPWdAE",
@@ -822,6 +862,14 @@
     "title": "Early Access ▰ WOLFGANG KRAUSER Vs TERRY BOGARD ▰ [FATAL FURY: City of the Wolves]",
     "publishedAt": "2026-04-19T06:56:46Z",
     "durationSec": 245
+  },
+  {
+    "id": "8ftt1eM0l64",
+    "kind": "character-completion",
+    "channel": "bestOfFgc",
+    "title": "MANJIRO SANO 🐺 HOTARUSUX VS DIAPHONE 🐺 MANJIRO SANO | FATAL FURY COTW",
+    "publishedAt": "2026-10-23T21:00:00Z",
+    "durationSec": 470
   },
   {
     "id": "_aOm1Y4pZ1M",
