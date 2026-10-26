@@ -16,23 +16,23 @@
 
 # CotW pipeline report
 
-- **4971** published records · **2223** players · **31** fighters
-- **682** pending review item(s) — absent from the site, never guessed
+- **4973** published records · **2223** players · **31** fighters
+- **685** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
 
 ## Per intake
 
 | intake | raw uploads | CotW-marked | parsed | published |
 | --- | ---: | ---: | ---: | ---: |
-| fatalFuryReplays | 6671 | 1371 | 1347 | 1347 |
-| wolfFgc | 2009 | 1353 | 1302 | 1302 |
+| fatalFuryReplays | 6677 | 1377 | 1348 | 1348 |
+| wolfFgc | 2015 | 1359 | 1302 | 1302 |
 | svcHighlights | 749 | 696 | 676 | 676 |
-| ffCotwReplays | 763 | 762 | 642 | 642 |
-| bestOfSnk | 521 | 265 | 252 | 252 |
-| cotwReplays | 169 | 169 | 143 | 143 |
-| nomiiAegis | 379 | 352 | 151 | 151 |
-| bestOfFgc | 1452 | 340 | 321 | 321 |
-| dildilFatalFury | 2546 | 1804 | 9 | 9 |
+| ffCotwReplays | 765 | 764 | 642 | 642 |
+| bestOfSnk | 523 | 266 | 252 | 252 |
+| cotwReplays | 170 | 170 | 143 | 143 |
+| nomiiAegis | 381 | 354 | 152 | 152 |
+| bestOfFgc | 1454 | 341 | 321 | 321 |
+| dildilFatalFury | 2548 | 1806 | 9 | 9 |
 | evoEvents | 2831 | 103 | 0 | 0 |
 | replayTheater | — | — | — | 128 |
 
@@ -59,11 +59,11 @@
 
 ## Misses
 
-- `no-marker` — 10875
-- `no-char` — 681
-- `vs-count` — 636
-- `no-vs` — 505
-- `no-handle` — 262
+- `no-marker` — 10877
+- `no-char` — 684
+- `vs-count` — 638
+- `no-vs` — 506
+- `no-handle` — 275
 - `too-short` — 257
 - `before-floor` — 30
 - `slot-ambiguous` — 1
@@ -113,8 +113,8 @@ line with its literal text, instead of vanishing into a silently shorter side.
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero`
 - 6× `Wolves TREINING`
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES CO`
-- … 1045 more
+- … 1063 more
 
 > Replay Theater: 150 dumped, 150 already known here, 0 candidates, 0 rebuilt, 128 carried (add-only), 128 total.
 
-_Generated 2026-10-25T13:14:57.055Z_
+_Generated 2026-10-26T15:15:31.723Z_
