@@ -1,6 +1,6 @@
 {
   "totals": {
-    "replays": 4976,
+    "replays": 4978,
     "characters": 31,
     "players": 2224,
     "byPatch": {
@@ -31,19 +31,21 @@
       "3.0.1": 219,
       "3.1.2": 114,
       "3.1.3": 142,
-      "3.2.2": 364
+      "3.2.2": 366
     }
   },
   "characterUsage": {
+    "kim-dong-hwan": 236,
+    "billy-kane": 358,
+    "duck-king": 180,
+    "wolfgang-krauser": 309,
     "joe-higashi": 236,
     "mr-karate": 444,
     "tizoc": 436,
-    "billy-kane": 357,
     "cristiano-ronaldo": 342,
     "rock-howard": 569,
     "terry-bogard": 613,
     "ken": 442,
-    "wolfgang-krauser": 308,
     "kain-r-heinlein": 449,
     "rick-strowd": 228,
     "kim-kaphwan": 177,
@@ -53,7 +55,6 @@
     "kenshiro": 324,
     "mr-big": 252,
     "kevin-rian": 275,
-    "duck-king": 179,
     "b-jenet": 304,
     "blue-mary": 205,
     "nightmare-geese": 253,
@@ -61,7 +62,6 @@
     "hokutomaru": 296,
     "chun-li": 302,
     "mai-shiranui": 273,
-    "kim-dong-hwan": 235,
     "kim-jae-hoon": 185,
     "marco-rodrigues": 350,
     "preecha": 312,
@@ -698,15 +698,17 @@
       "billy-kane": 2
     },
     "3.2.2": {
+      "kim-dong-hwan": 7,
+      "billy-kane": 7,
+      "duck-king": 36,
+      "wolfgang-krauser": 32,
       "joe-higashi": 14,
       "mr-karate": 48,
       "tizoc": 22,
-      "billy-kane": 6,
       "cristiano-ronaldo": 25,
       "rock-howard": 25,
       "terry-bogard": 33,
       "ken": 21,
-      "wolfgang-krauser": 31,
       "kain-r-heinlein": 8,
       "rick-strowd": 40,
       "kim-kaphwan": 177,
@@ -716,7 +718,6 @@
       "kenshiro": 40,
       "mr-big": 16,
       "kevin-rian": 18,
-      "duck-king": 35,
       "b-jenet": 9,
       "blue-mary": 16,
       "nightmare-geese": 15,
@@ -724,7 +725,6 @@
       "hokutomaru": 7,
       "chun-li": 29,
       "mai-shiranui": 14,
-      "kim-dong-hwan": 6,
       "kim-jae-hoon": 6,
       "marco-rodrigues": 9,
       "preecha": 6
@@ -733,6 +733,20 @@
   "playerCharacters": {
     "123456": {
       "marco-rodrigues": 1
+    },
+    "loaalmendra": {
+      "kim-dong-hwan": 2
+    },
+    "piter": {
+      "billy-kane": 2
+    },
+    "umg": {
+      "duck-king": 1,
+      "nightmare-geese": 1
+    },
+    "miki": {
+      "wolfgang-krauser": 23,
+      "billy-kane": 1
     },
     "poetrychef": {
       "joe-higashi": 5,
@@ -745,9 +759,6 @@
     },
     "g10gamers": {
       "tizoc": 3
-    },
-    "piter": {
-      "billy-kane": 1
     },
     "go1": {
       "cristiano-ronaldo": 5,
@@ -926,10 +937,6 @@
     },
     "arusulavision": {
       "vox-reaper": 3
-    },
-    "miki": {
-      "wolfgang-krauser": 22,
-      "billy-kane": 1
     },
     "maromero": {
       "kenshiro": 5,
@@ -1331,9 +1338,6 @@
       "mr-big": 2,
       "kim-kaphwan": 1,
       "billy-kane": 1
-    },
-    "loaalmendra": {
-      "kim-dong-hwan": 1
     },
     "dgy": {
       "hokutomaru": 2,
@@ -4028,9 +4032,6 @@
     },
     "charly": {
       "cristiano-ronaldo": 1
-    },
-    "umg": {
-      "nightmare-geese": 1
     },
     "high-level-rank-match-eltodasmias": {
       "kain-r-heinlein": 1
