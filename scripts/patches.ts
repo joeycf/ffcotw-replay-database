@@ -131,9 +131,9 @@ export const SEASONS: SeasonBoundary[] = [
  * Every patch the vendor announced, oldest first.
  *
  * NEVER INVENT A VERSION TO FILL A SEQUENCE GAP. SNK announced no 1.1.0–1.1.2,
- * 1.3.0, 1.7.0, 1.7.1, 2.0.0, 2.1.0, 2.1.1, 3.1.0, 3.1.1, 3.2.0 or 3.2.1. Those
- * numbers are absent here on purpose; a reader noticing the gap is the intended
- * outcome.
+ * 1.3.0, 1.7.0, 1.7.1, 2.0.0, 2.1.0, 2.1.1, 3.1.0, 3.1.1, 3.2.0, 3.2.1, 3.3.0 or
+ * 3.3.1. Those numbers are absent here on purpose; a reader noticing the gap is
+ * the intended outcome.
  *
  * The two version-LESS rows are the beta builds and the launch build, for which
  * the vendor published no number at all. Checklist 4b's rule applies exactly
@@ -292,6 +292,13 @@ export const PATCHES: PatchBoundary[] = [
     url: 'https://www.snk-corp.co.jp/us/games/fatalfury-cotw/patchnotes/v3.2.2/',
     announcedOn: 'snk-news',
     note: 'Kim Kaphwan',
+  },
+  {
+    version: '3.3.2',
+    start: '2026-10-19',
+    url: 'https://www.snk-corp.co.jp/us/games/fatalfury-cotw/patchnotes/v3.3.2/',
+    announcedOn: 'snk-news',
+    note: 'Mikey & Draken · Ranked Phase 5',
   },
 ];
 
