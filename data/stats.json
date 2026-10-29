@@ -1,8 +1,8 @@
 {
   "totals": {
-    "replays": 4978,
+    "replays": 4979,
     "characters": 31,
-    "players": 2224,
+    "players": 2225,
     "byPatch": {
       "2025-02-20": 65,
       "2025-03-26": 86,
@@ -31,10 +31,12 @@
       "3.0.1": 219,
       "3.1.2": 114,
       "3.1.3": 142,
-      "3.2.2": 366
+      "3.2.2": 367
     }
   },
   "characterUsage": {
+    "kevin-rian": 276,
+    "gato": 371,
     "kim-dong-hwan": 236,
     "billy-kane": 358,
     "duck-king": 180,
@@ -50,11 +52,9 @@
     "rick-strowd": 228,
     "kim-kaphwan": 177,
     "andy-bogard": 329,
-    "gato": 370,
     "vox-reaper": 339,
     "kenshiro": 324,
     "mr-big": 252,
-    "kevin-rian": 275,
     "b-jenet": 304,
     "blue-mary": 205,
     "nightmare-geese": 253,
@@ -698,6 +698,8 @@
       "billy-kane": 2
     },
     "3.2.2": {
+      "kevin-rian": 19,
+      "gato": 23,
       "kim-dong-hwan": 7,
       "billy-kane": 7,
       "duck-king": 36,
@@ -713,11 +715,9 @@
       "rick-strowd": 40,
       "kim-kaphwan": 177,
       "andy-bogard": 18,
-      "gato": 22,
       "vox-reaper": 11,
       "kenshiro": 40,
       "mr-big": 16,
-      "kevin-rian": 18,
       "b-jenet": 9,
       "blue-mary": 16,
       "nightmare-geese": 15,
@@ -733,6 +733,18 @@
   "playerCharacters": {
     "123456": {
       "marco-rodrigues": 1
+    },
+    "sombra": {
+      "kevin-rian": 39,
+      "kenshiro": 5,
+      "mr-karate": 6,
+      "marco-rodrigues": 41,
+      "wolfgang-krauser": 4,
+      "joe-higashi": 3,
+      "ken": 1
+    },
+    "player": {
+      "gato": 1
     },
     "loaalmendra": {
       "kim-dong-hwan": 2
@@ -946,15 +958,6 @@
     },
     "stachington": {
       "mr-big": 1
-    },
-    "sombra": {
-      "kevin-rian": 38,
-      "kenshiro": 5,
-      "mr-karate": 6,
-      "marco-rodrigues": 41,
-      "wolfgang-krauser": 4,
-      "joe-higashi": 3,
-      "ken": 1
     },
     "kbzon": {
       "tizoc": 34

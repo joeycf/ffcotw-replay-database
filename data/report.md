@@ -1,12 +1,15 @@
 ## ⚠ ACTION REQUIRED
 
-2 self-expiring gate(s) are due:
+3 self-expiring gate(s) are due:
 
 - **manjiro-sano** (unreleased-character, due 2026-10-22)
   manjiro-sano should now be playable. If it is: confirm the name and spelling on snk-corp.co.jp/us/games/fatalfury-cotw/characters/, add --char-manjiro-sano to design/handoff/tokens.css (accent from a Claude Design session — never invent one — contrast ≥4.5:1 on --color-surface and a hue ≥8–12° off its roster neighbours), add the same hex to accents in app/app.config.ts, add the fighter to ROSTER in scripts/characters.ts with the aliases its uploaders actually use, drop this entry from UNRELEASED, then run `npm run data:characters` and `npm run data:art`. Also add a comboforge null for it in app/app.config.ts until `npm run verify:comboforge` says they carry it. If it has NOT shipped, re-date this row to the new window — do not delete it.
 
 - **ken-ryuguji** (unreleased-character, due 2026-10-22)
   ken-ryuguji should now be playable. If it is: confirm the name and spelling on snk-corp.co.jp/us/games/fatalfury-cotw/characters/, add --char-ken-ryuguji to design/handoff/tokens.css (accent from a Claude Design session — never invent one — contrast ≥4.5:1 on --color-surface and a hue ≥8–12° off its roster neighbours), add the same hex to accents in app/app.config.ts, add the fighter to ROSTER in scripts/characters.ts with the aliases its uploaders actually use, drop this entry from UNRELEASED, then run `npm run data:characters` and `npm run data:art`. Also add a comboforge null for it in app/app.config.ts until `npm run verify:comboforge` says they carry it. If it has NOT shipped, re-date this row to the new window — do not delete it.
+
+- **patch-table** (stale-patch-table, due 2026-09-18)
+  The newest patch in scripts/patches.ts is 3.2.2, 41 days old (threshold 40). Run `npm run data:patch-check` against SNK's own news CMS — not the Steam feed, which stopped carrying version posts at Ver 1.1.7. If a patch shipped and is not in the table, every replay since is filed under the previous token: it renders, it filters, and it is wrong. If genuinely nothing shipped, that is fine — this warning costs one command.
 
 
 ## ⚠ AN UNRELEASED FIGHTER MAY HAVE SHIPPED
@@ -16,29 +19,29 @@
 
 # CotW pipeline report
 
-- **4978** published records · **2224** players · **31** fighters
-- **688** pending review item(s) — absent from the site, never guessed
+- **4979** published records · **2225** players · **31** fighters
+- **689** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
 
 ## Per intake
 
 | intake | raw uploads | CotW-marked | parsed | published |
 | --- | ---: | ---: | ---: | ---: |
-| fatalFuryReplays | 6687 | 1387 | 1348 | 1348 |
-| wolfFgc | 2025 | 1369 | 1303 | 1303 |
-| svcHighlights | 751 | 698 | 676 | 676 |
-| ffCotwReplays | 767 | 766 | 642 | 642 |
-| bestOfSnk | 527 | 269 | 254 | 254 |
+| fatalFuryReplays | 6692 | 1392 | 1348 | 1348 |
+| wolfFgc | 2032 | 1376 | 1303 | 1303 |
+| svcHighlights | 753 | 700 | 676 | 676 |
+| ffCotwReplays | 768 | 767 | 642 | 642 |
+| bestOfSnk | 529 | 270 | 254 | 254 |
 | cotwReplays | 171 | 171 | 143 | 143 |
-| nomiiAegis | 387 | 360 | 153 | 153 |
-| bestOfFgc | 1458 | 343 | 322 | 322 |
+| nomiiAegis | 388 | 361 | 153 | 153 |
+| bestOfFgc | 1460 | 344 | 323 | 323 |
 | dildilFatalFury | 2548 | 1806 | 9 | 9 |
-| evoEvents | 2831 | 103 | 0 | 0 |
+| evoEvents | 2832 | 103 | 0 | 0 |
 | replayTheater | — | — | — | 128 |
 
 ## Tournament placements — Liquipedia Tier 1–2, CC BY-SA 3.0
 
-84 events with placements read; 46 of 2224 registry players carry a title (65 wins). 19 placed names are not in the registry yet — they are featured the day a replay of theirs is ingested, unless listed below as needing a human.
+84 events with placements read; 46 of 2225 registry players carry a title (65 wins). 19 placed names are not in the registry yet — they are featured the day a replay of theirs is ingested, unless listed below as needing a human.
 
 **Titled:** `xiaohai` 9W/1R · `el-maza` 5W/4R · `go1` 6W/3R · `didimokof` 3W/3R · `darkangel` 4W/1R · `nemo` 1W/4R · `poongko` 1W/4R · `score` 2W/3R · `fenritti` 2W/2R · `kindevu` 0W/4R · `kojikog` 2W/2R · `laggia` 3W/1R · `zjz` 2W/2R · `abao` 2W/1R · `kula` 3W/0R · `lokof` 1W/2R · `reynald` 0W/3R · `thegio` 1W/2R · `abuomar` 1W/1R · `basher` 1W/1R · `dai` 1W/1R · `frezzer` 2W/0R · `neku` 1W/1R · `pangma` 2W/0R · `shadow-x` 1W/1R · `sharkurien` 0W/2R · `tamago` 1W/1R · `alex` 0W/1R · `alfinete` 1W/0R · `alioune` 0W/1R · `arusu` 0W/1R · `boros` 0W/1R · `cientifikof` 1W/0R · `diaphone` 1W/0R · `iceskyrain` 0W/1R · `javier-yagami` 0W/1R · `kaiser666` 1W/0R · `leffen` 0W/1R · `mok` 1W/0R · `monib` 0W/1R · `pida` 0W/1R · `rigosam` 0W/1R · `rondun` 0W/1R · `seis-mx` 1W/0R · `sosicknashfan` 1W/0R · `xyzzy` 1W/0R
 
@@ -59,11 +62,11 @@
 
 ## Misses
 
-- `no-marker` — 10880
-- `no-char` — 687
+- `no-marker` — 10883
+- `no-char` — 688
 - `vs-count` — 638
-- `no-vs` — 510
-- `no-handle` — 299
+- `no-vs` — 511
+- `no-handle` — 314
 - `too-short` — 257
 - `before-floor` — 30
 - `slot-ambiguous` — 1
@@ -113,8 +116,8 @@ line with its literal text, instead of vanishing into a silently shorter side.
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero`
 - 6× `Wolves TREINING`
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES CO`
-- … 1092 more
+- … 1109 more
 
 > Replay Theater: 150 dumped, 150 already known here, 0 candidates, 0 rebuilt, 128 carried (add-only), 128 total.
 
-_Generated 2026-10-28T15:09:58.826Z_
+_Generated 2026-10-29T15:17:45.310Z_
