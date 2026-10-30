@@ -227,6 +227,15 @@
     "url": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/patchnotes/v3.2.2/",
     "announcedOn": "snk-news",
     "note": "Kim Kaphwan",
+    "end": "2026-10-19",
+    "season": 3
+  },
+  {
+    "version": "3.3.2",
+    "start": "2026-10-19",
+    "url": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/patchnotes/v3.3.2/",
+    "announcedOn": "snk-news",
+    "note": "Mikey & Draken · Ranked Phase 5",
     "end": null,
     "season": 3
   }

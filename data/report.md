@@ -1,15 +1,12 @@
 ## ⚠ ACTION REQUIRED
 
-3 self-expiring gate(s) are due:
+2 self-expiring gate(s) are due:
 
 - **manjiro-sano** (unreleased-character, due 2026-10-22)
   manjiro-sano should now be playable. If it is: confirm the name and spelling on snk-corp.co.jp/us/games/fatalfury-cotw/characters/, add --char-manjiro-sano to design/handoff/tokens.css (accent from a Claude Design session — never invent one — contrast ≥4.5:1 on --color-surface and a hue ≥8–12° off its roster neighbours), add the same hex to accents in app/app.config.ts, add the fighter to ROSTER in scripts/characters.ts with the aliases its uploaders actually use, drop this entry from UNRELEASED, then run `npm run data:characters` and `npm run data:art`. Also add a comboforge null for it in app/app.config.ts until `npm run verify:comboforge` says they carry it. If it has NOT shipped, re-date this row to the new window — do not delete it.
 
 - **ken-ryuguji** (unreleased-character, due 2026-10-22)
   ken-ryuguji should now be playable. If it is: confirm the name and spelling on snk-corp.co.jp/us/games/fatalfury-cotw/characters/, add --char-ken-ryuguji to design/handoff/tokens.css (accent from a Claude Design session — never invent one — contrast ≥4.5:1 on --color-surface and a hue ≥8–12° off its roster neighbours), add the same hex to accents in app/app.config.ts, add the fighter to ROSTER in scripts/characters.ts with the aliases its uploaders actually use, drop this entry from UNRELEASED, then run `npm run data:characters` and `npm run data:art`. Also add a comboforge null for it in app/app.config.ts until `npm run verify:comboforge` says they carry it. If it has NOT shipped, re-date this row to the new window — do not delete it.
-
-- **patch-table** (stale-patch-table, due 2026-09-18)
-  The newest patch in scripts/patches.ts is 3.2.2, 41 days old (threshold 40). Run `npm run data:patch-check` against SNK's own news CMS — not the Steam feed, which stopped carrying version posts at Ver 1.1.7. If a patch shipped and is not in the table, every replay since is filed under the previous token: it renders, it filters, and it is wrong. If genuinely nothing shipped, that is fine — this warning costs one command.
 
 
 ## ⚠ AN UNRELEASED FIGHTER MAY HAVE SHIPPED
@@ -19,7 +16,7 @@
 
 # CotW pipeline report
 
-- **4979** published records · **2225** players · **31** fighters
+- **4981** published records · **2225** players · **31** fighters
 - **689** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
 
@@ -27,14 +24,14 @@
 
 | intake | raw uploads | CotW-marked | parsed | published |
 | --- | ---: | ---: | ---: | ---: |
-| fatalFuryReplays | 6692 | 1392 | 1348 | 1348 |
-| wolfFgc | 2032 | 1376 | 1303 | 1303 |
+| fatalFuryReplays | 6697 | 1396 | 1349 | 1349 |
+| wolfFgc | 2035 | 1379 | 1303 | 1303 |
 | svcHighlights | 753 | 700 | 676 | 676 |
-| ffCotwReplays | 768 | 767 | 642 | 642 |
-| bestOfSnk | 529 | 270 | 254 | 254 |
-| cotwReplays | 171 | 171 | 143 | 143 |
-| nomiiAegis | 388 | 361 | 153 | 153 |
-| bestOfFgc | 1460 | 344 | 323 | 323 |
+| ffCotwReplays | 769 | 768 | 642 | 642 |
+| bestOfSnk | 531 | 271 | 254 | 254 |
+| cotwReplays | 172 | 172 | 143 | 143 |
+| nomiiAegis | 390 | 363 | 154 | 154 |
+| bestOfFgc | 1462 | 345 | 323 | 323 |
 | dildilFatalFury | 2548 | 1806 | 9 | 9 |
 | evoEvents | 2832 | 103 | 0 | 0 |
 | replayTheater | — | — | — | 128 |
@@ -62,11 +59,11 @@
 
 ## Misses
 
-- `no-marker` — 10883
+- `no-marker` — 10886
 - `no-char` — 688
 - `vs-count` — 638
 - `no-vs` — 511
-- `no-handle` — 314
+- `no-handle` — 325
 - `too-short` — 257
 - `before-floor` — 30
 - `slot-ambiguous` — 1
@@ -116,8 +113,8 @@ line with its literal text, instead of vanishing into a silently shorter side.
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero`
 - 6× `Wolves TREINING`
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES CO`
-- … 1109 more
+- … 1118 more
 
 > Replay Theater: 150 dumped, 150 already known here, 0 candidates, 0 rebuilt, 128 carried (add-only), 128 total.
 
-_Generated 2026-10-29T15:17:45.310Z_
+_Generated 2026-10-30T15:06:35.896Z_
