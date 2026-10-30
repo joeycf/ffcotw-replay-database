@@ -93,6 +93,10 @@ const DECOR_SUFFIX = new RegExp(
   [
     String.raw`\s*[▰⭐🌟🐺🥊🐦🪶💥⚡✨🔥👑🎮]*\s*(?:FF\s*)?C[Oo]TW\s+DLC\s*:.*$`,
     String.raw`\s*[▰⭐🌟🐺🥊🐦🪶💥⚡✨🔥👑🎮]*\s*DLC\s*:.*$`,
+    // The colon-less form: "▰ Tokyo Revengers DLC Day 1" (fatalFuryReplays,
+    // 2026-10-22). Left in, clean() turns the ▰ into a space and the six words
+    // join the handle, which then fails the word cap — so the side is lost.
+    String.raw`\s*[▰⭐🌟🐺🥊🐦🪶💥⚡✨🔥👑🎮]+[^▰⭐🌟🐺🥊🐦🪶💥⚡✨🔥👑🎮]*\bDLC\s+Day\s*\d+\s*$`,
     String.raw`\s*[▰⭐🌟🐺🥊🐦🪶💥⚡✨🔥👑🎮]+\s*(?:Replay\s*Match|Ranked\s*Match|High\s*Level|Early\s*Access|FF\s*CotW|Fatal\s*Fury|FATAL\s*FURY).*$`,
     String.raw`\s*\|\s*FATAL\s*FURY.*$`,
     String.raw`\s*[-–—]\s*(?:Replay|Ranked)\s*Match\b.*$`,
@@ -233,6 +237,23 @@ function parseSide(segment: string, matcher: AliasMatcher): ParsedSide | null {
       // fighter? Never guessed; the caller routes it to the queue.
       const resolvingParens = inner.filter((p) => matcher.ids(p).length > 0);
       if (resolvingParens.length > 1) return null;
+      // A paren that RESTATES the fighter the outside text already names is a
+      // nickname, not the slot: "Ken Ryuguji (Draken) (NoMiiAegis)" is the
+      // reversed shape with the nickname in brackets, and the handle is the
+      // paren that resolves to nothing. Without this, "Ken Ryuguji" became the
+      // HANDLE and minted a player named after the fighter. Only when such a
+      // paren exists — "MR KARATE (Mr.Karate)" is a player who mains his
+      // namesake, and keeps the outside text as the handle.
+      const fromOutside = matcher.ids(outside);
+      const others = inner.filter((p) => matcher.ids(p).length === 0);
+      if (
+        others.length > 0 &&
+        fromOutside.length > 0 &&
+        fromOutside.join() === [...new Set(fromParen)].join()
+      ) {
+        const handle = handleOf(others);
+        if (handle) return { handle, characters: fromOutside, slotOrder: 'chars-first' };
+      }
       const handle = handleOf(outside.split(/[▰⭐🌟🐺🥊🐦🪶💥⚡✨🔥👑🎮|｜]/u));
       if (!handle) return null;
       return { handle, characters: [...new Set(fromParen)], slotOrder: 'handle-first' };

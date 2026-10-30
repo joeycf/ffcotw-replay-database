@@ -496,5 +496,35 @@
       "released": "2026-09-18",
       "full name": "Kim Kaphwan"
     }
+  },
+  {
+    "id": "manjiro-sano",
+    "name": "Manjiro Sano",
+    "imgPortrait": "/img/char/manjiro-sano.webp",
+    "imgSplash": "/img/splash/manjiro-sano.webp",
+    "accent": "#F0E2B8",
+    "extra": {
+      "aliases": [
+        "Mikey"
+      ],
+      "season": 3,
+      "released": "2026-10-19",
+      "full name": "Manjiro Sano"
+    }
+  },
+  {
+    "id": "ken-ryuguji",
+    "name": "Ken Ryuguji",
+    "imgPortrait": "/img/char/ken-ryuguji.webp",
+    "imgSplash": "/img/splash/ken-ryuguji.webp",
+    "accent": "#E4DC3B",
+    "extra": {
+      "aliases": [
+        "Draken"
+      ],
+      "season": 3,
+      "released": "2026-10-19",
+      "full name": "Ken Ryuguji"
+    }
   }
 ]

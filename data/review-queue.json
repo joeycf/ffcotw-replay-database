@@ -1,139 +1,11 @@
 [
   {
-    "id": "8zLgAdN0DtQ",
-    "kind": "character-completion",
-    "channel": "fatalFuryReplays",
-    "title": "FF COTW ▰ ZERGE (Mikey) vs MINILORD (Draken) ▰ High Level Gameplay",
-    "publishedAt": "2026-10-27T00:00:24Z",
-    "durationSec": 980
-  },
-  {
-    "id": "moHKpYsn14E",
-    "kind": "character-completion",
-    "channel": "fatalFuryReplays",
-    "title": "FF COTW ▰ JOHNY (#1 Ranked Mikey) vs FERNO (#1 Ranked Draken) ▰ High Level Gameplay",
-    "publishedAt": "2026-10-25T13:15:06Z",
-    "durationSec": 722
-  },
-  {
-    "id": "b35fQYPehdM",
-    "kind": "character-completion",
-    "channel": "fatalFuryReplays",
-    "title": "FF COTW ▰ ZJZ (#3 Ranked Mikey) vs MAKOTOMI (#1 Ranked Nightmare Geese) ▰ Tokyo Revengers DLC Day 1",
-    "publishedAt": "2026-10-22T18:30:09Z",
-    "durationSec": 924
-  },
-  {
-    "id": "tX02RoMjTrE",
-    "kind": "character-completion",
-    "channel": "fatalFuryReplays",
-    "title": "FF COTW ▰ ARUSU (#1 Ranked Mikey) vs CHAOSBREAKER (#1 Ranked Kevin) ▰ Tokyo Revengers DLC Day 1",
-    "publishedAt": "2026-10-22T16:30:27Z",
-    "durationSec": 733
-  },
-  {
-    "id": "SB-qJldjfsI",
-    "kind": "character-completion",
-    "channel": "fatalFuryReplays",
-    "title": "FF COTW ▰ ARUSU (#1 Ranked Mikey) vs CLOUDBERRY (#1 Ranked S. Ganacci) ▰ Tokyo Revengers DLC Day 1",
-    "publishedAt": "2026-10-22T14:30:16Z",
-    "durationSec": 481
-  },
-  {
-    "id": "BQn4ybpadJs",
-    "kind": "character-completion",
-    "channel": "fatalFuryReplays",
-    "title": "FF COTW ▰ FERNO (#1 Ranked Draken) vs MINILORD (#3 Ranked Mr. Karate) ▰ Tokyo Revengers DLC Day 1",
-    "publishedAt": "2026-10-22T12:45:55Z",
-    "durationSec": 719
-  },
-  {
-    "id": "aed8O-4_oPM",
-    "kind": "character-completion",
-    "channel": "fatalFuryReplays",
-    "title": "FF COTW ▰ PANPINA (Draken) vs PDPDR (Mikey) ▰ Tokyo Revengers DLC Day 1",
-    "publishedAt": "2026-10-22T11:00:19Z",
-    "durationSec": 481
-  },
-  {
-    "id": "KmU2S1_Ct7c",
-    "kind": "character-completion",
-    "channel": "fatalFuryReplays",
-    "title": "FF COTW ▰ IMSTILLDADDADY (Mikey) vs FERNO (Draken) ▰ Tokyo Revengers DLC Day 1",
-    "publishedAt": "2026-10-22T09:15:54Z",
-    "durationSec": 514
-  },
-  {
     "id": "EFFbsSVV-ko",
     "kind": "slot-ambiguous",
     "channel": "fatalFuryReplays",
     "title": "FF:CotW 🔥 GGGGGG (Rock) vs AIGOO (Vox Reaper) & OPANTS (Kain) 🔥 FATAL FURY CotW OPEN BETA GAMEPLAY",
     "publishedAt": "2025-02-21T15:54:32Z",
     "durationSec": 481
-  },
-  {
-    "id": "v3U5-YnJso4",
-    "kind": "character-completion",
-    "channel": "wolfFgc",
-    "title": "FF:CotW 🐺 FERNO (Draken) vs THE RED FOX (Mikey)⭐Replay Match - FATAL FURY: CotW - 10/26",
-    "publishedAt": "2026-10-26T00:17:19Z",
-    "durationSec": 446
-  },
-  {
-    "id": "Hp1grYWmZxk",
-    "kind": "character-completion",
-    "channel": "wolfFgc",
-    "title": "FF:CotW 🐺 JOHNY KOF(Mikey) vs FERNO (Draken)⭐Replay Match - FATAL FURY: CotW - 10/26",
-    "publishedAt": "2026-10-24T22:44:43Z",
-    "durationSec": 451
-  },
-  {
-    "id": "o4ug93eTbQ4",
-    "kind": "character-completion",
-    "channel": "wolfFgc",
-    "title": "FF:CotW 🐺 Player1 (Mikey) vs Player2 (Draken)⭐Replay Match - FATAL FURY: CotW - 10/26",
-    "publishedAt": "2026-10-23T08:30:34Z",
-    "durationSec": 563
-  },
-  {
-    "id": "w6xlRrLj6iU",
-    "kind": "character-completion",
-    "channel": "wolfFgc",
-    "title": "FF:CotW 🐺 LANCER (Mikey) vs TANUMARU (Draken)⭐Replay Match - FATAL FURY: CotW - 10/26",
-    "publishedAt": "2026-10-23T03:00:33Z",
-    "durationSec": 584
-  },
-  {
-    "id": "eqPzqe1ZAWA",
-    "kind": "character-completion",
-    "channel": "wolfFgc",
-    "title": "FF:CotW 🐺 PANPINA (Draken) vs AE PDPDR (Mikey)⭐Replay Match - FATAL FURY: CotW - 10/26",
-    "publishedAt": "2026-10-22T12:30:20Z",
-    "durationSec": 502
-  },
-  {
-    "id": "R8_3RQ-rqqA",
-    "kind": "character-completion",
-    "channel": "wolfFgc",
-    "title": "FF:CotW 🐺 ARUSU (Mikey) vs GO1 (Mikey)⭐Replay Match - FATAL FURY: CotW - 10/26",
-    "publishedAt": "2026-10-22T11:23:45Z",
-    "durationSec": 570
-  },
-  {
-    "id": "Lx22TQg6b50",
-    "kind": "character-completion",
-    "channel": "svcHighlights",
-    "title": "FF:CotW 🌟 OKAMI (Mikey) vs FRIONEL (Draken)🌟Replay Match - FATAL FURY: City of the Wolves!",
-    "publishedAt": "2026-10-27T18:18:50Z",
-    "durationSec": 537
-  },
-  {
-    "id": "uQiRQjFIp0Q",
-    "kind": "character-completion",
-    "channel": "svcHighlights",
-    "title": "FF:CotW 🌟 WEIWEI (Kim) vs ZJZ (Mikey)🌟Replay Match - FATAL FURY: City of the Wolves!",
-    "publishedAt": "2026-10-23T15:40:20Z",
-    "durationSec": 451
   },
   {
     "id": "F0ApUr9aoIo",
@@ -150,54 +22,6 @@
     "title": "FF:CotW 🌟 PANPINA (Kim) vs MUSUBI (Kim)🌟Replay Match - FATAL FURY: City of the Wolves!",
     "publishedAt": "2026-09-30T15:49:15Z",
     "durationSec": 549
-  },
-  {
-    "id": "B1TkhNiXfjI",
-    "kind": "character-completion",
-    "channel": "ffCotwReplays",
-    "title": "Fatal Fury COTW BlackHeart Mikey VS Justin Wong Draken High Level Gameplay",
-    "publishedAt": "2026-10-29T14:00:17Z",
-    "durationSec": 510
-  },
-  {
-    "id": "QxPxm5ggA_4",
-    "kind": "character-completion",
-    "channel": "ffCotwReplays",
-    "title": "Fatal Fury COTW MadKof Mikey VS Kuraudokin Kim High Level Gameplay",
-    "publishedAt": "2026-10-27T12:49:40Z",
-    "durationSec": 607
-  },
-  {
-    "id": "4-VJpV6AML8",
-    "kind": "character-completion",
-    "channel": "ffCotwReplays",
-    "title": "Fatal Fury COTW SaiyanLoco Kim VS Imstilldadaddy Mikey",
-    "publishedAt": "2026-10-24T18:53:43Z",
-    "durationSec": 338
-  },
-  {
-    "id": "BGYTa7tfzb4",
-    "kind": "character-completion",
-    "channel": "ffCotwReplays",
-    "title": "Fatal Fury COTW Madkof Mikey VS Haregoro Draken",
-    "publishedAt": "2026-10-23T19:01:40Z",
-    "durationSec": 421
-  },
-  {
-    "id": "0X8uOPgUZRk",
-    "kind": "character-completion",
-    "channel": "ffCotwReplays",
-    "title": "Fatal Fury COTW Arusu Mikey VS GO1 Mikey",
-    "publishedAt": "2026-10-23T15:00:16Z",
-    "durationSec": 542
-  },
-  {
-    "id": "VuvTG1zf46c",
-    "kind": "character-completion",
-    "channel": "ffCotwReplays",
-    "title": "Fatal Fury COTW Panpina Draken VS Musubi Mikey",
-    "publishedAt": "2026-10-23T02:40:15Z",
-    "durationSec": 488
   },
   {
     "id": "x46TlQqis4Y",
@@ -240,28 +64,12 @@
     "durationSec": 436
   },
   {
-    "id": "gqVX0Wm5RQI",
-    "kind": "character-completion",
-    "channel": "bestOfSnk",
-    "title": "MANJIRO SANO 🐺 ARUSULAVISION VS GO1 🐺 MANJIRO SANO | FATAL FURY COTW",
-    "publishedAt": "2026-10-23T21:00:06Z",
-    "durationSec": 514
-  },
-  {
     "id": "_CGvYzt3Kjk",
     "kind": "character-completion",
     "channel": "bestOfSnk",
     "title": "KIM 🐺 PANPINA VS MOK 🐺 KIM | FATAL FURY COTW",
     "publishedAt": "2026-09-25T13:00:20Z",
     "durationSec": 311
-  },
-  {
-    "id": "rRnO5ZJd8CI",
-    "kind": "character-completion",
-    "channel": "cotwReplays",
-    "title": "Draken (ferno) vs Mikey (Audio33) | Fatal Fury: City of the Wolves",
-    "publishedAt": "2026-10-23T19:00:33Z",
-    "durationSec": 527
   },
   {
     "id": "jR8EhpPWdAE",
@@ -326,14 +134,6 @@
     "title": "Fatal Fury COTW Kenshiro vs Hotaru",
     "publishedAt": "2026-07-05T16:00:02Z",
     "durationSec": 574
-  },
-  {
-    "id": "ih4zrhc1_ec",
-    "kind": "character-completion",
-    "channel": "nomiiAegis",
-    "title": "FF Season 3 ▰ Geoffrey Mark (Kaphwan) Vs NoMiiAegis (Draken)  ▰ FATAL FURY: CoTW High Level Gameplay",
-    "publishedAt": "2026-10-25T01:25:59Z",
-    "durationSec": 845
   },
   {
     "id": "7SlznPNkSJo",
@@ -934,22 +734,6 @@
     "title": "Early Access ▰ WOLFGANG KRAUSER Vs TERRY BOGARD ▰ [FATAL FURY: City of the Wolves]",
     "publishedAt": "2026-04-19T06:56:46Z",
     "durationSec": 245
-  },
-  {
-    "id": "5Fm9brAdD_c",
-    "kind": "character-completion",
-    "channel": "bestOfFgc",
-    "title": "MANJIRO SANO 🐺 BLACKHEARTVER VS JUSTIN WONG 🐺 DRAKEN | FATAL FURY COTW",
-    "publishedAt": "2026-10-26T11:00:16Z",
-    "durationSec": 477
-  },
-  {
-    "id": "8ftt1eM0l64",
-    "kind": "character-completion",
-    "channel": "bestOfFgc",
-    "title": "MANJIRO SANO 🐺 HOTARUSUX VS DIAPHONE 🐺 MANJIRO SANO | FATAL FURY COTW",
-    "publishedAt": "2026-10-23T21:00:00Z",
-    "durationSec": 470
   },
   {
     "id": "_aOm1Y4pZ1M",

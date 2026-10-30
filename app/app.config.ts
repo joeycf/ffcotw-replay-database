@@ -49,7 +49,9 @@ import type { GameConfig } from '@engine/types';
  * handoff also carries --char-laocorn, which is deliberately ABSENT here: he is
  * announced but unreleased (Season 3, November 2026) and lives in UNRELEASED in
  * scripts/expiries.ts until he ships. Kim Kaphwan was promoted the same way when
- * he shipped (Ver.3.2.2, 2026-09-18).
+ * he shipped (Ver.3.2.2, 2026-09-18). Mikey and Draken (Ver.3.3.2, 2026-10-19)
+ * were announced after the handoff, so their two accents are DERIVED in-session
+ * by the handoff's own method — see tokens.css.
  */
 export default defineAppConfig({
   game: {
@@ -80,7 +82,7 @@ export default defineAppConfig({
     },
     // No GameStatsPanels override ships, so the stats page's `beside-timeline`
     // anchor is empty — give the meta-over-time chart the whole row and, with
-    // the room, plot the top 8 of a 31-fighter roster.
+    // the room, plot the top 8 of a 33-fighter roster.
     stats: {
       metaTimelineTopN: 8,
       metaTimelineFullWidth: true,
@@ -144,6 +146,9 @@ export default defineAppConfig({
       'rick-strowd': '#C8895A',
       'duck-king': '#2FCBB0',
       'kim-kaphwan': '#4A90FF',
+      // DERIVED 2026-10-30, not from the handoff — see tokens.css.
+      'manjiro-sano': '#F0E2B8',
+      'ken-ryuguji': '#E4DC3B',
     },
     // Order matters: SourceBadge styles by index (0 = filled primary,
     // 1 = secondary outline, 2+ = warning outline). Ids mirror
@@ -236,7 +241,8 @@ export default defineAppConfig({
     //
     // laocorn is listed although he is not on our roster yet: the day the
     // UNRELEASED gate promotes him, the null is already here and his band cannot
-    // ship a dead link on day one. kim-kaphwan's null got there the same way.
+    // ship a dead link on day one. kim-kaphwan's null got there the same way,
+    // and so did the Tokyo Revengers pair's.
     comboforge: {
       gameId: 'ffcotw',
       characters: {
@@ -245,6 +251,8 @@ export default defineAppConfig({
         'rick-strowd': null,
         'duck-king': null,
         'kim-kaphwan': null,
+        'manjiro-sano': null,
+        'ken-ryuguji': null,
         laocorn: null,
       },
     },

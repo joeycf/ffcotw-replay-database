@@ -1,6 +1,6 @@
 {
   "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/",
-  "fetched": "2026-09-24",
+  "fetched": "2026-10-30",
   "files": [
     {
       "id": "rock-howard",
@@ -713,6 +713,52 @@
         "figure": "body 1078×2468 → 273×626 at x2521",
         "bytes": 47886,
         "sha256": "2efaa4e897f032fe"
+      }
+    },
+    {
+      "id": "manjiro-sano",
+      "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/mikey.php",
+      "enumeratedTile": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_mikey.webp",
+      "portrait": {
+        "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_mikey.webp",
+        "sourceDimensions": "2155×2500",
+        "dimensions": "512×683",
+        "crop": "bust 858×1143 at 680,168 on #F0E2B8",
+        "figure": "head estimated at 53%,5% of body 1374×2199",
+        "bytes": 37966,
+        "sha256": "352a068061773341"
+      },
+      "splash": {
+        "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_mikey.webp",
+        "sourceDimensions": "2155×2500",
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1374×2199 → 391×626 at x2403",
+        "bytes": 41582,
+        "sha256": "796f8b048d9e44b4"
+      }
+    },
+    {
+      "id": "ken-ryuguji",
+      "page": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/draken.php",
+      "enumeratedTile": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_index_draken.webp",
+      "portrait": {
+        "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_draken.webp",
+        "sourceDimensions": "2155×2500",
+        "dimensions": "512×683",
+        "crop": "bust 941×1255 at 580,43 on #E4DC3B",
+        "figure": "head estimated at 33%,5% of body 1299×2414",
+        "bytes": 51640,
+        "sha256": "e7e30168430cd23c"
+      },
+      "splash": {
+        "source": "https://www.snk-corp.co.jp/us/games/fatalfury-cotw/characters/img/character_main_draken.webp",
+        "sourceDimensions": "2155×2500",
+        "dimensions": "2880×680",
+        "crop": "full body composed onto the hero's own 2880×680 ratio (2× the 1440×340 box, so object-cover crops nothing at desktop)",
+        "figure": "body 1299×2414 → 337×626 at x2457",
+        "bytes": 51962,
+        "sha256": "89f838c857d5f907"
       }
     }
   ]

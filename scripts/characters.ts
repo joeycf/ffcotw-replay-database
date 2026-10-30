@@ -15,7 +15,11 @@
  *    THE DESIGN TOKENS ARE THE SOURCE OF TRUTH FOR ACCENTS. app/app.config.ts
  *    mirrors the same block, so config and data cannot drift, and A ROSTER ID
  *    WITH NO TOKEN FAILS THIS SCRIPT LOUD rather than shipping an unstyled
- *    fighter. Never invent an accent here — get it from Claude Design.
+ *    fighter. Never invent an accent here. A fighter the handoff predates gets
+ *    one DERIVED by the handoff's own method (tokens.css header): anchor hue
+ *    sampled from SNK's key art, the roster's tone band, Δhue ≥ 8–12° against
+ *    every neighbour or a documented ΔL/chroma split, AA ≥ 4.5:1 — candidates
+ *    shown, the user picks, tokens.css marks it DERIVED.
  *
  * THE IDS ARE FULL-NAME KEBAB, and that is a decision with a second payoff.
  * SNK's own page slugs are short (`jenet`, `donghwan`, `mrkarate`), but
@@ -90,16 +94,14 @@ interface RosterEntry {
 }
 
 /**
- * Thirty-one released fighters. Four more are announced and NOT here — they
- * live in UNRELEASED in expiries.ts and arrive on release day: Mikey and Draken
- * (both 2026-10-22, the Tokyo Revengers pair), Laocorn (November 2026) and
- * December's unnamed slot.
+ * Thirty-three released fighters. Two more are announced and NOT here — they
+ * live in UNRELEASED in expiries.ts and arrive on release day: Laocorn
+ * (November 2026) and December's unnamed slot.
  *
  * Laocorn's accent is already in the design handoff, so he is a one-line
- * promotion, as Kaphwan was. THE TOKYO REVENGERS PAIR ARE NOT — they were
- * announced after the handoff, have no --char- token, and need a Claude Design
- * session before they can ship. Do not invent their accents here; characters.ts
- * exits 1 on a roster id with no token, which is the intended behaviour.
+ * promotion, as Kaphwan was. The Tokyo Revengers pair were announced after the
+ * handoff; their tokens were DERIVED on 2026-10-30 (see tokens.css). A roster
+ * id with no token still exits 1 here, which is the intended behaviour.
  */
 const ROSTER: RosterEntry[] = [
   // ── Base roster (Early Access 2025-04-21) ────────────────────────────────
@@ -278,6 +280,32 @@ const ROSTER: RosterEntry[] = [
     // Ver.3.2.2's own patch page: "New Playable Character: KIM KAPHWAN".
     released: '2026-09-18',
     aliases: [],
+  },
+  // The Tokyo Revengers pair. Ver.3.3.2's own patch page (Release Date: October
+  // 19, 2026): "New Playable Characters: MIKEY & DRAKEN". SNK's press release
+  // said October 22, the day the first uploads naming them appeared; the patch
+  // page is the date authority here, as it was for Kaphwan. Names are SNK's
+  // page titles (mikey.php "MANJIRO SANO", draken.php "KEN RYUGUJI").
+  {
+    id: 'manjiro-sano',
+    name: 'Manjiro Sano',
+    season: 3,
+    released: '2026-10-19',
+    // Measured 2026-10-30 over every raw title since 10-19: "Mikey" ×144 in
+    // character slots, never a handle ("LuchoMickey" is a different token).
+    // Bare 'Manjiro' and 'Sano' never appear alone; no katakana spelling.
+    aliases: ['Mikey'],
+  },
+  {
+    id: 'ken-ryuguji',
+    name: 'Ken Ryuguji',
+    season: 3,
+    released: '2026-10-19',
+    // "Draken" ×120, never a handle. BARE 'Ken' STAYS WITH KEN MASTERS: his
+    // uploaders still write it ("#1 Ranked Ken", "Ken (LVienna)") and no title
+    // meaning Draken does. "Ken Ryuguji" outranks "Ken" by longest-first, which
+    // is what repairs the two records filed under Ken before this row existed.
+    aliases: ['Draken'],
   },
 ];
 

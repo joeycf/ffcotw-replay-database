@@ -57,9 +57,10 @@
   --color-loss: #FF8AB3;              /* L marker — softened danger pink; never reads as the red secondary · 8.3:1 */
   --color-focus: #FFE680;             /* focus ring pale yellow · 14.6:1 */
 
-  /* 32 fighters (17 launch + Season 1 · 2 · 3 as announced 2026-09-03; S3's
-     Nov/Dec slots are unrevealed and NOT tokenized — add on reveal) · one
-     accent each · all ≥4.5:1 on --color-surface.
+  /* 34 fighters (17 launch + Season 1 · 2 · 3: the 32 announced by
+     2026-09-03, plus the October pair revealed 2026-09-09 and DERIVED
+     2026-10-30; S3's December slot is unrevealed and NOT tokenized — add on
+     reveal) · one accent each · all ≥4.5:1 on --color-surface.
      Method (same as Tōkon; use for future DLC):
      1 anchor on the canonical costume/VFX hue · 2 snap chroma+lightness to
      the roster's tone band (S .6–1, L .55–.78) · 3 enforce Δ8–12° of hue vs
@@ -107,5 +108,12 @@
   --char-duck-king: #2FCBB0;          /* mohawk teal · 8.9:1 */
   --char-kim-kaphwan: #4A90FF;        /* dobok blue — dH 11 from kain, 14 from chun-li · 5.8:1 */
   --char-laocorn: #D4AF37;            /* Armor of Mars gold — dH 6 from tizoc split by ΔL .13 + S .65/1 · 8.7:1 */
-  /* --char-<s3-nov>, --char-<s3-dec>: pending reveal. */
+  /* The Tokyo Revengers pair (Ver.3.3.2, 2026-10-19) arrived after this
+     handoff. DERIVED 2026-10-30 in-session by the method above, from SNK's
+     character_main_{mikey,draken}.webp; picked from candidates by the user.
+     A Claude Design session may replace either. Both renders are mostly the
+     black Toman uniform, so the pair splits the gold family by LIGHTNESS. */
+  --char-manjiro-sano: #F0E2B8;       /* DERIVED · pale-blond hair highlight #E9DDBE, S lifted .49→.65 off the steel/lilac whites; L .83 above band like andy — split by ΔL .27 from primary/ken-ryuguji, .31 from laocorn · 14.1:1 */
+  --char-ken-ryuguji: #E4DC3B;        /* DERIVED · Toman embroidery gold, as sampled (3.8% of torso) — dH 9 from primary, 11 from laocorn, 16 marco, 17 tizoc, 23 vox · 12.7:1 */
+  /* --char-<s3-dec>: pending reveal. */
 }

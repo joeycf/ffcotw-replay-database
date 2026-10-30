@@ -299,6 +299,10 @@
     "handle": "AlexSmith"
   },
   {
+    "id": "alexviii",
+    "handle": "ALEXVIII"
+  },
+  {
     "id": "alfinete",
     "handle": "Alfinete",
     "featured": true,
@@ -389,6 +393,14 @@
     "handle": "AngelHoliday"
   },
   {
+    "id": "angels",
+    "handle": "ANGELS"
+  },
+  {
+    "id": "angelsonxtasy",
+    "handle": "AngelsOnXtasy"
+  },
+  {
     "id": "anpan",
     "handle": "ANPAN"
   },
@@ -467,6 +479,10 @@
   {
     "id": "arkarkzero",
     "handle": "ARKARKZERO"
+  },
+  {
+    "id": "armenta",
+    "handle": "ARMENTA"
   },
   {
     "id": "armisael",
@@ -867,6 +883,14 @@
   {
     "id": "blackhb",
     "handle": "BLACKHB"
+  },
+  {
+    "id": "blackheart",
+    "handle": "BlackHeart"
+  },
+  {
+    "id": "blackheartver",
+    "handle": "BLACKHEARTVER"
   },
   {
     "id": "blackofee",
@@ -1507,6 +1531,10 @@
     "handle": "COMMON SENSE"
   },
   {
+    "id": "commonsense",
+    "handle": "COMMONSENSE"
+  },
+  {
     "id": "comodin24",
     "handle": "️ COMODIN24"
   },
@@ -1632,7 +1660,11 @@
   },
   {
     "id": "crumbzy",
-    "handle": "CRUMBZY"
+    "handle": "Crumbzy"
+  },
+  {
+    "id": "crun",
+    "handle": "CRUN"
   },
   {
     "id": "crystalmeff",
@@ -2390,6 +2422,10 @@
     "handle": "ElDonDelCiber"
   },
   {
+    "id": "elgallezno",
+    "handle": "ELGALLEZNO"
+  },
+  {
     "id": "elhamburguesa",
     "handle": "ElHamburguesa"
   },
@@ -2800,7 +2836,7 @@
   },
   {
     "id": "fortier",
-    "handle": "fortier"
+    "handle": "Fortier"
   },
   {
     "id": "foxxy",
@@ -2997,7 +3033,7 @@
   },
   {
     "id": "genesis",
-    "handle": "GENESIS"
+    "handle": "Genesis"
   },
   {
     "id": "genesis-jones",
@@ -3273,6 +3309,10 @@
   {
     "id": "granado-eod",
     "handle": "GRANADO EOD"
+  },
+  {
+    "id": "grandpa",
+    "handle": "GRANDPA"
   },
   {
     "id": "grayfokxx",
@@ -3859,6 +3899,10 @@
     "handle": "Hotaru"
   },
   {
+    "id": "hotarusux",
+    "handle": "HOTARUSUX"
+  },
+  {
     "id": "hotdog",
     "handle": "HotDog"
   },
@@ -3901,6 +3945,10 @@
   {
     "id": "hurricane",
     "handle": "HURRICANE"
+  },
+  {
+    "id": "hwan",
+    "handle": "HWAN"
   },
   {
     "id": "hyde",
@@ -4036,6 +4084,10 @@
   {
     "id": "intubation",
     "handle": "INTUBATION"
+  },
+  {
+    "id": "inukkoro",
+    "handle": "Inukkoro"
   },
   {
     "id": "iori-gordo",
@@ -4733,7 +4785,7 @@
   },
   {
     "id": "kindevu",
-    "handle": "KindEVU",
+    "handle": "Kindevu",
     "featured": true,
     "extra": {
       "titles": [
@@ -5580,6 +5632,10 @@
     "handle": "MAKHBETH"
   },
   {
+    "id": "makhenshiro",
+    "handle": "MAKHENSHIRO"
+  },
+  {
     "id": "makotomi",
     "handle": "Makotomi"
   },
@@ -5674,6 +5730,10 @@
   {
     "id": "masomamx",
     "handle": "MasomaMX"
+  },
+  {
+    "id": "mastersoul",
+    "handle": "MasterSoul"
   },
   {
     "id": "matheus",
@@ -6199,7 +6259,7 @@
   },
   {
     "id": "musubi",
-    "handle": "musubi"
+    "handle": "Musubi"
   },
   {
     "id": "mutekiyama",
@@ -6244,6 +6304,10 @@
   {
     "id": "n3shk3n",
     "handle": "N3SHK3N"
+  },
+  {
+    "id": "na55",
+    "handle": "NA55"
   },
   {
     "id": "nacer",
@@ -6332,6 +6396,10 @@
   {
     "id": "nauldrade",
     "handle": "NAULDRADE"
+  },
+  {
+    "id": "nazonoperu",
+    "handle": "NAZONOPERU"
   },
   {
     "id": "nbace",
@@ -6540,6 +6608,10 @@
   {
     "id": "nomiiaegis",
     "handle": "NoMiiAegis"
+  },
+  {
+    "id": "nonoilman",
+    "handle": "NONOILMAN"
   },
   {
     "id": "noribou",
@@ -6778,6 +6850,10 @@
     "handle": "OZGORD"
   },
   {
+    "id": "pablo-garcia",
+    "handle": "PABLO GARCIA"
+  },
+  {
     "id": "pace",
     "handle": "PACE"
   },
@@ -6844,7 +6920,7 @@
   },
   {
     "id": "parasite",
-    "handle": "PARASITE"
+    "handle": "Parasite"
   },
   {
     "id": "pashi",
@@ -7036,6 +7112,14 @@
   {
     "id": "player",
     "handle": "PLAYER"
+  },
+  {
+    "id": "player1",
+    "handle": "Player1"
+  },
+  {
+    "id": "player2",
+    "handle": "Player2"
   },
   {
     "id": "playuni",
@@ -7329,6 +7413,10 @@
     "handle": "ReallyKANE"
   },
   {
+    "id": "rebirth",
+    "handle": "REBIRTH"
+  },
+  {
     "id": "recap",
     "handle": "RECAP"
   },
@@ -7499,6 +7587,10 @@
     "handle": "RINRIN"
   },
   {
+    "id": "rittimond",
+    "handle": "RITTIMOND"
+  },
+  {
     "id": "rivai",
     "handle": "Rivai"
   },
@@ -7529,6 +7621,10 @@
   {
     "id": "robinho-da-ilha",
     "handle": "ROBINHO DA ILHA"
+  },
+  {
+    "id": "robokof",
+    "handle": "ROBOKOF"
   },
   {
     "id": "robsensei",
@@ -7658,10 +7754,6 @@
     "handle": "Ryougi"
   },
   {
-    "id": "ryuguji",
-    "handle": "RYUGUJI"
-  },
-  {
     "id": "ryuken",
     "handle": "RYUKEN"
   },
@@ -7778,6 +7870,10 @@
     "handle": "SANDUNGERO"
   },
   {
+    "id": "sanguinario",
+    "handle": "sanguinario"
+  },
+  {
     "id": "sanwa-m",
     "handle": "SANWA M’"
   },
@@ -7812,6 +7908,10 @@
   {
     "id": "scarat",
     "handle": "SCARAT"
+  },
+  {
+    "id": "schick",
+    "handle": "SCHICK"
   },
   {
     "id": "scio",
@@ -8517,6 +8617,10 @@
     "handle": "SUPREMUS"
   },
   {
+    "id": "supremus2d",
+    "handle": "SUPREMUS2D"
+  },
+  {
     "id": "sutaadasuto",
     "handle": "SUTAADASUTO"
   },
@@ -8618,6 +8722,10 @@
     "handle": "Tamn Son!"
   },
   {
+    "id": "tanumaru",
+    "handle": "Tanumaru"
+  },
+  {
     "id": "taru-vt",
     "handle": "TARU VT"
   },
@@ -8640,6 +8748,10 @@
   {
     "id": "teddy",
     "handle": "TEDDY"
+  },
+  {
+    "id": "teemoisreport",
+    "handle": "TeemoisReport"
   },
   {
     "id": "teiga",
@@ -8728,6 +8840,10 @@
   {
     "id": "the-rage",
     "handle": "THE RAGE"
+  },
+  {
+    "id": "the-red-fox",
+    "handle": "THE RED FOX"
   },
   {
     "id": "the-sh1ning",
@@ -8970,7 +9086,7 @@
   },
   {
     "id": "tristero",
-    "handle": "TRISTERO"
+    "handle": "Tristero"
   },
   {
     "id": "trix-sama",
@@ -9097,6 +9213,10 @@
     "handle": "USAGI"
   },
   {
+    "id": "usami",
+    "handle": "USAMI"
+  },
+  {
     "id": "usan-feon",
     "handle": "USAN FEON"
   },
@@ -9125,6 +9245,10 @@
     "handle": "VALRMOGHULIS ️"
   },
   {
+    "id": "vampk",
+    "handle": "VAMPK"
+  },
+  {
     "id": "vanesso-san",
     "handle": "VANESSO SAN"
   },
@@ -9135,6 +9259,10 @@
   {
     "id": "vanpk",
     "handle": "VANPK"
+  },
+  {
+    "id": "vansthor",
+    "handle": "VANSTHOR"
   },
   {
     "id": "velozcity",
@@ -9247,6 +9375,10 @@
   {
     "id": "vip",
     "handle": "VIP"
+  },
+  {
+    "id": "vleoh",
+    "handle": "VLEOH"
   },
   {
     "id": "von",
@@ -9415,6 +9547,10 @@
   {
     "id": "wul3madokula",
     "handle": "WUL3MADOKULA ️"
+  },
+  {
+    "id": "wwsnk",
+    "handle": "WWSNK"
   },
   {
     "id": "wycry",

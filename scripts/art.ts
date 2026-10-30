@@ -95,6 +95,8 @@ const PAGE_SLUG: Record<string, string> = {
   // does not also need editing. SNK has no page for them yet, which this script
   // reports rather than crashing on.
   'kim-kaphwan': 'kaphwan',
+  'manjiro-sano': 'mikey',
+  'ken-ryuguji': 'draken',
   laocorn: 'laocorn',
 };
 

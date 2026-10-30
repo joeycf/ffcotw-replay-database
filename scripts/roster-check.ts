@@ -23,6 +23,14 @@
  * (For the same reason, do not read the `atl=` alt text either: SNK ships
  * `kain.php` with alt "GATO".)
  *
+ * AN ENTRY ENDS AT `</a>`, NOT AT `</a></li>`. The Tokyo Revengers pair
+ * (2026-10-19) arrived as `<li><a href="mikey.php">…<img …></a>` followed by a
+ * `<p>MANJIRO SANO</p>` caption before the `</li>`. Anchored on `</a></li>`, the
+ * lazy match ran from mikey.php across draken.php to the next `</a></li>` on
+ * the page: 32 fighters seen against 33 linked, with Draken silently absent.
+ * The thumbnail-shape control could not catch it, because the swallowed
+ * entry's body still carried an <img>.
+ *
  * SNK'S SLUGS ARE SHORT AND OURS ARE FULL-NAME KEBAB. `jenet` is `b-jenet`,
  * `donghwan` is `kim-dong-hwan`, `cr7` is `cristiano-ronaldo`. That translation
  * has to live somewhere, and SLUG_TO_ID below is it. See scripts/characters.ts
@@ -84,6 +92,8 @@ const SLUG_TO_ID: Record<string, string> = {
   rick: 'rick-strowd',
   duck: 'duck-king',
   kaphwan: 'kim-kaphwan',
+  mikey: 'manjiro-sano',
+  draken: 'ken-ryuguji',
   // Identity: preecha, tizoc, gato, hokutomaru, ken, chun-li, kenshiro.
 };
 
@@ -111,7 +121,7 @@ async function main(): Promise<void> {
   }
 
   const entries = [
-    ...html.matchAll(/<li><a href="([a-z0-9_.-]+)\.php"[^>]*>([\s\S]*?)<\/a><\/li>/g),
+    ...html.matchAll(/<li><a href="([a-z0-9_.-]+)\.php"[^>]*>([\s\S]*?)<\/a>/g),
   ];
   const linkSlugs = new Set(entries.map((m) => m[1]!));
   if (linkSlugs.size === 0)

@@ -127,15 +127,24 @@ major bump that its own notes place _inside_ Season 2.
 **Nothing folds.** 1.1.3 → 1.1.7 are five separately announced balance updates
 in six weeks; folding on Z would erase all five.
 
-## The roster is 31, plus 4 announced
+## The roster is 33, plus 2 announced
 
 Enumerated from SNK's own character index. Kim Kaphwan joined with Ver.3.2.2 on
-2026-09-18. Laocorn (November 2026), the Tokyo Revengers pair Mikey and Draken
-(2026-10-22) and December's unnamed slot are announced on SNK's **press** path —
-a different feed from the game site's news CMS — and are held in `UNRELEASED`
-(`scripts/expiries.ts`) until they ship. Laocorn's accent is already in the
-design handoff, so his promotion is a one-line change; Mikey and Draken need a
-design session for theirs first.
+2026-09-18, and the Tokyo Revengers pair, Manjiro "Mikey" Sano and Ken "Draken"
+Ryuguji, with Ver.3.3.2 on 2026-10-19. Laocorn (November 2026) and December's
+unnamed slot are announced on SNK's **press** path — a different feed from the
+game site's news CMS — and are held in `UNRELEASED` (`scripts/expiries.ts`)
+until they ship. Laocorn's accent is already in the design handoff, so his
+promotion is a one-line change.
+
+A fighter the handoff predates gets an accent **derived** by the handoff's own
+method (the header of `design/handoff/tokens.css`): the anchor hue sampled from
+SNK's key art, never guessed; the roster's tone band; Δhue ≥ 8–12° against
+every neighbour, else a documented ΔL ≥ .12 or chroma split; AA ≥ 4.5:1 on
+`--color-surface`. Three or four candidates go to a human with the anchor
+evidence, and the pick is recorded in tokens.css marked DERIVED, which a design
+session may later replace. Mikey (`#F0E2B8`) and Draken (`#E4DC3B`) were
+derived this way on 2026-10-30.
 
 Character art is **enumerated, never constructed**, from SNK's own markup.
 Their filenames disagree with their own page slugs three different ways

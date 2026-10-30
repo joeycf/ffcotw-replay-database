@@ -64,8 +64,8 @@ import type { Expiry } from '../types/index';
  * snk-corp.co.jp/us/press/2026/city-of-the-wolves-is-destined-for-revenge-in-
  * season-3-…/) names the schedule: Rick Strowd July, Duck King August, Kim
  * Kaphwan September, Laocorn November, with "mystery fighters slated for
- * release in October and December". Rick, Duck and Kaphwan have shipped and
- * are on the roster; the rows below are what is left.
+ * release in October and December". Rick, Duck, Kaphwan, Mikey and Draken have
+ * shipped and are on the roster; the rows below are what is left.
  *
  * Kaphwan shipped on 2026-09-18 (Ver.3.2.2), twelve days before his
  * window-close row would have fired. The manual data:patch-check and
@@ -116,42 +116,16 @@ export const UNRELEASED: {
       'Season 3, announced for NOVEMBER 2026; fires at window close. Playable debut, from the ' +
       '1994 Fatal Fury film — so uploaders may spell it "Laocorn Gaudeamus".',
   },
-  // ── THE OCTOBER SLOT, REVEALED 2026-09-09: ONE SLOT, TWO FIGHTERS ──────────
-  // These two replace the old 's3-october-mystery' row, which was wrong twice over:
-  // one row for two fighters, and firing 2026-10-31 for a release on the 22nd.
-  // An EXACT DAY was announced, so the fire-at-window-close rule in this file's
-  // header does not apply here — that rule exists for month-granularity windows,
-  // and the rows that still need it (laocorn, december) keep it.
-  {
-    id: 'manjiro-sano',
-    releases: '2026-10-22',
-    detect: ['mikey'],
-    note:
-      'Season 3, Tokyo Revengers collaboration, announced 2026-09-09 for OCTOBER 22 with an ' +
-      'exact day. "Manjiro \u201cMikey\u201d Sano" — full-name kebab per this repo\'s id ' +
-      "convention, but CONFIRM the id and spelling against SNK's character index when the page " +
-      'exists; there is none yet. Uploaders will overwhelmingly write "Mikey", the nickname ' +
-      'inside the official name, so that is the alias that matters. Ships alongside ' +
-      '[ken-ryuguji] — the first time this game has released two DLC characters simultaneously.',
-  },
-  {
-    id: 'ken-ryuguji',
-    releases: '2026-10-22',
-    detect: ['draken'],
-    note:
-      'Season 3, Tokyo Revengers collaboration, announced 2026-09-09 for OCTOBER 22. ' +
-      '"Ken \u201cDraken\u201d Ryuguji"; uploaders will write "Draken". ' +
-      'READ THIS BEFORE WRITING HIS ALIASES: he puts a SECOND Ken on this roster, so a bare ' +
-      '"Ken" stops being resolvable the day he ships — exactly the Kim problem the header ' +
-      'describes, and the reason "kim" is on the banned list. Today the id `ken` (Ken Masters, ' +
-      'S1) owns the bare token through its own name. Either Draken never carries a bare "Ken", ' +
-      'or "ken" joins the banned list and both fighters resolve only on a qualified spelling. ' +
-      'Decide it when he ships, with the corpus counts in front of you — never by pattern.',
-  },
+  // The October slot (Mikey and Draken, the Tokyo Revengers pair) shipped with
+  // Ver.3.3.2 on 2026-10-19 and was promoted on 2026-10-30; their rows are gone.
+  // Their `detect` needles live on in SELFTEST_ROWS below, which is where the
+  // nickname-not-id rule is proved.
   {
     id: 's3-december-mystery',
     releases: '2026-12-31',
-    note: 'Season 3, December slot. Announced, unnamed. Same treatment as the October row.',
+    note:
+      'Season 3, December slot. Announced, unnamed; fires at window close, and moves to an ' +
+      'exact day if SNK names one, as the October pair did.',
   },
 ];
 
@@ -222,14 +196,21 @@ export function dueExpiries(asOf: string = today()): Expiry[] {
           `design/handoff/tokens.css (${
             u.accent
               ? `the handoff already derived ${u.accent}`
-              : 'accent from a Claude Design session — never invent one'
-          } — contrast ≥4.5:1 on --color-surface and a hue ≥8–12° off its roster ` +
-          `neighbours), add the same hex to accents in app/app.config.ts, add the fighter to ` +
-          `ROSTER in scripts/characters.ts with the aliases its uploaders actually use, drop ` +
-          `this entry from UNRELEASED, then run \`npm run data:characters\` and ` +
-          `\`npm run data:art\`. Also add a comboforge null for it in app/app.config.ts until ` +
-          `\`npm run verify:comboforge\` says they carry it. If it has NOT shipped, re-date ` +
-          `this row to the new window — do not delete it.`,
+              : 'derive it by the handoff\'s method from the vendor\'s official art — anchor ' +
+                'hue sampled from the character\'s key art, never guessed; the roster\'s tone ' +
+                'band (S .6–1, L .55–.78); Δhue ≥ 8–12° against every roster neighbour, else ' +
+                'split by ΔL ≥ .12 or chroma, documented; AA ≥ 4.5:1 on --color-surface — ' +
+                'present 3–4 candidates with the anchor evidence, the user picks, record the ' +
+                'derivation in tokens.css marked DERIVED (a design session may replace it)'
+          }), add the same hex to accents in app/app.config.ts, add the fighter to ` +
+          `ROSTER in scripts/characters.ts with the aliases its uploaders actually use (mined ` +
+          `from titles, never guessed), drop this entry from UNRELEASED, map SNK's page slug in ` +
+          `SLUG_TO_ID (scripts/roster-check.ts) and PAGE_SLUG (scripts/art.ts), then run ` +
+          `\`npm run data:characters\`, \`npm run data:art\` (eyeball the bust crop; a novel ` +
+          `pose needs a BUST_HEAD row) and \`npm run data:og\`, and fix the prose that counts ` +
+          `the roster (README, characters.ts, app.config.ts). Also add a comboforge null for it ` +
+          `in app/app.config.ts until \`npm run verify:comboforge\` says they carry it. If it ` +
+          `has NOT shipped, re-date this row to the new window — do not delete it.`,
       });
     }
   }
@@ -291,6 +272,16 @@ export function expiryBlock(due: Expiry[]): string[] {
 //
 // It exists because the rule WAS silently blind: matching on the id alone,
 // "manjiro-sano" never appears in a title and "Mikey" always would.
+//
+// THE FIXTURES CARRY THEIR OWN ROWS. Run against the live UNRELEASED, every
+// promotion deleted the very fixture that proved the nickname rule (Kaphwan's
+// went that way); frozen here, the control outlives the fighters it was
+// written for. Mikey and Draken shipped on 2026-10-19 and still prove it.
+const SELFTEST_ROWS: { id: string; detect?: string[] }[] = [
+  { id: 'manjiro-sano', detect: ['mikey'] },
+  { id: 'ken-ryuguji', detect: ['draken'] },
+  { id: 'laocorn' },
+];
 const SELFTEST: { name: string; residue: string[]; want: string[] }[] = [
   { name: 'a clean corpus fires nothing', residue: ['DildilFatalFury', 'Rankeadas'], want: [] },
   {
@@ -324,7 +315,7 @@ const SELFTEST: { name: string; residue: string[]; want: string[] }[] = [
 function selftest(): number {
   let failed = 0;
   for (const c of SELFTEST) {
-    const got = unreleasedResidueHits(c.residue, UNRELEASED);
+    const got = unreleasedResidueHits(c.residue, SELFTEST_ROWS);
     const ok = [...got].sort().join(',') === [...c.want].sort().join(',');
     if (!ok) {
       failed++;
