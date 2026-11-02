@@ -279,6 +279,10 @@
     "handle": "Alex Smith"
   },
   {
+    "id": "alex-viii",
+    "handle": "ALEX VIII"
+  },
+  {
     "id": "alex5mith",
     "handle": "Alex5mith"
   },
@@ -3471,6 +3475,10 @@
     "handle": "Haregoro"
   },
   {
+    "id": "haregoropc",
+    "handle": "HaregoroPC"
+  },
+  {
     "id": "harima",
     "handle": "HARIMA"
   },
@@ -5617,7 +5625,7 @@
   },
   {
     "id": "madkof",
-    "handle": "Madkof"
+    "handle": "MadkoF"
   },
   {
     "id": "maestro-matt",
@@ -5890,6 +5898,10 @@
   {
     "id": "mikado2002",
     "handle": "Mikado2002"
+  },
+  {
+    "id": "mike",
+    "handle": "MIKE"
   },
   {
     "id": "mike-ross",
