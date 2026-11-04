@@ -552,6 +552,10 @@
     "handle": "Arusu Grant"
   },
   {
+    "id": "arusu-lavision",
+    "handle": "ARUSU LAVISION"
+  },
+  {
     "id": "arusugrant",
     "handle": "ArusuGrant"
   },
@@ -1437,7 +1441,7 @@
   },
   {
     "id": "cibernetico",
-    "handle": "CIBERNETICO"
+    "handle": "Cibernetico"
   },
   {
     "id": "ciberneticomx",
@@ -1545,6 +1549,10 @@
   {
     "id": "commonsense",
     "handle": "COMMONSENSE"
+  },
+  {
+    "id": "commonsensen",
+    "handle": "COMMONSENSEN"
   },
   {
     "id": "comodin24",
@@ -4176,6 +4184,10 @@
   {
     "id": "ivanndif",
     "handle": "IVANNDIF"
+  },
+  {
+    "id": "ivansnk",
+    "handle": "IVANSNK"
   },
   {
     "id": "iyueni",
@@ -7421,6 +7433,10 @@
     "handle": "Ramones"
   },
   {
+    "id": "ramsseus",
+    "handle": "Ramsseus"
+  },
+  {
     "id": "rarebear",
     "handle": "RAREBEAR"
   },
@@ -9839,6 +9855,10 @@
   {
     "id": "yingdangying",
     "handle": "YINGDANGYING"
+  },
+  {
+    "id": "yiro",
+    "handle": "YIRO"
   },
   {
     "id": "yisusloco1",
