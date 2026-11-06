@@ -2772,7 +2772,7 @@
   },
   {
     "id": "ferno",
-    "handle": "Ferno"
+    "handle": "ferno"
   },
   {
     "id": "fever",
@@ -4678,6 +4678,10 @@
   {
     "id": "kazunoko",
     "handle": "Kazunoko"
+  },
+  {
+    "id": "kazutora",
+    "handle": "Kazutora"
   },
   {
     "id": "kb2k",
@@ -6832,6 +6836,10 @@
   {
     "id": "only-pants",
     "handle": "ONLY PANTS"
+  },
+  {
+    "id": "ootaka",
+    "handle": "OOTAKA"
   },
   {
     "id": "oracle",
