@@ -1699,6 +1699,10 @@
     "handle": "CrystalMeff"
   },
   {
+    "id": "cubanpete",
+    "handle": "CubanPete"
+  },
+  {
     "id": "cubish",
     "handle": "Cubish"
   },
@@ -1790,6 +1794,10 @@
   {
     "id": "daniel-foka",
     "handle": "DANIEL FOKA"
+  },
+  {
+    "id": "danielfoca",
+    "handle": "DANIELFOCA"
   },
   {
     "id": "danielfoka",
@@ -5520,6 +5528,10 @@
     }
   },
   {
+    "id": "lookstrash",
+    "handle": "LOOKSTRASH"
+  },
+  {
     "id": "lord-jinzo",
     "handle": "Lord Jinzo"
   },
@@ -6771,7 +6783,7 @@
   },
   {
     "id": "okami",
-    "handle": "OKAMI"
+    "handle": "okami"
   },
   {
     "id": "okibang",
@@ -9939,6 +9951,10 @@
   {
     "id": "yukitomaru",
     "handle": "Yukitomaru"
+  },
+  {
+    "id": "yumoto",
+    "handle": "Yumoto"
   },
   {
     "id": "yurikov",
