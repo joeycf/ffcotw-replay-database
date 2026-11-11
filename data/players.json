@@ -61,7 +61,7 @@
   },
   {
     "id": "aaruhoku",
-    "handle": "Aaruhoku"
+    "handle": "aaruhoku"
   },
   {
     "id": "abao",
@@ -2784,7 +2784,7 @@
   },
   {
     "id": "ferno",
-    "handle": "ferno"
+    "handle": "Ferno"
   },
   {
     "id": "fever",
@@ -8430,6 +8430,10 @@
     "handle": "SNK FOREVER"
   },
   {
+    "id": "snnns",
+    "handle": "SNNNS"
+  },
+  {
     "id": "snoot",
     "handle": "SNOOT"
   },
@@ -8823,7 +8827,7 @@
   },
   {
     "id": "tanumaru",
-    "handle": "Tanumaru"
+    "handle": "tanumaru"
   },
   {
     "id": "taru-vt",

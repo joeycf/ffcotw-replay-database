@@ -1,8 +1,8 @@
 {
   "totals": {
-    "replays": 5249,
+    "replays": 5262,
     "characters": 33,
-    "players": 2287,
+    "players": 2288,
     "byPatch": {
       "2025-02-20": 65,
       "2025-03-26": 86,
@@ -32,42 +32,42 @@
       "3.1.2": 114,
       "3.1.3": 142,
       "3.2.2": 327,
-      "3.3.2": 310
+      "3.3.2": 323
     }
   },
   "characterUsage": {
-    "manjiro-sano": 140,
+    "manjiro-sano": 143,
+    "cristiano-ronaldo": 355,
+    "rock-howard": 581,
+    "ken-ryuguji": 98,
+    "kenshiro": 345,
+    "gato": 377,
+    "b-jenet": 310,
+    "hotaru-futaba": 386,
+    "kim-dong-hwan": 238,
+    "mai-shiranui": 283,
+    "nightmare-geese": 266,
+    "kim-kaphwan": 214,
+    "joe-higashi": 247,
+    "duck-king": 188,
+    "kim-jae-hoon": 194,
+    "marco-rodrigues": 353,
+    "chun-li": 309,
     "rick-strowd": 235,
     "mr-big": 263,
-    "kenshiro": 343,
-    "hotaru-futaba": 385,
-    "ken-ryuguji": 95,
     "mr-karate": 483,
-    "kim-kaphwan": 211,
-    "kim-jae-hoon": 193,
-    "rock-howard": 580,
-    "nightmare-geese": 265,
     "wolfgang-krauser": 319,
     "tizoc": 455,
-    "chun-li": 308,
-    "gato": 376,
     "terry-bogard": 623,
     "andy-bogard": 337,
-    "duck-king": 187,
     "salvatore-ganacci": 203,
-    "joe-higashi": 246,
     "vox-reaper": 350,
     "kevin-rian": 290,
-    "mai-shiranui": 282,
-    "b-jenet": 308,
-    "cristiano-ronaldo": 353,
-    "marco-rodrigues": 352,
     "ken": 448,
     "kain-r-heinlein": 456,
     "billy-kane": 361,
     "blue-mary": 210,
     "preecha": 317,
-    "kim-dong-hwan": 237,
     "hokutomaru": 296
   },
   "byPatchUsage": {
@@ -733,43 +733,217 @@
       "b-jenet": 7
     },
     "3.3.2": {
-      "manjiro-sano": 140,
+      "manjiro-sano": 143,
+      "cristiano-ronaldo": 17,
+      "rock-howard": 15,
+      "ken-ryuguji": 98,
+      "kenshiro": 25,
+      "gato": 11,
+      "b-jenet": 8,
+      "hotaru-futaba": 6,
+      "kim-dong-hwan": 3,
+      "mai-shiranui": 10,
+      "nightmare-geese": 14,
+      "kim-kaphwan": 46,
+      "joe-higashi": 12,
+      "duck-king": 13,
+      "kim-jae-hoon": 9,
+      "marco-rodrigues": 3,
+      "chun-li": 7,
       "rick-strowd": 12,
       "mr-big": 14,
-      "kenshiro": 23,
-      "hotaru-futaba": 5,
-      "ken-ryuguji": 95,
       "mr-karate": 46,
-      "kim-kaphwan": 43,
-      "kim-jae-hoon": 8,
-      "rock-howard": 14,
-      "nightmare-geese": 13,
       "wolfgang-krauser": 15,
       "tizoc": 24,
-      "chun-li": 6,
-      "gato": 10,
       "terry-bogard": 13,
       "andy-bogard": 10,
-      "duck-king": 12,
       "salvatore-ganacci": 6,
-      "joe-higashi": 11,
       "vox-reaper": 12,
       "kevin-rian": 17,
-      "mai-shiranui": 9,
-      "b-jenet": 6,
-      "cristiano-ronaldo": 15,
-      "marco-rodrigues": 2,
       "ken": 11,
       "kain-r-heinlein": 9,
       "billy-kane": 6,
       "blue-mary": 6,
-      "preecha": 5,
-      "kim-dong-hwan": 2
+      "preecha": 5
     }
   },
   "playerCharacters": {
     "123456": {
       "marco-rodrigues": 1
+    },
+    "armenta": {
+      "manjiro-sano": 18
+    },
+    "michelle": {
+      "cristiano-ronaldo": 24
+    },
+    "rondun": {
+      "rock-howard": 20
+    },
+    "ferno": {
+      "ken-ryuguji": 45,
+      "kim-kaphwan": 42,
+      "terry-bogard": 2,
+      "mr-karate": 16,
+      "wolfgang-krauser": 25,
+      "duck-king": 34,
+      "kenshiro": 27,
+      "kim-jae-hoon": 7,
+      "rick-strowd": 19,
+      "salvatore-ganacci": 20,
+      "mr-big": 18,
+      "nightmare-geese": 15,
+      "blue-mary": 17,
+      "cristiano-ronaldo": 1,
+      "kim-dong-hwan": 13,
+      "kevin-rian": 4,
+      "mai-shiranui": 1,
+      "joe-higashi": 2,
+      "andy-bogard": 10,
+      "marco-rodrigues": 8,
+      "b-jenet": 1,
+      "tizoc": 1
+    },
+    "na55": {
+      "manjiro-sano": 8
+    },
+    "naruo": {
+      "kenshiro": 3,
+      "gato": 2
+    },
+    "snnns": {
+      "gato": 1
+    },
+    "rino": {
+      "ken-ryuguji": 2,
+      "rick-strowd": 3,
+      "mr-big": 16,
+      "wolfgang-krauser": 3,
+      "kim-jae-hoon": 1,
+      "chun-li": 2,
+      "ken": 1,
+      "andy-bogard": 1
+    },
+    "jckil1a": {
+      "b-jenet": 16
+    },
+    "fibel": {
+      "hotaru-futaba": 19
+    },
+    "ondl3": {
+      "kim-dong-hwan": 2,
+      "wolfgang-krauser": 1
+    },
+    "faalex": {
+      "manjiro-sano": 17,
+      "rock-howard": 94,
+      "mr-karate": 7,
+      "terry-bogard": 1,
+      "ken": 1,
+      "blue-mary": 4
+    },
+    "vermi-cl": {
+      "mai-shiranui": 1,
+      "manjiro-sano": 1,
+      "b-jenet": 2
+    },
+    "plsx": {
+      "nightmare-geese": 54,
+      "joe-higashi": 22,
+      "rick-strowd": 10,
+      "duck-king": 4,
+      "kenshiro": 3,
+      "mr-karate": 1,
+      "wolfgang-krauser": 3,
+      "vox-reaper": 16
+    },
+    "didimokof": {
+      "kim-kaphwan": 3,
+      "manjiro-sano": 3,
+      "mr-karate": 3,
+      "andy-bogard": 1,
+      "nightmare-geese": 1,
+      "hokutomaru": 22
+    },
+    "fffff": {
+      "joe-higashi": 5,
+      "preecha": 15,
+      "mr-karate": 3
+    },
+    "pugera": {
+      "duck-king": 5,
+      "marco-rodrigues": 8,
+      "hotaru-futaba": 2,
+      "kim-dong-hwan": 3
+    },
+    "tanumaru": {
+      "kenshiro": 2,
+      "ken-ryuguji": 1
+    },
+    "aaruhoku": {
+      "kim-jae-hoon": 5,
+      "andy-bogard": 3,
+      "mai-shiranui": 2
+    },
+    "kula": {
+      "cristiano-ronaldo": 83,
+      "manjiro-sano": 7,
+      "ken-ryuguji": 3,
+      "mr-karate": 19,
+      "kim-kaphwan": 6,
+      "duck-king": 3,
+      "kenshiro": 3,
+      "wolfgang-krauser": 2,
+      "blue-mary": 3,
+      "marco-rodrigues": 4,
+      "nightmare-geese": 3,
+      "kevin-rian": 1,
+      "mr-big": 1,
+      "hotaru-futaba": 2,
+      "chun-li": 4,
+      "joe-higashi": 1,
+      "billy-kane": 2,
+      "andy-bogard": 10,
+      "hokutomaru": 1
+    },
+    "momo-ayase": {
+      "kim-kaphwan": 9,
+      "wolfgang-krauser": 2,
+      "kevin-rian": 10,
+      "duck-king": 1,
+      "billy-kane": 1,
+      "nightmare-geese": 3,
+      "chun-li": 4,
+      "kim-jae-hoon": 3,
+      "andy-bogard": 3
+    },
+    "blckspider": {
+      "marco-rodrigues": 12,
+      "kim-kaphwan": 5,
+      "duck-king": 1,
+      "mr-karate": 2,
+      "kevin-rian": 2
+    },
+    "johny": {
+      "kim-kaphwan": 8,
+      "manjiro-sano": 3,
+      "ken": 18,
+      "preecha": 2,
+      "mr-karate": 1,
+      "kenshiro": 2,
+      "hokutomaru": 6,
+      "mr-big": 1,
+      "nightmare-geese": 1,
+      "kim-jae-hoon": 4,
+      "chun-li": 3,
+      "joe-higashi": 2,
+      "hotaru-futaba": 1
+    },
+    "omni-source": {
+      "chun-li": 6
+    },
+    "alex5mith": {
+      "b-jenet": 19
     },
     "armisael": {
       "manjiro-sano": 3,
@@ -802,14 +976,6 @@
       "mr-big": 3,
       "joe-higashi": 5
     },
-    "faalex": {
-      "manjiro-sano": 16,
-      "rock-howard": 94,
-      "mr-karate": 7,
-      "terry-bogard": 1,
-      "ken": 1,
-      "blue-mary": 4
-    },
     "kang": {
       "mr-karate": 3,
       "hotaru-futaba": 6
@@ -823,16 +989,6 @@
       "mr-karate": 19,
       "rock-howard": 3,
       "hotaru-futaba": 7
-    },
-    "rino": {
-      "ken-ryuguji": 1,
-      "rick-strowd": 3,
-      "mr-big": 16,
-      "wolfgang-krauser": 3,
-      "kim-jae-hoon": 1,
-      "chun-li": 2,
-      "ken": 1,
-      "andy-bogard": 1
     },
     "paolo": {
       "kim-kaphwan": 2,
@@ -869,16 +1025,6 @@
       "kim-jae-hoon": 2,
       "nightmare-geese": 1
     },
-    "plsx": {
-      "nightmare-geese": 53,
-      "joe-higashi": 22,
-      "rick-strowd": 10,
-      "duck-king": 4,
-      "kenshiro": 3,
-      "mr-karate": 1,
-      "wolfgang-krauser": 3,
-      "vox-reaper": 16
-    },
     "chuchuzera": {
       "hotaru-futaba": 16,
       "rock-howard": 9,
@@ -900,33 +1046,6 @@
     "gamessa": {
       "tizoc": 9
     },
-    "ferno": {
-      "kim-kaphwan": 42,
-      "ken-ryuguji": 43,
-      "terry-bogard": 2,
-      "mr-karate": 16,
-      "wolfgang-krauser": 25,
-      "duck-king": 34,
-      "kenshiro": 27,
-      "kim-jae-hoon": 7,
-      "rick-strowd": 19,
-      "salvatore-ganacci": 20,
-      "mr-big": 18,
-      "nightmare-geese": 15,
-      "blue-mary": 17,
-      "cristiano-ronaldo": 1,
-      "kim-dong-hwan": 13,
-      "kevin-rian": 4,
-      "mai-shiranui": 1,
-      "joe-higashi": 2,
-      "andy-bogard": 10,
-      "marco-rodrigues": 8,
-      "b-jenet": 1,
-      "tizoc": 1
-    },
-    "na55": {
-      "manjiro-sano": 7
-    },
     "danielfoca": {
       "chun-li": 1
     },
@@ -947,10 +1066,6 @@
       "billy-kane": 1,
       "kain-r-heinlein": 1
     },
-    "naruo": {
-      "kenshiro": 2,
-      "gato": 2
-    },
     "jumpa": {
       "wolfgang-krauser": 1
     },
@@ -970,12 +1085,6 @@
     },
     "jebus": {
       "andy-bogard": 5
-    },
-    "pugera": {
-      "duck-king": 4,
-      "marco-rodrigues": 8,
-      "hotaru-futaba": 2,
-      "kim-dong-hwan": 3
     },
     "cloudberry": {
       "salvatore-ganacci": 15
@@ -1001,26 +1110,11 @@
     "franking": {
       "terry-bogard": 16
     },
-    "vermi-cl": {
-      "manjiro-sano": 1,
-      "b-jenet": 2
-    },
     "ramsseus": {
       "manjiro-sano": 2
     },
     "cibernetico": {
       "salvatore-ganacci": 6
-    },
-    "momo-ayase": {
-      "kim-kaphwan": 8,
-      "wolfgang-krauser": 2,
-      "kevin-rian": 10,
-      "duck-king": 1,
-      "billy-kane": 1,
-      "nightmare-geese": 3,
-      "chun-li": 4,
-      "kim-jae-hoon": 3,
-      "andy-bogard": 3
     },
     "poetry-chef": {
       "joe-higashi": 16,
@@ -1057,9 +1151,6 @@
       "kim-kaphwan": 2,
       "mr-big": 13
     },
-    "alex5mith": {
-      "b-jenet": 18
-    },
     "cientifikof": {
       "cristiano-ronaldo": 1,
       "gato": 27,
@@ -1087,21 +1178,6 @@
     "dracov": {
       "tizoc": 88
     },
-    "johny": {
-      "kim-kaphwan": 7,
-      "manjiro-sano": 3,
-      "ken": 18,
-      "preecha": 2,
-      "mr-karate": 1,
-      "kenshiro": 2,
-      "hokutomaru": 6,
-      "mr-big": 1,
-      "nightmare-geese": 1,
-      "kim-jae-hoon": 4,
-      "chun-li": 3,
-      "joe-higashi": 2,
-      "hotaru-futaba": 1
-    },
     "sombra": {
       "kevin-rian": 46,
       "kenshiro": 5,
@@ -1117,27 +1193,6 @@
       "duck-king": 3,
       "salvatore-ganacci": 13,
       "cristiano-ronaldo": 1
-    },
-    "kula": {
-      "manjiro-sano": 7,
-      "cristiano-ronaldo": 82,
-      "ken-ryuguji": 3,
-      "mr-karate": 19,
-      "kim-kaphwan": 6,
-      "duck-king": 3,
-      "kenshiro": 3,
-      "wolfgang-krauser": 2,
-      "blue-mary": 3,
-      "marco-rodrigues": 4,
-      "nightmare-geese": 3,
-      "kevin-rian": 1,
-      "mr-big": 1,
-      "hotaru-futaba": 2,
-      "chun-li": 4,
-      "joe-higashi": 1,
-      "billy-kane": 2,
-      "andy-bogard": 10,
-      "hokutomaru": 1
     },
     "scooby": {
       "ken-ryuguji": 2,
@@ -1162,9 +1217,6 @@
       "mr-big": 4,
       "kain-r-heinlein": 14,
       "hokutomaru": 1
-    },
-    "armenta": {
-      "manjiro-sano": 17
     },
     "dgy": {
       "mr-big": 6,
@@ -1230,9 +1282,6 @@
       "ken-ryuguji": 2,
       "wolfgang-krauser": 3,
       "mr-karate": 1
-    },
-    "rondun": {
-      "rock-howard": 19
     },
     "amaral": {
       "kenshiro": 4,
@@ -1400,9 +1449,6 @@
       "nightmare-geese": 2,
       "duck-king": 1
     },
-    "michelle": {
-      "cristiano-ronaldo": 23
-    },
     "nerfkarate": {
       "mr-karate": 1
     },
@@ -1411,11 +1457,6 @@
     },
     "maurik11111": {
       "salvatore-ganacci": 1
-    },
-    "fffff": {
-      "preecha": 15,
-      "mr-karate": 3,
-      "joe-higashi": 4
     },
     "mike": {
       "manjiro-sano": 1
@@ -1460,14 +1501,6 @@
       "kim-kaphwan": 2,
       "joe-higashi": 11,
       "rock-howard": 2
-    },
-    "didimokof": {
-      "kim-kaphwan": 2,
-      "manjiro-sano": 3,
-      "mr-karate": 3,
-      "andy-bogard": 1,
-      "nightmare-geese": 1,
-      "hokutomaru": 22
     },
     "momoayase": {
       "kim-kaphwan": 3,
@@ -1587,9 +1620,6 @@
     },
     "galland": {
       "kain-r-heinlein": 6
-    },
-    "omni-source": {
-      "chun-li": 5
     },
     "rebirth": {
       "manjiro-sano": 1
@@ -1796,10 +1826,6 @@
     },
     "vleoh": {
       "hotaru-futaba": 1
-    },
-    "tanumaru": {
-      "kenshiro": 1,
-      "ken-ryuguji": 1
     },
     "jjxc": {
       "ken": 6
@@ -2213,13 +2239,6 @@
     },
     "serafin": {
       "marco-rodrigues": 6
-    },
-    "blckspider": {
-      "kim-kaphwan": 5,
-      "marco-rodrigues": 11,
-      "duck-king": 1,
-      "mr-karate": 2,
-      "kevin-rian": 2
     },
     "yayok": {
       "preecha": 2
@@ -3084,9 +3103,6 @@
     },
     "osf-mxy": {
       "chun-li": 2
-    },
-    "fibel": {
-      "hotaru-futaba": 18
     },
     "pxzaito240": {
       "rick-strowd": 1
@@ -4879,10 +4895,6 @@
     "benizaker": {
       "nightmare-geese": 1
     },
-    "ondl3": {
-      "wolfgang-krauser": 1,
-      "kim-dong-hwan": 1
-    },
     "mauricio": {
       "mr-big": 1
     },
@@ -5058,11 +5070,6 @@
     "cheeks": {
       "wolfgang-krauser": 2,
       "mai-shiranui": 1
-    },
-    "aaruhoku": {
-      "kim-jae-hoon": 4,
-      "andy-bogard": 3,
-      "mai-shiranui": 2
     },
     "coral-blue": {
       "wolfgang-krauser": 1
@@ -5240,9 +5247,6 @@
     },
     "omj": {
       "nightmare-geese": 1
-    },
-    "jckil1a": {
-      "b-jenet": 15
     },
     "heregoro": {
       "blue-mary": 1,
