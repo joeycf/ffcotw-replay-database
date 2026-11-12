@@ -861,6 +861,10 @@
     "handle": "BIORENTE"
   },
   {
+    "id": "bios-hard-level",
+    "handle": "Bios) Hard Level"
+  },
+  {
     "id": "bishibashi",
     "handle": "BISHIBASHI ️"
   },
@@ -5668,6 +5672,10 @@
     "handle": "MACHINE"
   },
   {
+    "id": "macho-sigma",
+    "handle": "MACHO SIGMA"
+  },
+  {
     "id": "madkof",
     "handle": "MadKoF"
   },
@@ -5802,6 +5810,10 @@
   {
     "id": "mastersoul",
     "handle": "MasterSoul"
+  },
+  {
+    "id": "matharazo",
+    "handle": "Matharazo"
   },
   {
     "id": "matheus",
@@ -7717,6 +7729,10 @@
   {
     "id": "robinho-da-ilha",
     "handle": "ROBINHO DA ILHA"
+  },
+  {
+    "id": "robly",
+    "handle": "ROBLY"
   },
   {
     "id": "robokof",
