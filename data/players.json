@@ -252,6 +252,10 @@
     "handle": "Aldoner"
   },
   {
+    "id": "alelan",
+    "handle": "ALELAN"
+  },
+  {
     "id": "alemaoduckkin",
     "handle": "AlemaoDuckKin"
   },
@@ -447,6 +451,10 @@
   {
     "id": "apple",
     "handle": "APPLE"
+  },
+  {
+    "id": "applejack",
+    "handle": "APPLEJACK"
   },
   {
     "id": "arabiki",
@@ -2111,6 +2119,10 @@
     "handle": "DildilFatalFury FT2"
   },
   {
+    "id": "dildilfatalfury-show-match",
+    "handle": "DildilfatalFury show Match"
+  },
+  {
     "id": "dilkay",
     "handle": "DILKAY"
   },
@@ -2179,12 +2191,20 @@
     "handle": "DogPenguin"
   },
   {
+    "id": "dogura",
+    "handle": "Dogura"
+  },
+  {
     "id": "doms",
     "handle": "Doms"
   },
   {
     "id": "donpedro",
     "handle": "DONPEDRO"
+  },
+  {
+    "id": "donsuke",
+    "handle": "DONSUKE"
   },
   {
     "id": "dontstop",
@@ -3595,6 +3615,10 @@
     "handle": "HeroHuman"
   },
   {
+    "id": "herrerakof",
+    "handle": "HERRERAKOF"
+  },
+  {
     "id": "hidden-xgear",
     "handle": "HIDDEN XGEAR"
   },
@@ -4110,6 +4134,10 @@
     "handle": "ILFASANN"
   },
   {
+    "id": "imetivi",
+    "handle": "iMeTivi"
+  },
+  {
     "id": "imranchamp",
     "handle": "IMRANCHAMP"
   },
@@ -4212,6 +4240,10 @@
   {
     "id": "iyueni",
     "handle": "Iyueni"
+  },
+  {
+    "id": "izzy",
+    "handle": "Izzy"
   },
   {
     "id": "j-o-e-l",
@@ -6520,6 +6552,10 @@
   {
     "id": "nekoneko",
     "handle": "NEKONEKO"
+  },
+  {
+    "id": "nekrudo",
+    "handle": "NEKRUDO"
   },
   {
     "id": "neku",
@@ -9627,6 +9663,10 @@
   {
     "id": "willis",
     "handle": "Willis"
+  },
+  {
+    "id": "wing-jd",
+    "handle": "WING JD"
   },
   {
     "id": "wingjd",
