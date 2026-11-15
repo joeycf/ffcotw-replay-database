@@ -1112,6 +1112,10 @@
     "handle": "BrotherBogard"
   },
   {
+    "id": "brothersbogard",
+    "handle": "BrothersBogard"
+  },
+  {
     "id": "bruce",
     "handle": "BRUCE"
   },
@@ -8222,6 +8226,10 @@
   {
     "id": "senhor",
     "handle": "Senhor"
+  },
+  {
+    "id": "senhordeidade",
+    "handle": "Senhordeidade"
   },
   {
     "id": "serafin",
