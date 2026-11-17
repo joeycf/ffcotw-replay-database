@@ -1,28 +1,28 @@
 # CotW pipeline report
 
-- **5324** published records · **2311** players · **33** fighters
-- **665** pending review item(s) — absent from the site, never guessed
+- **5343** published records · **2316** players · **33** fighters
+- **666** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
 
 ## Per intake
 
 | intake | raw uploads | CotW-marked | parsed | published |
 | --- | ---: | ---: | ---: | ---: |
-| fatalFuryReplays | 6782 | 1473 | 1466 | 1466 |
-| wolfFgc | 2107 | 1451 | 1420 | 1420 |
-| svcHighlights | 764 | 711 | 688 | 688 |
-| ffCotwReplays | 784 | 783 | 668 | 668 |
-| bestOfSnk | 565 | 289 | 275 | 275 |
-| cotwReplays | 185 | 185 | 160 | 160 |
-| nomiiAegis | 413 | 385 | 168 | 168 |
-| bestOfFgc | 1496 | 359 | 339 | 339 |
-| dildilFatalFury | 2643 | 1896 | 12 | 12 |
+| fatalFuryReplays | 6787 | 1476 | 1469 | 1469 |
+| wolfFgc | 2111 | 1455 | 1424 | 1424 |
+| svcHighlights | 765 | 712 | 689 | 689 |
+| ffCotwReplays | 785 | 784 | 669 | 669 |
+| bestOfSnk | 567 | 290 | 275 | 275 |
+| cotwReplays | 186 | 186 | 161 | 161 |
+| nomiiAegis | 416 | 388 | 169 | 169 |
+| bestOfFgc | 1498 | 360 | 340 | 340 |
+| dildilFatalFury | 2676 | 1929 | 19 | 19 |
 | evoEvents | 2836 | 103 | 0 | 0 |
 | replayTheater | — | — | — | 128 |
 
 ## Tournament placements — Liquipedia Tier 1–2, CC BY-SA 3.0
 
-84 events with placements read; 46 of 2311 registry players carry a title (65 wins). 19 placed names are not in the registry yet — they are featured the day a replay of theirs is ingested, unless listed below as needing a human.
+84 events with placements read; 46 of 2316 registry players carry a title (65 wins). 19 placed names are not in the registry yet — they are featured the day a replay of theirs is ingested, unless listed below as needing a human.
 
 **Titled:** `xiaohai` 9W/1R · `el-maza` 5W/4R · `go1` 6W/3R · `didimokof` 3W/3R · `darkangel` 4W/1R · `nemo` 1W/4R · `poongko` 1W/4R · `score` 2W/3R · `fenritti` 2W/2R · `kindevu` 0W/4R · `kojikog` 2W/2R · `laggia` 3W/1R · `zjz` 2W/2R · `abao` 2W/1R · `kula` 3W/0R · `lokof` 1W/2R · `reynald` 0W/3R · `thegio` 1W/2R · `abuomar` 1W/1R · `basher` 1W/1R · `dai` 1W/1R · `frezzer` 2W/0R · `neku` 1W/1R · `pangma` 2W/0R · `shadow-x` 1W/1R · `sharkurien` 0W/2R · `tamago` 1W/1R · `alex` 0W/1R · `alfinete` 1W/0R · `alioune` 0W/1R · `arusu` 0W/1R · `boros` 0W/1R · `cientifikof` 1W/0R · `diaphone` 1W/0R · `iceskyrain` 0W/1R · `javier-yagami` 0W/1R · `kaiser666` 1W/0R · `leffen` 0W/1R · `mok` 1W/0R · `monib` 0W/1R · `pida` 0W/1R · `rigosam` 0W/1R · `rondun` 0W/1R · `seis-mx` 1W/0R · `sosicknashfan` 1W/0R · `xyzzy` 1W/0R
 
@@ -43,12 +43,12 @@
 
 ## Misses
 
-- `no-marker` — 10940
-- `vs-count` — 715
-- `no-char` — 664
-- `no-vs` — 527
+- `no-marker` — 10944
+- `vs-count` — 717
+- `no-char` — 665
+- `no-vs` — 530
+- `no-handle` — 268
 - `too-short` — 257
-- `no-handle` — 245
 - `before-floor` — 30
 - `slot-ambiguous` — 1
 
@@ -76,6 +76,7 @@ line with its literal text, instead of vanishing into a silently shorter side.
 - 12× `DREAM DildilFatalFury Assis`
 - 11× `Dream`
 - 11× `Wolves TREINING HAWORD HAYPERDEFENSE JUSTDEFENSE`
+- 10× `Treiening`
 - 10× `DildilfatalFury TsukiGoose B Janet`
 - 10× `Wolves TREINING SOUTH TOWN O CHEFE DA MAFIA HAYPERDEFE`
 - 10× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES COUN`
@@ -86,6 +87,7 @@ line with its literal text, instead of vanishing into a silently shorter side.
 - 8× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES`
 - 8× `Wolves HAYPERDEFENSE JUSTDEFENSE zero FRAMES COUNTER HIT Alcateia Lobo`
 - 8× `Wolves DildilFatalFury SNK SEMPRE`
+- 7× `Treiening Kaphwan ranqueadas Kim`
 - 7× `Rankeada DildilfatalFury`
 - 7× `Dream DildilfatalFury Correia`
 - 7× `DildilFatalFury Klebin`
@@ -95,10 +97,8 @@ line with its literal text, instead of vanishing into a silently shorter side.
 - 6× `HAYPERDEFENSE JUSTDEFENSE zero FRAME NO especial Move Haoshoukukem do Mr Kara`
 - 6× `TREINING`
 - 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero`
-- 6× `Wolves TREINING`
-- 6× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES CO`
-- … 1082 more
+- … 1094 more
 
 > Replay Theater: 150 dumped, 150 already known here, 0 candidates, 0 rebuilt, 128 carried (add-only), 128 total.
 
-_Generated 2026-11-16T18:37:42.015Z_
+_Generated 2026-11-17T17:41:22.776Z_

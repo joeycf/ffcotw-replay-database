@@ -2478,6 +2478,10 @@
     "handle": "EL PAPA STJ"
   },
   {
+    "id": "elchiapas",
+    "handle": "elchiapas"
+  },
+  {
     "id": "elchiapasko",
     "handle": "ELCHIAPASKO"
   },
@@ -2994,6 +2998,10 @@
   {
     "id": "frydryse",
     "handle": "FRYDRYSE"
+  },
+  {
+    "id": "ft2-ranqueadas2026-training-kim",
+    "handle": "FT2 #ranqueadas2026 Training Kim"
   },
   {
     "id": "fumi",
@@ -3557,6 +3565,10 @@
   {
     "id": "harmonie",
     "handle": "Harmonie"
+  },
+  {
+    "id": "harryblack",
+    "handle": "HARRYBLACK"
   },
   {
     "id": "harumy",
@@ -9046,6 +9058,10 @@
     "handle": "THE TERRYMAN"
   },
   {
+    "id": "thegaia",
+    "handle": "TheGaia"
+  },
+  {
     "id": "thegio",
     "handle": "TheGio",
     "featured": true,
@@ -9267,6 +9283,10 @@
   {
     "id": "trashkof",
     "handle": "TRASHKOF"
+  },
+  {
+    "id": "treiening",
+    "handle": "Treiening"
   },
   {
     "id": "trema",
