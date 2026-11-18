@@ -3000,6 +3000,10 @@
     "handle": "FRYDRYSE"
   },
   {
+    "id": "ft2-ranqueadas2026-training",
+    "handle": "FT2 #ranqueadas2026 Training"
+  },
+  {
     "id": "ft2-ranqueadas2026-training-kim",
     "handle": "FT2 #ranqueadas2026 Training Kim"
   },
@@ -4744,6 +4748,10 @@
     "handle": "KASUMI"
   },
   {
+    "id": "katakuri",
+    "handle": "KATAKURI"
+  },
+  {
     "id": "kaz",
     "handle": "KAZ"
   },
@@ -5237,6 +5245,10 @@
     "handle": "Kumi"
   },
   {
+    "id": "kumo",
+    "handle": "KUMO"
+  },
+  {
     "id": "kumoko",
     "handle": "Kumoko"
   },
@@ -5459,6 +5471,10 @@
   {
     "id": "levity",
     "handle": "Levity"
+  },
+  {
+    "id": "lexusrojo",
+    "handle": "LEXUSROJO"
   },
   {
     "id": "lezinhu",
@@ -7828,7 +7844,7 @@
   },
   {
     "id": "rockpon",
-    "handle": "Rockpon"
+    "handle": "rockpon"
   },
   {
     "id": "rockspirit",
@@ -9506,7 +9522,7 @@
   },
   {
     "id": "vermicl",
-    "handle": "VERMICL ️"
+    "handle": "VermiCL"
   },
   {
     "id": "verni",
