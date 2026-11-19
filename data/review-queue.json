@@ -1,11 +1,27 @@
 [
   {
+    "id": "bAzrlKzEZu8",
+    "kind": "character-completion",
+    "channel": "fatalFuryReplays",
+    "title": "FF COTW ▰ FERNO (Laocorn) vs ANTONIO FURBY (Laocorn) ▰ Laocorn DLC Day 1",
+    "publishedAt": "2026-11-19T11:52:14Z",
+    "durationSec": 773
+  },
+  {
     "id": "EFFbsSVV-ko",
     "kind": "slot-ambiguous",
     "channel": "fatalFuryReplays",
     "title": "FF:CotW 🔥 GGGGGG (Rock) vs AIGOO (Vox Reaper) & OPANTS (Kain) 🔥 FATAL FURY CotW OPEN BETA GAMEPLAY",
     "publishedAt": "2025-02-21T15:54:32Z",
     "durationSec": 481
+  },
+  {
+    "id": "YNhfjgY8W58",
+    "kind": "character-completion",
+    "channel": "wolfFgc",
+    "title": "FF:CotW 🐺 KOJI KOG (Laocorn) vs FENRITTI (Laocorn)⭐Replay Match - FATAL FURY: CotW - 11/26",
+    "publishedAt": "2026-11-19T14:33:17Z",
+    "durationSec": 539
   },
   {
     "id": "F0ApUr9aoIo",
@@ -22,6 +38,14 @@
     "title": "FF:CotW 🌟 PANPINA (Kim) vs MUSUBI (Kim)🌟Replay Match - FATAL FURY: City of the Wolves!",
     "publishedAt": "2026-09-30T15:49:15Z",
     "durationSec": 549
+  },
+  {
+    "id": "ituyi8YQwbQ",
+    "kind": "character-completion",
+    "channel": "ffCotwReplays",
+    "title": "Fatal Fury COTW Narou Laocorn VS Fenritti Laocorn New Gameplay",
+    "publishedAt": "2026-11-19T16:07:28Z",
+    "durationSec": 475
   },
   {
     "id": "x46TlQqis4Y",
@@ -134,6 +158,14 @@
     "title": "Fatal Fury COTW Kenshiro vs Hotaru",
     "publishedAt": "2026-07-05T16:00:02Z",
     "durationSec": 574
+  },
+  {
+    "id": "gD6IziBoVX4",
+    "kind": "character-completion",
+    "channel": "nomiiAegis",
+    "title": "FF Season 3 ▰ KOG (LAOCORN) Vs SCORE (LAOCORN) 🔥 ▰ FATAL FURY: CoTW High Level Gameplay",
+    "publishedAt": "2026-11-19T14:38:54Z",
+    "durationSec": 601
   },
   {
     "id": "7SlznPNkSJo",
@@ -766,6 +798,22 @@
     "title": "KIM 🐺 KOG VS GO1 🐺 KIM | FATAL FURY COTW",
     "publishedAt": "2026-09-25T11:00:21Z",
     "durationSec": 612
+  },
+  {
+    "id": "-aVolyZnFyI",
+    "kind": "character-completion",
+    "channel": "dildilFatalFury",
+    "title": "FATAL FURY: CotW show Match Kain VS Kaphwan FT2 #ranqueadas2026 Training Kim",
+    "publishedAt": "2026-11-19T03:39:31Z",
+    "durationSec": 454
+  },
+  {
+    "id": "ObBmkCCj44Q",
+    "kind": "character-completion",
+    "channel": "dildilFatalFury",
+    "title": "FATAL FURY: CotW show Match Kaphwan VS Maike FT2 #ranqueadas2026 Training Kim",
+    "publishedAt": "2026-11-19T03:26:16Z",
+    "durationSec": 451
   },
   {
     "id": "JHVIJEul2nM",

@@ -1,22 +1,26 @@
+## ⚠ AN UNRELEASED FIGHTER MAY HAVE SHIPPED
+
+- **laocorn** appears in parser residue. Promote it — see scripts/expiries.ts.
+
 # CotW pipeline report
 
-- **5359** published records · **2320** players · **33** fighters
-- **670** pending review item(s) — absent from the site, never guessed
+- **5364** published records · **2320** players · **33** fighters
+- **676** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
 
 ## Per intake
 
 | intake | raw uploads | CotW-marked | parsed | published |
 | --- | ---: | ---: | ---: | ---: |
-| fatalFuryReplays | 6791 | 1478 | 1471 | 1471 |
-| wolfFgc | 2116 | 1460 | 1429 | 1429 |
+| fatalFuryReplays | 6800 | 1486 | 1473 | 1473 |
+| wolfFgc | 2124 | 1468 | 1429 | 1429 |
 | svcHighlights | 766 | 713 | 690 | 690 |
-| ffCotwReplays | 786 | 785 | 670 | 670 |
-| bestOfSnk | 569 | 291 | 276 | 276 |
-| cotwReplays | 187 | 187 | 162 | 162 |
-| nomiiAegis | 417 | 389 | 169 | 169 |
-| bestOfFgc | 1500 | 361 | 341 | 341 |
-| dildilFatalFury | 2720 | 1973 | 23 | 23 |
+| ffCotwReplays | 787 | 786 | 670 | 670 |
+| bestOfSnk | 571 | 292 | 277 | 277 |
+| cotwReplays | 188 | 188 | 163 | 163 |
+| nomiiAegis | 421 | 391 | 169 | 169 |
+| bestOfFgc | 1502 | 362 | 342 | 342 |
+| dildilFatalFury | 2735 | 1988 | 23 | 23 |
 | evoEvents | 2837 | 103 | 0 | 0 |
 | replayTheater | — | — | — | 128 |
 
@@ -43,12 +47,12 @@
 
 ## Misses
 
-- `no-marker` — 10949
+- `no-marker` — 10954
 - `vs-count` — 725
-- `no-char` — 669
-- `no-vs` — 532
-- `no-handle` — 295
-- `too-short` — 257
+- `no-char` — 675
+- `no-vs` — 535
+- `no-handle` — 316
+- `too-short` — 259
 - `before-floor` — 30
 - `slot-ambiguous` — 1
 
@@ -59,8 +63,8 @@ line with its literal text, instead of vanishing into a silently shorter side.
 
 - 59× `DildilFatalFury`
 - 51× `Wolves HAYPERDEFENSE JUSTDEFENSE zero FRAMES COUNTER`
+- 40× `Kaphwan ranqueadas Kim`
 - 28× `Mirro`
-- 27× `Kaphwan ranqueadas Kim`
 - 21× `Early Access`
 - 17× `Wolves show HAYPERDEFENSE JUSTDEFENSE zero FRAMES COUNTER HIT GURDCANCEL`
 - 17× `Wolves TREINING HAYPERDEFENSE JUSTDEFENSE zero FRAMES COUNTER HIT GURDCAN`
@@ -97,8 +101,8 @@ line with its literal text, instead of vanishing into a silently shorter side.
 - 6× `Mirro Dream DildilFatalFury Assis`
 - 6× `HAYPERDEFENSE JUSTDEFENSE zero FRAME NO especial Move Haoshoukukem do Mr Kara`
 - 6× `TREINING`
-- … 1108 more
+- … 1125 more
 
 > Replay Theater: 150 dumped, 150 already known here, 0 candidates, 0 rebuilt, 128 carried (add-only), 128 total.
 
-_Generated 2026-11-18T17:19:41.915Z_
+_Generated 2026-11-19T17:26:19.656Z_
