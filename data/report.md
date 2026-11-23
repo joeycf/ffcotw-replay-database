@@ -4,7 +4,7 @@
 
 # CotW pipeline report
 
-- **5368** published records · **2321** players · **33** fighters
+- **5370** published records · **2321** players · **33** fighters
 - **683** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
 
@@ -12,15 +12,15 @@
 
 | intake | raw uploads | CotW-marked | parsed | published |
 | --- | ---: | ---: | ---: | ---: |
-| fatalFuryReplays | 6812 | 1498 | 1473 | 1473 |
-| wolfFgc | 2141 | 1485 | 1429 | 1429 |
-| svcHighlights | 768 | 715 | 690 | 690 |
-| ffCotwReplays | 792 | 791 | 671 | 671 |
-| bestOfSnk | 577 | 295 | 279 | 279 |
+| fatalFuryReplays | 6818 | 1504 | 1474 | 1474 |
+| wolfFgc | 2144 | 1488 | 1429 | 1429 |
+| svcHighlights | 769 | 716 | 690 | 690 |
+| ffCotwReplays | 793 | 792 | 672 | 672 |
+| bestOfSnk | 579 | 296 | 279 | 279 |
 | cotwReplays | 191 | 191 | 163 | 163 |
-| nomiiAegis | 424 | 394 | 169 | 169 |
-| bestOfFgc | 1508 | 364 | 343 | 343 |
-| dildilFatalFury | 2744 | 1997 | 23 | 23 |
+| nomiiAegis | 428 | 397 | 169 | 169 |
+| bestOfFgc | 1510 | 365 | 343 | 343 |
+| dildilFatalFury | 2751 | 2003 | 23 | 23 |
 | evoEvents | 2837 | 103 | 0 | 0 |
 | replayTheater | — | — | — | 128 |
 
@@ -47,11 +47,11 @@
 
 ## Misses
 
-- `no-marker` — 10961
-- `vs-count` — 730
+- `no-marker` — 10965
+- `vs-count` — 735
 - `no-char` — 682
-- `no-vs` — 538
-- `no-handle` — 351
+- `no-vs` — 539
+- `no-handle` — 365
 - `too-short` — 261
 - `before-floor` — 30
 - `slot-ambiguous` — 1
@@ -101,8 +101,8 @@ line with its literal text, instead of vanishing into a silently shorter side.
 - 6× `Mirro Dream DildilFatalFury Assis`
 - 6× `HAYPERDEFENSE JUSTDEFENSE zero FRAME NO especial Move Haoshoukukem do Mr Kara`
 - 6× `TREINING`
-- … 1171 more
+- … 1189 more
 
-> Replay Theater: 150 dumped, 150 already known here, 0 candidates, 0 rebuilt, 128 carried (add-only), 128 total.
+> Replay Theater: 149 dumped, 149 already known here, 0 candidates, 0 rebuilt, 128 carried (add-only), 128 total.
 
-_Generated 2026-11-22T16:21:32.780Z_
+_Generated 2026-11-23T20:18:45.806Z_
