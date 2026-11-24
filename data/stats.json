@@ -1,6 +1,6 @@
 {
   "totals": {
-    "replays": 5370,
+    "replays": 5371,
     "characters": 33,
     "players": 2321,
     "byPatch": {
@@ -32,10 +32,12 @@
       "3.1.2": 114,
       "3.1.3": 142,
       "3.2.2": 327,
-      "3.3.2": 431
+      "3.3.2": 432
     }
   },
   "characterUsage": {
+    "mr-karate": 492,
+    "vox-reaper": 352,
     "tizoc": 461,
     "manjiro-sano": 166,
     "wolfgang-krauser": 329,
@@ -53,7 +55,6 @@
     "nightmare-geese": 274,
     "mai-shiranui": 287,
     "ken": 454,
-    "mr-karate": 491,
     "rick-strowd": 245,
     "kenshiro": 353,
     "marco-rodrigues": 355,
@@ -66,7 +67,6 @@
     "mr-big": 267,
     "andy-bogard": 342,
     "kim-jae-hoon": 197,
-    "vox-reaper": 351,
     "b-jenet": 311,
     "salvatore-ganacci": 203
   },
@@ -733,6 +733,8 @@
       "b-jenet": 7
     },
     "3.3.2": {
+      "mr-karate": 55,
+      "vox-reaper": 14,
       "tizoc": 30,
       "manjiro-sano": 166,
       "wolfgang-krauser": 25,
@@ -750,7 +752,6 @@
       "nightmare-geese": 22,
       "mai-shiranui": 14,
       "ken": 17,
-      "mr-karate": 54,
       "rick-strowd": 22,
       "kenshiro": 33,
       "marco-rodrigues": 5,
@@ -763,7 +764,6 @@
       "mr-big": 18,
       "andy-bogard": 15,
       "kim-jae-hoon": 12,
-      "vox-reaper": 13,
       "b-jenet": 9,
       "salvatore-ganacci": 6
     }
@@ -771,6 +771,17 @@
   "playerCharacters": {
     "123456": {
       "marco-rodrigues": 1
+    },
+    "aaa": {
+      "mr-karate": 21,
+      "rock-howard": 3,
+      "hotaru-futaba": 7
+    },
+    "arusu": {
+      "vox-reaper": 33,
+      "manjiro-sano": 8,
+      "kim-kaphwan": 2,
+      "kenshiro": 2
     },
     "sudocho": {
       "tizoc": 27
@@ -1012,12 +1023,6 @@
       "duck-king": 2,
       "mr-karate": 1
     },
-    "arusu": {
-      "manjiro-sano": 8,
-      "vox-reaper": 32,
-      "kim-kaphwan": 2,
-      "kenshiro": 2
-    },
     "griffon-masker": {
       "blue-mary": 1,
       "chun-li": 1
@@ -1257,11 +1262,6 @@
       "rick-strowd": 14,
       "manjiro-sano": 2,
       "terry-bogard": 2
-    },
-    "aaa": {
-      "mr-karate": 20,
-      "rock-howard": 3,
-      "hotaru-futaba": 7
     },
     "steven-segal": {
       "mr-karate": 1
