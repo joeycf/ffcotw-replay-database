@@ -72,8 +72,8 @@ export default defineAppConfig({
     //   /ffcotw-insights/:path* → https://ffcotw-replay-database.vercel.app/_vercel/insights/:path*
     // — the two ship together or every beacon 404s, silently. Same-origin on
     // purpose: the child's endpoints send no CORS headers, so an absolute URL
-    // here would die at preflight. speedInsights stays at the engine default
-    // (single-project on Hobby — it must reach the enabled project).
+    // here would die at preflight. speedInsights is unset, so Speed
+    // Insights is off (opt-in since engine v0.19.0).
     observability: { insights: '/ffcotw-insights' },
     charactersPerSide: 1,
     filters: {
