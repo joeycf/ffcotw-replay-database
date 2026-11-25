@@ -1,6 +1,6 @@
 {
   "totals": {
-    "replays": 5371,
+    "replays": 5372,
     "characters": 33,
     "players": 2321,
     "byPatch": {
@@ -32,10 +32,12 @@
       "3.1.2": 114,
       "3.1.3": 142,
       "3.2.2": 327,
-      "3.3.2": 432
+      "3.3.2": 433
     }
   },
   "characterUsage": {
+    "nightmare-geese": 275,
+    "mai-shiranui": 288,
     "mr-karate": 492,
     "vox-reaper": 352,
     "tizoc": 461,
@@ -52,8 +54,6 @@
     "rock-howard": 594,
     "duck-king": 197,
     "gato": 381,
-    "nightmare-geese": 274,
-    "mai-shiranui": 287,
     "ken": 454,
     "rick-strowd": 245,
     "kenshiro": 353,
@@ -733,6 +733,8 @@
       "b-jenet": 7
     },
     "3.3.2": {
+      "nightmare-geese": 23,
+      "mai-shiranui": 15,
       "mr-karate": 55,
       "vox-reaper": 14,
       "tizoc": 30,
@@ -749,8 +751,6 @@
       "rock-howard": 28,
       "duck-king": 22,
       "gato": 15,
-      "nightmare-geese": 22,
-      "mai-shiranui": 14,
       "ken": 17,
       "rick-strowd": 22,
       "kenshiro": 33,
@@ -771,6 +771,14 @@
   "playerCharacters": {
     "123456": {
       "marco-rodrigues": 1
+    },
+    "ratao-sarrant": {
+      "nightmare-geese": 7
+    },
+    "vermi-cl": {
+      "mai-shiranui": 2,
+      "manjiro-sano": 1,
+      "b-jenet": 2
     },
     "aaa": {
       "mr-karate": 21,
@@ -891,9 +899,6 @@
       "terry-bogard": 1,
       "marco-rodrigues": 1,
       "hotaru-futaba": 1
-    },
-    "ratao-sarrant": {
-      "nightmare-geese": 6
     },
     "macho-sigma": {
       "mai-shiranui": 2
@@ -1436,11 +1441,6 @@
     "ondl3": {
       "kim-dong-hwan": 2,
       "wolfgang-krauser": 1
-    },
-    "vermi-cl": {
-      "mai-shiranui": 1,
-      "manjiro-sano": 1,
-      "b-jenet": 2
     },
     "tanumaru": {
       "kenshiro": 2,

@@ -4,7 +4,7 @@
 
 # CotW pipeline report
 
-- **5371** published records · **2321** players · **33** fighters
+- **5372** published records · **2321** players · **33** fighters
 - **685** pending review item(s) — absent from the site, never guessed
 - **0** duplicate id(s) resolved by intake precedence
 
@@ -12,15 +12,15 @@
 
 | intake | raw uploads | CotW-marked | parsed | published |
 | --- | ---: | ---: | ---: | ---: |
-| fatalFuryReplays | 6823 | 1508 | 1474 | 1474 |
-| wolfFgc | 2151 | 1495 | 1429 | 1429 |
-| svcHighlights | 770 | 717 | 690 | 690 |
+| fatalFuryReplays | 6828 | 1513 | 1475 | 1475 |
+| wolfFgc | 2156 | 1500 | 1429 | 1429 |
+| svcHighlights | 771 | 718 | 690 | 690 |
 | ffCotwReplays | 794 | 793 | 673 | 673 |
-| bestOfSnk | 581 | 297 | 279 | 279 |
+| bestOfSnk | 582 | 298 | 279 | 279 |
 | cotwReplays | 192 | 192 | 163 | 163 |
-| nomiiAegis | 429 | 398 | 169 | 169 |
-| bestOfFgc | 1512 | 366 | 343 | 343 |
-| dildilFatalFury | 2758 | 2010 | 23 | 23 |
+| nomiiAegis | 431 | 400 | 169 | 169 |
+| bestOfFgc | 1513 | 366 | 343 | 343 |
+| dildilFatalFury | 2763 | 2015 | 23 | 23 |
 | evoEvents | 2838 | 103 | 0 | 0 |
 | replayTheater | — | — | — | 128 |
 
@@ -47,12 +47,12 @@
 
 ## Misses
 
-- `no-marker` — 10969
-- `vs-count` — 740
+- `no-marker` — 10970
+- `vs-count` — 741
 - `no-char` — 684
-- `no-vs` — 539
-- `no-handle` — 381
-- `too-short` — 261
+- `no-vs` — 542
+- `no-handle` — 394
+- `too-short` — 262
 - `before-floor` — 30
 - `slot-ambiguous` — 1
 
@@ -101,8 +101,8 @@ line with its literal text, instead of vanishing into a silently shorter side.
 - 6× `Mirro Dream DildilFatalFury Assis`
 - 6× `HAYPERDEFENSE JUSTDEFENSE zero FRAME NO especial Move Haoshoukukem do Mr Kara`
 - 6× `TREINING`
-- … 1209 more
+- … 1221 more
 
 > Replay Theater: 149 dumped, 149 already known here, 0 candidates, 0 rebuilt, 128 carried (add-only), 128 total.
 
-_Generated 2026-11-24T19:33:57.397Z_
+_Generated 2026-11-25T18:42:30.376Z_
