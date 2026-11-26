@@ -68,6 +68,12 @@ const SLUG = 'ffcotw';
 /** The apex the shell owns; it edge-rewrites /<slug>/* to this project. */
 const HOST = (process.env.SMOKE_HOST ?? 'https://replaydatabase.com').replace(/\/$/, '');
 
+// A named user agent instead of Node's bare `node`. The shell's firewall runs
+// Bot Protection, which challenges non-browser clients, and a custom bypass rule
+// there exempts exactly this user agent on /data/ paths. Without it the check
+// would read a challenge page instead of the archive and go red after 900 s.
+const SMOKE_UA = 'replay-database-smoke-check';
+
 const TIMEOUT_SEC = Number(process.env.SMOKE_TIMEOUT_SEC ?? 900);
 const INTERVAL_SEC = Number(process.env.SMOKE_INTERVAL_SEC ?? 20);
 
@@ -138,7 +144,7 @@ async function servedDigest(url: string): Promise<Digest | null> {
   try {
     const res = await fetch(`${url}?_cb=${Date.now()}`, {
       cache: 'no-store',
-      headers: { 'cache-control': 'no-cache', pragma: 'no-cache' },
+      headers: { 'cache-control': 'no-cache', pragma: 'no-cache', 'user-agent': SMOKE_UA },
       redirect: 'follow',
     });
     if (!res.ok) {
@@ -160,7 +166,7 @@ async function servedSummary(url: string): Promise<{ game?: string; engine?: str
   try {
     const res = await fetch(`${url}?_cb=${Date.now()}`, {
       cache: 'no-store',
-      headers: { 'cache-control': 'no-cache', pragma: 'no-cache' },
+      headers: { 'cache-control': 'no-cache', pragma: 'no-cache', 'user-agent': SMOKE_UA },
       redirect: 'follow',
     });
     if (!res.ok) {
