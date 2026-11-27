@@ -12,14 +12,14 @@
 
 | intake | raw uploads | CotW-marked | parsed | published |
 | --- | ---: | ---: | ---: | ---: |
-| fatalFuryReplays | 6833 | 1517 | 1477 | 1477 |
-| wolfFgc | 2161 | 1505 | 1429 | 1429 |
-| svcHighlights | 772 | 719 | 690 | 690 |
-| ffCotwReplays | 795 | 794 | 674 | 674 |
-| bestOfSnk | 583 | 298 | 279 | 279 |
+| fatalFuryReplays | 6838 | 1519 | 1477 | 1477 |
+| wolfFgc | 2166 | 1510 | 1429 | 1429 |
+| svcHighlights | 773 | 720 | 690 | 690 |
+| ffCotwReplays | 796 | 795 | 674 | 674 |
+| bestOfSnk | 585 | 299 | 279 | 279 |
 | cotwReplays | 192 | 192 | 163 | 163 |
 | nomiiAegis | 431 | 400 | 169 | 169 |
-| bestOfFgc | 1514 | 367 | 343 | 343 |
+| bestOfFgc | 1516 | 368 | 343 | 343 |
 | dildilFatalFury | 2768 | 2020 | 23 | 23 |
 | evoEvents | 2838 | 103 | 0 | 0 |
 | replayTheater | — | — | — | 128 |
@@ -47,11 +47,11 @@
 
 ## Misses
 
-- `no-marker` — 10972
+- `no-marker` — 10977
 - `vs-count` — 741
 - `no-char` — 688
 - `no-vs` — 542
-- `no-handle` — 404
+- `no-handle` — 415
 - `too-short` — 262
 - `before-floor` — 30
 - `slot-ambiguous` — 1
@@ -101,8 +101,8 @@ line with its literal text, instead of vanishing into a silently shorter side.
 - 6× `Mirro Dream DildilFatalFury Assis`
 - 6× `HAYPERDEFENSE JUSTDEFENSE zero FRAME NO especial Move Haoshoukukem do Mr Kara`
 - 6× `TREINING`
-- … 1232 more
+- … 1242 more
 
 > Replay Theater: 149 dumped, 149 already known here, 0 candidates, 0 rebuilt, 128 carried (add-only), 128 total.
 
-_Generated 2026-11-26T18:29:15.151Z_
+_Generated 2026-11-27T18:16:19.414Z_
